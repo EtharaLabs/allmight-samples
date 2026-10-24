@@ -60,15 +60,19 @@ Each bundle directory is a complete Harbor task: `task.toml` is the runner manif
 ## Cite
 
 ```bibtex
-@misc{allmightsamples,
-  title = {allmight: samples}
+@misc{allmight,
+  title        = {allmight: benchmark tasks for building a web application from nothing},
+  author       = {{Ethara AI}},
+  year         = {2026},
+  howpublished = {\url{https://github.com/Ethara-Ai}},
+  note         = {No measured results are published yet; see Evidence status.}
 }
 ```
 
 ## License
 
-See the license of the repository that publishes this lane.
+Released under the MIT License. See [LICENSE](LICENSE).
 
 ## Contact
 
-[Ethara AI on GitHub](https://github.com/Ethara-Ai), [SECURITY.md](SECURITY.md) for a private report, and [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution route.
+[Ethara AI on GitHub](https://github.com/Ethara-Ai) for the organization. [SECURITY.md](SECURITY.md) for a private vulnerability or benchmark-integrity report. [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution route.
