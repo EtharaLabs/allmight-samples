@@ -76,3 +76,9 @@ Released under the MIT License. See [LICENSE](LICENSE).
 ## Contact
 
 [Ethara AI on GitHub](https://github.com/Ethara-Ai) for the organization. [SECURITY.md](SECURITY.md) for a private vulnerability or benchmark-integrity report. [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution route.
+
+---
+
+## Copyright
+
+Copyright (c) 2026 Green Rider Technology LLP (Ethara AI). All rights reserved.
