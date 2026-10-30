@@ -1,0 +1,3125 @@
+# FORGE-CANARY-BEGIN
+# FORGE-CANARY-SLOT-1: 8e49de0fadec9ce1a152a788f3b15d1d4116c89baccb6ece97820c3a61139e57
+# FORGE-CANARY-SLOT-2: c9e1cbabd555209e15383bf616c9a8caa1f2ab1ca16b0f0f1d8811b07d917909
+# FORGE-CANARY-SLOT-3: 435bcab1d6aab734bf215774f2dfb9eea9072e666ae80aa4d066fa06e7edfb48
+# FORGE-CANARY-SLOT-4: a27bdf669e9ce53c83a949838ce9cafec5c988090fb292d50dc0f93183024abd
+# FORGE-CANARY-END
+#
+# The one private source FORGE Phase build item 10 requires: solution/solve.sh,
+# solution/TRUTH.md, tests/test_output.py and the checker fixtures are all
+# derived from this file by solution/recompute.py, so the oracle, the
+# human-readable truth, the compiled criteria and the fixtures cannot disagree.
+# Nothing here is agent-visible. Every value a checker reads is established in
+# built environment state and derived here from its grounding source, never
+# copied from a statement literal.
+#
+# Slots stand at placeholder values until item 11a plants the derived tokens;
+# the item 2 normalization rewrites exactly this slot form, so planting does
+# not move the hash the tokens derive from.
+
+schema: forge.grounding/v1
+
+task:
+  name: ethara/ledgerline-review
+  scenario: Ledgerline expense reconciliation review application
+  turn_shape: single-turn
+
+# ---------------------------------------------------------------------------
+# Item 5: the seeded corpus. Every value below is the source of truth for the
+# bytes environment/inputs/ carries; recompute.py writes those bytes from here.
+# The corpus is carried unchanged from the superseded CLI slot, because the
+# re-scope replaces the surface the solver builds and not the reconciliation
+# domain underneath it: the two-source disagreement and the rules that resolve
+# it are the thing still being built.
+# ---------------------------------------------------------------------------
+policy:
+  match_window_days: 3
+  amount_tolerance_cents: 50
+  category_limits_cents:
+    meals: 7500
+    travel: 50000
+
+# Statement rows. amount_cents is signed as instruction.md states: debits
+# negative. Every cross-service key (txn_id) is unique and resolves.
+statement:
+  - txn_id: TXN-1001
+    posted_date: "2026-03-02"
+    description: NORTHWIND AIR 884210
+    amount_cents: -48200
+    currency: USD
+  - txn_id: TXN-1002
+    posted_date: "2026-03-03"
+    description: BLUEBIRD DINER
+    amount_cents: -6450
+    currency: USD
+  - txn_id: TXN-1003
+    posted_date: "2026-03-05"
+    description: HELIOTYPE SOFTWARE SUBSCR
+    amount_cents: -12000
+    currency: USD
+  - txn_id: TXN-1004
+    posted_date: "2026-03-06"
+    description: CARTER AND VOSS LLP
+    amount_cents: -31500
+    currency: USD
+  - txn_id: TXN-1005
+    posted_date: "2026-03-09"
+    description: ORCHARD GRILL
+    amount_cents: -8100
+    currency: USD
+  - txn_id: TXN-1006
+    posted_date: "2026-03-10"
+    description: PALLAS HARDWARE DEPOT
+    amount_cents: -22750
+    currency: USD
+  - txn_id: TXN-1007
+    posted_date: "2026-03-12"
+    description: REFUND NORTHWIND AIR
+    amount_cents: 9900
+    currency: USD
+  - txn_id: TXN-1008
+    posted_date: "2026-03-14"
+    description: MERIDIAN COACH LINES
+    amount_cents: -5400
+    currency: USD
+  - txn_id: TXN-1009
+    posted_date: "2026-03-16"
+    description: SALT AND CEDAR
+    amount_cents: -9950
+    currency: USD
+  - txn_id: TXN-1010
+    posted_date: "2026-03-18"
+    description: VERIDIAN CLOUD HOSTING
+    amount_cents: -4400
+    currency: USD
+  - txn_id: TXN-1011
+    posted_date: "2026-03-20"
+    description: UNMATCHED ACH DEBIT
+    amount_cents: -77300
+    currency: USD
+  - txn_id: TXN-1012
+    posted_date: "2026-03-21"
+    description: ASHGROVE STATIONERY
+    amount_cents: -1875
+    currency: USD
+
+# Receipts. The TOTAL is unsigned with exactly two fraction digits, matched
+# against the absolute value of the row amount. Two receipts carry a VENDOR
+# containing a colon and one carries non-field noise lines, because
+# instruction.md admits both and a checker must prove the parse survives them.
+receipts:
+  - receipt_id: RCP-0001
+    date: "2026-03-02"
+    vendor: "Northwind Air"
+    total: "482.00"
+    category: travel
+    noise: []
+  - receipt_id: RCP-0002
+    date: "2026-03-04"
+    vendor: "Bluebird Diner"
+    total: "64.75"
+    category: meals
+    noise: []
+  - receipt_id: RCP-0003
+    date: "2026-03-05"
+    vendor: "Heliotype Software: Annual Plan"
+    total: "120.00"
+    category: software
+    noise: []
+  - receipt_id: RCP-0004
+    date: "2026-03-07"
+    vendor: "Carter & Voss LLP"
+    total: "315.00"
+    category: other
+    noise:
+      - "Thank you for your business."
+      - "Invoice generated automatically; retain for records."
+  - receipt_id: RCP-0005
+    date: "2026-03-09"
+    vendor: "Orchard Grill"
+    total: "81.00"
+    category: meals
+    noise: []
+  - receipt_id: RCP-0006
+    date: "2026-03-11"
+    vendor: "Pallas Hardware Depot"
+    total: "227.20"
+    category: hardware
+    noise: []
+  - receipt_id: RCP-0007
+    date: "2026-03-15"
+    vendor: "Meridian Coach Lines: Route 42"
+    total: "54.00"
+    category: travel
+    noise: []
+  - receipt_id: RCP-0008
+    date: "2026-03-17"
+    vendor: "Salt and Cedar"
+    total: "99.10"
+    category: meals
+    noise: []
+  - receipt_id: RCP-0009
+    date: "2026-03-19"
+    vendor: "Veridian Cloud Hosting"
+    total: "44.00"
+    category: software
+    noise: []
+  - receipt_id: RCP-0010
+    date: "2026-03-22"
+    vendor: "Ashgrove Stationery"
+    total: "18.40"
+    category: other
+    noise: []
+  - receipt_id: RCP-0011
+    date: "2026-03-15"
+    vendor: "Covent Row Catering"
+    total: "99.45"
+    category: meals
+    noise: []
+  - receipt_id: RCP-0012
+    date: "2026-03-26"
+    vendor: "Thornbury Removals"
+    total: "610.00"
+    category: other
+    noise: []
+
+# ---------------------------------------------------------------------------
+# The rendered surface the re-scope adds. These values fix what the two screens
+# must carry; recompute.py writes them into the fixtures the browser checkers
+# read, and the statement states each obligation in prose without naming a
+# reference value.
+# ---------------------------------------------------------------------------
+screens:
+  - id: review
+    route: /
+    purpose: >-
+      The reconciliation review screen. It carries every matched pair as a row
+      of a table whose element id is matched-table, every unreceipted txn_id in
+      a list whose element id is unreceipted-list, and every unposted
+      RECEIPT-ID in a list whose element id is unposted-list.
+    required_element_ids:
+      - matched-table
+      - unreceipted-list
+      - unposted-list
+      - totals-matched
+      - totals-unreceipted
+      - totals-unposted
+      - totals-violations
+    row_contract: >-
+      Each matched row carries a data-receipt-id attribute equal to its
+      RECEIPT-ID, and six cells in this order: receipt id, txn id, amount delta
+      in cents, date delta in days, category, and the policy state. A row whose
+      pair violates policy carries the class violation on the row element.
+  - id: detail
+    route: /pair/<receipt_id>
+    purpose: >-
+      The per-pair detail screen, one per matched pair, reachable from its row.
+      It carries the same six values under element ids pair-receipt-id,
+      pair-txn-id, pair-amount-delta, pair-date-delta, pair-category and
+      pair-policy-state, so the two screens can be compared against each other
+      and against the JSON.
+    required_element_ids:
+      - pair-receipt-id
+      - pair-txn-id
+      - pair-amount-delta
+      - pair-date-delta
+      - pair-category
+      - pair-policy-state
+
+# The rendered-state obligations that exist only in a hydrated document. Each
+# is measured by the verifier's browser against the served application and is
+# unobservable in the bytes the server returns, because each is produced by
+# CSS cascade, font resolution or layout rather than by markup.
+rendered_state:
+  violation_weight: 700
+  violation_weight_note: >-
+    A row whose pair violates policy resolves to a computed font-weight of 700
+    on its policy-state cell; a compliant row resolves to 400. The statement
+    states that a violation must be distinguishable in text weight and not by
+    colour or position alone, and the computed weight is the resolved cascade
+    value rather than a markup attribute.
+  font_family_head: Liberation Sans
+  font_family_note: >-
+    Every graded cell resolves to a font the image ships, so
+    document.fonts.check returns true at each element's own computed weight and
+    size. A page that names a font the image lacks still serves identical
+    bytes and renders in a fallback, which only a hydrated document reveals.
+  column_alignment_tolerance_px: 1
+  column_alignment_note: >-
+    Within the matched table, every cell of one column shares a left edge to
+    within one device-independent pixel at the named viewport. Markup alone
+    does not establish this: a table whose cells carry correct text can still
+    lay out ragged under a CSS rule that sizes columns per row.
+  viewport:
+    width: 1280
+    height: 800
+  viewport_note: >-
+    The single named viewport at which every rendered-state obligation is
+    measured. A geometry claim without a viewport is unfalsifiable, so the
+    statement names this one and the verifier measures at it alone.
+
+# ---------------------------------------------------------------------------
+# Discovery: values a solver obtains only by interacting with the built
+# environment, never by reading instruction.md. Each is established in
+# environment state and derived below from its grounding source.
+# ---------------------------------------------------------------------------
+discovery:
+  - id: matching-is-maximum-cardinality
+    established_in: environment/inputs/statement.csv + environment/inputs/receipts/
+    why: >-
+      RCP-0011 is eligible for both TXN-1009, at an amount delta of -5 cents
+      and a date delta of -1 day, and TXN-1007, at +45 cents and +3 days.
+      RCP-0008 is eligible for TXN-1009 alone, at -40 cents and +1 day, and
+      TXN-1007 admits RCP-0011 alone. A solver that orders eligible pairs by
+      closeness and takes the best available edge first therefore gives
+      TXN-1009 to RCP-0011, which strands RCP-0008 and leaves TXN-1007
+      unmatched: ten pairs instead of eleven. Only a maximum-cardinality
+      matching routes RCP-0011 to its worse edge and recovers both. Measured
+      against the shipped corpus: greedy-by-closeness selects ten pairs and
+      the maximum selects eleven, so every one of the four totals, both id
+      lists, the matched array and every rendered row differ. The trap is in
+      the data, not in the statement.
+  - id: refund-row-is-a-credit
+    established_in: environment/inputs/statement.csv
+    why: >-
+      TXN-1007 carries a positive amount_cents of 9900 while every other row
+      is a debit. Eligibility compares the unsigned receipt total against the
+      absolute value of the row amount, and the maximum matching assigns
+      RCP-0011 to this row, so a solver comparing against the signed value
+      finds no eligible receipt for it at all: the row falls out of the graph
+      entirely, the matching drops to ten pairs, and TXN-1007 appears as
+      unreceipted on the review screen. The sign convention is stated; that a
+      credit row carries a graded match is established only in the corpus.
+  - id: vendor-colon-and-noise-lines
+    established_in: environment/inputs/receipts/
+    why: >-
+      RCP-0003 and RCP-0007 carry a colon inside VENDOR, and RCP-0004 carries
+      two non-field lines. A split-on-every-colon parse or a
+      every-line-is-a-field parse corrupts those three receipts. The
+      statement admits both shapes; the environment is where they appear.
+  - id: which-rows-carry-a-violation
+    established_in: environment/inputs/ + the built application state
+    why: >-
+      Whether a matched pair violates policy follows from the receipt total,
+      its category and the limits in policy.json, so which rows must render at
+      the heavier weight is established only once the corpus is parsed and the
+      maximum matching is computed. A solver cannot read the violating set
+      from the statement: the statement states the rule and the rendering
+      obligation, and the corpus decides which rows it applies to.
+  - id: which-rows-are-contestable
+    established_in: environment/inputs/statement.csv + environment/inputs/receipts/
+    why: >-
+      The sixth deliverable obliges an account of the three rows whose matching
+      a reviewer is most likely to dispute, and the statement names no row. A
+      row is contestable only where it had an alternative: TXN-1009 and TXN-1007
+      contend for RCP-0011, which is why the maximum matching routes RCP-0011 to
+      its worse edge at an amount delta of +45 cents and strands nothing, and
+      why TXN-1009 falls to RCP-0008 at -40 cents instead of its nearest
+      receipt. Which rows carry such contention, and which alternatives each was
+      eligible for, is computed from the eligibility graph over the shipped
+      corpus and is readable nowhere in the statement. A solver that never built
+      the graph cannot name three contestable rows, and one that built a
+      greedy-by-closeness matching names the wrong contention, because under
+      greedy RCP-0011 takes TXN-1009 uncontested and TXN-1007 has no alternative
+      to discuss at all.
+    graded_by:
+      - contested_account_structure
+      - contested_account_names_an_alternative
+      - contested_pairing_matches_declared_matching
+      - contested_reason_is_the_operative_rule
+    note: >-
+      This value is what carries the new obligation's discovery dependency. It
+      is not a restatement of matching-is-maximum-cardinality: that value fixes
+      which eleven pairs exist, and this one fixes which rows had a losing
+      alternative and what it was. The two judged items depend on both, because
+      a faithful account must state the pairing the matching produced and the
+      reason the contention resolved as it did.
+
+discovery_floor:
+  value: conservative-default
+  source: >-
+    No requirements/ value and no recorded touchstones/ disposition fixes a
+    discovery floor, so it is carried by name rather than as a
+    domain-specific number, per item 10a.1's "carried by name only with a
+    conservative default". Every graded deliverable in this bundle depends on
+    the matched set, and the matched set depends on
+    matching-is-maximum-cardinality, so the realized share is total rather
+    than partial.
+  realized_share: 71/71
+  realized_share_recomputed: >-
+    Recomputed from these bytes after the sixth deliverable was added, not
+    carried forward from 55/55. Nineteen compiled items carry weight 61 and two
+    judged items carry weight 10, so total graded weight is 71. All four items
+    over D6-contested-account depend on discovery. contested_account_structure
+    requires each heading's txn_id to be a row of the statement, and the three
+    rows an account can lawfully contest are fixed by which-rows-are-contestable
+    rather than by the statement. contested_account_names_an_alternative
+    recomputes the eligible set from environment/inputs/, which is discovery by
+    construction. Both judged items read the pairing and the reason against the
+    matching, so each depends on matching-is-maximum-cardinality and on
+    which-rows-are-contestable. The share therefore stays total at 71/71, and
+    the number changed because the denominator did.
+
+# ---------------------------------------------------------------------------
+# Item 4: mutations. Loud mutations are announced and applied; silent
+# mutations are applied and never announced, and each binds to a checker and
+# a stale control.
+# ---------------------------------------------------------------------------
+mutations:
+  loud: []
+  loud_note: >-
+    This slot is single-turn with no admin-plane turn in which to announce a
+    mutation, so no loud mutation is encoded. Item 4 requires loud mutations
+    to be announced and applied; an unannounced one would be a silent
+    mutation under another name.
+  silent:
+    - id: snapshot-staleness
+      applied: >-
+        The graded carrier for the reconciliation table is
+        /app/out/snapshot.sql, a dump the solver produces. The verifier runs
+        in a separate offline container that receives only the declared
+        artifacts, so the live table is unreachable at grade time and the
+        dump is the only evidence of table state. A solver that writes the
+        table, dumps it, and then revises the table without redumping ships a
+        snapshot that disagrees with the table it claims to represent.
+      announced: false
+      announced_note: >-
+        instruction.md states the grader reads the file rather than the
+        database and that a stale snapshot scores as if the table were
+        absent. It never states that the artifact list is what makes the
+        database unreachable, nor that revision-after-dump is the specific
+        failure. The mechanism is unannounced; only its consequence is.
+      checker: snapshot_agrees_with_reconciliation_json
+      stale_control: stale-snapshot
+      stale_control_note: >-
+        The stale control writes a correct table and a correct JSON, then
+        dumps, then mutates one row of the table without redumping. The
+        checker must reject it. A checker that passes the stale control is
+        inert and proves nothing about the mutation.
+    - id: served-divergence
+      applied: >-
+        The rendered surface is graded by dialling the application the verifier
+        serves, so the screens and the JSON deliverable are two independent
+        renderings of one reconciliation and nothing reconciles them
+        automatically. A solver that computes the answer once for its JSON and
+        again for its screens, or that writes the JSON and then changes what a
+        screen renders, ships a served screen disagreeing with its own
+        declared result, exactly as a stale dump disagrees with its table.
+      announced: false
+      announced_note: >-
+        instruction.md states that the screens and the JSON must agree and
+        that the rendered page is what is graded. It never states that the
+        grader reads them through two separate paths, nor that a late change
+        to one is the specific failure. The mechanism is unannounced; only
+        its consequence is.
+      checker: served_screen_agrees_with_reconciliation_json
+      stale_control: divergent-screen
+      stale_control_note: >-
+        The control serves screens rendering one row's category or policy
+        state differently from the JSON that declares it. The checker must
+        reject it; a checker that passes it is inert and proves nothing about
+        the mutation.
+
+# ---------------------------------------------------------------------------
+# Item 9: red lines. Each is a deterministic backend-state assertion whose
+# breach is catastrophic rather than incremental.
+# ---------------------------------------------------------------------------
+red_lines:
+  - id: no-network-egress
+    assertion: >-
+      The solver reaches no external host. task.toml binds [agent]
+      network_mode no-network and both environment baselines to no-network,
+      so egress is denied by the runner rather than by inspection.
+    penalty: catastrophic
+  - id: inputs-unmodified
+    assertion: >-
+      Every byte under /app/inputs/ is unchanged at grade time. A solver that
+      edits the statement, a receipt, or the policy to make its own output
+      consistent has rewritten the question rather than answered it.
+    penalty: catastrophic
+    checker: inputs_unmodified
+  - id: table-shape-exact
+    assertion: >-
+      The reconciliation table carries exactly the six declared columns with
+      the declared types and no others, proved from the dump.
+    penalty: catastrophic
+    checker: snapshot_table_shape
+  - id: screens-are-self-contained
+    assertion: >-
+      Every screen the application serves issues no request to an origin other
+      than the application's own. Every stylesheet, script, font and image it
+      needs is served by the application itself, so the rendered surface a
+      grader measures is the one this image can produce rather than one a
+      network fetch completed. Observed through browser request interception,
+      which sees a URL a script composed at runtime.
+    penalty: catastrophic
+    checker: served_screens_request_no_external_origin
+
+# ---------------------------------------------------------------------------
+# Item 10a: known-wrong controls. Each must be rejected by the live checkers.
+# ---------------------------------------------------------------------------
+known_wrong_controls:
+  - id: greedy-matching
+    defect: >-
+      Sorts eligible pairs by (amount delta, date delta, receipt_id) and takes
+      the best available edge first instead of maximising matched pairs.
+    expect: rejected
+  - id: signed-amount-compare
+    defect: >-
+      Compares the receipt total against the signed amount_cents rather than
+      its absolute value, so every debit row fails eligibility.
+    expect: rejected
+  - id: naive-colon-split
+    defect: >-
+      Splits each receipt line on every colon, corrupting the two VENDOR
+      values that contain one.
+    expect: rejected
+  - id: hardcoded-policy
+    defect: >-
+      Hard-codes the window, tolerance and limits instead of reading
+      policy.json, so it is correct only for the shipped policy.
+    expect: rejected
+  - id: stale-snapshot
+    defect: >-
+      Writes a correct table and JSON, dumps, then mutates one table row
+      without regenerating the dump.
+    expect: rejected
+  - id: divergent-screen
+    defect: >-
+      Serves screens that render one row's category or policy state
+      differently from the JSON deliverable that declares it.
+    expect: rejected
+  - id: app-never-answers
+    defect: >-
+      Writes every file deliverable correctly and serves nothing, so no screen
+      route answers within the health deadline.
+    expect: rejected
+  - id: unsorted-output
+    defect: >-
+      Emits matched unsorted by receipt_id and the two id lists unsorted, and
+      renders the table rows in that same order.
+    expect: rejected
+  - id: totals-drift
+    defect: >-
+      Emits correct lists but a violation_count that counts every matched
+      pair in a limited category rather than only those strictly exceeding
+      the limit.
+    expect: rejected
+  - id: colour-only-violation
+    defect: >-
+      Distinguishes a violating row by colour alone, leaving every
+      policy-state cell at the same computed font weight, so the rendered
+      state carries the distinction the statement requires in no text weight.
+    expect: rejected
+  - id: missing-detail-screens
+    defect: >-
+      Renders the review screen correctly and serves no per-pair detail
+      screen, so half the rendered obligation is absent.
+    expect: rejected
+  - id: external-font-reference
+    defect: >-
+      References a web font by external URL, which no-network leaves
+      unresolved, so every graded cell renders in a fallback the image did
+      not ship.
+    expect: rejected
+  - id: contested-account-inverts-a-pairing
+    defect: >-
+      Writes /app/out/contested.md with three well-formed sections that name
+      every identifier the eligible sets admit, but whose TXN-1009 section
+      asserts the row was matched to RCP-0011 rather than to RCP-0008, which
+      the matched array of its own reconciliation.json contradicts.
+    expect: rejected
+    proves: >-
+      The liveness half of contested_pairing_matches_declared_matching. The
+      section carries both identifiers, so every substring and token-set
+      comparator over the prose accepts it; only a reading of what the sentence
+      asserts rejects it. A judge that passes this control is inert, which
+      Phase verify item 7e makes BLOCK:INVALID_TASK.
+  - id: contested-account-gives-a-false-reason
+    defect: >-
+      Writes /app/out/contested.md whose pairings all agree with
+      reconciliation.json, but whose TXN-1007 section gives the deciding reason
+      as RCP-0011 having the smaller amount delta, when its delta is +45 cents
+      against a nearer alternative and the operative rule is maximum-cardinality
+      matching forcing it off its best edge.
+    expect: rejected
+    proves: >-
+      The liveness half of contested_reason_is_the_operative_rule. The section
+      speaks the vocabulary of the stated rules, so any keyword comparator
+      accepts it; only a reading of whether the reason is the operative one
+      rejects it. It also proves the two judged items are disjoint, because this
+      control passes contested_pairing_matches_declared_matching while failing
+      the reason item, and contested-account-inverts-a-pairing does the reverse.
+  - id: contested-account-absent
+    defect: >-
+      Produces the other five deliverables correctly and writes no
+      /app/out/contested.md at all.
+    expect: rejected
+    proves: >-
+      That both judged items and both compiled contested items fail closed on an
+      absent carrier rather than scoring vacuously, which is the same fail-closed
+      property app-never-answers proves for the served application.
+  - id: policy-notes-inverts-the-relation
+    defect: >-
+      Produces every deliverable correctly except that the RCP-0005 section of
+      /app/out/policy-notes.md reads "8100 does not exceed 7500, so the pair
+      does not violate policy", leaving the section set, the heading order, the
+      receipt total and the governing cap exactly as the oracle writes them.
+    expect: rejected
+    proves: >-
+      The liveness half of policy_verdict_follows_from_the_two_numbers, and the
+      residue that makes it judged. Measured by execution: both compiled items
+      over this carrier return True on these bytes, because both integers occur
+      and the cited cap is the one governing the receipt's own category. Only a
+      reading of whether 8100 exceeds 7500 separates it from the oracle, so a
+      criterion that accepts both is inert under item 7e and the item must be
+      judged rather than compiled.
+  - id: policy-notes-cites-the-wrong-limit
+    defect: >-
+      Produces every deliverable correctly except that the RCP-0005 section
+      cites the travel limit of 50000 cents against a meals receipt, while
+      still reaching the verdict /app/out/reconciliation.json declares.
+    expect: rejected
+    proves: >-
+      The liveness of policy_notes_names_the_governing_limit, and its
+      divergence from policy_notes_covers_every_violation. Measured by
+      execution: coverage returns True and limit-naming returns False on these
+      bytes. A verdict that happens to agree with the JSON does not excuse a
+      citation of a cap that does not govern the pair.
+  - id: policy-notes-omits-a-violation
+    defect: >-
+      Produces /app/out/policy-notes.md with the RCP-0008 section removed, so
+      one matched pair the JSON marks violates_policy true gets no account.
+    expect: rejected
+    proves: >-
+      The liveness of policy_notes_covers_every_violation, and its divergence
+      from policy_notes_names_the_governing_limit in the opposite direction.
+      Measured by execution: coverage returns False and limit-naming returns
+      True, because every remaining section still cites its own governing cap.
+      Together with policy-notes-cites-the-wrong-limit this proves each of the
+      two compiled items fails on a defect the other passes.
+  - id: policy-notes-absent
+    defect: >-
+      Produces the other six deliverables correctly and writes no
+      /app/out/policy-notes.md at all.
+    expect: rejected
+    proves: >-
+      That both compiled items over this carrier and the judged item fail
+      closed on an absent file rather than scoring vacuously. Measured by
+      execution: both compiled items return False.
+  - id: policy-notes-falsifies-the-magnitude
+    defect: >-
+      Produces every deliverable correctly except that the RCP-0005 section of
+      /app/out/policy-notes.md reads "8100 strictly exceeds 7500, by 2400
+      cents, so the pair violates policy". The relation is correct, the verdict
+      is correct, both integers are present, the section set and heading order
+      are the oracle's, and only the stated difference is false: 8100 minus
+      7500 is 600.
+    expect: rejected
+    proves: >-
+      The liveness half of policy_magnitude_is_the_arithmetic_difference, and
+      the residue that makes it judged. Measured by execution against the whole
+      compiled surface over every prose carrier:
+      policy_notes_covers_every_violation,
+      policy_notes_names_the_governing_limit, contested_account_structure,
+      contested_account_names_an_alternative, parse_notes_covers_every_hazard
+      and parse_notes_quotes_the_correct_value all returned True on these
+      bytes. A second variant falsifying the non-violating shortfall from 1800
+      to 9900 returned True on all six as well. So no compiled item in this
+      bundle separates a true subtraction from a false one.
+    distinguished_from: >-
+      This control leaves policy_verdict_follows_from_the_two_numbers
+      satisfiable, because the relation it asserts and the verdict it reaches
+      are both the ones the numbers compel. That is the disjointness proof for
+      the two judged items of D7-policy-rationale by process: this control
+      falsifies exactly one of the pair.
+    not_caught_by_a_comparator: >-
+      Tested rather than assumed, because the magnitude is the difference of
+      two integers a compiled item already locates and a reduction would have
+      made the judged item BLOCK:INVALID_TASK under item 7e. The strongest
+      reasonable comparator, binding a "by N cents" phrase in a section and
+      requiring N to equal the absolute difference of that section's two
+      numbers, does return False on this control in the oracle's exact wording.
+      It returns True on the same false claim phrased "exceeding it by 2400",
+      "with a difference of 2400 cents", "2400 cents over", and on the figure
+      spelled in words. instruction.md prescribes no wording for the figure and
+      states that no length is prescribed, so a comparator that works only
+      where the solver copies the oracle's sentence shape reduces the oracle
+      rather than the judgment.
+  - id: parse-notes-misattributes-the-colon-mechanism
+    defect: >-
+      Produces every deliverable correctly except that the RCP-0003 and
+      RCP-0007 sections of /app/out/parse-notes.md claim the trailing-non-field
+      lines rule instead of the colon rule, while still quoting each receipt's
+      true VENDOR value and the truncation a naive split would produce. Neither
+      receipt carries a non-field line.
+    expect: rejected
+    proves: >-
+      The liveness half of parse_notes_attributes_the_colon_mechanism, and the
+      residue that makes it judged. Measured by execution: on these bytes
+      parse_notes_covers_every_hazard returns True and
+      parse_notes_quotes_the_correct_value returns True, because the heading
+      set is untouched and every string either checker requires survives the
+      swap. Only a reading of which rule each section attributes separates this
+      carrier from the oracle, so a criterion that accepts both is inert under
+      item 7e and the item must be judged.
+    distinguished_from: >-
+      This control leaves the RCP-0004 section correct, so
+      parse_notes_attributes_the_nonfield_mechanism must accept it while
+      parse_notes_attributes_the_colon_mechanism rejects it. That is one half
+      of the disjointness proof for the two judged items of
+      D8-parse-rationale by process.
+  - id: parse-notes-misattributes-the-nonfield-mechanism
+    defect: >-
+      Produces every deliverable correctly except that the RCP-0004 section of
+      /app/out/parse-notes.md claims the colon rule instead of the
+      trailing-non-field lines rule, while still quoting its true VENDOR value
+      'Carter & Voss LLP' and both of its non-field lines verbatim. Its VENDOR
+      value carries no colon.
+    expect: rejected
+    proves: >-
+      The liveness half of parse_notes_attributes_the_nonfield_mechanism.
+      Measured by execution: on these bytes parse_notes_covers_every_hazard
+      returns True and parse_notes_quotes_the_correct_value returns True,
+      because for a receipt whose VENDOR carries no colon the quoting item
+      requires the true vendor and every non-field line, all of which this
+      carrier still holds. The receipt's own bytes contradict the rule the
+      prose attributes to it and no comparator over the prose detects that.
+    distinguished_from: >-
+      This control leaves the RCP-0003 and RCP-0007 sections correct, so
+      parse_notes_attributes_the_colon_mechanism must accept it while
+      parse_notes_attributes_the_nonfield_mechanism rejects it. Together with
+      parse-notes-misattributes-the-colon-mechanism this is the disjointness
+      proof item 7e requires of two judged items in one cell: each control
+      fails exactly one of the pair.
+  - id: parse-notes-omits-a-hazardous-receipt
+    defect: >-
+      Produces /app/out/parse-notes.md with the RCP-0004 section removed, so a
+      receipt carrying non-field lines gets no account.
+    expect: rejected
+    proves: >-
+      The liveness of parse_notes_covers_every_hazard and its divergence from
+      parse_notes_quotes_the_correct_value. Measured by execution: coverage
+      returns False and quoting returns True, because the two remaining
+      sections still carry every string the quoting item requires.
+  - id: parse-notes-discusses-a-clean-receipt
+    defect: >-
+      Produces /app/out/parse-notes.md with a fourth section for RCP-0001,
+      whose VENDOR carries no colon and which has no non-field lines, so the
+      account discusses a receipt the statement forbids discussing.
+    expect: rejected
+    proves: >-
+      That the statement's prohibition on discussing a receipt whose bytes
+      exercise neither rule is enforced by membership rather than inferred.
+      Measured against current bytes in both placements: appended after
+      RCP-0007 and inserted in ascending position before RCP-0003, coverage
+      returns False either way while quoting returns True, so the defect is the
+      surplus member and not the ordering.
+  - id: parse-notes-misquotes-the-correct-value
+    defect: >-
+      Produces /app/out/parse-notes.md with every section present, ordered and
+      correctly attributed, but with the quoted correct VENDOR values mangled.
+    expect: rejected
+    proves: >-
+      The liveness of parse_notes_quotes_the_correct_value against something
+      other than absence, which item 7e requires because a criterion that
+      fails only on a missing carrier is inert. Measured by execution: coverage
+      returns True and quoting returns False, the opposite direction from
+      parse-notes-omits-a-hazardous-receipt, which completes the exclusivity
+      proof for the two compiled items.
+  - id: parse-notes-absent
+    defect: >-
+      Produces the other seven deliverables correctly and writes no
+      /app/out/parse-notes.md at all.
+    expect: rejected
+    proves: >-
+      That both compiled items over this carrier and both judged items fail
+      closed on an absent file rather than scoring vacuously. Measured by
+      execution: both compiled items return False.
+  - id: convention-notes-inverts-the-collapse
+    defect: >-
+      Produces every deliverable correctly except that the collapse section of
+      /app/out/convention-notes.md is inverted: it reads that the
+      absolute-value rule admits one eligible pair and the signed comparison
+      twelve, that the maximum matching holds one pair under the absolute rule
+      and eleven under the signed one so dropping the absolute value would gain
+      ten pairs, and that RCP-0011 to TXN-1007 is the pair the signed
+      comparison drops. Every figure and identifier the oracle names is still
+      present and the divergence section is untouched.
+    expect: rejected
+    proves: >-
+      The liveness half of convention_collapse_is_the_true_direction, and the
+      residue that makes it judged. Measured by execution against the whole
+      compiled surface: all eight compiled items over every prose carrier
+      returned True on these bytes. Only a reading of which rule each figure is
+      attached to, and of which direction the loss runs, separates this carrier
+      from the oracle, so a criterion accepting both is inert under item 7e and
+      the item must be judged rather than compiled.
+    distinguished_from: >-
+      This control leaves the divergence section exactly as written, so
+      convention_divergence_set_is_the_true_partition is left satisfiable. That
+      is one half of the disjointness argument for the two judged items of
+      D9-convention-divergence-rationale by process, and it is an argument from
+      what the control alters rather than a measured verdict, since no judge has
+      run.
+  - id: convention-notes-claims-the-rules-agree
+    defect: >-
+      Produces every deliverable correctly except that the divergence section
+      of /app/out/convention-notes.md asserts that no row differs between the
+      two rules and that the two rules agree on every row, TXN-1007 and
+      TXN-1011 included, while still naming all twelve txn_ids. The collapse
+      section is untouched, so the account simultaneously says that dropping
+      the absolute value costs ten matched pairs and that no row's eligible set
+      changes.
+    expect: rejected
+    proves: >-
+      The liveness half of convention_divergence_set_is_the_true_partition.
+      Measured by execution: all eight compiled items returned True on these
+      bytes, because convention_notes_names_every_row is a membership test over
+      the section's txn_id tokens and every token is still present. The
+      assignment of a named row to the wrong group is invisible to it, which is
+      the residue stated as a measurement.
+    distinguished_from: >-
+      This control leaves the collapse section exactly as written, so
+      convention_collapse_is_the_true_direction is left satisfiable. Together
+      with convention-notes-inverts-the-collapse it is the disjointness
+      argument item 7e requires of two judged items in one cell: each control
+      corrupts the subject of exactly one of the pair. Argued from the control
+      design rather than executed, since a judge is required to execute a
+      judged item and none has run.
+  - id: convention-notes-states-only-the-general-shape
+    defect: >-
+      Produces /app/out/convention-notes.md with both sections and a correct
+      collapse, but with the divergence section's ten row names replaced by the
+      phrase "the debit rows" and the coinciding pair left unnamed.
+    expect: rejected
+    proves: >-
+      The liveness of convention_notes_names_every_row against something other
+      than absence, which item 7e requires because a criterion failing only on
+      a missing carrier is inert. Measured by execution:
+      convention_notes_names_every_row returns False while
+      convention_notes_carries_both_sections returns True, which is also the
+      exclusivity divergence between the two compiled items of this obligation.
+      It is the defect instruction.md names directly when it says an account
+      stating only the general shape cannot be checked against these inputs.
+  - id: convention-notes-absent
+    defect: >-
+      Produces the other eight deliverables correctly and writes no
+      /app/out/convention-notes.md at all.
+    expect: rejected
+    proves: >-
+      That both compiled items over this carrier and both judged items fail
+      closed on an absent file rather than scoring vacuously. Measured by
+      execution: both compiled items return False while every compiled item
+      over the other prose carriers still returns True, so the failure is
+      confined to this obligation.
+  - id: no-op
+    defect: Produces no deliverable at all.
+    expect: rejected
+
+# ---------------------------------------------------------------------------
+# Item 10a: sentinel cases the checker must pass and malformed cases it must
+# fail, proving each checker fires on both halves.
+# ---------------------------------------------------------------------------
+sentinels:
+  - id: reference
+    kind: must-pass
+    note: The reference solution derived from this file.
+malformed:
+  - id: json-not-object
+    kind: must-fail
+    note: reconciliation.json holding a JSON array instead of an object.
+  - id: summary-extra-whitespace
+    kind: must-fail
+    note: summary.txt with trailing whitespace on a line.
+  - id: snapshot-absent
+    kind: must-fail
+    note: snapshot.sql missing while the other three deliverables are correct.
+  - id: app-unreachable
+    kind: must-fail
+    note: >-
+      no route answers within the health deadline while every file deliverable
+      is correct.
+  - id: served-row-count-wrong
+    kind: must-fail
+    note: a review screen rendering one fewer matched row than the JSON declares.
+  - id: contested-account-token-stuffed
+    kind: must-fail
+    note: >-
+      contested.md whose three sections name every identifier the eligible sets
+      admit and nothing else, with no sentence asserting any pairing or reason.
+      It satisfies both compiled contested items and must fail both judged ones,
+      which is the sharpest statement of the residue: the carrier's tokens are
+      right and its claims are absent.
+
+# ---------------------------------------------------------------------------
+# Item 10f / 8: the checker set. Each reduces to exactly one outcome class.
+# Every item here is mode compiled: each judgment below is deterministically
+# reducible over its named evidence, and item 10f makes mode judged never an
+# authoring choice for such a judgment. The judged items are authored in a
+# later pass, after the drafting acceptance predicate binds.
+# ---------------------------------------------------------------------------
+checkers:
+  - id: reconciliation_json_wellformed
+    outcome_class: VALUE
+    weight: 3
+    criterion: >-
+      /app/out/reconciliation.json parses as one JSON object carrying exactly
+      the keys matched, unreceipted, unposted and totals, with matched a list
+      of objects each carrying exactly receipt_id, txn_id, amount_delta_cents,
+      date_delta_days, category and violates_policy.
+  - id: matched_set_exact
+    outcome_class: VALUE
+    weight: 5
+    criterion: >-
+      The matched array equals the maximum-cardinality matching the policy and
+      corpus determine, pair for pair, including each amount_delta_cents and
+      date_delta_days.
+  - id: matched_sorted_by_receipt_id
+    outcome_class: ORDERING
+    weight: 1
+    criterion: The matched array is sorted by receipt_id ascending.
+  - id: unreceipted_set_exact
+    outcome_class: VALUE
+    weight: 3
+    criterion: >-
+      unreceipted equals the set of txn_id values with no matched receipt,
+      sorted ascending.
+  - id: unposted_set_exact
+    outcome_class: VALUE
+    weight: 3
+    criterion: >-
+      unposted equals the set of RECEIPT-ID values with no matched row, sorted
+      ascending.
+  - id: violation_flags_exact
+    outcome_class: VALUE
+    weight: 3
+    criterion: >-
+      Each matched pair's violates_policy is true exactly when its category
+      appears in category_limits_cents and its total in cents strictly exceeds
+      that limit.
+  - id: totals_consistent
+    outcome_class: INVARIANT
+    weight: 3
+    criterion: >-
+      Each count in totals equals the length of the list it describes, and
+      violation_count equals the number of matched pairs with violates_policy
+      true.
+  - id: summary_matches_json
+    outcome_class: DIVERGENCE
+    weight: 3
+    criterion: >-
+      summary.txt carries exactly four lines in the declared order whose
+      numbers equal the corresponding totals in reconciliation.json, with no
+      leading or trailing whitespace and exactly one space after each colon.
+  - id: snapshot_table_shape
+    outcome_class: INVARIANT
+    weight: 3
+    criterion: >-
+      snapshot.sql shows a reconciliation relation carrying exactly the six
+      declared columns and no others.
+  - id: snapshot_agrees_with_reconciliation_json
+    outcome_class: DIVERGENCE
+    weight: 5
+    criterion: >-
+      Every row in snapshot.sql corresponds to exactly one entry of the
+      matched array with identical field values, and the row count equals
+      matched_count, so a stale dump is rejected.
+  - id: inputs_unmodified
+    outcome_class: ABSENCE
+    weight: 5
+    criterion: >-
+      No byte under /app/inputs/ differs from the bytes the image shipped.
+  - id: review_screen_structure
+    outcome_class: VALUE
+    weight: 3
+    criterion: >-
+      The review screen the application serves at / carries the elements
+      matched-table, unreceipted-list, unposted-list, totals-matched,
+      totals-unreceipted, totals-unposted and totals-violations, with
+      matched-table holding one row per matched pair, each carrying a
+      data-receipt-id attribute and exactly six cells.
+  - id: review_screen_rows_sorted
+    outcome_class: ORDERING
+    weight: 1
+    criterion: >-
+      The data-receipt-id attributes of the matched-table rows, read top to
+      bottom, are in ascending order.
+  - id: review_screen_columns_aligned
+    outcome_class: INVARIANT
+    weight: 1
+    criterion: >-
+      Within matched-table, every cell of one column shares a left edge with
+      every other cell of that column to within one device-independent pixel at
+      the 1280 by 800 viewport.
+  - id: served_screen_agrees_with_reconciliation_json
+    outcome_class: DIVERGENCE
+    weight: 5
+    criterion: >-
+      Every matched-table row the served review screen renders corresponds to
+      exactly one entry of the matched array with identical receipt id, txn id,
+      amount delta, date delta, category and policy state, the row count equals
+      matched_count, and the four totals elements and two id lists equal their
+      JSON counterparts, so a served screen diverging from its own declared
+      result is rejected.
+  - id: detail_screens_complete
+    outcome_class: VALUE
+    weight: 3
+    criterion: >-
+      The application serves one detail screen per matched pair at
+      /pair/<receipt_id>, each returning 200 and carrying pair-receipt-id,
+      pair-txn-id, pair-amount-delta, pair-date-delta, pair-category and
+      pair-policy-state whose values equal that pair's entry in the matched
+      array.
+  - id: served_screens_request_no_external_origin
+    outcome_class: ABSENCE
+    weight: 5
+    criterion: >-
+      Loading the review screen and every detail screen issues no browser
+      request to an origin other than the application's own, observed through
+      request interception so a URL composed at runtime is seen, and so every
+      asset the rendered surface needs is served by the application itself.
+  - id: contested_account_structure
+    outcome_class: VALUE
+    weight: 3
+    mode: compiled
+    criterion: >-
+      /app/out/contested.md carries exactly three sections, each opening with a
+      line of the form "## <txn_id>" whose txn_id is a row of
+      environment/inputs/statement.csv, the three txn_id values are distinct,
+      and each section's body carries at least one non-blank prose line.
+  - id: contested_account_names_an_alternative
+    outcome_class: COVERAGE
+    weight: 3
+    mode: compiled
+    criterion: >-
+      Every section of /app/out/contested.md whose txn_id has an admissible
+      receipt besides the one the matched array of
+      /app/out/reconciliation.json pairs it with names at least one of those
+      further receipts, at least one section is such a section, and the
+      admissible set is recomputed from environment/inputs/ rather than read
+      from the prose.
+    criterion_prior_recording: >-
+      Supersedes a frozen prose that read "Each section ... names ... at least
+      one further RECEIPT-ID or txn_id drawn from the eligible set". That
+      quantifier was universal over all three sections and no correct
+      deliverable could satisfy it, because the corpus gives exactly one row a
+      losing alternative. Measured by executing this checker against the
+      oracle's own /app/out/contested.md: the three sections resolve to
+      admissible sets {RCP-0008, RCP-0011} for TXN-1009 with partner RCP-0008
+      and others {RCP-0011}, {RCP-0011} for TXN-1007 with partner RCP-0011 and
+      others empty, and the empty set for TXN-1011 which matched nothing, so
+      two of three sections had nothing to name and the item returned False
+      while contested_account_structure returned True on the same bytes. The
+      quantifier is now conditional on the row having an alternative, and the
+      second conjunct keeps it from passing vacuously on three rows that have
+      none. Recorded under named gap contested-alternative-item-unsatisfiable,
+      which closes on this repair.
+    mode_source: >-
+      Authored compiled rather than judged after an explicit ruling. The
+      eligible set is recomputable from the corpus and membership of a token in
+      that set is decidable over the prose bytes, so item 10f's clause that a
+      deterministically reducible judgment "must use mode compiled" and that
+      "mode judged is never an authoring choice for it" applies. The weaker
+      residual claim, whether the prose asserts that receipt as an alternative
+      rather than merely naming it, is not this criterion and is not authored
+      as one; solution/grounding.yaml records the ruling under
+      judged_candidates as contested-alternative-is-claimed-as-such.
+  - id: policy_notes_covers_every_violation
+    outcome_class: COVERAGE
+    weight: 5
+    mode: compiled
+    criterion: >-
+      /app/out/policy-notes.md carries one section per receipt_id that the
+      matched array of /app/out/reconciliation.json marks violates_policy true,
+      those sections stand first in ascending receipt_id order, exactly one
+      further section names a receipt_id the same array marks violates_policy
+      false, every heading is distinct and of the form "## <receipt_id>", and
+      every section body carries at least one non-blank line.
+    mode_source: >-
+      Compiled rather than judged, because which receipts violate is a
+      reference value /app/out/reconciliation.json already declares and
+      membership of a heading in that set is decidable over the prose bytes.
+      Item 10f's clause that a deterministically reducible judgment "must use
+      mode compiled" applies, and the residual claim about what each section
+      asserts is authored separately as a judged item rather than folded in
+      here.
+    weight_source: >-
+      Weighted 5 rather than 3 because its failure costs the obligation its
+      whole subject: a missing section is a policy decision the account never
+      makes, and the deliverable exists to account for every violation. By
+      contrast contested_account_structure is weighted 3, because the three
+      contested rows are the solver's own choice and no particular row is owed.
+  - id: policy_notes_names_the_governing_limit
+    outcome_class: VALUE
+    weight: 3
+    mode: compiled
+    criterion: >-
+      Each section of /app/out/policy-notes.md carries its receipt's TOTAL in
+      cents and the category_limits_cents value policy.json sets for that
+      receipt's own CATEGORY, carries no limit value policy.json sets for a
+      different category, and where the category appears in no limit carries no
+      limit value at all, with every value recomputed from environment/inputs/
+      rather than read from the prose.
+    mode_source: >-
+      Compiled rather than judged. Both the receipt total and the governing cap
+      are reference values recomputable from environment/inputs/, and whether a
+      section carries the one that governs it rather than a neighbouring
+      category's is decidable over the prose bytes by comparing the integers it
+      contains against the limits table. The claim this cannot settle, whether
+      the stated relation between those two numbers is the one that holds, is
+      authored as the judged item policy_verdict_follows_from_the_two_numbers.
+    weight_source: >-
+      Weighted 3 rather than 5. Its failure is a wrong citation inside an
+      otherwise complete account, which misleads a reviewer without removing a
+      decision, whereas policy_notes_covers_every_violation at 5 loses the
+      decision entirely.
+  - id: parse_notes_covers_every_hazard
+    outcome_class: COVERAGE
+    weight: 5
+    mode: compiled
+    criterion: >-
+      /app/out/parse-notes.md carries exactly one section per receipt in
+      environment/inputs/receipts/ whose VENDOR value contains a colon or which
+      carries a line that is not a field line, the headings are those
+      receipt_ids in ascending order and no others, and every section body
+      carries at least one non-blank line, with the hazardous set recomputed
+      from the receipt bytes rather than read from the prose.
+    mode_source: >-
+      Compiled rather than judged. Which receipts carry a hazard is decidable
+      over environment/inputs/receipts/ by the two rules the statement states,
+      and heading membership in that recomputed set is decidable over the prose
+      bytes, so item 10f's clause that a deterministically reducible judgment
+      must use mode compiled applies. The claim this cannot settle, which
+      mechanism the prose attributes to each receipt, is authored as the two
+      judged items over this obligation.
+    weight_source: >-
+      Weighted 5 against item 9g's test. A missing section is a hazardous
+      receipt the account never discusses, and a surplus section discusses a
+      receipt the statement forbids discussing, so either failure means the
+      account does not describe the set the obligation names. Measured in both
+      directions: dropping the RCP-0004 section returns False, and adding a
+      section for RCP-0001, which carries neither hazard, returns False whether
+      appended or placed in ascending position.
+  - id: parse_notes_quotes_the_correct_value
+    outcome_class: VALUE
+    weight: 3
+    mode: compiled
+    criterion: >-
+      Each section of /app/out/parse-notes.md carries its receipt's correct
+      VENDOR value under the first-colon-only rule, and additionally carries
+      the truncated value a split-on-every-colon parse would produce where the
+      receipt's VENDOR contains a colon, or every one of its non-field lines
+      where it does not, with every value recomputed from the receipt bytes
+      rather than read from the prose.
+    mode_source: >-
+      Compiled rather than judged. The correct vendor value, the truncation a
+      naive split yields, and the non-field lines are all reference values
+      recomputable from the receipt bytes, and whether a section carries those
+      strings is decidable over the prose bytes. What this cannot settle is
+      which mechanism the section attributes to the receipt, because the
+      strings it requires survive an attribution swap untouched, which is
+      measured under the two judged items' residues.
+    weight_source: >-
+      Weighted 3 against item 9g's test. Its failure is a misquotation inside
+      an account whose section set and attributions may be right, so a reviewer
+      still learns which receipts are hazardous and which rule governs each and
+      is misled only about the literal value. That is substantial but partial
+      credit, below parse_notes_covers_every_hazard at 5 where the set itself
+      is wrong. Liveness measured independently of absence: mangling the quoted
+      vendor values returns False while the section set stays correct.
+  - id: convention_notes_carries_both_sections
+    outcome_class: VALUE
+    weight: 3
+    mode: compiled
+    criterion: >-
+      /app/out/convention-notes.md carries exactly two sections, the first
+      headed "## collapse" and the second "## divergence" in that order and
+      with no other heading, and each section body carries at least one
+      non-blank line.
+    mode_source: >-
+      Compiled rather than judged. The statement fixes both headings and their
+      order as literals, so whether the carrier holds them is decided by a
+      comparison over its own bytes and item 10f's clause that a
+      deterministically reducible judgment must use mode compiled applies. What
+      this cannot decide is whether either section's claims are true, which the
+      two judged items over this obligation grade.
+    weight_source: >-
+      Weighted 3 against item 9g's test, which sets 3 where failing the item
+      costs substantial but partial credit. A carrier missing the divergence
+      section loses half the account, which is substantial; a carrier holding
+      both sections in the wrong order or under a third heading still carries
+      both bodies and a reader can follow it. Neither failure destroys the
+      obligation the way a false claim does, so it sits below both judged items
+      and below convention_notes_names_every_row, whose failure removes the
+      checkable content rather than its container.
+  - id: convention_notes_names_every_row
+    outcome_class: COVERAGE
+    weight: 5
+    mode: compiled
+    criterion: >-
+      The divergence section of /app/out/convention-notes.md names every txn_id
+      of environment/inputs/statement.csv whose eligible receipt set differs
+      between the absolute-value rule and the signed comparison, and every
+      txn_id whose set is the same under both, where both sets are recomputed
+      from environment/inputs/ rather than read from the prose.
+    mode_source: >-
+      Compiled rather than judged. Both partitions are recomputable from the
+      shipped corpus by building the eligibility graph twice, and whether a
+      txn_id token appears in the divergence section is decidable over the
+      prose bytes, so the judgment reduces and item 10f forbids mode judged for
+      it. The claim it cannot settle is which partition the prose assigns each
+      named row to, which is authored as
+      convention_divergence_set_is_the_true_partition.
+    weight_source: >-
+      Weighted 5 against item 9g's test, which sets 5 where failing the item
+      alone fails its obligation. The statement's own words are that an account
+      stating only the general shape "cannot be checked against these inputs",
+      so naming the rows is the obligation rather than an adornment of it.
+      Measured: a carrier replacing the ten row names with the phrase "the
+      debit rows" returns False here while
+      convention_notes_carries_both_sections returns True, so the failure is
+      the loss of every checkable claim in the section while its container
+      stands.
+
+# ---------------------------------------------------------------------------
+# Item 10f: the judged items. Kept in their own block rather than beside the
+# compiled checkers because solution/recompute.py iterates the checkers block
+# to emit tests/test_output.py, and a judged item emitted as a Reward Kit
+# criterion would be graded by a comparator that cannot settle it. Each item
+# here is emitted to tests/judge.toml instead, and every field this block
+# carries is one item 10f names.
+# ---------------------------------------------------------------------------
+judged_items:
+  note: >-
+    Five items at mode judged, over three obligations and three cells: two in
+    D6-contested-account by process, one in D7-policy-rationale by process, and
+    two in D8-parse-rationale by process. Each reads a written prose carrier no
+    item of any other cell reads, so no judged item overlaps a compiled one and
+    no judged item of one cell can collide with one of another.
+
+    Item 7e scopes exclusivity per cell, "no two judged items of one cell state
+    the same check", which is a distinctness requirement and not a count, so a
+    cell admits as many items as there are distinct defects. Each cell carrying
+    two items argues its pair disjoint from the design of its shipped controls
+    rather than from execution, since a judge is required to execute a judged
+    item and no judge has run against this bundle; the grid note for each
+    records which control corrupts the subject of which item. What execution
+    does establish for every one of those controls is that the whole compiled
+    surface accepts it, which is the residue and is recorded as measured.
+
+    Corrected form. An earlier revision of this note said those cells "prove
+    their pair disjoint by execution rather than by argument", which overstated
+    what was done and contradicted the honest form the D6 exclusivity record
+    already carried. The overstatement is named rather than quietly narrowed.
+
+    Supersedes an earlier note recording two items in one cell. That note was
+    true of the surface it described and its disjointness argument for the D6
+    pair stands unchanged: an account naming the wrong partner while giving a
+    sound general reason fails the first and can pass the second, and an
+    account naming the right partner while attributing it to closeness fails
+    the second and passes the first.
+  judge:
+    backend: claude-code
+    model: anthropic/claude-fable-5
+    version: 2.1.314
+    cwd: /app
+    mode: individual
+    backend_source: >-
+      Measured rather than preferred. Reward Kit routes a [judge] value naming a
+      known agent through its agent-judge backend, which execs that agent's CLI,
+      and any other value through the LLM backend, which calls the Anthropic
+      messages endpoint over HTTP. The two are not interchangeable against the
+      credential this bundle is graded with. task.toml [verifier.env] carries
+      CLAUDE_CODE_OAUTH_TOKEN, a subscription sk-ant-oat token, and the same
+      token on the same host 35 seconds apart was refused by the plain endpoint
+      with a rate_limit_error and accepted by the CLI, which returned the
+      requested string. A factorial probe over an identity preamble and a
+      json_schema response_format failed in all eight cells, so the refusal is
+      the transport rather than the request shape or an exhausted quota. The LLM
+      backend therefore cannot grade this bundle at all, which is why the backend
+      is a source value here rather than the field being left to default.
+    version_source: >-
+      The CLI is not fetchable at grade time: [verifier] runs under an allowlist
+      that admits api.anthropic.com alone, and _ensure_claude_installed would
+      otherwise curl an installer. tests/Dockerfile therefore bakes exactly this
+      release, selected by explicit TARGETARCH against its published sha256, and
+      asserts it in both the stage that builds it and the stage that ships it.
+      Pinning the same value here makes rewardkit's _matching_binary accept the
+      baked binary rather than install over it, and sets DISABLE_UPDATES.
+    cwd_source: >-
+      AgentJudge carries no files field, and rewardkit's prompts/agent.md tells
+      the judge to explore its working directory, so the per-criterion files
+      lists the eight items declare are reachable only if the judge starts in the
+      workspace the deliverables are restored into. That is /app, which
+      rewardkit's own --workspace default also names.
+    isolated_source: >-
+      Not emitted, so it defaults false, and tests/test.sh passes --yolo to
+      accept the resulting shared-workspace warning. isolated = true is the
+      documented alternative and is unavailable here: it mounts overlayfs, which
+      the unprivileged verifier container cannot do, and rewardkit fails the
+      whole reward rather than degrading. The exposure the warning names is
+      bounded, because Harbor collects every artifact before the verifier starts
+      and each criterion reads named paths rather than enumerating the tree.
+    mode_source: >-
+      Forced by the carrier's own shape rather than chosen, which is why it is a
+      generated consequence rather than an authored preference. Every one of the
+      eight judged items carries its own files list and the [judge] table
+      declares no files key, so Reward Kit's JudgeConfig.files resolves empty.
+      reward.py lines 211 to 217 then refuse the combination: "if
+      self.judge.mode == \"batched\": if c.files and isinstance(self.judge,
+      (LLMJudge, JevJudge)): raise ValueError(... per-criterion 'files' requires
+      the judge to use mode = \"individual\". Set the mode or remove the
+      criterion-level files.)". JudgeMode at models.py line 274 is
+      Literal["batched", "individual"] and JudgeConfig.mode defaults to
+      "batched" at line 320, so exactly one admitted value satisfies this
+      carrier and no operator choice selects it.
+    mode_why_not_removing_the_files_lists: >-
+      The validator names two remedies and only one preserves the evidence.
+      judges.py line 435 passes judge.files on the batched path and never reads
+      c.files, while line 458 on the individual path passes "c.files or
+      judge.files". With judge.files empty, batched would grade all eight
+      criteria against no evidence at all, which is exactly the silent loss the
+      validator exists to prevent. Removing the per-criterion files lists
+      therefore realizes that loss rather than avoiding it, and it would weaken
+      eight criteria to satisfy a tool, which rules.md rule 6 and the operator's
+      own Part E.1 feedback both forbid.
+    mode_cost_not_semantics: >-
+      judges.py _arun_llm_individual at lines 443 to 472 fans the criteria out
+      concurrently under one asyncio.TaskGroup, one call per criterion, slicing
+      weights per criterion at line 457 and concatenating the scores at line
+      468. So the eight criteria grade on the same evidence each one names, and
+      the change is from one model call to eight. That is a cost change rather
+      than a semantics change, and the operator accepted the cost explicitly.
+    model_source: >-
+      Named by the operator for this bundle, which is the source value item 10f
+      conditions emission on: "omit [judge] unless a source value exists". The
+      clause turns on a source value existing rather than on its being derived
+      from the grounding, and this is where such a value is retained so
+      solution/recompute.py emits the table rather than a hand edit asserting
+      it.
+    model_requested: >-
+      The operator asked for Fable 5.1. That request is recorded here with the
+      substitution rather than silently resolved, because the shipped value is
+      Fable 5 and a reader comparing the two must see which was asked for.
+    model_substitution_reason: >-
+      Both forms route identically: litellm get_llm_provider resolves
+      anthropic/claude-fable-5 and anthropic/claude-fable-5-1 alike to provider
+      anthropic, and rewardkit judges _is_anthropic_direct_model admits both, so
+      either reaches the subscription token path. They differ on cost data under
+      the flag this bundle itself sets. tests/../task.toml [verifier.env]
+      carries LITELLM_LOCAL_MODEL_COST_MAP = "True", which makes litellm load
+      its bundled backup map rather than the live one. Measured: the live
+      default map holds 4429 entries including claude-fable-5-1, while the same
+      map under that flag holds 2953 and claude-fable-5-1 is absent from it
+      whereas claude-fable-5 is present with input_cost_per_token 1e-05. An
+      absent key is not fatal, since get_model_info still returns a record,
+      but it returns input_cost_per_token 0, so a 5-1 pin would grade correctly
+      and report judge cost as zero in every pilot run. Fable 5 is therefore the
+      only Fable form that keeps cost accounting honest under this bundle's own
+      configuration.
+    model_repin_is_a_separate_edit: >-
+      A later Harbor or litellm release whose cost map carries a Fable 5.1 entry
+      under the local-cost-map flag makes the 5.1 pin lossless, and moving to it
+      is a separate deliberate edit that re-mints this bundle. It is not implied
+      by this record and no future value is pre-authorized here.
+    emitted_fields: >-
+      Five: judge, model, version, mode and cwd. Reward Kit's JudgeConfig is
+      declared extra="forbid" and carries thirteen fields: judge, model,
+      version, files, mode, timeout, reasoning_effort, isolated, cwd,
+      reference, atif_trajectory, mcp_servers and weight. The five emitted are
+      the five this record retains a source value for, each under its own
+      _source key above. The remaining eight are not emitted: files would
+      override the per-criterion lists the eight items declare, isolated is
+      addressed under isolated_source, and no source value exists for timeout,
+      reasoning_effort, reference, atif_trajectory, mcp_servers or weight.
+  items:
+  - id: contested_pairing_matches_declared_matching
+    outcome_class: DIVERGENCE
+    weight: 5
+    negate: false
+    obligation: D6-contested-account
+    dimension: process
+    evaluation_target: /app/out/contested.md
+    evidence:
+      - /app/out/contested.md
+      - /app/out/reconciliation.json
+    criterion: >-
+      In each section of /app/out/contested.md, the prose asserts for that
+      section's txn_id the same receipt pairing that the matched array of
+      /app/out/reconciliation.json declares for it, or asserts that the row was
+      matched to no receipt where that array carries none, judged as what the
+      sentences claim rather than which identifiers they contain.
+    residue: >-
+      What blocks compilation is predication, not vocabulary. The pairing this
+      criterion checks is itself a reference value a comparator settles over
+      /app/out/reconciliation.json, so the comparison is deterministic wherever
+      the claim is already structured. The carrier is free English prose, and a
+      comparison over the bytes of that carrier decides only whether an
+      identifier occurs in a section, never what the sentence containing it
+      asserts. A section reading "TXN-1009 was not matched to RCP-0008; it went
+      to RCP-0011" carries both identifiers and states the opposite of the
+      matched array, so every substring, regular-expression and token-set
+      comparator over the prose accepts it while the claim is false. Reducing
+      the check to whether the identifiers co-occur would grade whether the
+      account mentions the pairing rather than whether it states it, which is a
+      weaker claim than the criterion makes; reducing it to the JSON instead
+      would grade the matching, which eight compiled items already do, and not
+      the account. The item therefore stays judged against a written document,
+      which is why the bundle declares a judged carrier under item 10f.
+    weight_source: >-
+      Weighted 5 against item 9g's test, which sets 5 where failing the item
+      alone fails its obligation. D6-contested-account exists to produce an
+      account of three disputed rows that a reviewer can check against the
+      inputs. A section asserting a pairing the solver's own
+      /app/out/reconciliation.json contradicts is not a partially useful
+      account of that row, it is a false one: a reviewer acting on it would
+      look for a pair the run never made. Failing this item alone therefore
+      fails the obligation, and no partial credit survives it.
+  - id: contested_reason_is_the_operative_rule
+    outcome_class: VALUE
+    weight: 3
+    negate: false
+    obligation: D6-contested-account
+    dimension: process
+    evaluation_target: /app/out/contested.md
+    evidence:
+      - /app/out/contested.md
+      - environment/inputs/statement.csv
+      - environment/inputs/receipts/
+      - environment/inputs/policy.json
+    criterion: >-
+      In each section of /app/out/contested.md, the reason the prose gives for
+      resolving that txn_id as it did is a reason the shipped inputs make true
+      for that row under the stated matching rules, rather than a different
+      rule that happens to name the same quantities.
+    residue: >-
+      Whether a stated reason is the operative one is not a property of the
+      tokens the prose carries. The decisive case is in the shipped corpus: the
+      maximum-cardinality rule routes RCP-0011 to TXN-1007 at an amount delta
+      of +45 cents while a nearer edge existed, so an account reading "RCP-0011
+      took TXN-1007 because its amount delta was smaller" states a reason the
+      inputs make false, using the vocabulary of the rules a keyword comparator
+      would look for. Every comparator over the carrier's bytes that is strong
+      enough to accept the true account also accepts that false one, because
+      the two differ in what they predicate rather than in which terms they
+      use. Reducing the check to a required keyword set would grade whether the
+      account speaks the vocabulary of the rules rather than whether it gives
+      the reason, which is a weaker claim than the criterion makes. The item
+      therefore stays judged.
+    weight_source: >-
+      Weighted 3 against item 9g's test, which sets 3 where failing the item
+      costs substantial but partial credit. A section that states the pairing
+      its own reconciliation.json declares and then gives the wrong reason
+      still tells a reviewer which receipt matched which row, which is the
+      larger half of what the obligation asks; only the why is lost, and a
+      reviewer who knows the rules can re-derive it from the inputs the section
+      names. That is partial rather than total failure of the obligation, so it
+      sits below contested_pairing_matches_declared_matching at 5, where the
+      pairing itself is false and nothing in the section survives.
+    weight_prior_recording: >-
+      Superseded from 5. The earlier value was not derived against item 9g's
+      test at all: all three judged items carried 5 with no weight_source,
+      which item 10f names as the defect it forbids, "never by a uniform
+      default". The 5 is corrected rather than deleted so the uniform-default
+      error stays readable as history. Re-derivation moved this item alone;
+      the other two were tested the same way and hold at 5 on their own
+      grounds, recorded in their own weight_source fields.
+  - id: policy_verdict_follows_from_the_two_numbers
+    outcome_class: DIVERGENCE
+    weight: 5
+    negate: false
+    obligation: D7-policy-rationale
+    dimension: process
+    evaluation_target: /app/out/policy-notes.md
+    evidence:
+      - /app/out/policy-notes.md
+      - /app/out/reconciliation.json
+      - environment/inputs/policy.json
+    criterion: >-
+      In each section of /app/out/policy-notes.md, the relation the prose
+      asserts between the receipt total and the category limit it names is the
+      relation those two numbers actually stand in, and the violation verdict
+      the prose states for that pair is the one that relation entails under the
+      rule that a pair violates when its category carries a limit and its total
+      strictly exceeds it, judged as what the sentences claim rather than which
+      numbers they contain.
+    residue: >-
+      Measured rather than argued. Both compiled items over this carrier were
+      executed against a control that replaces the oracle's sentence "8100
+      strictly exceeds 7500, by 600 cents, so the pair violates policy" with
+      "8100 does not exceed 7500, so the pair does not violate policy", leaving
+      the section set, the heading order, the receipt total and the governing
+      cap untouched. policy_notes_covers_every_violation returned True and
+      policy_notes_names_the_governing_limit returned True on those bytes, so
+      the whole compiled surface accepts an account whose arithmetic claim is
+      false and whose verdict contradicts /app/out/reconciliation.json.
+
+      The gap is predication again, and it is a different predication from the
+      D6 items. Those grade whether a stated pairing matches a declared
+      matching and whether a stated reason is the operative rule. This grades
+      whether a stated inequality between two integers holds and whether the
+      verdict follows from it. A comparator over the carrier's bytes decides
+      that both integers occur and that the governing cap rather than a
+      neighbour's is cited, which is exactly what the two compiled items do;
+      it cannot decide whether "strictly exceeds" or "does not exceed" is the
+      true relation between them, because both readings use the same two
+      numbers and the same vocabulary. Reducing the check to a required phrase
+      such as "strictly exceeds" would grade whether the account speaks the
+      rule's words rather than whether its claim is true, and would accept an
+      account using that phrase about the wrong pair.
+
+      Not reducible by reading the JSON instead. The verdict is already
+      compiled by violation_flags_exact over
+      /app/out/reconciliation.json, and that item grades the matching rather
+      than the account; an account can carry a verdict that agrees with the
+      JSON while asserting an inequality that does not hold, and an account can
+      assert a true inequality while stating a verdict the JSON contradicts.
+      Those are two distinct defects and the criterion names one condition over
+      the account's own sentences, which is why it stays judged.
+    weight_source: >-
+      Weighted 5 against item 9g's test, which sets 5 where failing the item
+      alone fails its obligation. D7-policy-rationale exists to record the
+      policy decision on each violating pair. A section stating that a pair
+      does not violate where the numbers make it violate, or the reverse,
+      records the opposite decision from the one the inputs compel, and a
+      reviewer acting on it would clear an over-limit expense or challenge a
+      compliant one. No partial credit survives a reversed decision, so this
+      sits at 5 rather than at 3 beside
+      contested_reason_is_the_operative_rule, where the pairing survives and
+      only the explanation is lost.
+  - id: parse_notes_attributes_the_colon_mechanism
+    outcome_class: DIVERGENCE
+    weight: 5
+    negate: false
+    obligation: D8-parse-rationale
+    dimension: process
+    evaluation_target: /app/out/parse-notes.md
+    evidence:
+      - /app/out/parse-notes.md
+      - environment/inputs/receipts/
+    criterion: >-
+      In each section of /app/out/parse-notes.md whose receipt carries a colon
+      inside its VENDOR value, the format rule the prose attributes to that
+      receipt is the rule that only the first colon on a line separates the
+      field name from its value, and the wrong reading the prose describes is
+      the truncation a split-on-every-colon parse would produce, judged as what
+      the sentences attribute rather than which rules they mention.
+    residue: >-
+      Measured rather than predicted. A control was built from the oracle's own
+      /app/out/parse-notes.md by swapping only the rule-naming sentence: the
+      RCP-0003 section was made to claim the trailing-non-field-lines rule and
+      the RCP-0004 section the colon rule, with every heading, every quoted
+      vendor value and every quoted dropped fragment left exactly as the oracle
+      wrote them. Both compiled items over this carrier returned True on those
+      bytes, and the oracle returned True on its own, so the whole compiled
+      surface accepts an account that attributes the wrong mechanism to the
+      wrong receipt.
+
+      Why no comparator separates them. parse_notes_covers_every_hazard
+      compares the heading set against the hazard set recomputed from
+      environment/inputs/receipts/ and requires a non-empty body, so it reads
+      no rule-naming sentence at all. parse_notes_quotes_the_correct_value
+      branches on whether the receipt's own bytes carry a colon in VENDOR,
+      taken from the receipt rather than from the prose, and then requires the
+      true vendor string and, for a colon receipt, the truncated form; the swap
+      leaves both of those strings exactly where they were. Every token either
+      checker reads survives the swap untouched, which is the gap between
+      naming a rule somewhere in a document and attributing it to a receipt.
+
+      Not reducible by requiring the rule's words near the heading. A section
+      may state the colon rule correctly and still describe a wrong reading
+      that the colon parse would not produce, and proximity of a phrase to a
+      heading is not the claim the criterion makes. The criterion names one
+      condition over the sentences of the colon sections, so it stays judged.
+    weight_source: >-
+      Weighted 5 against item 9g's test, which sets 5 where failing the item
+      alone fails its obligation. The colon mechanism spans two of the three
+      hazardous receipts, RCP-0003 and RCP-0007, so misattributing it corrupts
+      the majority of the account. The obligation exists to tell a reader which
+      of the two format rules each receipt exercises, and an account that gets
+      that wrong on two of three receipts has not performed the obligation at
+      all rather than performed it partially.
+  - id: parse_notes_attributes_the_nonfield_mechanism
+    outcome_class: DIVERGENCE
+    weight: 3
+    negate: false
+    obligation: D8-parse-rationale
+    dimension: process
+    evaluation_target: /app/out/parse-notes.md
+    evidence:
+      - /app/out/parse-notes.md
+      - environment/inputs/receipts/
+    criterion: >-
+      In each section of /app/out/parse-notes.md whose receipt carries lines
+      that are not field lines, the format rule the prose attributes to that
+      receipt is the rule that such lines are ignored, and the wrong reading
+      the prose describes is the spurious field an every-line-is-a-field parse
+      would admit, judged as what the sentences attribute rather than which
+      rules they mention.
+    residue: >-
+      The same measurement that carries
+      parse_notes_attributes_the_colon_mechanism carries this one, and the two
+      halves of the control are independently achievable. In the swapped
+      carrier the RCP-0004 section claims the colon rule while still quoting
+      its true vendor 'Carter & Voss LLP' and both of its trailing lines
+      verbatim, so parse_notes_quotes_the_correct_value finds every string it
+      requires for a non-colon receipt and returns True, and
+      parse_notes_covers_every_hazard never reads the sentence. A comparator
+      therefore accepts a section that pins a colon mechanism onto a receipt
+      whose VENDOR carries no colon, which the receipt's own bytes contradict.
+
+      Why this is a separate condition rather than the same one. Item 10f
+      states that a criterion joining two conditions is two items. The two
+      mechanisms are independently misattributable: an account can name the
+      colon rule correctly on RCP-0003 and RCP-0007 while pinning the colon
+      rule onto RCP-0004 as well, which fails this item and passes the colon
+      item, and an account can name the trailing-line rule correctly on
+      RCP-0004 while pinning it onto RCP-0003, which fails the colon item and
+      passes this one. A single item spanning both would fail on either and so
+      could not distinguish them, which is the overlap item 7e refuses within
+      one cell.
+    weight_source: >-
+      Weighted 3 against item 9g's test, which sets 3 where failing the item
+      costs substantial but partial credit. The trailing-line mechanism spans
+      one receipt of the three, RCP-0004, so misattributing it leaves the
+      account correct about RCP-0003 and RCP-0007 and wrong about one row. A
+      reviewer still learns which rule governs two of the three hazardous
+      receipts, which is partial performance of the obligation rather than
+      none. It therefore sits below
+      parse_notes_attributes_the_colon_mechanism at 5, whose mechanism spans
+      two receipts, and the two weights differ on measured extent rather than
+      on preference.
+  - id: policy_magnitude_is_the_arithmetic_difference
+    outcome_class: VALUE
+    weight: 1
+    negate: false
+    obligation: D7-policy-rationale
+    dimension: process
+    evaluation_target: /app/out/policy-notes.md
+    evidence:
+      - /app/out/policy-notes.md
+      - environment/inputs/policy.json
+    criterion: >-
+      In each section of /app/out/policy-notes.md, the figure the prose states
+      for how far the receipt total exceeds or falls short of the category limit
+      it names is the arithmetic difference between those two numbers, judged as
+      the quantity the sentence claims however it is phrased rather than as a
+      figure matched in a fixed form.
+    residue: >-
+    residue: >-
+      Measured before the item was frozen, because its own earlier record held
+      it as surviving-but-marginal on two doubts and both needed a measurement
+      rather than an argument.
+
+      The first doubt was whether the compiled surface already catches it. It
+      does not. A control was built from the oracle's own
+      /app/out/policy-notes.md by changing the RCP-0005 sentence from "8100
+      strictly exceeds 7500, by 600 cents, so the pair violates policy" to "by
+      2400 cents", leaving the relation, the verdict, both integers, the
+      section set and the heading order untouched; a second control falsified
+      the non-violating shortfall from 1800 to 9900. Every compiled item over
+      every prose carrier returned True on both:
+      policy_notes_covers_every_violation,
+      policy_notes_names_the_governing_limit, contested_account_structure,
+      contested_account_names_an_alternative, parse_notes_covers_every_hazard
+      and parse_notes_quotes_the_correct_value. So the whole compiled surface
+      accepts an account whose subtraction is false.
+
+      The second doubt was whether the judgment reduces after all, since the
+      magnitude is the difference of two integers a compiled item already
+      locates. That was tested rather than assumed, and the answer is that a
+      comparator settles a phrase and not the claim. The strongest reasonable
+      comparator, binding a "by N cents" phrase in a section and requiring N to
+      equal the absolute difference of that section's two numbers, does return
+      False on the control in the oracle's exact wording. It returns True on
+      the same false claim phrased "exceeding it by 2400", "with a difference
+      of 2400 cents", "2400 cents over", and on the figure spelled in words.
+      The statement prescribes no wording and says no length is prescribed, so
+      a comparator that works only where the solver copies the oracle's
+      sentence shape reduces the oracle rather than the judgment. Item 10f's
+      clause bites on a judgment deterministically reducible over its named
+      evidence, and this one is not.
+
+      Not reducible by reading policy.json instead. The two numbers are
+      reference values and policy_notes_names_the_governing_limit already
+      requires each section to carry its receipt's total and its own governing
+      cap. What that item cannot decide is whether a third figure the prose
+      introduces is their difference, because it says nothing about a third
+      number. The item therefore stays judged.
+    distinguished_from_the_existing_d7_item: >-
+      policy_verdict_follows_from_the_two_numbers grades the relation between
+      the total and the cap and the verdict that relation entails. A false
+      magnitude leaves both of those true: the control asserts "strictly
+      exceeds" correctly and "violates policy" correctly and is false only in
+      the subtraction. Conversely an account can state a true difference while
+      inverting the relation, which fails that item and passes this one. The
+      two are therefore distinct checks in the same cell, which item 7e admits
+      because its clause is a distinctness requirement and not a count, and
+      which item 10f requires because a criterion joining the relation and the
+      magnitude would be two items.
+    weight_source: >-
+      Weighted 1 against item 9g's test, which sets 1 for polish. Ruled from
+      the measurement rather than from a preference for a complete scale, and
+      the reasoning is the opposite of the two D7 items above it. A reader of a
+      section with a false magnitude still learns the receipt's category, its
+      total, the limit that governs it, which way the two numbers stand and
+      whether the pair violates policy, so every decision the deliverable
+      exists to record survives intact and only a derived convenience figure is
+      wrong. That is neither a failed obligation nor substantial partial credit
+      lost; it is the polish 9g's 1 names.
+
+      The honest answer was checked against the alternative rather than
+      assumed. A 3 would claim the failure costs substantial credit, and the
+      measurement does not support it: the control's RCP-0005 section remains
+      actionable by a reviewer, who can recompute 8100 minus 7500 from the two
+      numbers the same sentence names. Had the magnitude been the only place a
+      number appeared, a 3 would have been right. It is not, so 1 is.
+
+      This is the first judged item in this rubric at weight 1, and it is here
+      because the failure cost puts it here. No item was moved or invented to
+      represent the scale, and the earlier record that no judged item was worth
+      1 is superseded by this measurement rather than overruled by a
+      preference: that record was reasoning about the five items then authored,
+      each of which still holds its own weight on its own ground.
+  - id: convention_collapse_is_the_true_direction
+    outcome_class: DIVERGENCE
+    weight: 5
+    negate: false
+    obligation: D9-convention-divergence-rationale
+    dimension: process
+    evaluation_target: /app/out/convention-notes.md
+    evidence:
+      - /app/out/convention-notes.md
+      - environment/inputs/statement.csv
+      - environment/inputs/receipts/
+      - environment/inputs/policy.json
+    criterion: >-
+      In the collapse section of /app/out/convention-notes.md, the direction and
+      the size of the collapse the prose asserts are the ones these inputs make
+      true: that dropping the absolute value loses eligible pairs rather than
+      gaining them, and that the pairs the signed comparison leaves standing are
+      the ones it actually leaves standing, judged as what the sentences claim
+      rather than which figures they contain.
+    residue: >-
+      Measured against the whole compiled surface rather than argued. A control
+      was built from the oracle's own /app/out/convention-notes.md by inverting
+      only the collapse section: the edge counts were swapped so the prose reads
+      that the absolute-value rule admits one pair and the signed comparison
+      twelve, the matching counts were swapped so it reads that dropping the
+      absolute value would gain ten pairs, and the survivor sentence was
+      rewritten to say that RCP-0011 to TXN-1007 is the pair the signed
+      comparison drops. The divergence section was left exactly as the oracle
+      wrote it. Every compiled item over every prose carrier returned True on
+      those bytes: convention_notes_carries_both_sections,
+      convention_notes_names_every_row,
+      policy_notes_covers_every_violation,
+      policy_notes_names_the_governing_limit, contested_account_structure,
+      contested_account_names_an_alternative, parse_notes_covers_every_hazard
+      and parse_notes_quotes_the_correct_value. So the entire compiled surface
+      accepts an account whose central claim is backwards.
+    why_no_comparator_settles_it: >-
+      The figures are reference values a comparator can recompute, and that is
+      exactly why a comparator does not settle this. Both the true and the
+      inverted account carry the integers 12, 1, 11 and 10 and the identifiers
+      RCP-0011 and TXN-1007; they differ in which rule each figure is attached
+      to and in which direction the loss runs. A comparator strong enough to
+      bind each figure to its rule would have to parse the sentence structure
+      the statement deliberately leaves free, since instruction.md prescribes no
+      wording and no length for this deliverable. The same lesson the magnitude
+      item measured applies here: a comparator that works only where the solver
+      copies the oracle's sentence shape reduces the oracle rather than the
+      judgment.
+
+      Nor is it reducible by reading the inputs instead. Rebuilding both graphs
+      from environment/inputs/ settles what the figures are, which
+      convention_notes_names_every_row already uses for the partition, and
+      settles nothing about what the prose asserts them to be.
+    weight_source: >-
+      Weighted 5 against item 9g's test, which sets 5 where failing the item
+      alone fails its obligation. The operator's reading was offered to check
+      rather than adopt and it holds on its own terms: this deliverable exists
+      to say what dropping the absolute value would cost, so an account with
+      the direction backwards tells a reviewer that the mistake is harmless
+      when it destroys ten of eleven matched pairs. That is not partial credit;
+      it inverts the only conclusion the deliverable carries, and a reviewer
+      acting on it would accept the defect the deliverable exists to warn
+      against.
+  - id: convention_divergence_set_is_the_true_partition
+    outcome_class: VALUE
+    weight: 3
+    negate: false
+    obligation: D9-convention-divergence-rationale
+    dimension: process
+    evaluation_target: /app/out/convention-notes.md
+    evidence:
+      - /app/out/convention-notes.md
+      - environment/inputs/statement.csv
+      - environment/inputs/receipts/
+      - environment/inputs/policy.json
+    criterion: >-
+      In the divergence section of /app/out/convention-notes.md, each txn_id the
+      prose places among the rows whose eligible set differs between the two
+      rules is a row whose set does differ, and each txn_id it places among the
+      rows whose set is the same is a row whose set is the same, judged as which
+      group the sentences assign each row to rather than which rows they name.
+    residue: >-
+      Measured against the whole compiled surface rather than argued. A second
+      control was built from the oracle's own carrier by inverting only the
+      divergence section: the prose was rewritten to say that no row differs
+      between the two rules and that the two rules agree on every row,
+      TXN-1007 and TXN-1011 included, while still naming all twelve txn_ids.
+      The collapse section was left exactly as the oracle wrote it. Every
+      compiled item over every prose carrier returned True on those bytes, the
+      same eight named in the sibling item's residue, so the compiled surface
+      accepts an account that assigns ten diverging rows to the coinciding
+      group.
+
+      The reason it accepts is visible in what the compiled item checks.
+      convention_notes_names_every_row recomputes both partitions from
+      environment/inputs/ and requires the divergence section to name every
+      txn_id of both groups; it is a membership test over the section's tokens
+      and says nothing about which group a sentence assigns a row to. Measured
+      from the opposite side as well: replacing the ten row names with the
+      phrase "the debit rows" makes that compiled item return False while
+      convention_notes_carries_both_sections returns True, so the compiled item
+      is live on naming and silent on assignment.
+    weight_source: >-
+      Weighted 3 against item 9g's test, which sets 3 where failing the item
+      costs substantial but partial credit. The operator's reading was 3 on the
+      ground that naming the wrong rows is substantial but leaves the central
+      fact standing, and the re-measurement tested that against the alternative
+      rather than adopting it. The divergence set is ten of twelve rows, which
+      argues for 5; against that, an account with the collapse right and the
+      partition wrong still tells a reviewer that dropping the absolute value
+      costs ten of eleven pairs, which is the decision the deliverable exists
+      to support, and a reviewer can recompute the partition from the inputs
+      the section cites. The central conclusion survives and the detail is
+      wrong, which is 9g's 3 rather than its 5. It sits below
+      convention_collapse_is_the_true_direction, whose failure inverts the
+      conclusion itself.
+    distinguished_from_the_sibling: >-
+      The two items fail on different defects and each control corrupts exactly
+      one of them, which is argued from the control design rather than
+      executed, since executing a judged item requires a judge and no judge has
+      run against this bundle. The collapse control inverts the collapse
+      section and leaves the divergence section untouched, so a judge reading it
+      should fail convention_collapse_is_the_true_direction and accept
+      convention_divergence_set_is_the_true_partition. The divergence control
+      inverts the partition and leaves the collapse section untouched, so a
+      judge should fail the second and accept the first. That each control
+      corrupts the subject of exactly one item is a property of what the
+      control alters, not a verdict anyone has read.
+
+      Item 10f requires the split independently: a criterion joining the
+      direction of the collapse and the membership of the partition would join
+      two conditions, and a single item spanning both would fail on either and
+      so could not distinguish them, which is the overlap item 7e refuses
+      within one cell.
+
+aggregation:
+  rule: weighted-mean
+  full_reward: 1.0
+  graded_key: reward
+  compiled_weight: 85
+  judged_weight: 30
+  compiled_share: 0.7391304347826086
+  source: >-
+    delivery.reward in the approved contract binds one graded key named
+    reward with full_reward 1.0 over the closed interval 0 to 1. The task
+    owner amended that binding from a binary reward to a continuous one on
+    2026-10-30, with authority stated, so the rule is the weighted mean and
+    the graded key takes the intermediate values the closed interval already
+    admitted. full_reward is unchanged: a submission passing every item still
+    reads exactly 1.0, which the oracle control confirms.
+
+    The rule is bound once here and read by every Reward Kit table, because a
+    judged dimension aggregating by a different rule than the compiled one is
+    the defect the contract records under
+    uuid_prior_recording_after_scoring_table. tests/judge.toml carries it for
+    the judged dimension, tests/reward.toml for [scoring.test_output] and for
+    the top-level [[reward]], and that top-level table weights the two
+    dimensions by their own graded totals, 85 compiled and 30 judged, so the
+    compiled share stays the bound 0.7391304347826086 rather than the 0.5 an
+    unweighted pair of dimensions would impose.
+
+    Why the amendment was sought. all-pass reads no weight and returns zero on
+    a single failure, so it could not separate a partial answer from an empty
+    one: the no-op control and a measured submission passing 26 of the 33
+    items both scored exactly 0.0. Under this rule the same three controls
+    read 1.0, 0.8174 and 0.0435, so the 25 compiled weights this file already
+    assigns become live rather than inert.
+
+# ---------------------------------------------------------------------------
+# Item 10f: the judged-item attempt. Every candidate considered over the live
+# served application, with the ruling that admitted or refused it under the
+# bound rubric.drafting_acceptance_predicate. Recorded here rather than only in
+# a report, because "zero judged items" is a measured outcome and the
+# measurement is the evidence for it.
+# ---------------------------------------------------------------------------
+judged_candidates:
+  attempted_at: 2026-10-28
+  predicate_state_at_attempt: bound
+  surface: the application served at 127.0.0.1:8080 by the /app/start.sh deliverable
+  method: >-
+    Each candidate was measured against the running application with the
+    in-image chromium at the bound 1280 by 800 viewport, and separately against
+    the bytes its evaluation_target holds. The deciding question is the last
+    clause of the predicate's refuses list: a judgment that could be settled by
+    a comparison over those bytes is mode compiled under item 10f and is never
+    an authoring choice for mode judged. A candidate survives only if no such
+    comparison exists.
+  candidates:
+    - id: violation-legible-as-weight
+      criterion: >-
+        On the review screen the application serves at /, the policy-state cell
+        of every pair whose violates_policy is true resolves to a computed
+        font-weight of 700 and every compliant pair to 400, so the distinction
+        a reviewer reads survives without colour.
+      obligation: D4-served-application
+      dimension: outcome
+      evaluation_target: GET /
+      claimed_residue: >-
+        The computed weight is a resolved cascade value rather than a markup
+        attribute, so the markup alone does not carry it.
+      measured: >-
+        Violating rows resolve to 700 and compliant rows to 400, measured at
+        the bound viewport.
+      ruling: REFUSED
+      refused_by: >-
+        The refuses clause on reducibility. getComputedStyle(...).fontWeight is
+        a deterministic function of the served HTML and the served stylesheet
+        under a browser pinned by digest at a fixed viewport, and the comparator
+        is an equality against 700 and 400. The claimed residue is false: the
+        cascade is computed, not guessed. The check is already carried as the
+        compiled item review_screen_structure.
+    - id: graded-cells-render-in-a-shipped-font
+      criterion: >-
+        For every graded element the review screen serves at /,
+        document.fonts.check returns true at that element's own computed
+        font-weight, font-size and font-family, so nothing renders in a
+        fallback the image did not ship.
+      obligation: D4-served-application
+      dimension: constraints
+      evaluation_target: GET /
+      claimed_residue: >-
+        Font availability is a property of the hydrated document and the image,
+        not of the served bytes.
+      measured: >-
+        document.fonts.check returned true on every graded element, family
+        resolving to "Liberation Sans", sans-serif.
+      ruling: REFUSED
+      refused_by: >-
+        The refuses clause on reducibility. The function returns a boolean, and
+        the font set is fixed by the verifier image which is pinned by
+        per-platform digest, so the outcome is deterministic over the served
+        bytes plus a pinned image. Already carried inside review_screen_structure
+        and detail_screens_complete.
+    - id: matched-table-columns-share-an-edge
+      criterion: >-
+        Within matched-table on the review screen served at /, every cell of one
+        column shares a left edge with every other cell of that column to
+        within one device-independent pixel at the 1280 by 800 viewport.
+      obligation: D4-served-application
+      dimension: craft
+      evaluation_target: GET /
+      claimed_residue: >-
+        Layout geometry exists only once the document is laid out.
+      measured: >-
+        All six columns measured a left-edge span of 0 pixels.
+      ruling: REFUSED
+      refused_by: >-
+        The refuses clause on reducibility. max(lefts) minus min(lefts) against
+        a tolerance of one pixel is an arithmetic comparison over values the
+        pinned browser computes deterministically. Already carried as the
+        compiled item review_screen_columns_aligned.
+    - id: every-graded-value-above-the-fold
+      criterion: >-
+        At the 1280 by 800 viewport, every element id the review screen served
+        at / is required to carry has its bounding rectangle wholly within the
+        viewport, so a reviewer reads the whole reconciliation without
+        scrolling.
+      obligation: D4-served-application
+      dimension: craft
+      evaluation_target: GET /
+      claimed_residue: >-
+        Whether a reviewer must scroll is a property of the rendered page.
+      measured: >-
+        No required element fell below the fold; the list of out-of-viewport
+        elements was empty and document.scrollWidth equalled 1280.
+      ruling: REFUSED
+      refused_by: >-
+        The refuses clause on reducibility.
+        getBoundingClientRect().bottom compared against the bound viewport
+        height is an inequality over a deterministic layout, so a comparator
+        settles it. It is also not authored as a compiled item, because the
+        statement imposes no no-scroll obligation and item 10f requires a
+        criterion to name an obligation the statement declares.
+    - id: violation-cell-contrast-is-adequate
+      criterion: >-
+        The policy-state cell of a violating pair on the review screen served at
+        / renders at a WCAG contrast ratio of at least 4.5 against its
+        effective background at the 1280 by 800 viewport.
+      obligation: D4-served-application
+      dimension: craft
+      evaluation_target: GET /
+      claimed_residue: >-
+        Perceptual contrast is a judgement about legibility.
+      measured: >-
+        The violating cell measured 9.28 and a compliant cell 21.0 against the
+        page background.
+      ruling: REFUSED
+      refused_by: >-
+        The refuses clause on reducibility, and the refuses clause on
+        tolerance-free aesthetics does not even need to be reached. The WCAG
+        ratio is a published formula over sampled computed colours, so the
+        judgement is arithmetic rather than perceptual. A threshold makes it
+        exact, which makes it compiled.
+    - id: totals-are-identifiable-to-a-reviewer
+      criterion: >-
+        Each of the four totals elements the review screen serves at / carries
+        a label a reviewer can read, so the four numbers are distinguishable
+        from one another rather than presented as a bare sequence.
+      obligation: D4-served-application
+      dimension: coverage
+      evaluation_target: GET /
+      claimed_residue: >-
+        Whether a number is identifiable to a human reader is a semantic
+        property of the rendered page rather than a structural one.
+      measured: >-
+        All four totals elements carry no aria-label, no aria-labelledby, no
+        preceding non-numeric sibling and no ancestor label; the served markup
+        contains no aria-label attribute and no label element. The four values
+        render as 11, 1, 1 and 3 in an unlabelled list.
+      ruling: REFUSED
+      refused_by: >-
+        The refuses clause on reducibility. The absence of a label is decided by
+        a scan of the served bytes for aria-label, aria-labelledby, label and
+        caption, so a comparator settles it. It is additionally outside the
+        rubric because the statement declares the four element ids and imposes
+        no labelling obligation, and the predicate's admits clause requires a
+        criterion to name a property of this task rather than one the author
+        prefers.
+    - id: detail-screen-reachable-by-clicking
+      criterion: >-
+        Every row of matched-table on the review screen served at / carries an
+        anchor whose href is the served route /pair/<receipt_id> of that row's
+        own pair, so a reviewer reaches each detail screen by clicking rather
+        than by constructing a URL.
+      obligation: D4-served-application
+      dimension: coverage
+      evaluation_target: GET /
+      claimed_residue: >-
+        Reachability by a human action rather than by a path lookup.
+      measured: >-
+        Eleven anchors, one per row, each resolving to its pair. This candidate
+        found a real defect in the reference solution: the anchors carried the
+        capture-era form pair/<receipt_id>.html while the statement declares
+        /pair/<receipt_id>, and the detail pages linked back to
+        ../index.html. Both were corrected in the reference solution so the
+        oracle demonstrates the routes the statement declares.
+      ruling: REFUSED
+      refused_by: >-
+        The refuses clause on reducibility. Every href is a literal in the
+        served HTML, so a regex over those bytes decides whether each equals
+        /pair/<receipt_id>. The defect the candidate exposed was real and is
+        fixed, but the check that would catch it is compiled, not judged.
+    - id: trajectory-account-is-faithful
+      criterion: >-
+        The application accounts, on a screen it serves, for how it obtained
+        and checked the reconciliation it displays.
+      obligation: D4-served-application
+      dimension: process
+      evaluation_target: GET /
+      claimed_residue: >-
+        Faithfulness of a narrative account is the canonical irreducible
+        judgement, and process is the dimension a rendered-state judgment is
+        most likely to occupy.
+      measured: >-
+        The served application renders no such account. Its whole body text is
+        537 characters and contains no mention of method, provenance,
+        derivation, checking or audit. The statement declares five deliverables
+        and imposes no obligation to explain method: a search of instruction.md
+        for method, provenance, explanation, justification, rationale, audit
+        trail or show-your-work returns nothing.
+      ruling: REFUSED
+      refused_by: >-
+        The predicate's admits clause, not its reducibility clause. A criterion
+        must name the deliverable, element id, route or computed property of
+        this task that it checks, drawn from the obligation's own reference
+        values in solution/TRUTH.md. No deliverable carries a trajectory
+        account, so this criterion names nothing the task produces and could
+        only grade an obligation the statement never imposed. Item 10f requires
+        each item to be assessed against the TRUTH.md reference answer, and
+        TRUTH.md records the ordered path the oracle took without the
+        application rendering any part of it. Authoring this item would invent
+        a graded obligation rather than measure one.
+      refusal_ground_is_the_statement_not_the_judgment: >-
+        Recorded for the ninth candidate's benefit. This refusal turns on what
+        the statement obliges, not on whether faithfulness is reducible. It does
+        not rule that the faithfulness of a prose account is settleable by a
+        comparator; it rules that no deliverable existed for such an account to
+        be an account of. The ground is removable by obliging the deliverable,
+        and candidate 9 removes it. Nothing in this entry is overruled.
+    - id: contested-alternative-is-claimed-as-such
+      criterion: >-
+        Each section of /app/out/contested.md presents the further identifier it
+        names as an alternative the row was eligible to match, rather than
+        merely mentioning it.
+      obligation: D6-contested-account
+      dimension: coverage
+      evaluation_target: /app/out/contested.md
+      claimed_residue: >-
+        Presenting an identifier as an eligible alternative is a predication
+        about it, and predication was the residue that carried candidate 10 and
+        candidate 11.
+      measured: >-
+        The eligible set for a statement row is recomputed from
+        environment/inputs/ by the same policy the oracle applies, so the set of
+        admissible identifiers is fixed before the prose is read. The question
+        the criterion asks reduces to whether a token from that fixed set occurs
+        in the section, which a set-membership test over the section's bytes
+        settles.
+      ruling: REFUSED
+      refused_by: >-
+        The refuses clause on reducibility, and item 10f's rule that mode judged
+        is never an authoring choice for a reducible judgment. The claimed
+        residue does not survive measurement: the criterion as written is
+        satisfied by naming a member of the recomputed eligible set, and naming
+        is token presence. Had it been frozen as judged it would be the
+        reducible judgment Phase verify item 7e refuses as
+        BLOCK:INVALID_TASK.
+      authored_instead_as: >-
+        The compiled item contested_account_names_an_alternative, at weight 3 in
+        D6-contested-account by coverage. The judgment was not discarded, it was
+        compiled, which is what item 10f directs.
+      distinguished_from_the_judged_items: >-
+        contested_pairing_matches_declared_matching and
+        contested_reason_is_the_operative_rule survive the same clause because
+        neither reduces to membership in a precomputable set. The first asks
+        whether the section asserts the pairing the matched array holds, and a
+        section naming both identifiers can assert the inverse. The second asks
+        whether the stated reason is the reason these inputs make true, and the
+        space of wrong reasons is not enumerable from the inputs. This candidate
+        shows where that line falls: it names the same identifiers over the same
+        bytes and still reduces, because it asks only that a token appear.
+    - id: policy-verdict-follows-from-the-two-numbers
+      criterion: >-
+        In each section of /app/out/policy-notes.md, the relation the prose
+        asserts between the receipt total and the category limit it names is the
+        relation those two numbers actually stand in, and the violation verdict
+        the prose states for that pair is the one that relation entails.
+      obligation: D7-policy-rationale
+      dimension: process
+      evaluation_target: /app/out/policy-notes.md
+      claimed_residue: >-
+        Whether a stated inequality between two integers holds is a predication
+        about them, not the presence of either.
+      measured: >-
+        Measured by execution rather than argued. A carrier identical to the
+        oracle's except that its RCP-0005 section reads "8100 does not exceed
+        7500, so the pair does not violate policy" was graded by both compiled
+        items over this obligation. policy_notes_covers_every_violation
+        returned True, because the section set, the heading order and the
+        non-violating tail are untouched. policy_notes_names_the_governing_limit
+        returned True, because both 8100 and the governing meals cap of 7500
+        occur and no neighbouring category's cap does. So the entire compiled
+        surface accepts an account whose arithmetic claim is false.
+      ruling: ADMITTED
+      admitted_by: >-
+        The admits clause: the criterion names the deliverable
+        /app/out/policy-notes.md, the computed properties it reads, an exact
+        relation a reader can test, one condition only, and at mode judged the
+        carrier the value lives in and the property at which it is read. It
+        survives the refuses clause on reducibility, because the measurement
+        above shows a comparison over the carrier's bytes accepts both the true
+        and the false reading: the two differ in what they predicate and not in
+        which numbers they carry.
+      distinguished_from_the_existing_judged_items: >-
+        It sits in D7-policy-rationale by process, not D6-contested-account by
+        process, so item 7e's per-cell exclusivity clause cannot be engaged
+        against the two D6 items whatever it states. It also reads a different
+        carrier. The substance differs as well: the D6 items grade a declared
+        pairing and an operative matching rule, and this grades an inequality
+        between a total and a cap and the verdict that follows from it, which
+        the matching rules never touch.
+    - id: parse-hazard-account-is-faithful
+      criterion: >-
+        In each section of a written parse account, the mechanism the prose
+        gives for why a naive reading corrupts that receipt is the mechanism the
+        receipt's own bytes exhibit, and the correct reading it states is the
+        one the stated field rule produces.
+      obligation: D8-parse-rationale
+      dimension: process
+      evaluation_target: not yet authored
+      claimed_residue: >-
+        Which receipts carry a hazard is recomputable, but whether the prose
+        attributes the corruption to the right mechanism is a predication.
+      measured: >-
+        Re-derived from environment/inputs/receipts/ rather than from the
+        operator's list. Three receipts carry a hazard and they are not the same
+        hazard: RCP-0003 reads VENDOR "Heliotype Software: Annual Plan" and
+        RCP-0007 reads VENDOR "Meridian Coach Lines: Route 42", both of which a
+        split-on-every-colon parse truncates to "Heliotype Software" and
+        "Meridian Coach Lines" while dropping the remainder; RCP-0004 carries
+        two trailing non-field lines, "Thank you for your business." and
+        "Invoice generated automatically; retain for records.", which an
+        every-line-is-a-field parse admits as fields. So an account can name all
+        three receipts and still attribute the colon hazard to RCP-0004 or the
+        trailing-line hazard to RCP-0003, and every token a comparator looks for
+        is present in both the true and the false account.
+      ruling: ADMITTED-AND-AUTHORED-AS-TWO
+      admitted_by: >-
+        The admits clause on the same reading that admitted candidate 10: it
+        names the carrier, the computed property, an exact relation and one
+        condition. It survives the reducibility clause because the hazard set is
+        recomputable while the attribution of a mechanism to a receipt is not
+        settled by token presence.
+      prediction_verified: >-
+        The measured field above was a prediction when written, and it was
+        tested before any prose was frozen because a false prediction would
+        have made the item reducible and so BLOCK:INVALID_TASK under item 7e.
+        The test built a control from the oracle's own
+        /app/out/parse-notes.md by swapping only the rule-naming sentence,
+        leaving every heading, every quoted vendor value and every quoted
+        dropped fragment exactly as written. Both compiled items returned True
+        on the swapped carrier and True on the oracle, so the prediction holds:
+        a comparator over the carrier's bytes does not separate the true
+        account from the misattributed one.
+
+        The mechanism, read from the checker source rather than inferred.
+        parse_notes_covers_every_hazard compares the heading list against the
+        hazard set recomputed from environment/inputs/receipts/ and requires a
+        non-empty body, so it reads no rule-naming sentence.
+        parse_notes_quotes_the_correct_value branches on whether the receipt's
+        own bytes carry a colon in VENDOR, taken from the receipt rather than
+        from the prose, and then requires the true vendor string plus either
+        the truncated form or the non-field lines. The swap moves none of those
+        strings.
+      authored_as_two_because: >-
+        Item 10f states that a criterion joining two conditions is two items,
+        and this candidate joins two. The corpus carries two distinct
+        mechanisms over different extents: the colon rule on RCP-0003 and
+        RCP-0007, and the trailing-non-field-lines rule on RCP-0004. Each was
+        measured independently misattributable, by rewriting only the colon
+        sections and then only the non-field section; both halves returned
+        True on both compiled items, so each has its own live control. A single
+        item spanning both would fail on either and could not distinguish them,
+        which is the overlap item 7e refuses within one cell.
+
+        Authored as parse_notes_attributes_the_colon_mechanism at weight 5,
+        whose mechanism spans two of three hazardous receipts, and
+        parse_notes_attributes_the_nonfield_mechanism at weight 3, whose
+        mechanism spans one. The weights differ on measured extent rather than
+        on a preference about spread.
+      not_authored_because: >-
+        Its deliverable does not exist. The operator directed that one
+        deliverable be authored at a time, fully wired, and reported before the
+        next is opened, on the ground that the previous pass produced three
+        independent BLOCK:INVALID_TASK conditions from a single new deliverable.
+        D7-policy-rationale is the deliverable of this pass. This candidate is
+        recorded as surviving its ruling so that the next pass authors against a
+        ruling already made rather than re-deriving it, and it is stated as not
+        authored rather than as pending.
+    - id: credit-row-exclusion-is-explained
+      criterion: >-
+        In a written account of the credit row, the reason the prose gives for a
+        signed-value comparison excluding TXN-1007 from the eligibility graph is
+        the reason the shipped inputs make true for that row.
+      criterion_retracted: >-
+        This criterion is wrong in direction and is retracted rather than
+        deleted, so the error stays readable beside its correction. It asserts
+        that a signed-value comparison excludes TXN-1007 from the eligibility
+        graph. Re-measured from environment/inputs/, the opposite holds:
+        TXN-1007 is the one statement row a signed comparison does not exclude.
+
+        The arithmetic, with amount_tolerance_cents 50. A debit row carries a
+        negative amount_cents and a receipt TOTAL is unsigned, so for TXN-1001
+        at -48200 against RCP-0001 at 48200 the signed delta is
+        48200 - (-48200) = 96400, which exceeds the tolerance and is rejected,
+        while the absolute delta is 48200 - 48200 = 0 and is admitted. For the
+        credit row TXN-1007 at +9900 against RCP-0011 at 9945 the signed delta
+        is 9945 - 9900 = 45 and the absolute delta is also 45, both inside the
+        tolerance, so both conventions admit that edge.
+
+        The conventions therefore coincide exactly where the row amount is
+        already positive and diverge on every row where it is negative. Twelve
+        absolute-rule edges collapse to one under the signed rule, the maximum
+        matching falls from eleven pairs to one, and ten of twelve rows have a
+        different eligible set. The two rows that coincide are TXN-1007, which
+        both conventions admit, and TXN-1011, which neither admits because no
+        receipt is eligible for it under either rule.
+
+        A superseded report of this re-measurement overstated its scope by
+        saying the measured field below was also backwards. It is not: that
+        field already records that the conventions coincide for this row and
+        diverge for every debit row, which the re-measurement confirms. Only
+        this criterion string and the claimed_residue beneath it carried the
+        inverted direction, and the correction is confined to them.
+      obligation: D9-credit-row-rationale
+      dimension: process
+      evaluation_target: not yet authored
+      claimed_residue: >-
+        Why a comparison convention drops a row is a reason, not a value.
+      claimed_residue_retracted: >-
+        The residue stands and its subject moves. What no comparator settles is
+        still a reason rather than a value, but the reason is why a signed
+        comparison collapses the graph to the single credit-row edge, not why
+        it drops that edge. An account naming TXN-1007, the sign convention and
+        the tolerance while stating the consequence backwards carries every
+        token a comparator looks for, which is the residue restated over the
+        corrected fact.
+      measured: >-
+        Re-derived from environment/inputs/statement.csv. TXN-1007 at +9900 is
+        the only positive amount among twelve rows, and the eligibility rule
+        compares a receipt total against the absolute value of the row amount,
+        so a solver comparing against the signed value computes a delta of
+        9945 - 9900 = 45 for RCP-0011 under the absolute rule and
+        9945 - (+9900) against a tolerance of 50 under the signed rule, which
+        happens to coincide for this row and diverges for every debit row. The
+        account's claim is therefore about a convention and its consequence, and
+        a section naming TXN-1007, the sign and the tolerance can still state
+        the consequence backwards.
+      ruling: ADMITTED-NOT-AUTHORED
+      admitted_by: >-
+        The admits clause, on the same reading as candidates 10 and 11.
+      not_authored_because: >-
+        Its deliverable does not exist, and the one-deliverable-per-pass
+        direction governs. Recorded as surviving rather than authored.
+      caution_for_the_next_pass: >-
+        This candidate needs care the other two do not. The measurement above
+        shows the signed and absolute conventions coincide numerically for
+        TXN-1007 against RCP-0011, so an account could state a true consequence
+        from a false premise and a comparator could not tell. That makes the
+        residue real, but it also means the deliverable must oblige the account
+        to name which rows diverge rather than only that TXN-1007 is a credit,
+        or the judged item will grade a claim the corpus cannot distinguish. The
+        next pass must settle that in the statement before freezing prose.
+      caution_bound_by_operator: >-
+        The operator bound the caution above explicitly so it cannot be lost,
+        and bound it while closing the obligation count at eight deliverables.
+        Its terms: D9's statement must oblige the account to name which rows
+        diverge under the two conventions, not merely that TXN-1007 is a
+        credit; without that the judged item grades a claim the corpus cannot
+        distinguish, which item 7e refuses as inert. That must be settled in
+        the statement before any D9 prose is frozen. D9 is not authored, and
+        the operator has stopped the deliverable count at eight, so this
+        candidate stands recorded rather than queued.
+    - id: policy-magnitude-is-arithmetically-true
+      criterion: >-
+        In each section of /app/out/policy-notes.md that states by how many
+        cents the receipt total exceeds or falls short of its category limit,
+        that figure is the arithmetic difference between the two numbers the
+        section names.
+      obligation: D7-policy-rationale
+      dimension: process
+      evaluation_target: /app/out/policy-notes.md
+      claimed_residue: >-
+        A stated magnitude can be false beside a true relation and a true
+        verdict, and the subtraction is a third predication distinct from both.
+      measured: >-
+        Re-derived from the oracle's own output rather than from a list. The
+        oracle writes "8100 strictly exceeds 7500, by 600 cents" for RCP-0005,
+        "by 2410 cents" for RCP-0008, "by 2445 cents" for RCP-0011 and
+        "falling short of it by 1800 cents" for RCP-0001. A carrier can keep
+        the relation, the verdict, the receipt total and the governing cap all
+        correct and assert "by 2400 cents" instead of 600, and every integer
+        the two compiled items read is still present, because
+        policy_notes_names_the_governing_limit requires the total and the cap
+        and forbids a neighbouring category's cap but says nothing about a
+        third number. The existing judged item
+        policy_verdict_follows_from_the_two_numbers grades the relation between
+        the two numbers and the verdict that relation entails, and a false
+        magnitude leaves both of those true, so this is a distinct defect in
+        the same cell rather than a restatement.
+      ruling: ADMITTED-NOT-AUTHORED
+      admitted_by: >-
+        The admits clause: it names the carrier, an exact arithmetic relation a
+        reader can test, and one condition. It survives the reducibility clause
+        only on the reading that the magnitude is a claim about two numbers the
+        prose itself chooses to name, rather than a value recomputable before
+        the prose is read.
+      not_authored_because: >-
+        Ruled surviving-but-marginal and held back on that ground rather than
+        on scope. Two doubts stand unresolved and both need a measurement
+        before any prose is frozen. The first is whether the judgment reduces
+        after all: the magnitude is the difference of two integers the compiled
+        item already locates, so a comparator that extracts the third integer
+        and subtracts might settle it, which would make the item compiled under
+        item 10f and BLOCK:INVALID_TASK if frozen as judged. The second is the
+        weight: whether a false magnitude beside a true relation and a true
+        verdict costs its obligation substantially or is polish is not
+        something this run has measured, and item 9g's test cannot be applied
+        to a cost nobody has observed.
+
+        The operator ruled it held on exactly this ground. The next pass that
+        opens it must first build a control carrying a false magnitude beside a
+        true relation, execute both compiled items and the existing judged item
+        against it, and only then decide mode and weight. Recorded as surviving
+        rather than queued.
+  outcome:
+    judged_items: 5
+    judged_items_recount_after_d8: >-
+      Five, recounted from these bytes after D8-parse-rationale was authored
+      and after the weight re-derivation, superseding the three below and the
+      two before that. Thirteen candidates now stand enumerated across four
+      attempts, and the tally is: seven refused by the predicate's reducibility
+      clause; one, trajectory-account-is-faithful, refused on a statement
+      ground since removed; one, contested-alternative-is-claimed-as-such,
+      refused and compiled instead; five admitted and authored as
+      contested_pairing_matches_declared_matching,
+      contested_reason_is_the_operative_rule,
+      policy_verdict_follows_from_the_two_numbers,
+      parse_notes_attributes_the_colon_mechanism and
+      parse_notes_attributes_the_nonfield_mechanism; one,
+      credit-row-exclusion-is-explained, admitted and not authored because its
+      deliverable does not exist and the operator has closed the count at
+      eight; and one, policy-magnitude-is-arithmetically-true, admitted and
+      held as surviving-but-marginal pending a measured control.
+
+      The count rose because candidate 11 split into two under item 10f's
+      clause that a criterion joining two conditions is two items, not because
+      a number was targeted. No item at any mode or weight was authored to
+      reach a count or a spread.
+    judged_items_recount: >-
+      Three, recounted from these bytes after D7-policy-rationale was authored,
+      superseding the two this block recorded while the statement obliged six
+      deliverables. Twelve candidates have now been enumerated across three
+      attempts: seven refused by the predicate's reducibility clause, one
+      refused on the statement ground and since removable,
+      contested-alternative-is-claimed-as-such refused and compiled instead,
+      three admitted and authored as
+      contested_pairing_matches_declared_matching,
+      contested_reason_is_the_operative_rule and
+      policy_verdict_follows_from_the_two_numbers, and two admitted but not
+      authored because their deliverables do not exist. No item at any mode was
+      authored to reach a count.
+    superseded_outcome: >-
+      This block previously recorded judged_items 0, no judge carrier, and no
+      judge emitter in solution/recompute.py. That result was true of the
+    superseded_outcome: >-
+      This block previously recorded judged_items 0, no judge carrier, and no
+      judge emitter in solution/recompute.py. That result was true of the
+      five-deliverable statement it measured and is false of the statement as it
+      now stands. It is rewritten rather than deleted, and the reading taken is
+      named below.
+    judged_items_note: >-
+      Nine candidates were enumerated across two attempts. Eight were refused
+      against the five-deliverable statement, seven by the predicate's
+      reducibility clause and one, trajectory-account-is-faithful, by its admits
+      clause. The ninth, contested-alternative-is-claimed-as-such, was refused
+      by the reducibility clause and compiled instead. Two judged items are
+      authored, and neither is drawn from the refused nine: both arise from a
+      sixth deliverable the statement did not previously impose.
+    how_the_judged_surface_was_reached: >-
+      Not by overruling a refusal. The seven reducibility refusals stand, and so
+      does the ruling that a reducible judgment is mode compiled and never an
+      authoring choice for judged. What was removed is the ground of the eighth
+      refusal, which was not reducibility: it held that no deliverable carried a
+      prose account, so the criterion named nothing the task produces and could
+      only grade an obligation the statement never imposed. Obliging the account
+      removes that ground exactly. instruction.md now declares a sixth
+      deliverable, /app/out/contested.md, and D6-contested-account is an
+      obligation the statement imposes rather than one a criterion invents.
+    why_this_surface_does_not_reduce: >-
+      The residue is the gap between token presence and predication. Which
+      identifiers may lawfully appear in a section is fixed before the prose is
+      read, because the eligible set is recomputed from environment/inputs/, so
+      every criterion asking only that a token appear reduces to set membership
+      over the section's bytes, and two such criteria are authored compiled.
+      What does not reduce is what the section asserts about those identifiers.
+      A section reading "TXN-1009 was not matched to RCP-0008; it went to
+      RCP-0011" carries both tokens the compiled items demand and asserts the
+      opposite of the matched array, and a section reading "RCP-0011 took
+      TXN-1007 because its amount delta was smaller" uses the rules' own
+      vocabulary to state a reason the arithmetic refutes at an amount_delta of
+      +45 against a nearer edge. No comparator over the evaluation_target's
+      bytes separates either from a faithful section, because the wrong claim is
+      spelled in the right tokens.
+    consequence: >-
+      Item 10f's zero-judged consequence no longer applies. A tests/judge.toml
+      is emitted carrying exactly the two judged criteria, solution/recompute.py
+      gains the judge emitter, and the rubric splits six compiled items and two
+      judged items over D6-contested-account against seventeen compiled items
+      elsewhere.
+    what_the_rescope_contributed: >-
+      Corrected from the earlier claim that the re-scope to a web application
+      failed to produce a judged surface. It did not produce one, and the reason
+      recorded then still holds: a browser pinned by digest at a fixed viewport
+      makes rendered state measurable, and measurable is what makes a judgment
+      compilable. Its contribution stands as six compiled checks no CLI task
+      could carry, over computed cascade values, font resolution, layout
+      geometry and served-response agreement, plus two live red lines. The
+      judged surface came from a different move: not a richer instrument over
+      the same claims, but a deliverable whose claims no instrument settles.
+    why_the_count_is_two_and_not_ten_is_corrected: >-
+      The field below overreached and is corrected here rather than deleted.
+      Its measurement was sound and its conclusion was not. It proved by
+      execution that a further judged item over /app/out/contested.md in the
+      D6-contested-account by process cell would restate one of the two claims
+      already there, and then stated that conclusion as a bound on the judged
+      surface as a whole.
+
+      It does not generalise, and item 7e is the reason. The clause reads "no
+      two judged items of one cell state the same check", so exclusivity is
+      scoped per obligation-and-dimension cell. A judged item over a different
+      obligation sits in a different cell and cannot collide with a D6 item by
+      construction, whatever it states. The operator raised this and the
+      reading taken is the operator's: the measurement below bounds one cell,
+      never the surface.
+
+      What the correction changed in these bytes. A seventh deliverable,
+      /app/out/policy-notes.md, is obliged by instruction.md, and
+      D7-policy-rationale carries two compiled items and one judged item in its
+      own three cells. The judged count is therefore three rather than two, and
+      the bound is now one of corpus structure per obligation rather than a
+      ceiling on obligations.
+    why_the_count_is_two_and_not_ten: >-
+      The operator directed at least ten judged items and instructed that the
+      number be treated as a direction and never as a target, with no item
+      authored at any mode to reach it. The measured count is two, and this
+      field records why rather than reporting the direction as met.
+
+      The lawful route named was further prose obligations rather than finer
+      slicing of the prose already obliged, and the corpus bounds how far that
+      route runs. Recomputed from environment/inputs/: the eligibility graph
+      holds exactly one contention, over TXN-1007 and TXN-1009 against RCP-0008
+      and RCP-0011. Ten of twelve statement rows have exactly one admissible
+      receipt, TXN-1011 has none, and only TXN-1009 has two. The three edges
+      that carry the whole trap are RCP-0008 by TXN-1009 at amount delta -40
+      and date delta +1, RCP-0011 by TXN-1007 at +45 and +3, and the refused
+      RCP-0011 by TXN-1009 at -5 and -1, which is the nearest edge in the
+      contended set and the one maximum cardinality declines. A
+      greedy-by-closeness solver lands ten pairs and strands TXN-1007.
+
+      Both standing residues rest on predication over that one structure: a
+      section can carry the right identifiers and assert the wrong relation, or
+      speak the vocabulary of the rules and give a reason the inputs make false.
+      Measured against the shipped controls, both compiled items accept the
+      inverted pairing, accept the false reason, and accept the token-stuffed
+      sentinel, failing only on an absent carrier, so the residue is real and
+      no comparator closes it. But further judged items over this same artifact
+      would restate those two claims, and item 7e refuses two judged items of
+      one obligation and dimension that state the same check. Three sections by
+      three claims over one document does not yield ten non-overlapping items,
+      which is the arithmetic the operator already named.
+
+      What was not done, stated as not done rather than as an unchanged state.
+      No further prose obligation was authored, because adding one is a change
+      to instruction.md beyond the scope of this correction pass and the
+      operator reserved that decision. No candidate was authored at mode judged
+      to reach the count, and no compiled item was authored to hold the share.
+      The number owed to a later pass is therefore unknown rather than
+      estimated: it depends on obligations over different computed properties
+      that do not yet exist.
+
+# ---------------------------------------------------------------------------
+# Item 10f: the obligation by dimension grid. Every cell holds an item or a
+# not_applicable reason naming why that dimension cannot fail for that
+# obligation; an empty cell with no reason is BLOCK:INVALID_TASK.
+# ---------------------------------------------------------------------------
+grid:
+  obligations:
+    - D1-reconciliation-json
+    - D2-summary
+    - D3-table-snapshot
+    - D4-served-application
+    - D6-contested-account
+    - D7-policy-rationale
+    - D8-parse-rationale
+    - D9-convention-divergence-rationale
+    - RL-inputs-unmodified
+    - RL-screens-self-contained
+  dimensions:
+    - outcome
+    - coverage
+    - constraints
+    - robustness
+    - process
+    - craft
+  not_applicable:
+    - cell: D1-reconciliation-json x process
+      reason: >-
+        The task is single-turn with no steps tree and no trajectory artifact in
+        the graded set, so no deliverable records how the JSON was obtained and
+        no item could read one.
+    - cell: D1-reconciliation-json x craft
+      reason: >-
+        A JSON document whose schema, ordering and values are fixed by the
+        statement has no quality beyond correctness to grade; every property a
+        craft item could name is already an outcome or constraints obligation.
+    - cell: D2-summary x outcome
+      reason: >-
+        The summary's required end state is four counts equal to the JSON
+        totals, which is the divergence its constraints item
+        summary_matches_json already decides; a separate outcome item would be
+        the overlapping item 10f forbids.
+    - cell: D2-summary x coverage
+      reason: >-
+        The deliverable is exactly four lines fixed by the statement, so there
+        is no case, input class or part of it left for a coverage item to
+        range over.
+    - cell: D2-summary x robustness
+      reason: >-
+        No mutation, silent drift or adversarial input in this grounding
+        targets the summary, so there is no survival property to grade.
+    - cell: D2-summary x process
+      reason: >-
+        Single-turn with no trajectory artifact in the graded set.
+    - cell: D2-summary x craft
+      reason: >-
+        A four-line text file with whitespace fixed to the byte has no quality
+        beyond correctness.
+    - cell: D3-table-snapshot x outcome
+      reason: >-
+        The dump's required end state is agreement with the matched array,
+        which snapshot_agrees_with_reconciliation_json decides under
+        robustness; an outcome item would restate it.
+    - cell: D3-table-snapshot x coverage
+      reason: >-
+        One row per matched pair is the whole case set, and the row count is
+        already compared inside the agreement item.
+    - cell: D3-table-snapshot x process
+      reason: >-
+        Single-turn with no trajectory artifact in the graded set.
+    - cell: D3-table-snapshot x craft
+      reason: >-
+        A COPY stream or pg_dump body has no quality beyond correctness; its
+        two admitted carriers are both accepted by the reader.
+    - cell: D4-served-application x process
+      reason: >-
+        The application renders outcome only. The statement imposes no
+        obligation to account for method, provenance or checking, so no
+        deliverable carries a trajectory surface an item could read. The
+        judged candidate trajectory-account-is-faithful was enumerated for
+        this cell and refused by the predicate's admits clause, which is
+        recorded under judged_candidates. That refusal stands: this cell is
+        not_applicable because D4 renders outcome only, and the dimension-level
+        consequence it once carried has moved. The process dimension is now held
+        by D6-contested-account x process, whose deliverable the statement
+        obliges, so the gap rubric-process-dimension-unexercised closes on
+        evidence rather than on this reason.
+    - cell: D6-contested-account x constraints
+      reason: >-
+        The statement prescribes exactly two constraints on this deliverable:
+        exactly three sections, and a heading line of the form "## <txn_id>".
+        Both are decided inside the outcome item contested_account_structure,
+        which is where the shape of the carrier is graded. A separate
+        constraints item would fail on precisely the defects that item already
+        fails on, which is the overlap item 10f forbids. The statement
+        deliberately prescribes no length, so there is no further constraint to
+        grade.
+    - cell: D6-contested-account x robustness
+      reason: >-
+        No mutation, silent drift or adversarial input in this grounding targets
+        contested.md. The one adversarial carrier authored against it, the
+        malformed sentinel contested-account-token-stuffed, is not a robustness
+        property of the deliverable but the statement of the residue the judged
+        items grade: it names every admissible identifier and asserts nothing,
+        so it passes both compiled items and must fail both judged ones. It is
+        therefore evidence for the process cell, not a survival property a
+        robustness item could read.
+    - cell: D6-contested-account x craft
+      reason: >-
+        The deliverable is prose whose only graded quality is whether its claims
+        are true of this run, which the two judged items in the process cell
+        decide. A craft item would have to grade an aesthetic of the writing,
+        and the drafting_acceptance_predicate refuses a criterion that grades an
+        aesthetic rather than a user-visible behaviour. Legibility to a reader
+        who knows the rules but not the run is the obligation, and it is graded
+        as faithfulness, not as style.
+    - cell: D7-policy-rationale x constraints
+      reason: >-
+        The statement prescribes three constraints on this deliverable: one
+        section per violating pair plus exactly one non-violating pair, headings
+        of the form "## <receipt_id>", and ascending receipt_id order with the
+        non-violating pair last. All three are decided inside the coverage item
+        policy_notes_covers_every_violation, because a section set that omits a
+        violation, repeats a heading or misorders them is the same defect as a
+        coverage failure rather than a separate constraint. Item 10f makes a
+        criterion joining two conditions two items, so splitting the ordering
+        out would have to grade order independently of membership, and an
+        ordering defect over a wrong membership set is not a distinct failure
+        this obligation can suffer.
+    - cell: D7-policy-rationale x robustness
+      reason: >-
+        Robustness grades survival of a mutation or a hostile input, and this
+        deliverable has no state to be mutated: it is prose derived from
+        policy.json and the matched array, both of which the inputs-unmodified
+        red line already protects against alteration. A solver that edits
+        policy.json to make its own notes consistent fails inputs_unmodified at
+        weight 5, so the robustness this obligation needs is held by a red line
+        rather than left ungraded.
+    - cell: D7-policy-rationale x craft
+      reason: >-
+        The deliverable is prose whose only graded quality is whether its claims
+        are true of this run, which the judged item in the process cell decides.
+        A craft item would have to grade an aesthetic of the writing, and the
+        bound drafting_acceptance_predicate refuses a criterion that grades an
+        aesthetic rather than a user-visible behaviour.
+    - cell: D9-convention-divergence-rationale x constraints
+      reason: >-
+        The statement prescribes two constraints on this deliverable: exactly
+        two sections, and the headings "## collapse" and "## divergence" in that
+        order. Both are decided inside the outcome item
+        convention_notes_carries_both_sections, which compares the heading list
+        against those two literals in order, so a missing section, a third
+        heading and a reversed order are the same failure rather than three.
+        Item 10f makes a criterion joining two conditions two items, and
+        splitting the ordering out would have to grade order independently of
+        membership, which is not a failure this obligation can suffer: an
+        ordering defect over a wrong heading set is already a heading-set
+        defect.
+    - cell: D9-convention-divergence-rationale x robustness
+      reason: >-
+        Robustness grades survival of a mutation or a hostile input, and this
+        deliverable has no state to be mutated. It is prose derived from
+        environment/inputs/statement.csv, environment/inputs/receipts/ and
+        environment/inputs/policy.json, all of which the inputs-unmodified red
+        line already protects: a solver that edited a row's sign or the
+        tolerance to make its own convention notes consistent fails
+        inputs_unmodified at weight 5. The robustness this obligation needs is
+        therefore held by a red line rather than left ungraded.
+    - cell: D9-convention-divergence-rationale x craft
+      reason: >-
+        The deliverable is prose whose only graded quality is whether its claims
+        are true of these inputs, which the two judged items in the process cell
+        decide. A craft item would have to grade an aesthetic of the writing,
+        and the bound drafting_acceptance_predicate refuses a criterion that
+        grades an aesthetic rather than a user-visible behaviour. The statement
+        reinforces this by prescribing no wording and no length, so there is no
+        declared form for a craft item to measure against.
+    - cell: D8-parse-rationale x constraints
+      reason: >-
+        The statement prescribes three constraints on this deliverable: one
+        section per hazardous receipt and no others, headings of the form
+        "## <receipt_id>", and ascending receipt_id order. All three are
+        decided inside the coverage item parse_notes_covers_every_hazard, which
+        compares the heading list against the hazard set recomputed from the
+        receipt bytes, so a wrong set, a malformed heading and a misordering
+        are the same failure rather than three. Item 10f makes a criterion
+        joining two conditions two items, and splitting ordering out would have
+        to grade order independently of membership, which is not a failure this
+        obligation can suffer: an ordering defect over a wrong membership set is
+        already a membership defect.
+    - cell: D8-parse-rationale x robustness
+      reason: >-
+        Robustness grades survival of a mutation or a hostile input, and this
+        deliverable has no state to be mutated. It is prose derived from
+        environment/inputs/receipts/, which the inputs-unmodified red line
+        already protects: a solver that edited a receipt to make its own parse
+        notes consistent fails inputs_unmodified at weight 5. The robustness
+        this obligation needs is therefore held by a red line rather than left
+        ungraded.
+    - cell: D8-parse-rationale x craft
+      reason: >-
+        The deliverable is prose whose only graded quality is whether its
+        claims are true of these receipts, which the two judged items in the
+        process cell decide. A craft item would have to grade an aesthetic of
+        the writing, and the bound drafting_acceptance_predicate refuses a
+        criterion that grades an aesthetic rather than a user-visible
+        behaviour.
+    - cell: RL-inputs-unmodified x outcome
+      reason: >-
+        A red line has no required end state of its own: its outcome is the
+        absence its constraints item decides.
+    - cell: RL-inputs-unmodified x coverage
+      reason: >-
+        The checker compares every file under the shipped input tree against
+        its generation-time digest, so coverage is total inside the one
+        constraints item rather than a separate obligation.
+    - cell: RL-inputs-unmodified x robustness
+      reason: >-
+        No mutation in this grounding alters the input tree, so there is no
+        survival property distinct from the absence itself.
+    - cell: RL-inputs-unmodified x process
+      reason: >-
+        Single-turn with no trajectory artifact in the graded set.
+    - cell: RL-inputs-unmodified x craft
+      reason: >-
+        An unchanged byte set has no quality beyond being unchanged.
+    - cell: RL-screens-self-contained x outcome
+      reason: >-
+        A red line has no required end state of its own: its outcome is the
+        absence its constraints item decides.
+    - cell: RL-screens-self-contained x coverage
+      reason: >-
+        The checker loads the review screen and every detail screen and
+        intercepts every request each issues, so coverage is total inside the
+        one constraints item.
+    - cell: RL-screens-self-contained x robustness
+      reason: >-
+        Request interception already observes a URL composed at runtime, which
+        is the drift a robustness item would otherwise grade, so a separate
+        item would overlap.
+    - cell: RL-screens-self-contained x process
+      reason: >-
+        Single-turn with no trajectory artifact in the graded set.
+    - cell: RL-screens-self-contained x craft
+      reason: >-
+        The absence of an external request has no quality beyond its absence.
+  filled_by_item:
+    - cell: D1-reconciliation-json x outcome
+      items: [reconciliation_json_wellformed, matched_set_exact]
+    - cell: D1-reconciliation-json x coverage
+      items: [unreceipted_set_exact, unposted_set_exact]
+    - cell: D1-reconciliation-json x constraints
+      items: [matched_sorted_by_receipt_id, totals_consistent]
+    - cell: D1-reconciliation-json x robustness
+      items: [violation_flags_exact]
+    - cell: D2-summary x constraints
+      items: [summary_matches_json]
+    - cell: D3-table-snapshot x constraints
+      items: [snapshot_table_shape]
+    - cell: D3-table-snapshot x robustness
+      items: [snapshot_agrees_with_reconciliation_json]
+    - cell: D4-served-application x outcome
+      items: [review_screen_structure]
+    - cell: D4-served-application x coverage
+      items: [detail_screens_complete]
+    - cell: D4-served-application x constraints
+      items: [review_screen_rows_sorted]
+    - cell: D4-served-application x robustness
+      items: [served_screen_agrees_with_reconciliation_json]
+    - cell: D4-served-application x craft
+      items: [review_screen_columns_aligned]
+    - cell: D6-contested-account x outcome
+      items: [contested_account_structure]
+    - cell: D6-contested-account x coverage
+      items: [contested_account_names_an_alternative]
+    - cell: D6-contested-account x process
+      items:
+        - contested_pairing_matches_declared_matching
+        - contested_reason_is_the_operative_rule
+      mode: judged
+      note: >-
+        The only judged cell in the grid. Both items read
+        /app/out/contested.md, which no compiled item in any other cell reads,
+        so no judged item can overlap a compiled one across obligations. Within
+        this obligation the two compiled items grade the carrier's shape and the
+        presence of an admissible identifier, and these two grade what the prose
+        asserts about the identifiers it names; a section can satisfy either
+        pair while failing the other, which is why they do not overlap. The two
+        judged items are disjoint from each other on the same test: a section
+        that states the right pairing with a false reason fails the second and
+        passes the first, and a section that inverts a pairing while citing the
+        operative rule fails the first and passes the second.
+    - cell: D7-policy-rationale x coverage
+      items: [policy_notes_covers_every_violation]
+    - cell: D7-policy-rationale x outcome
+      items: [policy_notes_names_the_governing_limit]
+    - cell: D7-policy-rationale x process
+      items:
+        - policy_verdict_follows_from_the_two_numbers
+        - policy_magnitude_is_the_arithmetic_difference
+      mode: judged
+      note_second_item: >-
+        This cell carries two judged items. Item 7e scopes exclusivity per cell,
+        "no two judged items of one cell state the same check", which is a
+        distinctness requirement rather than a count, and item 10f independently
+        requires the split because a criterion joining the relation and the
+        magnitude would be two items.
+
+        Distinctness, argued from the control design rather than executed,
+        because executing a judged item requires a judge and no judge has run
+        against this bundle. The control that falsifies the magnitude leaves
+        the relation and the verdict true: it reads "8100 strictly exceeds
+        7500, by 2400 cents, so the pair violates policy", which is correct on
+        the relation, correct on the verdict and false only in the subtraction.
+        A judge reading it should therefore fail
+        policy_magnitude_is_the_arithmetic_difference and accept
+        policy_verdict_follows_from_the_two_numbers. The control that inverts
+        the relation leaves the magnitude incidental, so a judge should fail the
+        first and accept the second. Each control corrupts the subject of
+        exactly one item of the pair, which is a property of what the control
+        alters rather than a verdict anyone has read.
+
+        Corrected form. An earlier revision of this note opened "Distinctness,
+        measured rather than argued", which overstated what was done: what
+        execution established is the paragraph below, that both controls pass
+        every compiled item. The judged verdicts were never executed.
+
+        Both controls were measured against the whole compiled surface and both
+        passed every compiled item, which is why each stands at mode judged
+        rather than compiled.
+      note: >-
+        The second judged cell in the grid, and it cannot overlap the first.
+        Item 7e scopes exclusivity per cell, "no two judged items of one cell
+        state the same check", and this item sits in a different obligation row
+        from both D6 judged items, so collision is impossible by construction
+        rather than by argument. It also reads a different carrier:
+        /app/out/policy-notes.md, which no item of any other cell reads.
+
+        Against the two compiled items of this same obligation, divergence is
+        measured in both directions rather than asserted. A carrier whose
+        RCP-0005 section cites the travel cap of 50000 against a meals receipt
+        fails policy_notes_names_the_governing_limit and passes
+        policy_notes_covers_every_violation. A carrier with the RCP-0008
+        section removed fails policy_notes_covers_every_violation and passes
+        policy_notes_names_the_governing_limit. A carrier that inverts the
+        stated inequality passes both and must fail this judged item, which is
+        the residue stated as a measurement.
+    - cell: D8-parse-rationale x coverage
+      items: [parse_notes_covers_every_hazard]
+    - cell: D8-parse-rationale x outcome
+      items: [parse_notes_quotes_the_correct_value]
+    - cell: D8-parse-rationale x process
+      items:
+        - parse_notes_attributes_the_colon_mechanism
+        - parse_notes_attributes_the_nonfield_mechanism
+      mode: judged
+      note: >-
+        The third judged cell, and the second to carry two items. Item 7e
+        scopes exclusivity per cell, "no two judged items of one cell state the
+        same check", which is a distinctness requirement rather than a count,
+        so a cell admits as many items as there are distinct defects. Item 10f
+        independently requires the split: a criterion joining two conditions is
+        two items, and the two format rules are two conditions.
+
+        Disjointness, argued from the control design rather than executed,
+        because executing a judged item requires a judge and no judge has run
+        against this bundle. The control
+        parse-notes-misattributes-the-colon-mechanism rewrites only the
+        rule-naming sentence of the RCP-0003 and RCP-0007 sections and leaves
+        RCP-0004 correct, so a judge reading it should fail
+        parse_notes_attributes_the_colon_mechanism and accept
+        parse_notes_attributes_the_nonfield_mechanism. The control
+        parse-notes-misattributes-the-nonfield-mechanism rewrites only the
+        RCP-0004 sentence and leaves the other two correct, so a judge should
+        fail the second and accept the first. Each control therefore corrupts
+        the subject of exactly one item of the pair and leaves the other's
+        subject intact, which is the disjointness item 7e requires and which is
+        a property of what the controls alter rather than a verdict anyone has
+        read.
+
+        Corrected form. An earlier revision of this note said "Disjointness,
+        measured by executing the two shipped controls" and that these two "are
+        distinct on measured evidence rather than on argument". That overstated
+        what was done: what execution established is the paragraph below, that
+        both compiled items accept both controls. The judged verdicts were
+        never executed, and the D6 process cell already recorded the honest form
+        for its own pair, so this note is brought into line with it rather than
+        left asserting a measurement that does not exist.
+
+        Neither can collide with the judged items of D6-contested-account by
+        process or D7-policy-rationale by process, because those sit in
+        different obligation rows and read different carriers. This cell reads
+        /app/out/parse-notes.md, which no item of any other cell reads.
+
+        Against the two compiled items of this same obligation, both controls
+        were measured True on parse_notes_covers_every_hazard and True on
+        parse_notes_quotes_the_correct_value, so the whole compiled surface
+        accepts a carrier whose attributions are false. That is the residue
+        stated as a measurement rather than as a prediction.
+    - cell: D9-convention-divergence-rationale x outcome
+      items: [convention_notes_carries_both_sections]
+    - cell: D9-convention-divergence-rationale x coverage
+      items: [convention_notes_names_every_row]
+    - cell: D9-convention-divergence-rationale x process
+      items:
+        - convention_collapse_is_the_true_direction
+        - convention_divergence_set_is_the_true_partition
+      mode: judged
+      note: >-
+        The fourth judged cell, and the third to carry two items. Item 7e scopes
+        exclusivity per cell, "no two judged items of one cell state the same
+        check", which is a distinctness requirement rather than a count, and
+        item 10f independently requires the split because a criterion joining
+        the direction of the collapse and the membership of the partition would
+        join two conditions.
+
+        Disjointness, argued from the control design rather than executed,
+        because executing a judged item requires a judge and no judge has run
+        against this bundle. The control convention-notes-inverts-the-collapse
+        rewrites only the collapse section and leaves the divergence section as
+        the oracle wrote it, so a judge reading it should fail
+        convention_collapse_is_the_true_direction and accept
+        convention_divergence_set_is_the_true_partition. The control
+        convention-notes-claims-the-rules-agree rewrites only the divergence
+        section and leaves the collapse section intact, so a judge should fail
+        the second and accept the first. Each control corrupts the subject of
+        exactly one item of the pair, which is a property of what the control
+        alters rather than a verdict anyone has read.
+
+        What execution did establish, and what is recorded as measured: both
+        controls were graded by the whole compiled surface and every one of the
+        eight compiled items over every prose carrier returned True on each.
+        That is the residue, and it is why both items stand at mode judged
+        rather than compiled.
+
+        Neither can collide with the judged items of any other cell. The three
+        other judged cells sit in different obligation rows and read different
+        carriers; this cell reads /app/out/convention-notes.md, which no item of
+        any other cell reads.
+
+        Against the two compiled items of this same obligation, divergence is
+        measured in both directions. A carrier whose divergence section replaces
+        the ten row names with the phrase "the debit rows" fails
+        convention_notes_names_every_row and passes
+        convention_notes_carries_both_sections; a carrier with the divergence
+        section removed entirely fails both, and a carrier holding both sections
+        with every row named passes both. The first case is the measured
+        divergence; the compiled pair also sits in different cells, outcome and
+        coverage, so item 7e's clause is not engaged for them and the divergence
+        is stronger than the clause asks.
+    - cell: RL-inputs-unmodified x constraints
+      items: [inputs_unmodified]
+    - cell: RL-screens-self-contained x constraints
+      items: [served_screens_request_no_external_origin]
+  coverage_statement: >-
+    Forty-two cells over seven obligations and six dimensions. Seventeen hold at
+    least one item, covering all nineteen compiled items and both judged items,
+    and twenty-five carry a not_applicable reason. No cell is empty and no cell
+    carries both an item and a reason. All six dimensions hold at least one
+    item: outcome four, coverage four, constraints seven, robustness three,
+    process two, craft one.
+  process_dimension_now_held: >-
+    Supersedes the earlier statement that the process dimension held no item and
+    that this bundle failed the dimension-level exhaustiveness clause of Phase
+    verify item 7e. The clause is now satisfied on evidence. The two items in
+    D6-contested-account by process are the only judged items in the grid, and
+    the deliverable they read is one instruction.md obliges, so the dimension is
+    exercised by a graded obligation rather than discharged by a reason. The gap
+    rubric-process-dimension-unexercised in the run contract is to be closed
+    against this cell, not left standing: its closing condition was that some
+    obligation hold a process item, and one does. The six other obligations keep
+    their per-cell process reasons, which remain true of them.
+  weights_after_d8: >-
+    Compiled weight seventy-seven over twenty-three items, judged weight
+    twenty-one over five items, total ninety-eight. The compiled share is
+    77/98, which is 0.7857142857142857, recomputed from these bytes at report
+    time. Every weight is in the one, three, five scale item 9g fixes, and
+    every item of both modes now carries a weight_source recording its
+    derivation against 9g's test.
+
+    Supersedes the 61/71 the field below records and the 69/84 that followed
+    it. Both were true of the surfaces they measured. Per obligation the
+    judged share is 8 of 14 on D6-contested-account, 5 of 13 on
+    D7-policy-rationale and 8 of 16 on D8-parse-rationale, so no judge decides
+    more than half the weight of any obligation.
+
+    No judged item carries weight 1. The three weight-1 items are compiled and
+    are genuine polish: matched_sorted_by_receipt_id,
+    review_screen_rows_sorted and review_screen_columns_aligned. A judged 1
+    would price a judgment whose failure costs nothing, which is a judgment not
+    worth a judge, so none was invented to complete the scale.
+  weights: >-
+    Compiled weight sixty-one over nineteen items, judged weight ten over two
+    items, total seventy-one. The compiled share is 61/71, which is
+    0.8591549295774648, recomputed from these bytes rather than carried forward.
+    Every weight is in the one, three, five scale item 9g fixes.
+  liveness_measured_d8: >-
+    Item 7e requires liveness against the oracle and every item 10a control,
+    and the D8 result is measured here rather than asserted. The oracle's own
+    /app/out/parse-notes.md was produced by executing the generated
+    solution/solver.py against environment/inputs/ with APP rebound to a
+    scratch tree; it wrote exactly three sections headed RCP-0003, RCP-0004 and
+    RCP-0007 in ascending order, attributing the colon rule to the first and
+    third and the non-field rule to the second.
+
+    Over that output and six derived carriers, the two compiled items of
+    D8-parse-rationale resolve as follows. On the oracle both pass. On
+    parse-notes-misattributes-the-colon-mechanism both pass. On
+    parse-notes-misattributes-the-nonfield-mechanism both pass. On
+    parse-notes-omits-a-hazardous-receipt coverage fails and quoting passes. On
+    parse-notes-discusses-a-clean-receipt coverage fails and quoting passes,
+    measured in both placements, appended after RCP-0007 and inserted in
+    ascending position before RCP-0003, so the defect is the surplus member
+    rather than the ordering. On parse-notes-misquotes-the-correct-value
+    coverage passes and quoting fails. On parse-notes-absent both fail.
+
+    The two passes on misattributed carriers are the residue stated as a
+    measurement. A carrier that pins the non-field rule onto both colon
+    receipts, and one that pins the colon rule onto the non-field receipt, are
+    each accepted by every comparator over the prose bytes, because neither
+    moves a string either checker reads. Only a reading of which rule each
+    section attributes separates them from the oracle, which is why
+    parse_notes_attributes_the_colon_mechanism and
+    parse_notes_attributes_the_nonfield_mechanism stand at mode judged. Their
+    own liveness against those two controls is an authored expectation until a
+    judge runs, and is not claimed as measured.
+  exclusivity_measured_d8: >-
+    The two compiled items of D8-parse-rationale occupy different cells,
+    coverage and outcome, so item 7e's clause against two items of one
+    obligation and dimension giving the same verdict is not engaged for them.
+    Their divergence is proven anyway in both directions, because resting on
+    the scoping would be a weaker claim than the bytes support. Dropping the
+    RCP-0004 section makes parse_notes_covers_every_hazard fail while
+    parse_notes_quotes_the_correct_value passes; mangling every quoted vendor
+    value while keeping the section set correct makes the second fail while the
+    first passes.
+
+    The two judged items do share one cell, D8-parse-rationale by process, so
+    7e's distinctness clause is engaged for them and is satisfied on measured
+    evidence. The colon control leaves all three sections claiming the
+    non-field rule, which corrupts RCP-0003 and RCP-0007 and leaves RCP-0004
+    correct by accident of the swap; the non-field control leaves all three
+    claiming the colon rule, which corrupts RCP-0004 and leaves the other two
+    correct. Each control therefore falsifies exactly one item of the pair and
+    leaves the other satisfiable, which is the disjointness 7e requires.
+  liveness_measured: >-
+    Item 7e requires liveness against the oracle and every item 10a control,
+    and the result is measured here rather than asserted. The oracle's own
+    /app/out/contested.md was produced by executing the generated
+    solution/solver.py against environment/inputs/ with APP rebound to a
+    scratch tree; it reported totals matched_count 11, unreceipted_count 1,
+    unposted_count 1 and violation_count 3, and wrote three sections headed
+    TXN-1009, TXN-1007 and TXN-1011.
+
+    Over that output and four derived carriers, the two compiled items in the
+    D6-contested-account row resolve as follows. On the oracle both pass. On
+    contested-account-inverts-a-pairing both pass. On
+    contested-account-gives-a-false-reason both pass. On
+    contested-account-absent both fail. On the malformed sentinel
+    contested-account-token-stuffed both pass.
+
+    Those three passes on defective carriers are the residue stated as a
+    measurement rather than as an argument. A carrier that inverts a pairing, a
+    carrier that gives a reason the inputs make false, and a carrier that names
+    every admissible identifier while asserting nothing are each accepted by
+    every comparator over the prose bytes, because each carries the right
+    tokens. Only a reading of what the sentences claim separates them from the
+    oracle, which is why contested_pairing_matches_declared_matching and
+    contested_reason_is_the_operative_rule stand at mode judged. Their own
+    liveness against those two controls is an authored expectation until a
+    judge runs, and is not claimed as measured here.
+  exclusivity_measured: >-
+    The two compiled items over D6-contested-account occupy different cells,
+    outcome and coverage, so item 7e's clause against two items of one
+    obligation and dimension giving the same verdict is not engaged for them.
+    Their divergence is proven anyway, in both directions, because resting on
+    the scoping would be a weaker claim than the bytes support.
+
+    With RCP-0011 replaced throughout the TXN-1009 section by the phrase "the
+    other receipt", leaving the three-section shape intact,
+    contested_account_structure passes and
+    contested_account_names_an_alternative fails. With one heading rewritten to
+    "## TXN-9999", which is no row of environment/inputs/statement.csv,
+    contested_account_structure fails and
+    contested_account_names_an_alternative passes. Each therefore fails on a
+    defect the other passes.
+
+    The two judged items are disjoint on the same test, argued from the
+    controls rather than executed, since a judge is required to execute them: a
+    section stating the right pairing with a false reason fails the reason item
+    and passes the pairing item, and a section inverting a pairing while citing
+    maximum cardinality fails the pairing item and passes the reason item. The
+    two shipped known-wrong controls are exactly those two carriers.
+
+drafting:
+  model_identity: claude-opus-5
+  note: >-
+    Non-evidentiary metadata under item 10f. No closed schema receives it and
+    no gate reads it. Every criterion string above is a frozen literal of this
+    file; solution/recompute.py reads them and never invokes a model, a
+    network, a clock, a locale, or a random source.
+  predicate_state: bound
+  predicate_note: >-
+    rubric.drafting_acceptance_predicate in .seed/contract.yaml stands at
+    state bound, signed by the operator on 2026-10-28, and the gap
+    rubric-drafting-predicate-unbound is closed by that binding. The judged
+    candidates enumerated above were each ruled under it, and all were
+    refused, so every criterion in this file remains mode compiled and no
+    judged prose is frozen. The candidate prose above is a record of the
+    attempt rather than a frozen judged criterion: recompute.py emits no
+    criterion from the judged_candidates block.

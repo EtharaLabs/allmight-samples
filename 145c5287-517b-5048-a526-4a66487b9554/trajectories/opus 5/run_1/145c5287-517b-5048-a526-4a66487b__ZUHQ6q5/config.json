@@ -1,0 +1,24 @@
+{
+    "task": {
+        "path": "/home/ec2-user/shivansh2/145c5287-517b-5048-a526-4a66487b9554"
+    },
+    "trial_name": "145c5287-517b-5048-a526-4a66487b__ZUHQ6q5",
+    "trials_dir": "/home/ec2-user/shivansh2/145c5287-517b-5048-a526-4a66487b9554/trajectories/trajectory-wm",
+    "agent": {
+        "name": "claude-code",
+        "model_name": "claude-opus-5",
+        "extra_allowed_hosts": [
+            "api.anthropic.com"
+        ],
+        "env": {
+            "CLAUDE_FORCE_OAUTH": "****"
+        }
+    },
+    "job_id": "54aa1221-9c0e-41d0-a33f-21e934073000",
+    "source_trial": {
+        "action": "regrade",
+        "type": "local",
+        "trial_id": "52a61c73-4f52-4781-8e60-10d3addfb7fd",
+        "path": "/home/ec2-user/shivansh2/145c5287-517b-5048-a526-4a66487b9554/trajectories/opus 5/run_1/145c5287-517b-5048-a526-4a66487b__cU5PTZq"
+    }
+}

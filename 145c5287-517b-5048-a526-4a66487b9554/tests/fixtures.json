@@ -1,0 +1,192 @@
+{
+  "expected": {
+    "matched": [
+      {
+        "amount_delta_cents": 0,
+        "category": "travel",
+        "date_delta_days": 0,
+        "receipt_id": "RCP-0001",
+        "txn_id": "TXN-1001",
+        "violates_policy": false
+      },
+      {
+        "amount_delta_cents": 25,
+        "category": "meals",
+        "date_delta_days": 1,
+        "receipt_id": "RCP-0002",
+        "txn_id": "TXN-1002",
+        "violates_policy": false
+      },
+      {
+        "amount_delta_cents": 0,
+        "category": "software",
+        "date_delta_days": 0,
+        "receipt_id": "RCP-0003",
+        "txn_id": "TXN-1003",
+        "violates_policy": false
+      },
+      {
+        "amount_delta_cents": 0,
+        "category": "other",
+        "date_delta_days": 1,
+        "receipt_id": "RCP-0004",
+        "txn_id": "TXN-1004",
+        "violates_policy": false
+      },
+      {
+        "amount_delta_cents": 0,
+        "category": "meals",
+        "date_delta_days": 0,
+        "receipt_id": "RCP-0005",
+        "txn_id": "TXN-1005",
+        "violates_policy": true
+      },
+      {
+        "amount_delta_cents": -30,
+        "category": "hardware",
+        "date_delta_days": 1,
+        "receipt_id": "RCP-0006",
+        "txn_id": "TXN-1006",
+        "violates_policy": false
+      },
+      {
+        "amount_delta_cents": 0,
+        "category": "travel",
+        "date_delta_days": 1,
+        "receipt_id": "RCP-0007",
+        "txn_id": "TXN-1008",
+        "violates_policy": false
+      },
+      {
+        "amount_delta_cents": -40,
+        "category": "meals",
+        "date_delta_days": 1,
+        "receipt_id": "RCP-0008",
+        "txn_id": "TXN-1009",
+        "violates_policy": true
+      },
+      {
+        "amount_delta_cents": 0,
+        "category": "software",
+        "date_delta_days": 1,
+        "receipt_id": "RCP-0009",
+        "txn_id": "TXN-1010",
+        "violates_policy": false
+      },
+      {
+        "amount_delta_cents": -35,
+        "category": "other",
+        "date_delta_days": 1,
+        "receipt_id": "RCP-0010",
+        "txn_id": "TXN-1012",
+        "violates_policy": false
+      },
+      {
+        "amount_delta_cents": 45,
+        "category": "meals",
+        "date_delta_days": 3,
+        "receipt_id": "RCP-0011",
+        "txn_id": "TXN-1007",
+        "violates_policy": true
+      }
+    ],
+    "totals": {
+      "matched_count": 11,
+      "unposted_count": 1,
+      "unreceipted_count": 1,
+      "violation_count": 3
+    },
+    "unposted": [
+      "RCP-0012"
+    ],
+    "unreceipted": [
+      "TXN-1011"
+    ]
+  },
+  "input_digests": {
+    "policy.json": "57e53e3c763186275e4ace055165c635549e8e2c242f8a631f21ff478a969ff3",
+    "receipts/rcp-0001.txt": "639ecae1a33794a22082b4ed4dfe256e5986f3011fa437c6aad6053d5e901d81",
+    "receipts/rcp-0002.txt": "ed850576875e9a20b41f67ccb78653529a55327c5c9183daa7f9aeb820b12364",
+    "receipts/rcp-0003.txt": "8b79922deb271b2141a6bd10df70bb8eab011892d53b9b54249a373172012b75",
+    "receipts/rcp-0004.txt": "5b9c710282fd1ba11492e9efc3c35b9e8f915bc3c47dd13b2e005a6da6783fa2",
+    "receipts/rcp-0005.txt": "b53728eee5bed5d52249bde73e64cf56cf69955192de8185082c373a279b1c9c",
+    "receipts/rcp-0006.txt": "8cda3263753ce7ffe4eb8596c4725771de8d9feb2e83517a6e2e3dbf894c807d",
+    "receipts/rcp-0007.txt": "9e32b5db5ab7b921418e51247f40b4aa8373102ba5fab157762201336bc23971",
+    "receipts/rcp-0008.txt": "1f8337af5367273e49acb82401edbf499c40d6b6e8869798320d37be0af24f08",
+    "receipts/rcp-0009.txt": "16925ff22244bc5c1d42ae3460e22bbb16695b47678d53cb1011a26116691777",
+    "receipts/rcp-0010.txt": "728d2241e4fc4a424c3e1a6eda859217f3d8b6ab576f42352ec04606209b2960",
+    "receipts/rcp-0011.txt": "5bdcd56e1fe752494bff66bcd4126a34c1844b0e74290ea1ba11c31e205d9e76",
+    "receipts/rcp-0012.txt": "2540d6f94b8bc27b8e15e1d0097bf897f952fb54ae5d203e7d83180b78062f07",
+    "statement.csv": "25f2f4db75cb446743b92452ac6095d7fc6458158658b216929da1ca37a2fa5c"
+  },
+  "rendered_state": {
+    "column_alignment_note": "Within the matched table, every cell of one column shares a left edge to within one device-independent pixel at the named viewport. Markup alone does not establish this: a table whose cells carry correct text can still lay out ragged under a CSS rule that sizes columns per row.",
+    "column_alignment_tolerance_px": 1,
+    "font_family_head": "Liberation Sans",
+    "font_family_note": "Every graded cell resolves to a font the image ships, so document.fonts.check returns true at each element's own computed weight and size. A page that names a font the image lacks still serves identical bytes and renders in a fallback, which only a hydrated document reveals.",
+    "viewport": {
+      "height": 800,
+      "width": 1280
+    },
+    "viewport_note": "The single named viewport at which every rendered-state obligation is measured. A geometry claim without a viewport is unfalsifiable, so the statement names this one and the verifier measures at it alone.",
+    "violation_weight": 700,
+    "violation_weight_note": "A row whose pair violates policy resolves to a computed font-weight of 700 on its policy-state cell; a compliant row resolves to 400. The statement states that a violation must be distinguishable in text weight and not by colour or position alone, and the computed weight is the resolved cascade value rather than a markup attribute."
+  },
+  "schema": "forge.checker-fixtures/v1",
+  "screens": [
+    {
+      "id": "review",
+      "purpose": "The reconciliation review screen. It carries every matched pair as a row of a table whose element id is matched-table, every unreceipted txn_id in a list whose element id is unreceipted-list, and every unposted RECEIPT-ID in a list whose element id is unposted-list.",
+      "required_element_ids": [
+        "matched-table",
+        "unreceipted-list",
+        "unposted-list",
+        "totals-matched",
+        "totals-unreceipted",
+        "totals-unposted",
+        "totals-violations"
+      ],
+      "route": "/",
+      "row_contract": "Each matched row carries a data-receipt-id attribute equal to its RECEIPT-ID, and six cells in this order: receipt id, txn id, amount delta in cents, date delta in days, category, and the policy state. A row whose pair violates policy carries the class violation on the row element."
+    },
+    {
+      "id": "detail",
+      "purpose": "The per-pair detail screen, one per matched pair, reachable from its row. It carries the same six values under element ids pair-receipt-id, pair-txn-id, pair-amount-delta, pair-date-delta, pair-category and pair-policy-state, so the two screens can be compared against each other and against the JSON.",
+      "required_element_ids": [
+        "pair-receipt-id",
+        "pair-txn-id",
+        "pair-amount-delta",
+        "pair-date-delta",
+        "pair-category",
+        "pair-policy-state"
+      ],
+      "route": "/pair/<receipt_id>"
+    }
+  ],
+  "table_columns": [
+    [
+      "receipt_id",
+      "text"
+    ],
+    [
+      "txn_id",
+      "text"
+    ],
+    [
+      "amount_delta_cents",
+      "integer"
+    ],
+    [
+      "date_delta_days",
+      "integer"
+    ],
+    [
+      "category",
+      "text"
+    ],
+    [
+      "violates_policy",
+      "boolean"
+    ]
+  ]
+}

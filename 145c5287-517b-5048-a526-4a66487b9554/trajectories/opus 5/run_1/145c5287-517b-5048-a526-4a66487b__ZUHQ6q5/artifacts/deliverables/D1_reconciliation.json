@@ -1,0 +1,104 @@
+{
+  "matched": [
+    {
+      "receipt_id": "RCP-0001",
+      "txn_id": "TXN-1001",
+      "amount_delta_cents": 0,
+      "date_delta_days": 0,
+      "category": "travel",
+      "violates_policy": false
+    },
+    {
+      "receipt_id": "RCP-0002",
+      "txn_id": "TXN-1002",
+      "amount_delta_cents": 25,
+      "date_delta_days": 1,
+      "category": "meals",
+      "violates_policy": false
+    },
+    {
+      "receipt_id": "RCP-0003",
+      "txn_id": "TXN-1003",
+      "amount_delta_cents": 0,
+      "date_delta_days": 0,
+      "category": "software",
+      "violates_policy": false
+    },
+    {
+      "receipt_id": "RCP-0004",
+      "txn_id": "TXN-1004",
+      "amount_delta_cents": 0,
+      "date_delta_days": 1,
+      "category": "other",
+      "violates_policy": false
+    },
+    {
+      "receipt_id": "RCP-0005",
+      "txn_id": "TXN-1005",
+      "amount_delta_cents": 0,
+      "date_delta_days": 0,
+      "category": "meals",
+      "violates_policy": true
+    },
+    {
+      "receipt_id": "RCP-0006",
+      "txn_id": "TXN-1006",
+      "amount_delta_cents": -30,
+      "date_delta_days": 1,
+      "category": "hardware",
+      "violates_policy": false
+    },
+    {
+      "receipt_id": "RCP-0007",
+      "txn_id": "TXN-1008",
+      "amount_delta_cents": 0,
+      "date_delta_days": 1,
+      "category": "travel",
+      "violates_policy": false
+    },
+    {
+      "receipt_id": "RCP-0008",
+      "txn_id": "TXN-1009",
+      "amount_delta_cents": -40,
+      "date_delta_days": 1,
+      "category": "meals",
+      "violates_policy": true
+    },
+    {
+      "receipt_id": "RCP-0009",
+      "txn_id": "TXN-1010",
+      "amount_delta_cents": 0,
+      "date_delta_days": 1,
+      "category": "software",
+      "violates_policy": false
+    },
+    {
+      "receipt_id": "RCP-0010",
+      "txn_id": "TXN-1012",
+      "amount_delta_cents": -35,
+      "date_delta_days": 1,
+      "category": "other",
+      "violates_policy": false
+    },
+    {
+      "receipt_id": "RCP-0011",
+      "txn_id": "TXN-1007",
+      "amount_delta_cents": 45,
+      "date_delta_days": 3,
+      "category": "meals",
+      "violates_policy": true
+    }
+  ],
+  "unreceipted": [
+    "TXN-1011"
+  ],
+  "unposted": [
+    "RCP-0012"
+  ],
+  "totals": {
+    "matched_count": 11,
+    "unreceipted_count": 1,
+    "unposted_count": 1,
+    "violation_count": 3
+  }
+}

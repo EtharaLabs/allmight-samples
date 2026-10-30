@@ -1,0 +1,5 @@
+RECEIPT-ID: RCP-0011
+DATE: 2026-03-15
+VENDOR: Covent Row Catering
+TOTAL: 99.45
+CATEGORY: meals

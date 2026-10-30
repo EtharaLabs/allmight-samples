@@ -1,0 +1,5 @@
+RECEIPT-ID: RCP-0007
+DATE: 2026-03-15
+VENDOR: Meridian Coach Lines: Route 42
+TOTAL: 54.00
+CATEGORY: travel

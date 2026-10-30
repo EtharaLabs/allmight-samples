@@ -1,0 +1,5 @@
+RECEIPT-ID: RCP-0009
+DATE: 2026-03-19
+VENDOR: Veridian Cloud Hosting
+TOTAL: 44.00
+CATEGORY: software
