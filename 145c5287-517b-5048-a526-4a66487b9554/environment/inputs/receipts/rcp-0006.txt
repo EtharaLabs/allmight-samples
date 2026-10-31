@@ -1,5 +1,0 @@
-RECEIPT-ID: RCP-0006
-DATE: 2026-03-11
-VENDOR: Pallas Hardware Depot
-TOTAL: 227.20
-CATEGORY: hardware

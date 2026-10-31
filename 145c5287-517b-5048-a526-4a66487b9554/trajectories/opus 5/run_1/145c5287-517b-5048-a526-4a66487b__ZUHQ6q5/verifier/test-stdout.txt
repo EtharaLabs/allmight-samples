@@ -1,2 +1,0 @@
-started /app/start.sh, logging to /logs/verifier/app-start.log
-reward: 0.8174

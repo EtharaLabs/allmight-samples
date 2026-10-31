@@ -1,7 +1,0 @@
-RECEIPT-ID: RCP-0004
-DATE: 2026-03-07
-VENDOR: Carter & Voss LLP
-TOTAL: 315.00
-CATEGORY: other
-Thank you for your business.
-Invoice generated automatically; retain for records.

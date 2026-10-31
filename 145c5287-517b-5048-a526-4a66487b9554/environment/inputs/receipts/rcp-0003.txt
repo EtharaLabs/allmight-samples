@@ -1,5 +1,0 @@
-RECEIPT-ID: RCP-0003
-DATE: 2026-03-05
-VENDOR: Heliotype Software: Annual Plan
-TOTAL: 120.00
-CATEGORY: software

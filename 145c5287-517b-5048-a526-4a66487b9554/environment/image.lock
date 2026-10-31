@@ -1,5 +1,0 @@
-{
-  "context_digest": "sha256:b08383bf4759abeec32f333ac32485897dc11c2348b9a665c65de936cda5d205",
-  "image": "localhost:5001/ledgerline-env@sha256:e5931807291ac77e59912baef9892e5f8b0b11adc6f254678918916166ad06f5",
-  "schema": "trinity.image-lock/v1"
-}
