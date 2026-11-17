@@ -1,0 +1,65 @@
+schema_version = "1.4"
+reward_type = "bounded_continuous"
+artifacts = [{ source = "/app", exclude = [".git", "**/.cache", "**/__pycache__", "**/.pytest_cache", "**/.mypy_cache", "**/.ruff_cache", "**/.npm"] }]
+
+[task]
+name = "ethara/dd267972-4223-4439-afe5-095fe11a34f2"
+version = "1.0.0"
+description = "Build a restaurant group's timekeeping and payroll web application from a written specification over an existing database of staff, rates, and legacy punches: exact CA and FLSA overtime rules across time zones and DST, a time-clock punch API, approvals along a reporting tree, finalize-once payroll runs with retroactive adjustments, emailed pay statements, and a spreadsheet-safe export; graded by strict browser and HTTP workflows plus a judged experience review."
+authors = [{ name = "amrit.raj", email = "amrit.raj@ethara.ai" }]
+keywords = ["web-application", "zero-to-one", "payroll", "overtime", "time-zones", "dst", "postgresql", "email", "csrf", "authorization", "idempotency", "concurrency", "rewardkit", "llm-judge"]
+
+[metadata]
+category = "programming"
+domain = "enterprise-tool"
+difficulty = "hard"
+tags = ["full-stack", "payroll", "labor-law", "time-zones", "legacy-data", "security", "concurrency", "email"]
+reference_benchmark = "Vibe Code Bench (arXiv 2603.04601)"
+reference_benchmark_relation = "Used only to calibrate the delivery format and the difficulty target. The specification, seed corpus, reference engine, grading workflows and reference solution are original work authored for this task; no instruction text, fixture, expected value or grading criterion is derived from that benchmark or from any other public source. The California and FLSA overtime rules the task encodes are statutory requirements rather than content taken from a dataset, and are restated in the author's own words."
+valid_until = "2027-11-11"
+scoring = "reward = 0.9 * functional + 0.1 * judge; functional = weighted share of strict workflows (every substep must pass); any observed breach caps each workflow at 0.4, and any failed critical workflow caps each workflow at 0.4; a critical workflow that fails only because the verifier's time budget ran out scores 0 without triggering the cap"
+difficulty_explanation = "The pay rules are exact and interact: CA daily OT/DT, the seventh-day rule, weekly OT without pyramiding, a weighted regular rate across jobs with effective-dated rates, meal premiums, 6-minute rounding with ties, and workday splits at local midnight, workweek, pay-period and DST boundaries in three zones. Payroll is checked hour-for-hour and cent-for-cent against 1,500 staff of legacy data with ambiguous fall-back times, and against verifier-generated staff per rule. Runs must finalize once under concurrency, refuse stale drafts, pay late changes as signed adjustments, and send each pay statement exactly once. A breach battery (authorization along a reporting tree, CSRF, stored XSS, CSV formula injection, mass assignment, session fixation and survival, device-key scope, plain-text secrets, legacy record changes) caps the reward."
+solution_explanation = "solution/app is a Python standard-library HTTP server with psycopg 3: a unit-by-unit pay engine (6-minute units, exact Fractions), approval fingerprints that return changed weeks to pending, advisory-locked punch imports, run versions with recompute-and-compare finalization, an outbox mailer, and scrypt-hashed credentials."
+verification_explanation = "tests/workflows.py runs 23 strict workflows (12 of them critical) through HTTP, the punch API, the mail sink, and a real Chromium; tests/reference holds the reference pay engine (shared with the solution) and a model of approvals, finalized runs, and adjustments that predicts every CSV line. Reward Kit turns results.json into the functional score; the fable-5.1 judge grades ten experience criteria from verifier-captured screenshots and text."
+
+[agent]
+timeout_sec = 18000.0
+user = 1000
+network_mode = "allowlist"
+allowed_hosts = ["registry.npmjs.org", "pypi.org", "files.pythonhosted.org"]
+
+[verifier]
+timeout_sec = 10800.0
+user = 0
+environment_mode = "separate"
+network_mode = "allowlist"
+allowed_hosts = ["api.anthropic.com"]
+
+[verifier.env]
+ANTHROPIC_API_KEY = "${ANTHROPIC_API_KEY:-}"
+
+[verifier.environment]
+network_mode = "allowlist"
+allowed_hosts = ["api.anthropic.com"]
+build_timeout_sec = 3600.0
+cpus = 4
+memory_mb = 8192
+storage_mb = 20480
+gpus = 0
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 3600.0
+cpus = 4
+memory_mb = 8192
+storage_mb = 20480
+gpus = 0
+workdir = "/app"
+
+[environment.healthcheck]
+command = "test -s /etc/shiftbook/services.env && curl -fsS http://127.0.0.1:8025/healthz"
+interval_sec = 5.0
+timeout_sec = 10.0
+start_period_sec = 60.0
+start_interval_sec = 2.0
+retries = 5

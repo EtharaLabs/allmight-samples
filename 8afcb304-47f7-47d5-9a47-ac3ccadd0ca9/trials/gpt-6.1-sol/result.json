@@ -1,0 +1,148 @@
+{
+    "schema_version": 1,
+    "id": "dc926361-0e0f-4d49-86c1-b5aa06348562",
+    "task_name": "ethara/8afcb304-47f7-47d5-9a47-ac3ccadd0ca9",
+    "trial_name": "8afcb304-47f7-47d5-9a47-ac3ccadd__fGSfN6Q",
+    "trial_uri": "file:///home/ec2-user/harbor-jobs-judgefix/allmight-judgefix/8afcb304-47f7-47d5-9a47-ac3ccadd__fGSfN6Q",
+    "task_id": {
+        "path": "/home/ec2-user/allmight-smoldata-run/8afcb304-47f7-47d5-9a47-ac3ccadd0ca9"
+    },
+    "source": "allmight-smoldata-run",
+    "task_checksum": "add5d37b6898a195dda12a293eb5c6ced71914dfb27c46c1779873ad00743a2a",
+    "config": {
+        "schema_version": 1,
+        "task": {
+            "path": "/home/ec2-user/allmight-smoldata-run/8afcb304-47f7-47d5-9a47-ac3ccadd0ca9",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "allmight-smoldata-run"
+        },
+        "trial_name": "8afcb304-47f7-47d5-9a47-ac3ccadd__fGSfN6Q",
+        "trials_dir": "/home/ec2-user/harbor-jobs-judgefix/allmight-judgefix",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "codex",
+            "import_path": null,
+            "model_name": "gpt-6.1-sol",
+            "base_url": "http://172.17.0.1:8796",
+            "model_api_key_name": null,
+            "model_api_format": "openai_responses",
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [
+                "172.17.0.1"
+            ],
+            "kwargs": {
+                "reasoning_effort": "high"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "KH_PROXY_UPSTREAM": "http://172.17.0.1:8795",
+                "ANTHROPIC_API_KEY": "brid****uth",
+                "LITELLM_LOCAL_MODEL_COST_MAP": "True"
+            },
+            "disable": false,
+            "extra_allowed_hosts": [
+                "172.17.0.1"
+            ]
+        },
+        "override_error_policy": {},
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "24e28f99-c61b-42fc-adf7-0b4199c9a277",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "codex",
+        "version": "0.169.0",
+        "model_info": {
+            "name": "gpt-6.1-sol",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 1878614,
+        "n_cache_tokens": 1837824,
+        "n_output_tokens": 35548,
+        "cost_usd": 0.6208424000000001,
+        "model_usage": {
+            "gpt-6.1-sol": {
+                "n_input_tokens": 1878614,
+                "n_cache_tokens": 1837824,
+                "n_output_tokens": 35548,
+                "cost_usd": 0.6208424000000001
+            }
+        },
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "functional": 0.3633,
+            "judge": 0.9,
+            "reward": 0.417
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-11-16T17:15:31.258080Z",
+    "finished_at": "2026-11-16T17:52:41.670673Z",
+    "environment_setup": {
+        "started_at": "2026-11-16T17:15:31.321180Z",
+        "finished_at": "2026-11-16T17:16:13.903766Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-11-16T17:16:18.059001Z",
+        "finished_at": "2026-11-16T17:16:18.175153Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-11-16T17:16:18.175392Z",
+        "finished_at": "2026-11-16T17:32:21.418391Z"
+    },
+    "verifier": {
+        "started_at": "2026-11-16T17:32:34.920628Z",
+        "finished_at": "2026-11-16T17:52:41.670661Z"
+    },
+    "step_results": null,
+    "reward_valid": true
+}

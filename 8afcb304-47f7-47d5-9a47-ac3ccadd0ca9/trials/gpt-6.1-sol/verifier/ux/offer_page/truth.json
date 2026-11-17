@@ -1,0 +1,5 @@
+{
+ "offer_status": "offered",
+ "offer_ttl_seconds": 60,
+ "hold_ttl_seconds": 30
+}

@@ -1,0 +1,207 @@
+◷ Shiftbook
+RESTAURANT OPERATIONS
+My timesheet
+Profile
+Approvals
+Staff
+Time clocks
+Payroll
+Sign out
+TIME & PAY
+Payroll run
+
+2026-09-20 — 2026-10-03
+
+DRAFT · Version 1
+
+Download CSV
+
+Pay statements
+Verifier Person 503
+
+Mission St, San Francisco
+
+REG 53.1 · OT 1.9 · DT 0.0 hours · 0 meal premiums
+
+$1,611.36
+Verifier Person 504
+
+Roosevelt Row, Phoenix
+
+REG 67.9 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$1,228.99
+Verifier Person 505
+
+Wicker Park, Chicago
+
+REG 55.9 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$1,025.77
+Verifier Person 506
+
+Mission St, San Francisco
+
+REG 55.0 · OT 3.1 · DT 0.0 hours · 0 meal premiums
+
+$1,213.89
+Verifier Person 507
+
+Roosevelt Row, Phoenix
+
+REG 56.2 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$1,646.66
+Verifier Person 508
+
+Mission St, San Francisco
+
+REG 80.0 · OT 28.2 · DT 2.2 hours · 5 meal premiums
+
+$3,254.06
+Verifier Person 509
+
+Mission St, San Francisco
+
+REG 73.1 · OT 10.3 · DT 0.5 hours · 6 meal premiums
+
+$2,331.50
+Verifier Person 510
+
+Mission St, San Francisco
+
+REG 80.0 · OT 14.5 · DT 0.0 hours · 4 meal premiums
+
+$2,070.53
+Verifier Person 511
+
+Mission St, San Francisco
+
+REG 76.2 · OT 25.5 · DT 2.5 hours · 4 meal premiums
+
+$2,197.41
+Verifier Person 512
+
+Mission St, San Francisco
+
+REG 67.2 · OT 4.2 · DT 0.0 hours · 3 meal premiums
+
+$1,626.84
+Verifier Person 513
+
+Mission St, San Francisco
+
+REG 80.0 · OT 32.2 · DT 1.7 hours · 4 meal premiums
+
+$3,596.84
+Held weeks
+
+Held weeks are excluded from pay. Resolve exceptions and obtain approval, then recompute the draft.
+
+Finalizing locks this run and emails pay statements. It cannot be undone. Review the lines and held weeks before continuing.
+Finalize and email statements
+Shiftbook · Mission St / Roosevelt Row / Wicker Park
+--- text around [data-action=finalize-run] ---
+◷ Shiftbook
+RESTAURANT OPERATIONS
+My timesheet
+Profile
+Approvals
+Staff
+Time clocks
+Payroll
+Sign out
+TIME & PAY
+Payroll run
+
+2026-09-20 — 2026-10-03
+
+DRAFT · Version 1
+
+Download CSV
+
+Pay statements
+Verifier Person 503
+
+Mission St, San Francisco
+
+REG 53.1 · OT 1.9 · DT 0.0 hours · 0 meal premiums
+
+$1,611.36
+Verifier Person 504
+
+Roosevelt Row, Phoenix
+
+REG 67.9 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$1,228.99
+Verifier Person 505
+
+Wicker Park, Chicago
+
+REG 55.9 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$1,025.77
+Verifier Person 506
+
+Mission St, San Francisco
+
+REG 55.0 · OT 3.1 · DT 0.0 hours · 0 meal premiums
+
+$1,213.89
+Verifier Person 507
+
+Roosevelt Row, Phoenix
+
+REG 56.2 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$1,646.66
+Verifier Person 508
+
+Mission St, San Francisco
+
+REG 80.0 · OT 28.2 · DT 2.2 hours · 5 meal premiums
+
+$3,254.06
+Verifier Person 509
+
+Mission St, San Francisco
+
+REG 73.1 · OT 10.3 · DT 0.5 hours · 6 meal premiums
+
+$2,331.50
+Verifier Person 510
+
+Mission St, San Francisco
+
+REG 80.0 · OT 14.5 · DT 0.0 hours · 4 meal premiums
+
+$2,070.53
+Verifier Person 511
+
+Mission St, San Francisco
+
+REG 76.2 · OT 25.5 · DT 2.5 hours · 4 meal premiums
+
+$2,197.41
+Verifier Person 512
+
+Mission St, San Francisco
+
+REG 67.2 · OT 4.2 · DT 0.0 hours · 3 meal premiums
+
+$1,626.84
+Verifier Person 513
+
+Mission St, San Francisco
+
+REG 80.0 · OT 32.2 · DT 1.7 hours · 4 meal premiums
+
+$3,596.84
+Held weeks
+
+Held weeks are excluded from pay. Resolve exceptions and obtain approval, then recompute the draft.
+
+Finalizing locks this run and emails pay statements. It cannot be undone. Review the lines and held weeks before continuing.
+Finalize and email statements
+Shiftbook · Mission St / Roosevelt Row / Wicker Park

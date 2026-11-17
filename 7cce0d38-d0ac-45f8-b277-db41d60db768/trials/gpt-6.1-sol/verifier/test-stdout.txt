@@ -1,0 +1,65 @@
+verifier: reference money self-test passed
+verifier: starting services
+verifier: starting the submission
+verifier: healthz 200 after 3 s
+verifier: running workflows
+[wf] W01 Accounts and sessions: verification, reset links, refusals, session rotation, sign-out, next=
+[wf] W01 FAIL 76.0s FormNotFound: no form with a data-action='request-reset' button
+[wf] W02 Organizations: invitations, the five-role permission matrix, cross-organization isolation
+[wf] W02 FAIL 265.0s FormNotFound: no form with a data-action='request-reset' button
+[wf] W03 Venues and seat maps; events in venue time zones (folds, gaps); drafts, publishing, rescheduling
+[wf] W03 FAIL 38.3s sections and seat counts on the venue page expected {'UPPER': '36', 'LOWER': '90'}, got {'UPPER': '36', 'LOWER': '90', 'LOWER2': '10'}
+[wf] W04 Sales windows: presale with a code, on-sale, off-sale, at the venue's local times
+[wf] W04 PASS 237.5s 
+[wf] W05 Purchase: seat map, hold, price breakdown, Checkout Session, hosted payment, webhook, tickets, one email
+[wf] W05 PASS 61.3s 
+[wf] W06 Prices at scale: fees, tax, stacked codes, largest-remainder allocation and rounding ties on every line
+[wf] W06 PASS 1611.1s 
+[wf] W07 Promo codes: case-insensitive entry, one percent plus one fixed, refusals, locking at Pay, caps under concurrency
+[wf] W07 FAIL 92.5s no remove form for code SPRING20 on order 1001014
+[wf] W08 Holds: expiry from creation, release, provider sessions expired, late payments confirmed or refunded
+[wf] W08 FAIL 663.7s the waiting entry expected '1', got None
+[wf] W09 Webhooks: forged, unsigned and stale deliveries refused; duplicates and out-of-order events harmless; declined cards
+[wf] W09 PASS 94.8s 
+[wf] W10 Seat races and the per-buyer limit: one winner per seat, six tickets per buyer across orders and old orders
+[wf] W10 FAIL 185.8s FormNotFound: no form with a data-action='request-reset' button
+[wf] W11 Buyer refunds: 168/48-hour tiers to the second, deadlines across DST, reschedules, who may ask
+[wf] W11 PASS 1246.6s 
+[wf] W12 Refund mechanics: Idempotency-Key retries through provider faults, pending until the webhook, events out of order
+[wf] W12 PASS 99.4s 
+[wf] W13 Organizer refunds and cancelling an event: top-up refunds, one email per address, late payment after cancellation
+[wf] W13 FAIL 187.2s FormNotFound: no form with a data-action='request-reset' button
+[wf] W14 Transfers: the recipient holds a new QR token, every earlier token stops admitting, emails, who may transfer
+[wf] W14 FAIL 132.0s FormNotFound: no form with a data-action='request-reset' button
+[wf] W15 Scanner devices and online check-in: keys shown once, scope, every refusal reason, idempotent rescans, door list
+[wf] W15 PASS 200.3s 
+[wf] W16 Offline sync: earliest admission wins across gates and batches, ties, scan_id reuse, windows to the second across DST
+[wf] W16 PASS 141.3s 
+[wf] W17 Waiting lists: join rules, offers in join order with skip-over, offer expiry and decline, reserved seats
+[wf] W17 FAIL 134.8s data-my-waitlist of w1 on SMALL expected '2', got None
+[wf] W18 Dashboard figures at request time: sold, held, available, admitted, gross, refunded, net, per section
+[wf] W18 PASS 419.6s 
+[wf] W19 Attendee export: header, CRLF, seat order (numeric), resold seats, quoting, spreadsheet safety, who may download
+[wf] W19 PASS 246.5s 
+[wf] W20 Reminders and email safety: one email per holder address, one-time key, header injection, names in To
+[wf] W20 PASS 159.8s 
+[wf] W21 Old platform, Lantern Room Presents (Chicago): dashboards, exports, sale pages, holders
+[wf] W21 FAIL 1.3s FormNotFound: no form with a data-action='request-reset' button
+[wf] W22 Old platform, Copperline Live (Denver): dashboards, exports, sale pages, holders
+[wf] W22 FAIL 1.2s FormNotFound: no form with a data-action='request-reset' button
+[wf] W23 Old platform, Saguaro Sounds (Phoenix): dashboards, exports, sale pages, holders, old barcodes at the door
+[wf] W23 FAIL 1.3s FormNotFound: no form with a data-action='request-reset' button
+[wf] W24 In a real browser: layout at 1280 and 390 px, typed text never runs as script, a click-through purchase
+[wf] W24 PASS 164.9s 
+[wf] W25 Deployment: README, restart persistence (accounts, orders, QR tokens), nothing re-sent, old records kept
+[wf] W25 PASS 42.7s 
+[wf] W26 Cross-cutting safety: secrets only hashed at rest, reset ends sessions, Host-proof links, headers, no stack traces
+[wf] W26 FAIL 12.0s FormNotFound: no form with a data-action='request-reset' button
+[wf] W27 Health follows the database: non-2xx within 10 s of a stop, 200 within 60 s of a start
+[wf] W27 PASS 0.4s 
+verifier: scoring
+08:41:32 - LiteLLM:WARNING: anthropic_beta_headers_manager.py:155 - LiteLLM: Failed to fetch remote beta headers config from https://raw.githubusercontent.com/BerriAI/litellm/main/litellm/anthropic_beta_headers_config.json: [Errno -3] Temporary failure in name resolution. Falling back to local backup.
+functional: 0.1981
+judge: 0.6
+reward: 0.2383
+verifier: done (scoring exit 0)

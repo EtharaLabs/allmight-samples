@@ -1,0 +1,127 @@
+pickpath.
+Overview
+Orders
+Profile
+API keys
+Sign out
+LARDER & LINE PROVISIONS · SECAUCUS, NJ
+PP-076507
+in fulfilment
+Order total
+$467.40
+Ship date
+2027-07-25
+Purchase order
+—
+
+Order lines
+VF5C4A4509
+
+3 units × $9.90 · Amount $29.70 · Tax $2.64
+
+Reserved
+0
+Shipped
+0
+Backordered
+3
+Cancelled
+0
+Returned
+0
+
+Cancelled backordered units will be refunded to your card.
+
+Units
+Cancel backordered units
+VF5C4A4508
+
+30 units × $12.50 · Amount $375.00 · Tax $33.28
+
+Reserved
+30
+Shipped
+0
+Backordered
+0
+Cancelled
+0
+Returned
+0
+Order totals
+
+Subtotal: $404.70
+
+Tax: $35.92
+
+Freight: $24.60
+
+Freight tax: $2.18
+
+Total: $467.40
+
+Pickpath / Larder & Line Provisions
+--- text around [data-action=cancel-backorder] ---
+pickpath.
+Overview
+Orders
+Profile
+API keys
+Sign out
+LARDER & LINE PROVISIONS · SECAUCUS, NJ
+PP-076507
+in fulfilment
+Order total
+$467.40
+Ship date
+2027-07-25
+Purchase order
+—
+
+Order lines
+VF5C4A4509
+
+3 units × $9.90 · Amount $29.70 · Tax $2.64
+
+Reserved
+0
+Shipped
+0
+Backordered
+3
+Cancelled
+0
+Returned
+0
+
+Cancelled backordered units will be refunded to your card.
+
+Units
+Cancel backordered units
+VF5C4A4508
+
+30 units × $12.50 · Amount $375.00 · Tax $33.28
+
+Reserved
+30
+Shipped
+0
+Backordered
+0
+Cancelled
+0
+Returned
+0
+Order totals
+
+Subtotal: $404.70
+
+Tax: $35.92
+
+Freight: $24.60
+
+Freight tax: $2.18
+
+Total: $467.40
+
+Pickpath / Larder & Line Provisions

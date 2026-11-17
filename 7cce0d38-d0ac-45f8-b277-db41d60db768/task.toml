@@ -1,0 +1,65 @@
+schema_version = "1.4"
+reward_type = "bounded_continuous"
+artifacts = [{ source = "/app", exclude = [".git", "**/.cache", "**/__pycache__", "**/.pytest_cache", "**/.mypy_cache", "**/.ruff_cache", "**/.npm", "**/node_modules/.cache"] }]
+
+[task]
+name = "ethara/7cce0d38-d0ac-45f8-b277-db41d60db768"
+version = "1.0.0"
+description = "Build a reserved-seat ticketing platform for small venues from a written specification over an existing database of three promoters' venues, events, orders and tickets: multi-tenant organizations with five roles, seat maps, sales windows and presales in venue time zones, seat holds with TTLs, Stripe-compatible checkout confirmed only by signed webhooks, exact fee/tax/discount allocation, promo codes with redemption caps, tiered and organizer refunds through the provider, event cancellation, transfers with signed QR tokens, online and offline check-in, waiting lists, dashboards, exports and once-only email; graded by strict browser and HTTP workflows plus a judged experience review."
+authors = [{ name = "shivansh.rai", email = "shivansh.rai@ethara.ai" }]
+keywords = ["web-application", "zero-to-one", "ticketing", "payments", "stripe-compatible", "webhooks", "time-zones", "dst", "postgresql", "email", "multi-tenant", "authorization", "csrf", "idempotency", "concurrency", "rewardkit", "llm-judge"]
+
+[metadata]
+category = "programming"
+domain = "solo-founder"
+difficulty = "hard"
+tags = ["full-stack", "ticketing", "payments", "webhooks", "money-allocation", "time-zones", "legacy-data", "security", "concurrency", "email", "roles"]
+reference_benchmark = "Vibe Code Bench (arXiv 2603.04601)"
+reference_benchmark_relation = "Used only to calibrate the delivery format and the difficulty target. The specification, seed corpus, reference engine, grading workflows and reference solution are original work authored for this task; no instruction text, fixture, expected value or grading criterion is derived from that benchmark or from any other public source."
+scoring = "reward = 0.9 * functional + 0.1 * judge; functional = weighted share of strict workflows (every substep must pass); any observed breach, or any failed critical workflow, caps each workflow at 0.4; a critical workflow that fails only because the verifier's time budget ran out scores 0 without triggering the cap"
+valid_until = "2029-09-30"
+difficulty_explanation = "Fourteen interacting feature areas and five roles over email and a Stripe-compatible provider: seat maps and sales windows in venue time zones (DST folds and gaps), holds whose expiry is measured from creation, checkout confirmed only by verified webhooks (late, duplicate and out-of-order deliveries, late payments refunded when the seats are gone), exact money (7.5 % fees, 8.875 % order tax, stacked promo codes, largest-remainder allocation with seat-order ties that Decimal and float shares get wrong), elapsed-hour refund tiers with DST-crossing deadlines and a reschedule override, per-ticket provider refunds with Idempotency-Key retries completed only by webhooks, cancellation top-ups, transfers that rotate signed QR tokens, earliest-wins offline check-in across gates with exact-second windows, waiting lists with skip-over offers, and request-time dashboards and exports checked cent-for-cent against 20k old-platform tickets with recorded (not recomputed) amounts. A breach battery (tenant IDOR, role matrix, CSRF, stored and reflected XSS, CSV formula injection, mass assignment, forged QR or webhooks, device-key scope, open redirect, header injection, session fixation, plain-text secrets, legacy tampering) and critical workflows cap the reward."
+solution_explanation = "solution/app is a Python standard-library HTTP server with psycopg 3: integer-cent pricing with exact largest-remainder allocation, row-locked holds and promo redemptions, an outbox mailer, a background worker for hold expiry, provider session expiry, refund retries with stable Idempotency-Keys and waitlist offers, HMAC-SHA256 webhook verification, HMAC-signed versioned QR tokens, earliest-wins admissions, and scrypt-hashed credentials."
+verification_explanation = "tests/workflows.py runs 27 strict workflows through HTTP, the payments provider (hosted page, admin fault injection, delivery hold/release/redeliver), the mail sink, the scan API and a real Chromium; tests/reference holds the reference money engine (shared with the solution), a precomputed fixture of allocation and rounding ties (gen_ties.py), and a model of the old platform's data and of every verifier action that predicts every dashboard figure, export row, limit and scan result; DST dates are derived from the zone rules at run time. Reward Kit turns results.json into the functional score; the fable-5.1 judge grades ten experience criteria from verifier-captured screenshots and text."
+
+[agent]
+timeout_sec = 18000.0
+user = 1000
+network_mode = "allowlist"
+allowed_hosts = ["registry.npmjs.org", "pypi.org", "files.pythonhosted.org"]
+
+[verifier]
+timeout_sec = 10800.0
+user = 0
+environment_mode = "separate"
+network_mode = "allowlist"
+allowed_hosts = ["api.anthropic.com"]
+
+[verifier.env]
+ANTHROPIC_API_KEY = "${ANTHROPIC_API_KEY:-}"
+
+[verifier.environment]
+network_mode = "allowlist"
+allowed_hosts = ["api.anthropic.com"]
+build_timeout_sec = 3600.0
+cpus = 4
+memory_mb = 8192
+storage_mb = 20480
+gpus = 0
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 3600.0
+cpus = 4
+memory_mb = 8192
+storage_mb = 20480
+gpus = 0
+workdir = "/app"
+
+[environment.healthcheck]
+command = "test -s /etc/seatwise/services.env && curl -fsS http://127.0.0.1:8025/healthz && curl -fsS http://127.0.0.1:4242/healthz"
+interval_sec = 5.0
+timeout_sec = 10.0
+start_period_sec = 60.0
+start_interval_sec = 2.0
+retries = 5

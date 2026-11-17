@@ -1,0 +1,97 @@
+pickpath.
+Overview
+Orders
+Profile
+API keys
+Sign out
+LARDER & LINE PROVISIONS · SECAUCUS, NJ
+PP-076508
+awaiting approval
+Order total
+$47.36
+Ship date
+2027-07-25
+Purchase order
+—
+
+Total $47.36 exceeds the company approval limit of $10.00. Approving lets the buyer pay.
+
+Approve order
+Cancel order
+Order lines
+VF5C4A4509
+
+3 units × $9.90 · Amount $29.70 · Tax $2.64
+
+Reserved
+0
+Shipped
+0
+Backordered
+0
+Cancelled
+0
+Returned
+0
+Order totals
+
+Subtotal: $29.70
+
+Tax: $2.64
+
+Freight: $13.80
+
+Freight tax: $1.22
+
+Total: $47.36
+
+Pickpath / Larder & Line Provisions
+--- text around [data-action=approve-order] ---
+pickpath.
+Overview
+Orders
+Profile
+API keys
+Sign out
+LARDER & LINE PROVISIONS · SECAUCUS, NJ
+PP-076508
+awaiting approval
+Order total
+$47.36
+Ship date
+2027-07-25
+Purchase order
+—
+
+Total $47.36 exceeds the company approval limit of $10.00. Approving lets the buyer pay.
+
+Approve order
+Cancel order
+Order lines
+VF5C4A4509
+
+3 units × $9.90 · Amount $29.70 · Tax $2.64
+
+Reserved
+0
+Shipped
+0
+Backordered
+0
+Cancelled
+0
+Returned
+0
+Order totals
+
+Subtotal: $29.70
+
+Tax: $2.64
+
+Freight: $13.80
+
+Freight tax: $1.22
+
+Total: $47.36
+
+Pickpath / Larder & Line Provisions

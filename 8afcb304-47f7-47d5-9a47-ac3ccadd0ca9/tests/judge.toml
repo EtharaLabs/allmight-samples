@@ -1,0 +1,133 @@
+# Experience criteria (instruction.md R15, R6.4, R7.4, R9.3). Evidence is written by tests/workflows.py (W08, W12, W15, W18).
+[judge]
+judge = "anthropic/claude-fable-5-1"
+reasoning_effort = "max"
+mode = "individual"
+samples = 3
+guard = "penalize"
+timeout = 900
+prompt_template = "judge/prompt.md"
+reference = "/tests/judge-reference.md"
+
+[[criterion]]
+id = "J01"
+name = "J01"
+description = "The slot list shows each start time in the clinic's local time with the clinic's name and its time-zone abbreviation, and states the deposit due."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/slot_list"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R15.1"
+
+[[criterion]]
+id = "J02"
+name = "J02"
+description = "After returning from the payment page, the appointment page says the payment is being confirmed and how long the slot stays held."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/checkout_return"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R15.2"
+
+[[criterion]]
+id = "J03"
+name = "J03"
+description = "The confirmed appointment page shows that the booking is confirmed, its local date and time with the clinic, and the deposit paid."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/appointment_confirmed"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R15.2"
+
+[[criterion]]
+id = "J04"
+name = "J04"
+description = "Before cancelling, the confirmed appointment page states the refund that cancelling now would give and which notice band applies."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/appointment_confirmed"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R15.3"
+
+[[criterion]]
+id = "J05"
+name = "J05"
+description = "After cancelling, the page shows the refund amount and whether the refund is pending or already refunded."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/cancel_after"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R15.3"
+
+[[criterion]]
+id = "J06"
+name = "J06"
+description = "The expired hold's page explains that the slot was given up and how to book again."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/hold_expired"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R15.4"
+
+[[criterion]]
+id = "J07"
+name = "J07"
+description = "The waitlist offer page states the slot, when the offer expires, and that accepting holds the slot and asks for the deposit."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/offer_page"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R15.5"
+
+[[criterion]]
+id = "J08"
+name = "J08"
+description = "The clinician's day sheet makes each appointment's local time, patient, and appointment type clear."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/clinician_day"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R15.6"
+
+[[criterion]]
+id = "J09"
+name = "J09"
+description = "The confirmation email names the clinic, the clinician, and the local date and time; the cancellation email states the refund amount; the offer email names the slot and links to the offer."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/confirmation_email", "/logs/verifier/ux/cancellation_email", "/logs/verifier/ux/offer_email"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R6.4, R7.4, R9.3"
+
+[[criterion]]
+id = "J10"
+name = "J10"
+description = "At 390 pixels wide, the key facts and the primary action on these pages stay readable and reachable."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/slot_list/narrow.jpg", "/logs/verifier/ux/appointment_confirmed/narrow.jpg", "/logs/verifier/ux/offer_page/narrow.jpg"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R15.7"
+
+[scoring]
+aggregation = "weighted-mean"

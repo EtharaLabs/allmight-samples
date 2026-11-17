@@ -1,0 +1,167 @@
+# One strict workflow per entry: the workflow scores only when every substep passes (tests/scoring.py).
+# critical = core business correctness: a failed critical workflow caps every workflow at critical_cap.
+
+[scoring]
+critical_cap = 0.4
+
+[[workflow]]
+id = "W01"
+title = "Accounts: registration against quirky legacy addresses, reset links, duplicate-address accounts"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W02"
+title = "Sessions and roles: refusals, fixation, sign-out, role gates, profile mass assignment, CSRF"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W03"
+title = "Availability: 15-minute grid, fitting inside working time, buffers, merged and overlapping windows"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W04"
+title = "Availability: effective-dated schedule versions, exceptions, schedule edits and who may make them"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W05"
+title = "Availability: shared rooms and lowest-id assignment, daily limits with holds, fees in effect, inactive records"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W06"
+title = "Time: notice and horizon from now, clock-change days, local dates per clinic, fees by local date"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W07"
+title = "Legacy Seattle: the old system's schedules, appointments, folds and gaps, served as they are"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W08"
+title = "Booking: deposits on Checkout, mass assignment, confirmation only by signed webhook, one email"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W09"
+title = "Holds: expiry measured from creation, release, late and out-of-order payments refunded in full"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W10"
+title = "Webhook security: unsigned, mis-signed, tampered and stale deliveries change nothing"
+weight = 4
+critical = false
+
+[[workflow]]
+id = "W11"
+title = "Races: the last slot, the last room and the last daily place each go to exactly one patient"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W12"
+title = "Cancellation: refund bands by elapsed time, half-cent rounding, clinic cancellations, emails once"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W13"
+title = "Refund retries: provider errors, lost answers and timeouts never refund twice; events before answers"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W14"
+title = "Rescheduling: 24-hour window, the original never blocks itself, the deposit carries over"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W15"
+title = "Waitlist: join order, offers that occupy, offer and hold lifetimes, decline and expiry chains"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W16"
+title = "Clinical notes and clinician scope: only the treating clinician and admins, authors from the session"
+weight = 4
+critical = false
+
+[[workflow]]
+id = "W17"
+title = "Reminders: every booked appointment of a clinic's day once, quirky addresses normalized, never twice"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W18"
+title = "In a real browser: book and pay on the hosted page, layout at 1280 and 390 px, escaping everywhere"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W19"
+title = "Clinic closures: the old closures and new ones close every clinician; bookings stay; admins and the clinic's manager only"
+weight = 3
+critical = true
+
+[[workflow]]
+id = "W20"
+title = "Appointment export: exact columns and order, local and UTC times with folds, quoting, spreadsheet safety"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W21"
+title = "Front desk books for patients: holds for the account, payment-link emails, then the patient pays"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W22"
+title = "Legacy Honolulu: the old system's schedules, appointments, closures and patients, served as they are"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W23"
+title = "Clinic staff: managers edit their clinic's schedules, front desk books and cancels only for their clinic"
+weight = 4
+critical = false
+
+[[workflow]]
+id = "W24"
+title = "A patient's journey: browse, register, book and pay, waitlist, reschedule into an offer, cancel, export"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W25"
+title = "Cross-cutting safety: secrets nowhere at rest or in logs, reset ends sessions, Host-proof links, headers, no stack traces"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W26"
+title = "Deployment: README, restart persistence, holds and refunds survive, nothing re-sent, no secrets, records kept"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W27"
+title = "Health follows the database: non-2xx within 10 s of a stop, 200 within 60 s of a start"
+weight = 2
+critical = false

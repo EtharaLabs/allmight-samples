@@ -1,0 +1,78 @@
+schema_version = "1.4"
+reward_type = "bounded_continuous"
+artifacts = [
+  { source = "/app", destination = "deliverables/D4_application", exclude = [ "inputs", "out", ".git", "**/.cache", "**/__pycache__", "**/.pytest_cache", "**/.mypy_cache", "**/.ruff_cache", "**/.npm" ] },
+  { source = "/app/inputs", destination = "deliverables/D5_inputs" },
+  { source = "/app/out/reconciliation.json", destination = "deliverables/D1_reconciliation.json" },
+  { source = "/app/out/summary.txt", destination = "deliverables/D2_summary.txt" },
+  { source = "/app/out/snapshot.sql", destination = "deliverables/D3_reconciliation-table-snapshot.sql" },
+  { source = "/app/out/contested.md", destination = "deliverables/D6_contested.md" },
+  { source = "/app/out/policy-notes.md", destination = "deliverables/D7_policy-notes.md" },
+  { source = "/app/out/parse-notes.md", destination = "deliverables/D8_parse-notes.md" },
+  { source = "/app/out/convention-notes.md", destination = "deliverables/D9_convention-notes.md" },
+]
+
+[task]
+name = "ethara/145c5287-517b-5048-a526-4a66487b9554"
+version = "1.0.0"
+description = "Build a web application that reconciles a Ledgerline expense statement against its receipts and policy, and renders the result for review."
+authors = [{ name = "shivansh.rai", email = "shivansh.rai@ethara.ai" }]
+keywords = ["python", "postgresql", "web-application", "data-reconciliation", "browser-graded"]
+
+[metadata]
+category = "programming"
+domain = "enterprise-tool"
+difficulty = "hard"
+tags = ["reconciliation", "expense-policy", "exact-matching", "parse-hazards", "postgresql", "browser-graded", "written-account"]
+reference_benchmark = "Vibe Code Bench (arXiv 2603.04601)"
+reference_benchmark_relation = "Used only to calibrate the delivery format and the difficulty target. No instruction text, seed corpus, policy, expected answer, grading criterion or reference implementation is derived from that benchmark or from any other public source; all of it is original work authored for this task."
+valid_until = "2028-11-09"
+platforms = ["linux/amd64", "linux/arm64"]
+null_floor = 0.0
+discrimination_weight = 0.5
+scoring = "reward = weighted mean over two dimensions, test_output at 85 graded weight and judge at 30, so the compiled criteria carry 85/115 of the reward and the judged prose criteria carry 30/115; the test_output_score and judge_score rewards report each dimension on its own"
+difficulty_explanation = "The matching is exact, not approximate: eligibility is an inclusive amount tolerance and date window, the answer must be a maximum-cardinality pairing rather than the first feasible one, and ties are broken by total absolute amount delta, then total absolute date delta, then receipt id, so a greedy or unordered solver lands on a defensible but wrong pairing. The receipt corpus carries parse hazards that change the answer: a colon inside a VENDOR value where only the first colon separates the field, and lines that are not field lines at all. Two readings of the posting convention disagree about which statement rows are eligible, and the task asks for the collapse direction, its size, and the exact set of diverging rows. The result must then be published three ways that cannot be allowed to drift: a JSON deliverable, a PostgreSQL table dump, and a served review surface whose rendered rows agree with the JSON, sort by receipt id, align to within a pixel under a fixed table layout, and complete without a request to any origin but the application's own."
+solution_explanation = "solution/solver.py is a standard-library program with uvicorn for serving: it reads the static corpus from /app/inputs, builds the eligibility graph, selects the maximum-cardinality matching under the documented tie-break, derives the policy violations, residual sets and totals, writes the nine deliverables, loads the reconciliation table through psql, and then generates /app/app.py and /app/start.sh by copying its own matching and rendering functions in with inspect.getsource, so the served screens and the JSON are computed by the same code and cannot disagree."
+verification_explanation = "tests/test_output.py registers 25 compiled criteria totalling 85 graded weight, each backed by a function in tests/checks.py that re-derives the answer from the shipped inputs rather than trusting the deliverables, compares the JSON, the summary and the table dump against each other, and drives a real Chromium through Playwright to measure the served review and detail screens, their row order, their column alignment and every origin they request. tests/fixtures.json pins the sha256 of all 14 corpus files so a solver that edits its inputs is caught, and tests/cheat-checks.json names that guard. tests/judge.toml adds 8 judged criteria totalling 30 graded weight, scoring whether the written accounts attribute the right mechanism and state the right numbers."
+
+[agent]
+timeout_sec = 7200.0
+user = "10001:10001"
+network_mode = "no-network"
+
+[verifier]
+timeout_sec = 1800.0
+user = 0
+environment_mode = "separate"
+network_mode = "allowlist"
+allowed_hosts = ["api.anthropic.com"]
+
+[verifier.env]
+ANTHROPIC_API_KEY = "${ANTHROPIC_API_KEY:-}"
+LITELLM_LOCAL_MODEL_COST_MAP = "True"
+
+[verifier.environment]
+network_mode = "allowlist"
+allowed_hosts = ["api.anthropic.com"]
+build_timeout_sec = 1800.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 8192
+gpus = 0
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 1800.0
+cpus = 4
+memory_mb = 8192
+storage_mb = 10240
+gpus = 0
+workdir = "/app"
+
+[environment.healthcheck]
+command = "/usr/lib/postgresql/16/bin/pg_isready --host=localhost --port=5432 --username=ledgerline --quiet"
+interval_sec = 5.0
+timeout_sec = 10.0
+start_period_sec = 60.0
+start_interval_sec = 2.0
+retries = 5

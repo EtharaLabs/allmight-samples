@@ -1,0 +1,38 @@
+{
+ "order": 76507,
+ "lines": [
+  {
+   "line_no": 1,
+   "sku": "VF5C4A4509",
+   "qty": 3,
+   "unit_price_cents": 990,
+   "amount_cents": 2970,
+   "tax_cents": 264,
+   "reserved": 0,
+   "shipped": 0,
+   "backordered": 3,
+   "cancelled": 0,
+   "returned": 0,
+   "allocations": []
+  },
+  {
+   "line_no": 2,
+   "sku": "VF5C4A4508",
+   "qty": 30,
+   "unit_price_cents": 1250,
+   "amount_cents": 37500,
+   "tax_cents": 3328,
+   "reserved": 30,
+   "shipped": 0,
+   "backordered": 0,
+   "cancelled": 0,
+   "returned": 0,
+   "allocations": [
+    {
+     "lot_id": 30260,
+     "units": 30
+    }
+   ]
+  }
+ ]
+}

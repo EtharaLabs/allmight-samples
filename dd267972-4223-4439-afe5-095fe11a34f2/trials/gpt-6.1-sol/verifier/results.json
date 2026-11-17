@@ -1,0 +1,1468 @@
+{
+ "workflows": {
+  "W01": {
+   "title": "Password links: anti-enumeration, single use, replacement, expiry, address matching",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "both payroll admins set passwords from emailed links and sign in",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.435
+    },
+    {
+     "name": "a known and an unknown address get the same status and message; the unknown one gets no email",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.042
+    },
+    {
+     "name": "an inactive employee's address receives no email",
+     "ok": true,
+     "detail": "",
+     "seconds": 4.02
+    },
+    {
+     "name": "a newer link replaces the older one; the older one sets nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.224
+    },
+    {
+     "name": "a used link changes nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.174
+    },
+    {
+     "name": "an expired link changes nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 23.072
+    },
+    {
+     "name": "an unknown link answers 404",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.009
+    },
+    {
+     "name": "sign-in matches the address case-insensitively, ignoring surrounding spaces",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.079
+    }
+   ],
+   "error": null,
+   "seconds": 30.1
+  },
+  "W02": {
+   "title": "Sign-in refusals, lockout, session rotation and sign-out",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "set a password for a staff member",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.115
+    },
+    {
+     "name": "a wrong password and an unknown address are refused with the same message and no session",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.127
+    },
+    {
+     "name": "five failures lock the account, even against the right password",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.332
+    },
+    {
+     "name": "the lock lifts LOGIN_LOCKOUT_SECONDS after the fifth failure",
+     "ok": true,
+     "detail": "",
+     "seconds": 17.049
+    },
+    {
+     "name": "a successful sign-in resets the failure count",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.736
+    },
+    {
+     "name": "signing in starts a new session identifier; an identifier held before never becomes signed in",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.153
+    },
+    {
+     "name": "signing out ends the session on the server",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.064
+    },
+    {
+     "name": "a visitor sent to sign in from a protected page returns to that page after signing in",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.076
+    },
+    {
+     "name": "sign-in never redirects to another site, whatever next= says",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.507
+    }
+   ],
+   "error": null,
+   "seconds": 19.2
+  },
+  "W03": {
+   "title": "Staff and rates: creation, duplicates, effective-dated rates, staff-page protection",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a payroll admin adds an employee with a first rate",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.12
+    },
+    {
+     "name": "an address already on file is refused whatever its case and spacing; nothing changes",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.113
+    },
+    {
+     "name": "a rate is added; the same job and date again is refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.057
+    },
+    {
+     "name": "adding a rate without the session token is refused with 403 and changes nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.024
+    },
+    {
+     "name": "staff pages refuse a signed-in employee with 403 and a visitor is sent to sign in",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.247
+    }
+   ],
+   "error": null,
+   "seconds": 0.6
+  },
+  "W04": {
+   "title": "Time-clock keys and the punch API: auth, validation, idempotency, scope, races",
+   "weight": 4.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a time clock's key is shown once at creation and never again",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.077
+    },
+    {
+     "name": "an unknown key is refused with 401; a malformed body with 400",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.231
+    },
+    {
+     "name": "each row is accepted, a duplicate, or rejected for the stated reasons",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.16
+    },
+    {
+     "name": "the timesheet shows exactly the accepted punches for 2026-10-06 in Los Angeles",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.011
+    },
+    {
+     "name": "simultaneous requests carrying one punch_id accept it once",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.267
+    },
+    {
+     "name": "a revoked key is refused with 401 and records nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.049
+    }
+   ],
+   "error": null,
+   "seconds": 0.8
+  },
+  "W05": {
+   "title": "Timesheets: local days, midnight and DST splits, status markers",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "create staff in all three locations and send their punches",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.986
+    },
+    {
+     "name": "each day of each week shows the expected REG/OT/DT hours in the employee's local time",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.076
+    },
+    {
+     "name": "an out punch with no open shift makes the week an exception that cannot be approved",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.01
+    },
+    {
+     "name": "approving a pending week marks it approved",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.05
+    }
+   ],
+   "error": null,
+   "seconds": 1.1
+  },
+  "W06": {
+   "title": "Pay rules: CA daily overtime and double time",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "create the staff for this rule and send their punches",
+     "ok": true,
+     "detail": "",
+     "seconds": 14.543
+    },
+    {
+     "name": "before approval, timesheets follow the interface contract",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.159
+    },
+    {
+     "name": "approve every week with worked time",
+     "ok": true,
+     "detail": "",
+     "seconds": 7.734
+    },
+    {
+     "name": "after approval, timesheets follow the interface contract",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.168
+    },
+    {
+     "name": "the draft run for 2026-10-04 pays every hour and cent as the rules say",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.126
+    }
+   ],
+   "error": null,
+   "seconds": 24.7
+  },
+  "W07": {
+   "title": "Pay rules: weekly overtime without pyramiding (CA and FLSA)",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "create the staff for this rule and send their punches",
+     "ok": true,
+     "detail": "",
+     "seconds": 16.949
+    },
+    {
+     "name": "before approval, timesheets follow the interface contract",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.171
+    },
+    {
+     "name": "approve every week with worked time",
+     "ok": true,
+     "detail": "",
+     "seconds": 8.292
+    },
+    {
+     "name": "after approval, timesheets follow the interface contract",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.168
+    },
+    {
+     "name": "the draft run for 2026-10-04 pays every hour and cent as the rules say",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.232
+    }
+   ],
+   "error": null,
+   "seconds": 27.8
+  },
+  "W08": {
+   "title": "Pay rules: the CA seventh consecutive day",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "create the staff for this rule and send their punches",
+     "ok": true,
+     "detail": "",
+     "seconds": 13.654
+    },
+    {
+     "name": "before approval, timesheets follow the interface contract",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.223
+    },
+    {
+     "name": "approve every week with worked time",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.922
+    },
+    {
+     "name": "after approval, timesheets follow the interface contract",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.194
+    },
+    {
+     "name": "the draft run for 2026-10-04 pays every hour and cent as the rules say",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.253
+    }
+   ],
+   "error": null,
+   "seconds": 23.2
+  },
+  "W09": {
+   "title": "Pay rules: regular rate across jobs, effective-dated rates, work before a job's first rate",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "create the staff for this rule and send their punches",
+     "ok": true,
+     "detail": "",
+     "seconds": 17.943
+    },
+    {
+     "name": "before approval, timesheets follow the interface contract",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.168
+    },
+    {
+     "name": "approve every week with worked time",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.808
+    },
+    {
+     "name": "after approval, timesheets follow the interface contract",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.163
+    },
+    {
+     "name": "the draft run for 2026-10-04 pays every hour and cent as the rules say",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.159
+    },
+    {
+     "name": "work before a job's first rate holds that week and the draft lists it as held",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.796
+    }
+   ],
+   "error": null,
+   "seconds": 29.0
+  },
+  "W10": {
+   "title": "Pay rules: midnight, workweek, pay-period and DST boundaries; rounding ties",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "create the staff for this rule and send their punches",
+     "ok": true,
+     "detail": "",
+     "seconds": 11.148
+    },
+    {
+     "name": "before approval, timesheets follow the interface contract",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.155
+    },
+    {
+     "name": "approve every week with worked time",
+     "ok": true,
+     "detail": "",
+     "seconds": 13.05
+    },
+    {
+     "name": "after approval, timesheets follow the interface contract",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.148
+    },
+    {
+     "name": "the draft run for 2026-10-04 pays every hour and cent as the rules say",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.074
+    },
+    {
+     "name": "the draft run for 2026-10-18 pays every hour and cent as the rules say",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.132
+    },
+    {
+     "name": "the draft run for 2026-11-01 pays every hour and cent as the rules say",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.156
+    }
+   ],
+   "error": null,
+   "seconds": 30.9
+  },
+  "W11": {
+   "title": "Pay rules: CA meal premiums",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "create the staff for this rule and send their punches",
+     "ok": true,
+     "detail": "",
+     "seconds": 11.492
+    },
+    {
+     "name": "before approval, timesheets follow the interface contract",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.128
+    },
+    {
+     "name": "approve every week with worked time",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.479
+    },
+    {
+     "name": "after approval, timesheets follow the interface contract",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.141
+    },
+    {
+     "name": "the draft run for 2026-10-04 pays every hour and cent as the rules say",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.103
+    }
+   ],
+   "error": null,
+   "seconds": 19.3
+  },
+  "W20": {
+   "title": "Exceptions across week boundaries: interrupted, unclosed and over-16-hour shifts",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "staff whose punches break the rules across the 2026-10-10/11 week boundary",
+     "ok": true,
+     "detail": "",
+     "seconds": 9.119
+    },
+    {
+     "name": "the draft for 2026-10-04 pays only exception-free weeks and holds the others",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.219
+    }
+   ],
+   "error": null,
+   "seconds": 11.3
+  },
+  "W12": {
+   "title": "Legacy data at scale: Mission St (CA rules, Los Angeles) lines and held weeks",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "the draft for 2026-10-18 answers within 120 s",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.929
+    },
+    {
+     "name": "every legacy Mission St, San Francisco line for 2026-10-18 matches the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.657
+    },
+    {
+     "name": "the draft for 2026-10-18 lists exactly this location's held legacy weeks",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.745
+    },
+    {
+     "name": "the draft for 2026-11-01 answers within 120 s",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.935
+    },
+    {
+     "name": "every legacy Mission St, San Francisco line for 2026-11-01 matches the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.675
+    },
+    {
+     "name": "the draft for 2026-11-01 lists exactly this location's held legacy weeks",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.815
+    }
+   ],
+   "error": null,
+   "seconds": 30.8
+  },
+  "W21": {
+   "title": "Legacy data at scale: Roosevelt Row (FLSA, Phoenix) lines and held weeks",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "the draft for 2026-10-18 answers within 120 s",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.926
+    },
+    {
+     "name": "every legacy Roosevelt Row, Phoenix line for 2026-10-18 matches the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.335
+    },
+    {
+     "name": "the draft for 2026-10-18 lists exactly this location's held legacy weeks",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.435
+    },
+    {
+     "name": "the draft for 2026-11-01 answers within 120 s",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.924
+    },
+    {
+     "name": "every legacy Roosevelt Row, Phoenix line for 2026-11-01 matches the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.345
+    },
+    {
+     "name": "the draft for 2026-11-01 lists exactly this location's held legacy weeks",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.47
+    }
+   ],
+   "error": null,
+   "seconds": 17.4
+  },
+  "W22": {
+   "title": "Legacy data at scale: Wicker Park (FLSA, Chicago) lines and held weeks",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "the draft for 2026-10-18 answers within 120 s",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.905
+    },
+    {
+     "name": "every legacy Wicker Park, Chicago line for 2026-10-18 matches the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.346
+    },
+    {
+     "name": "the draft for 2026-10-18 lists exactly this location's held legacy weeks",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.466
+    },
+    {
+     "name": "the draft for 2026-11-01 answers within 120 s",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.941
+    },
+    {
+     "name": "every legacy Wicker Park, Chicago line for 2026-11-01 matches the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.346
+    },
+    {
+     "name": "the draft for 2026-11-01 lists exactly this location's held legacy weeks",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.509
+    }
+   ],
+   "error": null,
+   "seconds": 17.5
+  },
+  "W13": {
+   "title": "Approvals: reporting tree, self-approval, peers, invalidation, CSRF",
+   "weight": 4.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "build a reporting tree with accounts",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.679
+    },
+    {
+     "name": "viewing follows the tree: managers above see, peers and colleagues get 403",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.053
+    },
+    {
+     "name": "/approvals lists exactly the pending weeks the manager may approve",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.785
+    },
+    {
+     "name": "nobody approves their own week or a week outside their branch; a token-less approval is refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.142
+    },
+    {
+     "name": "the manager two levels up approves; the week is approved",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.044
+    },
+    {
+     "name": "a later punch returns the approved week to pending",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.072
+    },
+    {
+     "name": "a new punch returns a week approved by the old system to pending",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.891
+    },
+    {
+     "name": "an exception week cannot be approved",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.096
+    }
+   ],
+   "error": null,
+   "seconds": 8.8
+  },
+  "W14": {
+   "title": "Payroll run lifecycle: stale drafts, one finalization, lock, pay statements once",
+   "weight": 5.0,
+   "critical": true,
+   "passed": false,
+   "steps": [
+    {
+     "name": "staff with approved weeks in the period starting 2026-09-20",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.33
+    },
+    {
+     "name": "the draft carries a version",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.894
+    },
+    {
+     "name": "a punch after the draft makes finalizing it (from the browser) refused with 409; it stays a draft",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.985
+    },
+    {
+     "name": "two simultaneous finalize requests for the recomputed draft: exactly one succeeds",
+     "ok": false,
+     "detail": "gross for 2003 expected '166896', got '72288'",
+     "seconds": 19.829
+    }
+   ],
+   "error": "gross for 2003 expected '166896', got '72288'",
+   "seconds": 28.0
+  },
+  "W15": {
+   "title": "Adjustments: late punches, late approvals and rate changes reach the next run",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "staff with work in the period starting 2026-10-04; finalize it",
+     "ok": true,
+     "detail": "",
+     "seconds": 25.603
+    },
+    {
+     "name": "after the run: a late punch, a raise, a cut, a late approval, and an unapproved change",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.508
+    },
+    {
+     "name": "the next run pays each difference as an adjustment, and nothing for the unapproved change",
+     "ok": true,
+     "detail": "",
+     "seconds": 8.061
+    }
+   ],
+   "error": null,
+   "seconds": 34.2
+  },
+  "W16": {
+   "title": "CSV export: exact format, quoting, spreadsheet safety; profile edits change only the name",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "staff whose names need quoting or neutralizing have approved work in 2026-11-29",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.207
+    },
+    {
+     "name": "the export has the exact header, CRLF rows ordered by employee_id, and correct quoting",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.969
+    },
+    {
+     "name": "names starting with = + - @ or a tab are written with a leading quote; numbers stay plain",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.003
+    },
+    {
+     "name": "an employee changes their display name; extra fields change nothing; a token-less change is refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.29
+    },
+    {
+     "name": "names with control characters are refused; nothing typed adds an email header or recipient",
+     "ok": true,
+     "detail": "",
+     "seconds": 4.407
+    },
+    {
+     "name": "emails are addressed with the employee's display name and address in To",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.049
+    }
+   ],
+   "error": null,
+   "seconds": 7.9
+  },
+  "W17": {
+   "title": "In a real browser: layout at 1280 and 390 px, escaping everywhere, clicking through",
+   "weight": 3.0,
+   "critical": false,
+   "passed": false,
+   "steps": [
+    {
+     "name": "staff, labels and job codes carrying script payloads exist; a manager has a pending week",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.166
+    },
+    {
+     "name": "signing in through the browser form reaches a signed-in page",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.525
+    },
+    {
+     "name": "every page stays within 1280 and 390 CSS pixels without horizontal scrolling",
+     "ok": false,
+     "detail": "/admin/employees/2033 overflows by 199px at 390px",
+     "seconds": 0.129
+    }
+   ],
+   "error": "/admin/employees/2033 overflows by 199px at 390px",
+   "seconds": 3.7
+  },
+  "W18": {
+   "title": "Deployment: README, restart persistence, nothing re-sent, no secrets (passwords, keys, reset tokens, sessions) at rest, records kept",
+   "weight": 2.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "README.md and an executable start.sh are in the workspace",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.0
+    },
+    {
+     "name": "after a restart: passwords, runs and punches are kept and no email is sent again",
+     "ok": true,
+     "detail": "",
+     "seconds": 15.654
+    },
+    {
+     "name": "no password or time-clock key is stored in plain text",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.288
+    },
+    {
+     "name": "the old system's records are all still there, unchanged",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.064
+    }
+   ],
+   "error": null,
+   "seconds": 19.0
+  },
+  "W19": {
+   "title": "Health follows the database: non-2xx within 10 s of a stop, 200 within 60 s of a start",
+   "weight": 2.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "/healthz answers 200 while the database is up",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.019
+    },
+    {
+     "name": "within 10 s of the database stopping, /healthz answers a non-2xx status within 5 s",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.414
+    },
+    {
+     "name": "within 60 s of the database starting again, /healthz answers 200 without a restart",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.008
+    }
+   ],
+   "error": null,
+   "seconds": 0.6
+  },
+  "W23": {
+   "title": "Cross-cutting safety: no secrets in the app's files, reset ends sessions, Host-proof links, headers, no stack traces",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "setting a new password through a reset link signs out every existing session",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.567
+    },
+    {
+     "name": "a reset link always starts with PUBLIC_BASE_URL, whatever Host header the request carried",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.051
+    },
+    {
+     "name": "signed-in pages carry Cache-Control: no-store and an anti-framing header",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.01
+    },
+    {
+     "name": "malformed requests get a plain error page without stack traces, SQL, or file paths",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.144
+    },
+    {
+     "name": "no password, reset token, session identifier, or time-clock key is stored in the app's files",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.078
+    }
+   ],
+   "error": null,
+   "seconds": 2.9
+  }
+ },
+ "breaches": {},
+ "surfaces": {
+  "signin": true,
+  "admin": true,
+  "api": true
+ },
+ "observations": {
+  "W02": {
+   "session_cookies": [
+    "sb_session"
+   ]
+  },
+  "W06": {
+   "employees": [
+    1507,
+    1508,
+    1509,
+    1510,
+    1511,
+    1512,
+    1513,
+    1514,
+    1515,
+    1516,
+    1517,
+    1518,
+    1519,
+    1520,
+    1521,
+    1522,
+    1523,
+    1524,
+    1525,
+    1526,
+    1527,
+    1528,
+    1529,
+    1530,
+    1531,
+    1532,
+    1533,
+    1534,
+    1535,
+    1536,
+    1537,
+    1538,
+    1539,
+    1540,
+    1541,
+    1542,
+    1543,
+    1544,
+    1545,
+    1546,
+    1547,
+    1548,
+    1549,
+    1550,
+    1551,
+    1552,
+    1553,
+    1554,
+    1555,
+    1556,
+    1557,
+    1558,
+    1559,
+    1560,
+    1561,
+    1562,
+    1563,
+    1564,
+    1565,
+    1566,
+    1567,
+    1568,
+    1569,
+    1570,
+    1571,
+    1572,
+    1573,
+    1574,
+    1575,
+    1576,
+    1577,
+    1578,
+    1579,
+    1580,
+    1581,
+    1582,
+    1583,
+    1584,
+    1585,
+    1586,
+    1587,
+    1588,
+    1589,
+    1590,
+    1591,
+    1592,
+    1593,
+    1594
+   ]
+  },
+  "W07": {
+   "employees": [
+    1595,
+    1596,
+    1597,
+    1598,
+    1599,
+    1600,
+    1601,
+    1602,
+    1603,
+    1604,
+    1605,
+    1606,
+    1607,
+    1608,
+    1609,
+    1610,
+    1611,
+    1612,
+    1613,
+    1614,
+    1615,
+    1616,
+    1617,
+    1618,
+    1619,
+    1620,
+    1621,
+    1622,
+    1623,
+    1624,
+    1625,
+    1626,
+    1627,
+    1628,
+    1629,
+    1630,
+    1631,
+    1632,
+    1633,
+    1634,
+    1635,
+    1636,
+    1637,
+    1638,
+    1639,
+    1640,
+    1641,
+    1642,
+    1643,
+    1644,
+    1645,
+    1646,
+    1647,
+    1648,
+    1649,
+    1650,
+    1651,
+    1652,
+    1653,
+    1654,
+    1655,
+    1656,
+    1657,
+    1658,
+    1659,
+    1660,
+    1661,
+    1662,
+    1663,
+    1664,
+    1665,
+    1666,
+    1667,
+    1668,
+    1669,
+    1670,
+    1671,
+    1672,
+    1673,
+    1674,
+    1675,
+    1676,
+    1677,
+    1678,
+    1679,
+    1680,
+    1681,
+    1682
+   ]
+  },
+  "W08": {
+   "employees": [
+    1683,
+    1684,
+    1685,
+    1686,
+    1687,
+    1688,
+    1689,
+    1690,
+    1691,
+    1692,
+    1693,
+    1694,
+    1695,
+    1696,
+    1697,
+    1698,
+    1699,
+    1700,
+    1701,
+    1702,
+    1703,
+    1704,
+    1705,
+    1706,
+    1707,
+    1708,
+    1709,
+    1710,
+    1711,
+    1712,
+    1713,
+    1714,
+    1715,
+    1716,
+    1717,
+    1718,
+    1719,
+    1720,
+    1721,
+    1722,
+    1723,
+    1724,
+    1725,
+    1726,
+    1727,
+    1728,
+    1729,
+    1730,
+    1731,
+    1732,
+    1733,
+    1734,
+    1735,
+    1736,
+    1737,
+    1738,
+    1739,
+    1740,
+    1741,
+    1742,
+    1743,
+    1744,
+    1745,
+    1746,
+    1747,
+    1748,
+    1749,
+    1750
+   ]
+  },
+  "W09": {
+   "employees": [
+    1751,
+    1752,
+    1753,
+    1754,
+    1755,
+    1756,
+    1757,
+    1758,
+    1759,
+    1760,
+    1761,
+    1762,
+    1763,
+    1764,
+    1765,
+    1766,
+    1767,
+    1768,
+    1769,
+    1770,
+    1771,
+    1772,
+    1773,
+    1774,
+    1775,
+    1776,
+    1777,
+    1778,
+    1779,
+    1780,
+    1781,
+    1782,
+    1783,
+    1784,
+    1785,
+    1786,
+    1787,
+    1788,
+    1789,
+    1790,
+    1791,
+    1792,
+    1793,
+    1794,
+    1795,
+    1796,
+    1797,
+    1798,
+    1799,
+    1800,
+    1801,
+    1802,
+    1803,
+    1804,
+    1805,
+    1806,
+    1807,
+    1808,
+    1809,
+    1810,
+    1811,
+    1812,
+    1813,
+    1814,
+    1815,
+    1816,
+    1817,
+    1818,
+    1819
+   ]
+  },
+  "W10": {
+   "employees": [
+    1820,
+    1821,
+    1822,
+    1823,
+    1824,
+    1825,
+    1826,
+    1827,
+    1828,
+    1829,
+    1830,
+    1831,
+    1832,
+    1833,
+    1834,
+    1835,
+    1836,
+    1837,
+    1838,
+    1839,
+    1840,
+    1841,
+    1842,
+    1843,
+    1844,
+    1845,
+    1846,
+    1847,
+    1848,
+    1849,
+    1850,
+    1851,
+    1852,
+    1853,
+    1854,
+    1855,
+    1856,
+    1857,
+    1858,
+    1859,
+    1860,
+    1861,
+    1862,
+    1863,
+    1864,
+    1865,
+    1866,
+    1867,
+    1868,
+    1869,
+    1870,
+    1871,
+    1872,
+    1873,
+    1874,
+    1875,
+    1876,
+    1877,
+    1878,
+    1879,
+    1880,
+    1881,
+    1882,
+    1883,
+    1884,
+    1885,
+    1886,
+    1887
+   ]
+  },
+  "W11": {
+   "employees": [
+    1888,
+    1889,
+    1890,
+    1891,
+    1892,
+    1893,
+    1894,
+    1895,
+    1896,
+    1897,
+    1898,
+    1899,
+    1900,
+    1901,
+    1902,
+    1903,
+    1904,
+    1905,
+    1906,
+    1907,
+    1908,
+    1909,
+    1910,
+    1911,
+    1912,
+    1913,
+    1914,
+    1915,
+    1916,
+    1917,
+    1918,
+    1919,
+    1920,
+    1921,
+    1922,
+    1923,
+    1924,
+    1925,
+    1926,
+    1927,
+    1928,
+    1929,
+    1930,
+    1931,
+    1932,
+    1933,
+    1934,
+    1935,
+    1936,
+    1937,
+    1938,
+    1939,
+    1940,
+    1941,
+    1942,
+    1943,
+    1944,
+    1945,
+    1946,
+    1947,
+    1948,
+    1949,
+    1950,
+    1951,
+    1952,
+    1953,
+    1954,
+    1955
+   ]
+  },
+  "W12": {
+   "seconds_2026-10-18": 1.9,
+   "mismatches_2026-10-18": 0,
+   "seconds_2026-11-01": 1.9,
+   "mismatches_2026-11-01": 0
+  },
+  "W21": {
+   "seconds_2026-10-18": 1.9,
+   "mismatches_2026-10-18": 0,
+   "seconds_2026-11-01": 1.9,
+   "mismatches_2026-11-01": 0
+  },
+  "W22": {
+   "seconds_2026-10-18": 1.9,
+   "mismatches_2026-10-18": 0,
+   "seconds_2026-11-01": 1.9,
+   "mismatches_2026-11-01": 0
+  },
+  "W19": {
+   "non2xx_after_s": 0.0,
+   "back_after_s": 0.0
+  }
+ }
+}

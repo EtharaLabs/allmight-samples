@@ -1,0 +1,60 @@
+seatwise●
+Explore events
+My tickets
+Organizations
+Sign out
+
+LIVE & IN PERSON
+
+Event dashboard
+Capacity
+90
+Sold
+2
+Held
+0
+Available
+88
+Admitted
+0
+Gross
+$118.53
+Refunded
+$0.00
+Net
+$118.53
+Balcony
+Capacity
+30
+Sold
+0
+Held
+0
+Available
+30
+Admitted
+0
+Gross
+$0.00
+Refunded
+$0.00
+Net
+$0.00
+Floor
+Capacity
+60
+Sold
+2
+Held
+0
+Available
+58
+Admitted
+0
+Gross
+$118.53
+Refunded
+$0.00
+Net
+$118.53
+Seatwise · Good nights start here.

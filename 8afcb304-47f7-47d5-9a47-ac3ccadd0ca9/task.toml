@@ -1,0 +1,65 @@
+schema_version = "1.4"
+reward_type = "bounded_continuous"
+artifacts = [{ source = "/app", exclude = [".git", "**/.cache", "**/__pycache__", "**/.pytest_cache", "**/.mypy_cache", "**/.ruff_cache", "**/.npm"] }]
+
+[task]
+name = "ethara/8afcb304-47f7-47d5-9a47-ac3ccadd0ca9"
+version = "1.0.0"
+description = "Build a two-clinic physiotherapy practice's online booking application from a written specification over an existing database of clinics, rooms, clinicians, effective-dated schedules, fees and 31,000 legacy appointments: an exact availability engine across time zones and clock changes, holds paid by card deposit through a Stripe-compatible provider with signed webhooks, refunds by elapsed-time bands, rescheduling with deposit carry-over, a waitlist with timed offers, clinic closures, clinic-scoped front desk and managers, front-desk bookings and reminders, clinical notes, and a spreadsheet-safe export; graded by strict browser and HTTP workflows plus a judged experience review."
+authors = [{ name = "amrit.raj", email = "amrit.raj@ethara.ai" }]
+keywords = ["web-application", "zero-to-one", "scheduling", "availability", "time-zones", "dst", "payments", "webhooks", "refunds", "waitlist", "postgresql", "email", "csrf", "authorization", "concurrency", "physiotherapy", "booking"]
+
+[metadata]
+category = "programming"
+domain = "solo-founder"
+difficulty = "hard"
+tags = ["full-stack", "booking", "payments", "time-zones", "legacy-data", "security", "concurrency", "email"]
+reference_benchmark = "Vibe Code Bench (arXiv 2603.04601)"
+reference_benchmark_relation = "Used only to calibrate the delivery format and the difficulty target. The specification, seed corpus, reference engine, grading workflows and reference solution are original work authored for this task; no instruction text, fixture, expected value or grading criterion is derived from that benchmark or from any other public source."
+valid_until = "2030-01-31"
+scoring = "reward = 0.9 * functional + 0.1 * judge; functional = weighted share of strict workflows (every substep must pass); any observed breach, or any failed critical workflow, caps each workflow at 0.4; a critical workflow that fails only because the verifier's time budget ran out scores 0 without triggering the cap"
+difficulty_explanation = "Availability is an exact, interacting rule set: effective-dated weekly hours with same-day ties, whole and partial exceptions, clinic closures, a 15-minute grid, fit inside merged working time, buffers on clinician and room, lowest-id shared-room assignment, daily limits counting live holds, fees in effect by local date, notice and horizon from now, and wall-clock times in clock-change gaps and folds in two zones. It is checked list-for-list against hundreds of generated clinicians dense in boundary cases and against the old system's 150 clinicians and 31,000 appointments stored as naive local times with a fold column (which PostgreSQL's own conversion gets wrong). Money flows through a Stripe-compatible provider: holds with a TTL from creation, confirmation only by verified webhooks that arrive late, twice, or out of order, late payments refunded in full, refunds by elapsed-time bands with half-cent rounding, idempotent retries through provider errors, lost answers and restarts, deposit carry-over on reschedule, waitlist offers whose expiry chains to the next patient and whose deposit is fixed only when the offer is accepted (so a fee change while an offer is open applies), and offer tokens that, like reset tokens and session identifiers, are stored only as hashes (so offer emails cannot sit in an outbox table). Five roles with clinic-scoped staff (patient, clinician, front desk, manager, admin) and stated rules for which actions each page offers, email exactly once, deposits and half refunds that land on exact half cents (where half-to-even, float rate-first and halve-the-fee shortcuts each lose a cent), and a breach battery (IDOR and cross-clinic access, CSRF, stored and reflected XSS in a real browser, mass assignment, webhook forgery, session fixation and survival, sessions surviving a password reset, Host-header reset links, open redirect, email header injection, CSV formula injection, secrets stored in the database or workspace files, legacy tampering) cap the reward."
+solution_explanation = "solution/app is a Python standard-library HTTP server with psycopg 3: a per-date working-time engine on UTC instants with zoneinfo fold handling, per-clinic advisory locks around every hold, offer and reschedule, a webhook handler that verifies HMAC signatures and records event ids in the same transaction as their effect, a refund worker that retries with one Idempotency-Key per refund, a sweeper that expires holds and offers and triggers the waitlist, an outbox mailer (reset and offer emails, whose tokens are stored only as hashes, are sent right after commit and never stored), and scrypt-hashed credentials."
+verification_explanation = "tests/workflows.py runs 27 strict workflows (17 marked critical: any failed critical workflow caps the run at 0.4) through HTTP, the payments mock's public and administrative surfaces (held, released and forged webhook deliveries, armed provider faults), the mail sink, and a real Chromium. tests/reference holds an independent availability and money engine plus a model of every clinician, schedule, room, booking, refund and closure the verifier created on top of the pre-run baseline; it predicts every slot list, room, deposit, refund and export row; tests/reference/ties.json holds precomputed half-cent fee and rate pairs. Reward Kit turns results.json into the functional score; the fable-5.1 judge grades ten experience criteria from verifier-captured screenshots, page text and emails."
+
+[agent]
+timeout_sec = 18000.0
+user = 1000
+network_mode = "allowlist"
+allowed_hosts = ["registry.npmjs.org", "pypi.org", "files.pythonhosted.org"]
+
+[verifier]
+timeout_sec = 10800.0
+user = 0
+environment_mode = "separate"
+network_mode = "allowlist"
+allowed_hosts = ["api.anthropic.com"]
+
+[verifier.env]
+ANTHROPIC_API_KEY = "${ANTHROPIC_API_KEY:-}"
+
+[verifier.environment]
+network_mode = "allowlist"
+allowed_hosts = ["api.anthropic.com"]
+build_timeout_sec = 3600.0
+cpus = 4
+memory_mb = 8192
+storage_mb = 20480
+gpus = 0
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 3600.0
+cpus = 4
+memory_mb = 8192
+storage_mb = 20480
+gpus = 0
+workdir = "/app"
+
+[environment.healthcheck]
+command = "test -s /etc/physio/services.env && curl -fsS http://127.0.0.1:8025/healthz && curl -fsS http://127.0.0.1:4242/healthz"
+interval_sec = 5.0
+timeout_sec = 10.0
+start_period_sec = 60.0
+start_interval_sec = 2.0
+retries = 5

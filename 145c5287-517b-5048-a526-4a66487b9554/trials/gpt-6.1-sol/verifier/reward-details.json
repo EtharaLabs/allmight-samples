@@ -1,0 +1,329 @@
+{
+  "reward": {
+    "kind": "group",
+    "score": 0.8435,
+    "aggregation": "weighted-mean",
+    "components": [
+      {
+        "name": "judge",
+        "weight": 30.0,
+        "detail": {
+          "score": 1.0,
+          "criteria": [
+            {
+              "id": "contested_pairing_matches_declared_matching",
+              "name": "contested_pairing_matches_declared_matching",
+              "value": 1.0,
+              "raw": "yes",
+              "weight": 5.0,
+              "description": "In each section of /app/out/contested.md, the prose asserts for that section's txn_id the same receipt pairing that the matched array of /app/out/reconciliation.json declares for it, or asserts that the row was matched to no receipt where that array carries none, judged as what the sentences claim rather than which identifiers they contain.",
+              "reasoning": "contested.md has three sections. TXN-1007's prose asserts it is matched to RCP-0011; reconciliation.json's matched array has {receipt_id: RCP-0011, txn_id: TXN-1007}. TXN-1009's prose asserts it is matched to RCP-0008; the array has {RCP-0008, TXN-1009}. TXN-1012's prose asserts it is matched to RCP-0010; the array has {RCP-0010, TXN-1012}. In each section, other receipt IDs appear only as explicitly rejected alternatives (\"could instead match\", \"cannot replace it here\"), so the sentences' actual claims match the declared pairings. No section claims an unmatched row, and no contested txn_id is absent from the matched array."
+            },
+            {
+              "id": "contested_reason_is_the_operative_rule",
+              "name": "contested_reason_is_the_operative_rule",
+              "value": 1.0,
+              "raw": "yes",
+              "weight": 3.0,
+              "description": "In each section of /app/out/contested.md, the reason the prose gives for resolving that txn_id as it did is a reason the shipped inputs make true for that row under the stated matching rules, rather than a different rule that happens to name the same quantities.",
+              "reasoning": "Verified each contested.md section against inputs/statement.csv, inputs/receipts/*.txt, and inputs/policy.json (50-cent tolerance, 3-day window, absolute-value comparison, max-cardinality then amount tie-break as implemented in main.py). TXN-1007 (+9900, Mar 12): RCP-0011 (9945, Mar 15, 45c/3d) is the only eligible receipt; RCP-0008 (9910, Mar 17) is 5 days away and excluded by the window, exactly as stated. TXN-1009 (9950, Mar 16): both RCP-0008 (40c/1d) and RCP-0011 (5c/1d before) are eligible; the prose correctly says the amount tie-break would favour RCP-0011 but cardinality overrides, and main.py's matcher compares count before weighted score, so cardinality is genuinely the operative rule (2 matches vs 1). TXN-1012 (1875, Mar 21): RCP-0010 (1840, Mar 22, 35c/1d) is the sole eligible receipt and has no other eligible row, so the unique-eligibility/cardinality reason is true. All stated quantities and the rules cited as decisive are accurate for each row; no section substitutes a different rule that merely names the same numbers."
+            },
+            {
+              "id": "policy_verdict_follows_from_the_two_numbers",
+              "name": "policy_verdict_follows_from_the_two_numbers",
+              "value": 1.0,
+              "raw": "yes",
+              "weight": 5.0,
+              "description": "In each section of /app/out/policy-notes.md, the relation the prose asserts between the receipt total and the category limit it names is the relation those two numbers actually stand in, and the violation verdict the prose states for that pair is the one that relation entails under the rule that a pair violates when its category carries a limit and its total strictly exceeds it, judged as what the sentences claim rather than which numbers they contain.",
+              "reasoning": "policy-notes.md has four sections. RCP-0005 (meals, 8100 vs limit 7500), RCP-0008 (meals, 9910 vs 7500), and RCP-0011 (meals, 9945 vs 7500) each assert the total strictly exceeds the limit by 600, 2410, and 2445 cents respectively and state a violation; all three relations are arithmetically true and the violation verdict follows under the strict-exceedance rule. RCP-0001 (travel, 48200 vs limit 50000) asserts the total does not strictly exceed the limit, falling short by 1800 cents, and states compliance; that relation is true and compliance is the entailed verdict. Totals and categories were cross-checked against the raw receipt files (482.00, 81.00, 99.10, 99.45; travel/meals) and limits against inputs/policy.json (meals 7500, travel 50000). Every asserted relation and verdict matches reality."
+            },
+            {
+              "id": "parse_notes_attributes_the_colon_mechanism",
+              "name": "parse_notes_attributes_the_colon_mechanism",
+              "value": 1.0,
+              "raw": "yes",
+              "weight": 5.0,
+              "description": "In each section of /app/out/parse-notes.md whose receipt carries a colon inside its VENDOR value, the format rule the prose attributes to that receipt is the rule that only the first colon on a line separates the field name from its value, and the wrong reading the prose describes is the truncation a split-on-every-colon parse would produce, judged as what the sentences attribute rather than which rules they mention.",
+              "reasoning": "Only two receipts carry a colon inside their VENDOR value: RCP-0003 (\"Heliotype Software: Annual Plan\") and RCP-0007 (\"Meridian Coach Lines: Route 42\"). Both corresponding sections of /app/out/parse-notes.md attribute to the receipt the rule that \"a VENDOR value can contain a colon and only the first colon separates the field name from its value.\" Each section describes the wrong reading as what \"a reader splitting at every colon and keeping only the next segment\" would produce, namely the truncated values \"Heliotype Software\" and \"Meridian Coach Lines\", which is exactly the truncation a split-on-every-colon parse yields. The correct full values are stated and the trailing colon is explicitly identified as part of the value. The RCP-0004 section concerns a different rule (ignored non-field lines) and its VENDOR has no colon, so it is outside the criterion's scope. The attribution in the sentences, not merely the mention of rules, matches the criterion for both colon sections."
+            },
+            {
+              "id": "parse_notes_attributes_the_nonfield_mechanism",
+              "name": "parse_notes_attributes_the_nonfield_mechanism",
+              "value": 1.0,
+              "raw": "yes",
+              "weight": 3.0,
+              "description": "In each section of /app/out/parse-notes.md whose receipt carries lines that are not field lines, the format rule the prose attributes to that receipt is the rule that such lines are ignored, and the wrong reading the prose describes is what a parse that did not ignore those lines would have produced from them, judged as what the sentences attribute rather than which rules they mention.",
+              "reasoning": "Inspected all twelve receipts in /app/inputs/receipts. Only rcp-0004.txt contains lines that are not field lines: \"Thank you for your business.\" and \"Invoice generated automatically; retain for records.\" (neither has a colon). The RCP-0004 section of /app/out/parse-notes.md attributes exactly the rule that \"additional non-field lines are ignored\" to this receipt, and does not attribute the first-colon rule to it. The wrong reading it describes is that a reader treating every line as a field \"would invent spurious fields named\" those two exact lines, which is what a parse that did not ignore those lines would have produced from them. It then states both lines are ignored and that the correct CATEGORY (\"other\") and VENDOR (\"Carter & Voss LLP\") are unaffected, which matches the file contents. The other two sections (RCP-0003, RCP-0007) concern the colon-in-VENDOR rule and those receipts have no non-field lines, so they are outside the scope of this criterion. The criterion is satisfied."
+            },
+            {
+              "id": "policy_magnitude_is_the_arithmetic_difference",
+              "name": "policy_magnitude_is_the_arithmetic_difference",
+              "value": 1.0,
+              "raw": "yes",
+              "weight": 1.0,
+              "description": "In each section of /app/out/policy-notes.md, the figure the prose states for how far the receipt total exceeds or falls short of the category limit it names is the arithmetic difference between those two numbers, judged as the quantity the sentence claims however it is phrased rather than as a figure matched in a fixed form.",
+              "reasoning": "Every section of /app/out/policy-notes.md states a magnitude that equals the arithmetic difference between the receipt total and the category limit it names, with the correct direction: RCP-0005 says it exceeds the 7500 meals limit by 600 (8100-7500=600); RCP-0008 says it exceeds by 2410 (9910-7500=2410); RCP-0011 says it exceeds by 2445 (9945-7500=2445); RCP-0001 says it falls short of the 50000 travel limit by 1800 (50000-48200=1800). The limits match /app/inputs/policy.json (meals 7500, travel 50000). No section misstates the difference."
+            },
+            {
+              "id": "convention_collapse_is_the_true_direction",
+              "name": "convention_collapse_is_the_true_direction",
+              "value": 1.0,
+              "raw": "yes",
+              "weight": 5.0,
+              "description": "In the collapse section of /app/out/convention-notes.md, the direction and the size of the collapse the prose asserts are the ones these inputs make true: that dropping the absolute value loses eligible pairs rather than gaining them, and that the pairs the signed comparison leaves standing are the ones it actually leaves standing, judged as what the sentences claim rather than which figures they contain.",
+              "reasoning": "Recomputed from inputs/policy.json (50-cent tolerance, 3-day window), inputs/statement.csv, and the 12 receipts. Under the absolute-value rule there are 12 eligible (row, receipt) pairs: one each for TXN-1001..1006, 1008, 1010, 1012; RCP-0011 for TXN-1007; RCP-0008 and RCP-0011 for TXN-1009; none for TXN-1011. Maximum matching is 11 because RCP-0011 is shared by TXN-1007 and TXN-1009. Under signed comparison all receipt totals are positive and every row except TXN-1007 (+9900) is negative, so only TXN-1007 can match; RCP-0011 (9945, 3 days later) qualifies and RCP-0008 is 5 days away, leaving exactly 1 eligible pair, which is also the whole maximum matching. The collapse section states that the signed rule admits 1 pair versus 12, that the matching drops from 11 to 1, and that the sole survivor is RCP-0011 with TXN-1007 and is the full matching. The direction (dropping |\u00b7| loses pairs), the magnitude, and the identity of the surviving pair are all correct as asserted."
+            },
+            {
+              "id": "convention_divergence_set_is_the_true_partition",
+              "name": "convention_divergence_set_is_the_true_partition",
+              "value": 1.0,
+              "raw": "yes",
+              "weight": 3.0,
+              "description": "In the divergence section of /app/out/convention-notes.md, each txn_id the prose places among the rows whose eligible set differs between the two rules is a row whose set does differ, and each txn_id it places among the rows whose set is the same is a row whose set is the same, judged as which group the sentences assign each row to rather than which rows they name.",
+              "reasoning": "Recomputed eligibility from inputs/policy.json, inputs/statement.csv, and the 12 receipt files. Under the absolute-value rule the eligible sets are: 1001\u2192{0001}, 1002\u2192{0002}, 1003\u2192{0003}, 1004\u2192{0004}, 1005\u2192{0005}, 1006\u2192{0006}, 1007\u2192{0011}, 1008\u2192{0007}, 1009\u2192{0008,0011}, 1010\u2192{0009}, 1011\u2192{}, 1012\u2192{0010} (12 edges). Under the signed rule only TXN-1007 (+9900) retains RCP-0011; all negative rows become empty and TXN-1011 stays empty. So the true partition is differ = {1001,1002,1003,1004,1005,1006,1008,1009,1010,1012} and same = {1007,1011}. The divergence section of /app/out/convention-notes.md assigns exactly these ten rows to the \"sets differ\" sentence and exactly TXN-1007 and TXN-1011 to the \"sets are the same\" sentence, and its follow-up sentences (TXN-1011 empty under both, TXN-1007 has RCP-0011 under both, TXN-1001 as the differing example, TXN-1007 as the coinciding example) are consistent with that partition. Every row is placed in the correct group."
+            }
+          ],
+          "kind": "agent",
+          "judge": {
+            "agent": "claude-code",
+            "model": "anthropic/claude-fable-5-1",
+            "version": "2.1.314",
+            "reasoning_effort": null,
+            "timeout": 1800,
+            "cwd": "/app",
+            "isolated": false,
+            "atif_trajectory": null,
+            "mode": "individual",
+            "mcp_servers": [],
+            "samples": 1,
+            "guard": "off"
+          },
+          "judge_output": "--- contested_pairing_matches_declared_matching ---\n{\"score\": \"yes\", \"reasoning\": \"contested.md has three sections. TXN-1007's prose asserts it is matched to RCP-0011; reconciliation.json's matched array has {receipt_id: RCP-0011, txn_id: TXN-1007}. TXN-1009's prose asserts it is matched to RCP-0008; the array has {RCP-0008, TXN-1009}. TXN-1012's prose asserts it is matched to RCP-0010; the array has {RCP-0010, TXN-1012}. In each section, other receipt IDs appear only as explicitly rejected alternatives (\\\"could instead match\\\", \\\"cannot replace it here\\\"), so the sentences' actual claims match the declared pairings. No section claims an unmatched row, and no contested txn_id is absent from the matched array.\"}\n\n--- contested_reason_is_the_operative_rule ---\n{\"score\": \"yes\", \"reasoning\": \"Verified each contested.md section against inputs/statement.csv, inputs/receipts/*.txt, and inputs/policy.json (50-cent tolerance, 3-day window, absolute-value comparison, max-cardinality then amount tie-break as implemented in main.py). TXN-1007 (+9900, Mar 12): RCP-0011 (9945, Mar 15, 45c/3d) is the only eligible receipt; RCP-0008 (9910, Mar 17) is 5 days away and excluded by the window, exactly as stated. TXN-1009 (9950, Mar 16): both RCP-0008 (40c/1d) and RCP-0011 (5c/1d before) are eligible; the prose correctly says the amount tie-break would favour RCP-0011 but cardinality overrides, and main.py's matcher compares count before weighted score, so cardinality is genuinely the operative rule (2 matches vs 1). TXN-1012 (1875, Mar 21): RCP-0010 (1840, Mar 22, 35c/1d) is the sole eligible receipt and has no other eligible row, so the unique-eligibility/cardinality reason is true. All stated quantities and the rules cited as decisive are accurate for each row; no section substitutes a different rule that merely names the same numbers.\"}\n\n--- policy_verdict_follows_from_the_two_numbers ---\n{\"score\": \"yes\", \"reasoning\": \"policy-notes.md has four sections. RCP-0005 (meals, 8100 vs limit 7500), RCP-0008 (meals, 9910 vs 7500), and RCP-0011 (meals, 9945 vs 7500) each assert the total strictly exceeds the limit by 600, 2410, and 2445 cents respectively and state a violation; all three relations are arithmetically true and the violation verdict follows under the strict-exceedance rule. RCP-0001 (travel, 48200 vs limit 50000) asserts the total does not strictly exceed the limit, falling short by 1800 cents, and states compliance; that relation is true and compliance is the entailed verdict. Totals and categories were cross-checked against the raw receipt files (482.00, 81.00, 99.10, 99.45; travel/meals) and limits against inputs/policy.json (meals 7500, travel 50000). Every asserted relation and verdict matches reality.\"}\n\n--- parse_notes_attributes_the_colon_mechanism ---\n{\"score\": \"yes\", \"reasoning\": \"Only two receipts carry a colon inside their VENDOR value: RCP-0003 (\\\"Heliotype Software: Annual Plan\\\") and RCP-0007 (\\\"Meridian Coach Lines: Route 42\\\"). Both corresponding sections of /app/out/parse-notes.md attribute to the receipt the rule that \\\"a VENDOR value can contain a colon and only the first colon separates the field name from its value.\\\" Each section describes the wrong reading as what \\\"a reader splitting at every colon and keeping only the next segment\\\" would produce, namely the truncated values \\\"Heliotype Software\\\" and \\\"Meridian Coach Lines\\\", which is exactly the truncation a split-on-every-colon parse yields. The correct full values are stated and the trailing colon is explicitly identified as part of the value. The RCP-0004 section concerns a different rule (ignored non-field lines) and its VENDOR has no colon, so it is outside the criterion's scope. The attribution in the sentences, not merely the mention of rules, matches the criterion for both colon sections.\"}\n\n--- parse_notes_attributes_the_nonfield_mechanism ---\n{\"score\": \"yes\", \"reasoning\": \"Inspected all twelve receipts in /app/inputs/receipts. Only rcp-0004.txt contains lines that are not field lines: \\\"Thank you for your business.\\\" and \\\"Invoice generated automatically; retain for records.\\\" (neither has a colon). The RCP-0004 section of /app/out/parse-notes.md attributes exactly the rule that \\\"additional non-field lines are ignored\\\" to this receipt, and does not attribute the first-colon rule to it. The wrong reading it describes is that a reader treating every line as a field \\\"would invent spurious fields named\\\" those two exact lines, which is what a parse that did not ignore those lines would have produced from them. It then states both lines are ignored and that the correct CATEGORY (\\\"other\\\") and VENDOR (\\\"Carter & Voss LLP\\\") are unaffected, which matches the file contents. The other two sections (RCP-0003, RCP-0007) concern the colon-in-VENDOR rule and those receipts have no non-field lines, so they are outside the scope of this criterion. The criterion is satisfied.\"}\n\n--- policy_magnitude_is_the_arithmetic_difference ---\n{\"score\": \"yes\", \"reasoning\": \"Every section of /app/out/policy-notes.md states a magnitude that equals the arithmetic difference between the receipt total and the category limit it names, with the correct direction: RCP-0005 says it exceeds the 7500 meals limit by 600 (8100-7500=600); RCP-0008 says it exceeds by 2410 (9910-7500=2410); RCP-0011 says it exceeds by 2445 (9945-7500=2445); RCP-0001 says it falls short of the 50000 travel limit by 1800 (50000-48200=1800). The limits match /app/inputs/policy.json (meals 7500, travel 50000). No section misstates the difference.\"}\n\n--- convention_collapse_is_the_true_direction ---\n{\"score\": \"yes\", \"reasoning\": \"Recomputed from inputs/policy.json (50-cent tolerance, 3-day window), inputs/statement.csv, and the 12 receipts. Under the absolute-value rule there are 12 eligible (row, receipt) pairs: one each for TXN-1001..1006, 1008, 1010, 1012; RCP-0011 for TXN-1007; RCP-0008 and RCP-0011 for TXN-1009; none for TXN-1011. Maximum matching is 11 because RCP-0011 is shared by TXN-1007 and TXN-1009. Under signed comparison all receipt totals are positive and every row except TXN-1007 (+9900) is negative, so only TXN-1007 can match; RCP-0011 (9945, 3 days later) qualifies and RCP-0008 is 5 days away, leaving exactly 1 eligible pair, which is also the whole maximum matching. The collapse section states that the signed rule admits 1 pair versus 12, that the matching drops from 11 to 1, and that the sole survivor is RCP-0011 with TXN-1007 and is the full matching. The direction (dropping |\\u00b7| loses pairs), the magnitude, and the identity of the surviving pair are all correct as asserted.\"}\n\n--- convention_divergence_set_is_the_true_partition ---\n{\"score\": \"yes\", \"reasoning\": \"Recomputed eligibility from inputs/policy.json, inputs/statement.csv, and the 12 receipt files. Under the absolute-value rule the eligible sets are: 1001\\u2192{0001}, 1002\\u2192{0002}, 1003\\u2192{0003}, 1004\\u2192{0004}, 1005\\u2192{0005}, 1006\\u2192{0006}, 1007\\u2192{0011}, 1008\\u2192{0007}, 1009\\u2192{0008,0011}, 1010\\u2192{0009}, 1011\\u2192{}, 1012\\u2192{0010} (12 edges). Under the signed rule only TXN-1007 (+9900) retains RCP-0011; all negative rows become empty and TXN-1011 stays empty. So the true partition is differ = {1001,1002,1003,1004,1005,1006,1008,1009,1010,1012} and same = {1007,1011}. The divergence section of /app/out/convention-notes.md assigns exactly these ten rows to the \\\"sets differ\\\" sentence and exactly TXN-1007 and TXN-1011 to the \\\"sets are the same\\\" sentence, and its follow-up sentences (TXN-1011 empty under both, TXN-1007 has RCP-0011 under both, TXN-1001 as the differing example, TXN-1007 as the coinciding example) are consistent with that partition. Every row is placed in the correct group.\"}",
+          "usage": {
+            "input_tokens": 985634,
+            "cache_creation_input_tokens": 122681,
+            "cache_read_input_tokens": 861913,
+            "output_tokens": 21429,
+            "reasoning_output_tokens": 10333,
+            "total_tokens": 1007063,
+            "cost_usd": 2.83084075,
+            "tool_requests": {
+              "web_search": 0,
+              "web_fetch": 0
+            },
+            "models": {
+              "claude-fable-5-1": {
+                "input_tokens": 985634,
+                "cache_creation_input_tokens": 122681,
+                "cache_read_input_tokens": 861913,
+                "output_tokens": 21429,
+                "total_tokens": 1007063,
+                "context_window_tokens": 1000000,
+                "max_output_tokens": 64000,
+                "tool_requests": {
+                  "web_search": 0
+                },
+                "cost_usd": 2.83084075
+              }
+            }
+          },
+          "judge_logs": [
+            "/logs/verifier/trajectory.claude-code.contested_pairing_matches_declared_matching-1.9c1adc5561694ae3b16459adce44181b.jsonl",
+            "/logs/verifier/trajectory.claude-code.contested_reason_is_the_operative_rule-1.09df17e5eb5349eda614762721cd909b.jsonl",
+            "/logs/verifier/trajectory.claude-code.policy_verdict_follows_from_the_two_numbers-1.dd7a43e68b4c41e0b77db687341e55e9.jsonl",
+            "/logs/verifier/trajectory.claude-code.parse_notes_attributes_the_colon_mechanism-1.6bf2c0ab36d24a418699864ba462c263.jsonl",
+            "/logs/verifier/trajectory.claude-code.parse_notes_attributes_the_nonfield_mechanism-1.e1ce5f438a734d51b7b4ba7eb2daca30.jsonl",
+            "/logs/verifier/trajectory.claude-code.policy_magnitude_is_the_arithmetic_difference-1.7a42e7a5578849c99df725bba052d8f2.jsonl",
+            "/logs/verifier/trajectory.claude-code.convention_collapse_is_the_true_direction-1.911f8e526ff44db4858d28fd95560296.jsonl",
+            "/logs/verifier/trajectory.claude-code.convention_divergence_set_is_the_true_partition-1.ace43652cc634d69a220e374551c0829.jsonl"
+          ]
+        }
+      },
+      {
+        "name": "test_output",
+        "weight": 85.0,
+        "detail": {
+          "score": 0.7882,
+          "criteria": [
+            {
+              "name": "reconciliation_json_wellformed",
+              "value": 1.0,
+              "raw": true,
+              "weight": 3.0,
+              "description": "reconciliation_json_wellformed"
+            },
+            {
+              "name": "matched_set_exact",
+              "value": 1.0,
+              "raw": true,
+              "weight": 5.0,
+              "description": "matched_set_exact"
+            },
+            {
+              "name": "matched_sorted_by_receipt_id",
+              "value": 1.0,
+              "raw": true,
+              "weight": 1.0,
+              "description": "matched_sorted_by_receipt_id"
+            },
+            {
+              "name": "unreceipted_set_exact",
+              "value": 1.0,
+              "raw": true,
+              "weight": 3.0,
+              "description": "unreceipted_set_exact"
+            },
+            {
+              "name": "unposted_set_exact",
+              "value": 1.0,
+              "raw": true,
+              "weight": 3.0,
+              "description": "unposted_set_exact"
+            },
+            {
+              "name": "violation_flags_exact",
+              "value": 1.0,
+              "raw": true,
+              "weight": 3.0,
+              "description": "violation_flags_exact"
+            },
+            {
+              "name": "totals_consistent",
+              "value": 1.0,
+              "raw": true,
+              "weight": 3.0,
+              "description": "totals_consistent"
+            },
+            {
+              "name": "summary_matches_json",
+              "value": 1.0,
+              "raw": true,
+              "weight": 3.0,
+              "description": "summary_matches_json"
+            },
+            {
+              "name": "snapshot_table_shape",
+              "value": 1.0,
+              "raw": true,
+              "weight": 3.0,
+              "description": "snapshot_table_shape"
+            },
+            {
+              "name": "snapshot_agrees_with_reconciliation_json",
+              "value": 1.0,
+              "raw": true,
+              "weight": 5.0,
+              "description": "snapshot_agrees_with_reconciliation_json"
+            },
+            {
+              "name": "inputs_unmodified",
+              "value": 1.0,
+              "raw": true,
+              "weight": 5.0,
+              "description": "inputs_unmodified"
+            },
+            {
+              "name": "review_screen_structure",
+              "value": 0.0,
+              "raw": false,
+              "weight": 3.0,
+              "description": "review_screen_structure"
+            },
+            {
+              "name": "review_screen_rows_sorted",
+              "value": 0.0,
+              "raw": false,
+              "weight": 1.0,
+              "description": "review_screen_rows_sorted"
+            },
+            {
+              "name": "review_screen_columns_aligned",
+              "value": 0.0,
+              "raw": false,
+              "weight": 1.0,
+              "description": "review_screen_columns_aligned"
+            },
+            {
+              "name": "served_screen_agrees_with_reconciliation_json",
+              "value": 0.0,
+              "raw": false,
+              "weight": 5.0,
+              "description": "served_screen_agrees_with_reconciliation_json"
+            },
+            {
+              "name": "detail_screens_complete",
+              "value": 0.0,
+              "raw": false,
+              "weight": 3.0,
+              "description": "detail_screens_complete"
+            },
+            {
+              "name": "served_screens_request_no_external_origin",
+              "value": 0.0,
+              "raw": false,
+              "weight": 5.0,
+              "description": "served_screens_request_no_external_origin"
+            },
+            {
+              "name": "contested_account_structure",
+              "value": 1.0,
+              "raw": true,
+              "weight": 3.0,
+              "description": "contested_account_structure"
+            },
+            {
+              "name": "contested_account_names_an_alternative",
+              "value": 1.0,
+              "raw": true,
+              "weight": 3.0,
+              "description": "contested_account_names_an_alternative"
+            },
+            {
+              "name": "policy_notes_covers_every_violation",
+              "value": 1.0,
+              "raw": true,
+              "weight": 5.0,
+              "description": "policy_notes_covers_every_violation"
+            },
+            {
+              "name": "policy_notes_names_the_governing_limit",
+              "value": 1.0,
+              "raw": true,
+              "weight": 3.0,
+              "description": "policy_notes_names_the_governing_limit"
+            },
+            {
+              "name": "parse_notes_covers_every_hazard",
+              "value": 1.0,
+              "raw": true,
+              "weight": 5.0,
+              "description": "parse_notes_covers_every_hazard"
+            },
+            {
+              "name": "parse_notes_quotes_the_correct_value",
+              "value": 1.0,
+              "raw": true,
+              "weight": 3.0,
+              "description": "parse_notes_quotes_the_correct_value"
+            },
+            {
+              "name": "convention_notes_carries_both_sections",
+              "value": 1.0,
+              "raw": true,
+              "weight": 3.0,
+              "description": "convention_notes_carries_both_sections"
+            },
+            {
+              "name": "convention_notes_names_every_row",
+              "value": 1.0,
+              "raw": true,
+              "weight": 5.0,
+              "description": "convention_notes_names_every_row"
+            }
+          ],
+          "kind": "programmatic"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,168 @@
+# One strict workflow per entry: the workflow scores only when every substep passes (tests/scoring.py).
+# critical = core business correctness: a failed critical workflow caps every workflow at critical_cap.
+
+[scoring]
+critical_cap = 0.4
+
+[[workflow]]
+id = "W01"
+title = "Accounts and sessions: verification, reset links, refusals, session rotation, sign-out, next="
+weight = 4
+critical = false
+
+[[workflow]]
+id = "W02"
+title = "Organizations: invitations, the five-role permission matrix, cross-organization isolation"
+weight = 4
+critical = false
+
+[[workflow]]
+id = "W03"
+title = "Venues and seat maps; events in venue time zones (folds, gaps); drafts, publishing, rescheduling"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W04"
+title = "Sales windows: presale with a code, on-sale, off-sale, at the venue's local times"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W05"
+title = "Purchase: seat map, hold, price breakdown, Checkout Session, hosted payment, webhook, tickets, one email"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W06"
+title = "Prices at scale: fees, tax, stacked codes, largest-remainder allocation and rounding ties on every line"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W07"
+title = "Promo codes: case-insensitive entry, one percent plus one fixed, refusals, locking at Pay, caps under concurrency"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W08"
+title = "Holds: expiry from creation, release, provider sessions expired, late payments confirmed or refunded"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W09"
+title = "Webhooks: forged, unsigned and stale deliveries refused; duplicates and out-of-order events harmless; declined cards"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W10"
+title = "Seat races and the per-buyer limit: one winner per seat, six tickets per buyer across orders and old orders"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W11"
+title = "Buyer refunds: 168/48-hour tiers to the second, deadlines across DST, reschedules, who may ask"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W12"
+title = "Refund mechanics: Idempotency-Key retries through provider faults, pending until the webhook, events out of order"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W13"
+title = "Organizer refunds and cancelling an event: top-up refunds, one email per address, late payment after cancellation"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W14"
+title = "Transfers: the recipient holds a new QR token, every earlier token stops admitting, emails, who may transfer"
+weight = 4
+critical = false
+
+[[workflow]]
+id = "W15"
+title = "Scanner devices and online check-in: keys shown once, scope, every refusal reason, idempotent rescans, door list"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W16"
+title = "Offline sync: earliest admission wins across gates and batches, ties, scan_id reuse, windows to the second across DST"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W17"
+title = "Waiting lists: join rules, offers in join order with skip-over, offer expiry and decline, reserved seats"
+weight = 4
+critical = false
+
+[[workflow]]
+id = "W18"
+title = "Dashboard figures at request time: sold, held, available, admitted, gross, refunded, net, per section"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W19"
+title = "Attendee export: header, CRLF, seat order (numeric), resold seats, quoting, spreadsheet safety, who may download"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W20"
+title = "Reminders and email safety: one email per holder address, one-time key, header injection, names in To"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W21"
+title = "Old platform, Lantern Room Presents (Chicago): dashboards, exports, sale pages, holders"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W22"
+title = "Old platform, Copperline Live (Denver): dashboards, exports, sale pages, holders"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W23"
+title = "Old platform, Saguaro Sounds (Phoenix): dashboards, exports, sale pages, holders, old barcodes at the door"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W24"
+title = "In a real browser: layout at 1280 and 390 px, typed text never runs as script, a click-through purchase"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W25"
+title = "Deployment: README, restart persistence (accounts, orders, QR tokens), nothing re-sent, old records kept"
+weight = 2
+critical = false
+
+[[workflow]]
+id = "W26"
+title = "Cross-cutting safety: secrets only hashed at rest, reset ends sessions, Host-proof links, headers, no stack traces"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W27"
+title = "Health follows the database: non-2xx within 10 s of a stop, 200 within 60 s of a start"
+weight = 2
+critical = false
+

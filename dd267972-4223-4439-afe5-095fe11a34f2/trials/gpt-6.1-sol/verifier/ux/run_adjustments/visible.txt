@@ -1,0 +1,1411 @@
+◷ Shiftbook
+RESTAURANT OPERATIONS
+My timesheet
+Profile
+Approvals
+Staff
+Time clocks
+Payroll
+Sign out
+TIME & PAY
+Payroll run
+
+2026-10-18 — 2026-10-31
+
+DRAFT · Version 5
+
+Download CSV
+
+Pay statements
+Tariq Reyes
+
+Mission St, San Francisco
+
+REG 63.0 · OT 11.1 · DT 0.5 hours · 5 meal premiums
+
+$1,593.09
+Noah Costa
+
+Mission St, San Francisco
+
+REG 22.7 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$533.45
+Grace Fischer
+
+Mission St, San Francisco
+
+REG 50.3 · OT 11.1 · DT 0.6 hours · 3 meal premiums
+
+$1,852.96
+Felix Sato
+
+Mission St, San Francisco
+
+REG 60.6 · OT 4.0 · DT 0.6 hours · 4 meal premiums
+
+$2,258.12
+Lena Mensah
+
+Roosevelt Row, Phoenix
+
+REG 40.0 · OT 0.8 · DT 0.0 hours · 0 meal premiums
+
+$762.20
+Luis Haddad
+
+Roosevelt Row, Phoenix
+
+REG 60.1 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$1,142.17
+Aiyana Novak
+
+Roosevelt Row, Phoenix
+
+REG 69.6 · OT 18.4 · DT 0.0 hours · 0 meal premiums
+
+$2,095.59
+Aiyana Garcia
+
+Roosevelt Row, Phoenix
+
+REG 25.7 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$458.75
+Yusuf Kim
+
+Roosevelt Row, Phoenix
+
+REG 75.7 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$2,217.55
+Aiyana Haddad
+
+Wicker Park, Chicago
+
+REG 68.1 · OT 9.9 · DT 0.0 hours · 0 meal premiums
+
+$1,452.28
+Mateo Okafor
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 22.1 · DT 0.0 hours · 0 meal premiums
+
+$2,902.31
+Amara Lopez
+
+Wicker Park, Chicago
+
+REG 67.0 · OT 4.7 · DT 0.0 hours · 0 meal premiums
+
+$1,262.56
+Priya Holm
+
+Wicker Park, Chicago
+
+REG 32.4 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$610.13
+Darius Novak
+
+Wicker Park, Chicago
+
+REG 72.8 · OT 6.8 · DT 0.0 hours · 0 meal premiums
+
+$1,972.52
+Ines Lopez
+
+Mission St, San Francisco
+
+REG 67.9 · OT 16.4 · DT 0.0 hours · 6 meal premiums
+
+$2,861.57
+Diego Kim
+
+Wicker Park, Chicago
+
+REG 64.5 · OT 12.3 · DT 0.0 hours · 0 meal premiums
+
+$1,733.66
+Mateo Garcia
+
+Roosevelt Row, Phoenix
+
+REG 61.0 · OT 6.3 · DT 0.0 hours · 0 meal premiums
+
+$1,627.40
+Hana Dubois
+
+Mission St, San Francisco
+
+REG 73.5 · OT 16.3 · DT 0.0 hours · 2 meal premiums
+
+$1,719.14
+Noah Rossi
+
+Mission St, San Francisco
+
+REG 46.0 · OT 6.3 · DT 0.7 hours · 3 meal premiums
+
+$1,306.64
+Lena Holm
+
+Wicker Park, Chicago
+
+REG 40.0 · OT 4.6 · DT 0.0 hours · 0 meal premiums
+
+$1,075.37
+Arjun Ibrahim
+
+Mission St, San Francisco
+
+REG 55.1 · OT 5.5 · DT 0.0 hours · 3 meal premiums
+
+$1,572.50
+Amara Dubois
+
+Mission St, San Francisco
+
+REG 80.0 · OT 27.5 · DT 8.2 hours · 7 meal premiums
+
+$2,420.80
+Aiyana Ibrahim
+
+Roosevelt Row, Phoenix
+
+REG 69.7 · OT 5.0 · DT 0.0 hours · 0 meal premiums
+
+$1,543.61
+Amara Garcia
+
+Mission St, San Francisco
+
+REG 65.5 · OT 26.2 · DT 6.3 hours · 4 meal premiums
+
+$2,292.03
+Ines Holm
+
+Mission St, San Francisco
+
+REG 67.4 · OT 24.8 · DT 12.6 hours · 6 meal premiums
+
+$3,211.44
+Grace Rossi
+
+Mission St, San Francisco
+
+REG 57.1 · OT 11.3 · DT 2.2 hours · 2 meal premiums
+
+$1,490.33
+Elena Mensah
+
+Mission St, San Francisco
+
+REG 30.4 · OT 0.9 · DT 0.0 hours · 1 meal premiums
+
+$605.58
+Diego Ibrahim
+
+Wicker Park, Chicago
+
+REG 79.3 · OT 0.1 · DT 0.0 hours · 0 meal premiums
+
+$1,390.38
+Keiko Nguyen
+
+Wicker Park, Chicago
+
+REG 79.6 · OT 9.9 · DT 0.0 hours · 0 meal premiums
+
+$1,902.50
+Tariq Novak
+
+Mission St, San Francisco
+
+REG 60.4 · OT 6.6 · DT 0.4 hours · 4 meal premiums
+
+$1,500.77
+Zara Sato
+
+Wicker Park, Chicago
+
+REG 58.2 · OT 13.7 · DT 0.0 hours · 0 meal premiums
+
+$1,759.71
+Maria Lopez
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 12.4 · DT 0.0 hours · 0 meal premiums
+
+$2,286.56
+Tariq Quinn
+
+Wicker Park, Chicago
+
+REG 60.1 · OT 25.5 · DT 0.0 hours · 0 meal premiums
+
+$2,079.89
+Priya Lopez
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 30.9 · DT 0.0 hours · 0 meal premiums
+
+$3,253.52
+Luis Fischer
+
+Mission St, San Francisco
+
+REG 48.6 · OT 5.0 · DT 0.2 hours · 3 meal premiums
+
+$1,100.75
+Lena Holm
+
+Wicker Park, Chicago
+
+REG 70.2 · OT 24.8 · DT 0.0 hours · 0 meal premiums
+
+$2,561.49
+Grace Lindqvist
+
+Mission St, San Francisco
+
+REG 61.9 · OT 8.1 · DT 0.9 hours · 4 meal premiums
+
+$1,433.67
+Sofia Holm
+
+Roosevelt Row, Phoenix
+
+REG 80.0 · OT 17.0 · DT 0.0 hours · 0 meal premiums
+
+$2,658.60
+Lena Byrne
+
+Mission St, San Francisco
+
+REG 55.1 · OT 9.9 · DT 0.0 hours · 2 meal premiums
+
+$1,855.20
+Yusuf Garcia
+
+Mission St, San Francisco
+
+REG 71.2 · OT 19.6 · DT 7.9 hours · 3 meal premiums
+
+$2,405.20
+Hana Holm
+
+Mission St, San Francisco
+
+REG 76.7 · OT 17.4 · DT 1.1 hours · 3 meal premiums
+
+$2,651.70
+Elena Mensah
+
+Wicker Park, Chicago
+
+REG 71.9 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$1,453.33
+Yusuf Lindqvist
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 22.2 · DT 0.0 hours · 0 meal premiums
+
+$2,216.87
+Mateo Fischer
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 5.5 · DT 0.0 hours · 0 meal premiums
+
+$1,891.14
+Tariq Lindqvist
+
+Mission St, San Francisco
+
+REG 77.0 · OT 17.4 · DT 5.1 hours · 6 meal premiums
+
+$2,350.21
+Tariq Varga
+
+Mission St, San Francisco
+
+REG 28.9 · OT 4.0 · DT 0.0 hours · 2 meal premiums
+
+$741.99
+Omar Varga
+
+Mission St, San Francisco
+
+REG 70.1 · OT 15.4 · DT 7.8 hours · 4 meal premiums
+
+$1,968.37
+Wei Dubois
+
+Mission St, San Francisco
+
+REG 64.9 · OT 6.5 · DT 0.6 hours · 4 meal premiums
+
+$1,660.88
+Hana Sato
+
+Roosevelt Row, Phoenix
+
+REG 59.7 · OT 1.8 · DT 0.0 hours · 0 meal premiums
+
+$1,313.53
+Zara Novak
+
+Wicker Park, Chicago
+
+REG 66.6 · OT 9.4 · DT 0.0 hours · 0 meal premiums
+
+$1,492.95
+Ines Abara
+
+Mission St, San Francisco
+
+REG 64.0 · OT 21.0 · DT 1.4 hours · 4 meal premiums
+
+$1,718.64
+Zara Garcia
+
+Mission St, San Francisco
+
+REG 50.0 · OT 7.5 · DT 1.0 hours · 3 meal premiums
+
+$1,113.00
+Priya Moreau
+
+Wicker Park, Chicago
+
+REG 33.3 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$698.54
+Rowan Reyes
+
+Mission St, San Francisco
+
+REG 69.7 · OT 21.9 · DT 13.4 hours · 6 meal premiums
+
+$4,134.96
+Amara Sato
+
+Mission St, San Francisco
+
+REG 64.2 · OT 6.9 · DT 0.0 hours · 4 meal premiums
+
+$1,468.18
+James Mensah
+
+Roosevelt Row, Phoenix
+
+REG 80.0 · OT 12.2 · DT 0.0 hours · 0 meal premiums
+
+$1,896.51
+Priya Garcia
+
+Roosevelt Row, Phoenix
+
+REG 40.0 · OT 1.8 · DT 0.0 hours · 0 meal premiums
+
+$1,266.06
+Hana Aziz
+
+Wicker Park, Chicago
+
+REG 56.7 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$961.07
+Kwame Moreau
+
+Mission St, San Francisco
+
+REG 58.9 · OT 8.0 · DT 1.1 hours · 4 meal premiums
+
+$1,466.23
+Theo Okafor
+
+Mission St, San Francisco
+
+REG 48.5 · OT 1.9 · DT 0.0 hours · 5 meal premiums
+
+$977.67
+Darius Moreau
+
+Mission St, San Francisco
+
+REG 66.4 · OT 10.9 · DT 3.6 hours · 6 meal premiums
+
+$2,188.76
+Wei Nguyen
+
+Mission St, San Francisco
+
+REG 40.0 · OT 17.3 · DT 3.7 hours · 2 meal premiums
+
+$1,265.88
+Felix Dubois
+
+Roosevelt Row, Phoenix
+
+REG 80.0 · OT 18.2 · DT 0.0 hours · 0 meal premiums
+
+$1,951.84
+Tariq Abara
+
+Roosevelt Row, Phoenix
+
+REG 72.6 · OT 6.4 · DT 0.0 hours · 0 meal premiums
+
+$1,562.25
+Darius Lopez
+
+Wicker Park, Chicago
+
+REG 71.2 · OT 3.3 · DT 0.0 hours · 0 meal premiums
+
+$1,317.40
+Diego Fischer
+
+Roosevelt Row, Phoenix
+
+REG 80.0 · OT 30.4 · DT 0.0 hours · 0 meal premiums
+
+$2,807.05
+James Reyes
+
+Wicker Park, Chicago
+
+REG 75.5 · OT 8.9 · DT 0.0 hours · 0 meal premiums
+
+$1,771.15
+Amara Garcia
+
+Mission St, San Francisco
+
+REG 67.1 · OT 17.0 · DT 0.0 hours · 5 meal premiums
+
+$1,846.76
+Felix Ibrahim
+
+Mission St, San Francisco
+
+REG 56.1 · OT 4.0 · DT 0.4 hours · 5 meal premiums
+
+$1,688.88
+James Okafor
+
+Mission St, San Francisco
+
+REG 79.1 · OT 20.2 · DT 0.0 hours · 8 meal premiums
+
+$2,010.49
+Sofia Patel
+
+Wicker Park, Chicago
+
+REG 71.1 · OT 2.3 · DT 0.0 hours · 0 meal premiums
+
+$1,427.64
+Grace Mensah
+
+Wicker Park, Chicago
+
+REG 34.8 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$787.83
+Tariq Holm
+
+Mission St, San Francisco
+
+REG 41.2 · OT 2.3 · DT 0.0 hours · 1 meal premiums
+
+$926.29
+Hana Patel
+
+Roosevelt Row, Phoenix
+
+REG 76.3 · OT 7.2 · DT 0.0 hours · 0 meal premiums
+
+$1,742.00
+Sofia Varga
+
+Wicker Park, Chicago
+
+REG 40.0 · OT 1.5 · DT 0.0 hours · 0 meal premiums
+
+$854.16
+Aiyana Lopez
+
+Roosevelt Row, Phoenix
+
+REG 23.0 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$448.50
+Elena Dubois
+
+Mission St, San Francisco
+
+REG 50.0 · OT 8.1 · DT 4.5 hours · 1 meal premiums
+
+$1,356.42
+Noah Holm
+
+Roosevelt Row, Phoenix
+
+REG 80.0 · OT 5.9 · DT 0.0 hours · 0 meal premiums
+
+$1,573.53
+Keiko Novak
+
+Roosevelt Row, Phoenix
+
+REG 76.2 · OT 1.3 · DT 0.0 hours · 0 meal premiums
+
+$1,718.43
+Kwame Mensah
+
+Mission St, San Francisco
+
+REG 77.9 · OT 30.2 · DT 11.1 hours · 7 meal premiums
+
+$2,697.49
+Omar Mensah
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 17.5 · DT 0.0 hours · 0 meal premiums
+
+$1,912.50
+Ines Moreau
+
+Mission St, San Francisco
+
+REG 73.4 · OT 21.3 · DT 5.1 hours · 8 meal premiums
+
+$2,179.82
+Rowan Lindqvist
+
+Roosevelt Row, Phoenix
+
+REG 80.0 · OT 6.1 · DT 0.0 hours · 0 meal premiums
+
+$1,537.85
+Wei Garcia
+
+Wicker Park, Chicago
+
+REG 60.9 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$1,446.17
+Wei Dubois
+
+Mission St, San Francisco
+
+REG 28.1 · OT 1.7 · DT 0.0 hours · 1 meal premiums
+
+$557.04
+Wei Ibrahim
+
+Mission St, San Francisco
+
+REG 39.0 · OT 4.2 · DT 1.4 hours · 2 meal premiums
+
+$951.90
+Nadia Mensah
+
+Mission St, San Francisco
+
+REG 54.9 · OT 12.0 · DT 8.5 hours · 4 meal premiums
+
+$2,887.43
+Ines Sato
+
+Mission St, San Francisco
+
+REG 70.8 · OT 19.5 · DT 1.4 hours · 8 meal premiums
+
+$1,884.45
+Diego Okafor
+
+Mission St, San Francisco
+
+REG 37.2 · OT 17.2 · DT 2.5 hours · 3 meal premiums
+
+$1,223.86
+Rowan Chen
+
+Mission St, San Francisco
+
+REG 74.7 · OT 14.9 · DT 1.8 hours · 7 meal premiums
+
+$2,230.57
+Rowan Patel
+
+Mission St, San Francisco
+
+REG 78.2 · OT 14.5 · DT 5.1 hours · 7 meal premiums
+
+$2,307.86
+Rowan Novak
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 15.4 · DT 0.0 hours · 0 meal premiums
+
+$2,476.45
+Fatima Rossi
+
+Roosevelt Row, Phoenix
+
+REG 80.0 · OT 32.5 · DT 0.0 hours · 0 meal premiums
+
+$2,930.62
+Priya Novak
+
+Mission St, San Francisco
+
+REG 60.9 · OT 10.3 · DT 0.2 hours · 5 meal premiums
+
+$1,483.78
+Keiko Silva
+
+Mission St, San Francisco
+
+REG 57.4 · OT 9.0 · DT 1.7 hours · 5 meal premiums
+
+$1,800.50
+Amara Kim
+
+Roosevelt Row, Phoenix
+
+REG 80.0 · OT 11.7 · DT 0.0 hours · 0 meal premiums
+
+$1,843.70
+Theo Lopez
+
+Roosevelt Row, Phoenix
+
+REG 40.0 · OT 16.7 · DT 0.0 hours · 0 meal premiums
+
+$1,232.70
+Tariq Holm
+
+Wicker Park, Chicago
+
+REG 76.6 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$1,780.96
+Sofia Chen
+
+Wicker Park, Chicago
+
+REG 55.2 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$1,067.44
+Wei Sato
+
+Mission St, San Francisco
+
+REG 40.0 · OT 2.3 · DT 0.0 hours · 1 meal premiums
+
+$811.22
+Zara Quinn
+
+Roosevelt Row, Phoenix
+
+REG 80.0 · OT 6.2 · DT 0.0 hours · 0 meal premiums
+
+$1,531.50
+Ines Silva
+
+Mission St, San Francisco
+
+REG 51.7 · OT 11.6 · DT 4.4 hours · 4 meal premiums
+
+$1,384.12
+Elena Lindqvist
+
+Mission St, San Francisco
+
+REG 24.7 · OT 4.5 · DT 0.7 hours · 3 meal premiums
+
+$843.03
+Mateo Kim
+
+Mission St, San Francisco
+
+REG 33.5 · OT 10.0 · DT 0.9 hours · 3 meal premiums
+
+$996.22
+Arjun Kim
+
+Roosevelt Row, Phoenix
+
+REG 79.9 · OT 14.2 · DT 0.0 hours · 0 meal premiums
+
+$2,351.00
+Theo Rossi
+
+Wicker Park, Chicago
+
+REG 26.7 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$634.13
+Priya Lopez
+
+Mission St, San Francisco
+
+REG 58.2 · OT 10.3 · DT 8.1 hours · 4 meal premiums
+
+$1,717.46
+Yusuf Kim
+
+Roosevelt Row, Phoenix
+
+REG 77.4 · OT 3.3 · DT 0.0 hours · 0 meal premiums
+
+$1,465.13
+Grace Novak
+
+Mission St, San Francisco
+
+REG 74.5 · OT 11.9 · DT 0.0 hours · 5 meal premiums
+
+$2,170.37
+Theo Ibrahim
+
+Mission St, San Francisco
+
+REG 35.8 · OT 8.4 · DT 1.5 hours · 2 meal premiums
+
+$1,197.52
+James Nguyen
+
+Mission St, San Francisco
+
+REG 76.0 · OT 30.9 · DT 2.6 hours · 4 meal premiums
+
+$2,913.85
+Luis Byrne
+
+Roosevelt Row, Phoenix
+
+REG 35.9 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$696.62
+Tariq Patel
+
+Mission St, San Francisco
+
+REG 50.6 · OT 2.4 · DT 0.0 hours · 4 meal premiums
+
+$986.49
+James Chen
+
+Wicker Park, Chicago
+
+REG 40.0 · OT 4.7 · DT 0.0 hours · 0 meal premiums
+
+$1,077.45
+Amara Quinn
+
+Mission St, San Francisco
+
+REG 34.7 · OT 5.0 · DT 0.0 hours · 2 meal premiums
+
+$824.34
+Keiko Patel
+
+Wicker Park, Chicago
+
+REG 28.5 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$563.18
+Grace O'Brien
+
+Wicker Park, Chicago
+
+REG 36.4 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$742.56
+Darius Dubois
+
+Roosevelt Row, Phoenix
+
+REG 80.0 · OT 20.4 · DT 0.0 hours · 0 meal premiums
+
+$1,987.3
+--- text around [data-line-employee-id='2014'] ---
+◷ Shiftbook
+RESTAURANT OPERATIONS
+My timesheet
+Profile
+Approvals
+Staff
+Time clocks
+Payroll
+Sign out
+TIME & PAY
+Payroll run
+
+2026-10-18 — 2026-10-31
+
+DRAFT · Version 5
+
+Download CSV
+
+Pay statements
+Tariq Reyes
+
+Mission St, San Francisco
+
+REG 63.0 · OT 11.1 · DT 0.5 hours · 5 meal premiums
+
+$1,593.09
+Noah Costa
+
+Mission St, San Francisco
+
+REG 22.7 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$533.45
+Grace Fischer
+
+Mission St, San Francisco
+
+REG 50.3 · OT 11.1 · DT 0.6 hours · 3 meal premiums
+
+$1,852.96
+Felix Sato
+
+Mission St, San Francisco
+
+REG 60.6 · OT 4.0 · DT 0.6 hours · 4 meal premiums
+
+$2,258.12
+Lena Mensah
+
+Roosevelt Row, Phoenix
+
+REG 40.0 · OT 0.8 · DT 0.0 hours · 0 meal premiums
+
+$762.20
+Luis Haddad
+
+Roosevelt Row, Phoenix
+
+REG 60.1 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$1,142.17
+Aiyana Novak
+
+Roosevelt Row, Phoenix
+
+REG 69.6 · OT 18.4 · DT 0.0 hours · 0 meal premiums
+
+$2,095.59
+Aiyana Garcia
+
+Roosevelt Row, Phoenix
+
+REG 25.7 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$458.75
+Yusuf Kim
+
+Roosevelt Row, Phoenix
+
+REG 75.7 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$2,217.55
+Aiyana Haddad
+
+Wicker Park, Chicago
+
+REG 68.1 · OT 9.9 · DT 0.0 hours · 0 meal premiums
+
+$1,452.28
+Mateo Okafor
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 22.1 · DT 0.0 hours · 0 meal premiums
+
+$2,902.31
+Amara Lopez
+
+Wicker Park, Chicago
+
+REG 67.0 · OT 4.7 · DT 0.0 hours · 0 meal premiums
+
+$1,262.56
+Priya Holm
+
+Wicker Park, Chicago
+
+REG 32.4 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$610.13
+Darius Novak
+
+Wicker Park, Chicago
+
+REG 72.8 · OT 6.8 · DT 0.0 hours · 0 meal premiums
+
+$1,972.52
+Ines Lopez
+
+Mission St, San Francisco
+
+REG 67.9 · OT 16.4 · DT 0.0 hours · 6 meal premiums
+
+$2,861.57
+Diego Kim
+
+Wicker Park, Chicago
+
+REG 64.5 · OT 12.3 · DT 0.0 hours · 0 meal premiums
+
+$1,733.66
+Mateo Garcia
+
+Roosevelt Row, Phoenix
+
+REG 61.0 · OT 6.3 · DT 0.0 hours · 0 meal premiums
+
+$1,627.40
+Hana Dubois
+
+Mission St, San Francisco
+
+REG 73.5 · OT 16.3 · DT 0.0 hours · 2 meal premiums
+
+$1,719.14
+Noah Rossi
+
+Mission St, San Francisco
+
+REG 46.0 · OT 6.3 · DT 0.7 hours · 3 meal premiums
+
+$1,306.64
+Lena Holm
+
+Wicker Park, Chicago
+
+REG 40.0 · OT 4.6 · DT 0.0 hours · 0 meal premiums
+
+$1,075.37
+Arjun Ibrahim
+
+Mission St, San Francisco
+
+REG 55.1 · OT 5.5 · DT 0.0 hours · 3 meal premiums
+
+$1,572.50
+Amara Dubois
+
+Mission St, San Francisco
+
+REG 80.0 · OT 27.5 · DT 8.2 hours · 7 meal premiums
+
+$2,420.80
+Aiyana Ibrahim
+
+Roosevelt Row, Phoenix
+
+REG 69.7 · OT 5.0 · DT 0.0 hours · 0 meal premiums
+
+$1,543.61
+Amara Garcia
+
+Mission St, San Francisco
+
+REG 65.5 · OT 26.2 · DT 6.3 hours · 4 meal premiums
+
+$2,292.03
+Ines Holm
+
+Mission St, San Francisco
+
+REG 67.4 · OT 24.8 · DT 12.6 hours · 6 meal premiums
+
+$3,211.44
+Grace Rossi
+
+Mission St, San Francisco
+
+REG 57.1 · OT 11.3 · DT 2.2 hours · 2 meal premiums
+
+$1,490.33
+Elena Mensah
+
+Mission St, San Francisco
+
+REG 30.4 · OT 0.9 · DT 0.0 hours · 1 meal premiums
+
+$605.58
+Diego Ibrahim
+
+Wicker Park, Chicago
+
+REG 79.3 · OT 0.1 · DT 0.0 hours · 0 meal premiums
+
+$1,390.38
+Keiko Nguyen
+
+Wicker Park, Chicago
+
+REG 79.6 · OT 9.9 · DT 0.0 hours · 0 meal premiums
+
+$1,902.50
+Tariq Novak
+
+Mission St, San Francisco
+
+REG 60.4 · OT 6.6 · DT 0.4 hours · 4 meal premiums
+
+$1,500.77
+Zara Sato
+
+Wicker Park, Chicago
+
+REG 58.2 · OT 13.7 · DT 0.0 hours · 0 meal premiums
+
+$1,759.71
+Maria Lopez
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 12.4 · DT 0.0 hours · 0 meal premiums
+
+$2,286.56
+Tariq Quinn
+
+Wicker Park, Chicago
+
+REG 60.1 · OT 25.5 · DT 0.0 hours · 0 meal premiums
+
+$2,079.89
+Priya Lopez
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 30.9 · DT 0.0 hours · 0 meal premiums
+
+$3,253.52
+Luis Fischer
+
+Mission St, San Francisco
+
+REG 48.6 · OT 5.0 · DT 0.2 hours · 3 meal premiums
+
+$1,100.75
+Lena Holm
+
+Wicker Park, Chicago
+
+REG 70.2 · OT 24.8 · DT 0.0 hours · 0 meal premiums
+
+$2,561.49
+Grace Lindqvist
+
+Mission St, San Francisco
+
+REG 61.9 · OT 8.1 · DT 0.9 hours · 4 meal premiums
+
+$1,433.67
+Sofia Holm
+
+Roosevelt Row, Phoenix
+
+REG 80.0 · OT 17.0 · DT 0.0 hours · 0 meal premiums
+
+$2,658.60
+Lena 
+--- text around [data-line-employee-id='2015'] ---
+◷ Shiftbook
+RESTAURANT OPERATIONS
+My timesheet
+Profile
+Approvals
+Staff
+Time clocks
+Payroll
+Sign out
+TIME & PAY
+Payroll run
+
+2026-10-18 — 2026-10-31
+
+DRAFT · Version 5
+
+Download CSV
+
+Pay statements
+Tariq Reyes
+
+Mission St, San Francisco
+
+REG 63.0 · OT 11.1 · DT 0.5 hours · 5 meal premiums
+
+$1,593.09
+Noah Costa
+
+Mission St, San Francisco
+
+REG 22.7 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$533.45
+Grace Fischer
+
+Mission St, San Francisco
+
+REG 50.3 · OT 11.1 · DT 0.6 hours · 3 meal premiums
+
+$1,852.96
+Felix Sato
+
+Mission St, San Francisco
+
+REG 60.6 · OT 4.0 · DT 0.6 hours · 4 meal premiums
+
+$2,258.12
+Lena Mensah
+
+Roosevelt Row, Phoenix
+
+REG 40.0 · OT 0.8 · DT 0.0 hours · 0 meal premiums
+
+$762.20
+Luis Haddad
+
+Roosevelt Row, Phoenix
+
+REG 60.1 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$1,142.17
+Aiyana Novak
+
+Roosevelt Row, Phoenix
+
+REG 69.6 · OT 18.4 · DT 0.0 hours · 0 meal premiums
+
+$2,095.59
+Aiyana Garcia
+
+Roosevelt Row, Phoenix
+
+REG 25.7 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$458.75
+Yusuf Kim
+
+Roosevelt Row, Phoenix
+
+REG 75.7 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$2,217.55
+Aiyana Haddad
+
+Wicker Park, Chicago
+
+REG 68.1 · OT 9.9 · DT 0.0 hours · 0 meal premiums
+
+$1,452.28
+Mateo Okafor
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 22.1 · DT 0.0 hours · 0 meal premiums
+
+$2,902.31
+Amara Lopez
+
+Wicker Park, Chicago
+
+REG 67.0 · OT 4.7 · DT 0.0 hours · 0 meal premiums
+
+$1,262.56
+Priya Holm
+
+Wicker Park, Chicago
+
+REG 32.4 · OT 0.0 · DT 0.0 hours · 0 meal premiums
+
+$610.13
+Darius Novak
+
+Wicker Park, Chicago
+
+REG 72.8 · OT 6.8 · DT 0.0 hours · 0 meal premiums
+
+$1,972.52
+Ines Lopez
+
+Mission St, San Francisco
+
+REG 67.9 · OT 16.4 · DT 0.0 hours · 6 meal premiums
+
+$2,861.57
+Diego Kim
+
+Wicker Park, Chicago
+
+REG 64.5 · OT 12.3 · DT 0.0 hours · 0 meal premiums
+
+$1,733.66
+Mateo Garcia
+
+Roosevelt Row, Phoenix
+
+REG 61.0 · OT 6.3 · DT 0.0 hours · 0 meal premiums
+
+$1,627.40
+Hana Dubois
+
+Mission St, San Francisco
+
+REG 73.5 · OT 16.3 · DT 0.0 hours · 2 meal premiums
+
+$1,719.14
+Noah Rossi
+
+Mission St, San Francisco
+
+REG 46.0 · OT 6.3 · DT 0.7 hours · 3 meal premiums
+
+$1,306.64
+Lena Holm
+
+Wicker Park, Chicago
+
+REG 40.0 · OT 4.6 · DT 0.0 hours · 0 meal premiums
+
+$1,075.37
+Arjun Ibrahim
+
+Mission St, San Francisco
+
+REG 55.1 · OT 5.5 · DT 0.0 hours · 3 meal premiums
+
+$1,572.50
+Amara Dubois
+
+Mission St, San Francisco
+
+REG 80.0 · OT 27.5 · DT 8.2 hours · 7 meal premiums
+
+$2,420.80
+Aiyana Ibrahim
+
+Roosevelt Row, Phoenix
+
+REG 69.7 · OT 5.0 · DT 0.0 hours · 0 meal premiums
+
+$1,543.61
+Amara Garcia
+
+Mission St, San Francisco
+
+REG 65.5 · OT 26.2 · DT 6.3 hours · 4 meal premiums
+
+$2,292.03
+Ines Holm
+
+Mission St, San Francisco
+
+REG 67.4 · OT 24.8 · DT 12.6 hours · 6 meal premiums
+
+$3,211.44
+Grace Rossi
+
+Mission St, San Francisco
+
+REG 57.1 · OT 11.3 · DT 2.2 hours · 2 meal premiums
+
+$1,490.33
+Elena Mensah
+
+Mission St, San Francisco
+
+REG 30.4 · OT 0.9 · DT 0.0 hours · 1 meal premiums
+
+$605.58
+Diego Ibrahim
+
+Wicker Park, Chicago
+
+REG 79.3 · OT 0.1 · DT 0.0 hours · 0 meal premiums
+
+$1,390.38
+Keiko Nguyen
+
+Wicker Park, Chicago
+
+REG 79.6 · OT 9.9 · DT 0.0 hours · 0 meal premiums
+
+$1,902.50
+Tariq Novak
+
+Mission St, San Francisco
+
+REG 60.4 · OT 6.6 · DT 0.4 hours · 4 meal premiums
+
+$1,500.77
+Zara Sato
+
+Wicker Park, Chicago
+
+REG 58.2 · OT 13.7 · DT 0.0 hours · 0 meal premiums
+
+$1,759.71
+Maria Lopez
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 12.4 · DT 0.0 hours · 0 meal premiums
+
+$2,286.56
+Tariq Quinn
+
+Wicker Park, Chicago
+
+REG 60.1 · OT 25.5 · DT 0.0 hours · 0 meal premiums
+
+$2,079.89
+Priya Lopez
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 30.9 · DT 0.0 hours · 0 meal premiums
+
+$3,253.52
+Luis Fischer
+
+Mission St, San Francisco
+
+REG 48.6 · OT 5.0 · DT 0.2 hours · 3 meal premiums
+
+$1,100.75
+Lena Holm
+
+Wicker Park, Chicago
+
+REG 70.2 · OT 24.8 · DT 0.0 hours · 0 meal premiums
+
+$2,561.49
+Grace Lindqvist
+
+Mission St, San Francisco
+
+REG 61.9 · OT 8.1 · DT 0.9 hours · 4 meal premiums
+
+$1,433.67

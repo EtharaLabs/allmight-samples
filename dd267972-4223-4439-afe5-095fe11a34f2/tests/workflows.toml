@@ -1,0 +1,143 @@
+# One strict workflow per entry: the workflow scores only when every substep passes (tests/scoring.py).
+# critical = core business correctness: a failed critical workflow caps every workflow at critical_cap.
+
+[scoring]
+critical_cap = 0.4
+
+[[workflow]]
+id = "W01"
+title = "Password links: anti-enumeration, single use, replacement, expiry, address matching"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W02"
+title = "Sign-in refusals, lockout, session rotation and sign-out"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W03"
+title = "Staff and rates: creation, duplicates, effective-dated rates, staff-page protection"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W04"
+title = "Time-clock keys and the punch API: auth, validation, idempotency, scope, races"
+weight = 4
+critical = false
+
+[[workflow]]
+id = "W05"
+title = "Timesheets: local days, midnight and DST splits, status markers"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W06"
+title = "Pay rules: CA daily overtime and double time"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W07"
+title = "Pay rules: weekly overtime without pyramiding (CA and FLSA)"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W08"
+title = "Pay rules: the CA seventh consecutive day"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W09"
+title = "Pay rules: regular rate across jobs, effective-dated rates, work before a job's first rate"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W10"
+title = "Pay rules: midnight, workweek, pay-period and DST boundaries; rounding ties"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W11"
+title = "Pay rules: CA meal premiums"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W20"
+title = "Exceptions across week boundaries: interrupted, unclosed and over-16-hour shifts"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W12"
+title = "Legacy data at scale: Mission St (CA rules, Los Angeles) lines and held weeks"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W21"
+title = "Legacy data at scale: Roosevelt Row (FLSA, Phoenix) lines and held weeks"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W22"
+title = "Legacy data at scale: Wicker Park (FLSA, Chicago) lines and held weeks"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W13"
+title = "Approvals: reporting tree, self-approval, peers, invalidation, CSRF"
+weight = 4
+critical = false
+
+[[workflow]]
+id = "W14"
+title = "Payroll run lifecycle: stale drafts, one finalization, lock, pay statements once"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W15"
+title = "Adjustments: late punches, late approvals and rate changes reach the next run"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W16"
+title = "CSV export: exact format, quoting, spreadsheet safety; profile edits change only the name"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W17"
+title = "In a real browser: layout at 1280 and 390 px, escaping everywhere, clicking through"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W18"
+title = "Deployment: README, restart persistence, nothing re-sent, no secrets (passwords, keys, reset tokens, sessions) at rest, records kept"
+weight = 2
+critical = false
+
+[[workflow]]
+id = "W19"
+title = "Health follows the database: non-2xx within 10 s of a stop, 200 within 60 s of a start"
+weight = 2
+critical = false
+
+[[workflow]]
+id = "W23"
+title = "Cross-cutting safety: no secrets in the app's files, reset ends sessions, Host-proof links, headers, no stack traces"
+weight = 3
+critical = false

@@ -1,0 +1,396 @@
+{
+  "functional": {
+    "kind": "group",
+    "score": 0.3633,
+    "aggregation": "weighted-mean",
+    "components": [
+      {
+        "name": "strict",
+        "weight": 1.0,
+        "detail": {
+          "score": 0.3633,
+          "criteria": [
+            {
+              "name": "W01",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W02",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W03",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W04",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W05",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W06",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W07",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W08",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W09",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W10",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W11",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W12",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W13",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W14",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W15",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W16",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W17",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W18",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W19",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W20",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W21",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W22",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W23",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W24",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W25",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W26",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W27",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 2.0,
+              "description": "workflow_passed"
+            }
+          ],
+          "kind": "programmatic"
+        }
+      }
+    ]
+  },
+  "judge": {
+    "score": 0.9,
+    "criteria": [
+      {
+        "id": "J01",
+        "name": "J01",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The slot list shows each start time in the clinic's local time with the clinic's name and its time-zone abbreviation, and states the deposit due.",
+        "reasoning": "visible.txt and both screenshots show the slot list page (not 'checkpoint not reached'). The page names the clinic 'Harborview Physio Seattle (South Lake Union)', matching truth.json, along with the zone 'America/Los_Angeles'. All 30 slots (08:00 through 15:15, matching truth.json's 30) are shown as local clock times each suffixed with the time-zone abbreviation 'PST' (correct for 2026-11-22, after DST ends), not UTC. The deposit is stated as 'Deposit due: $25.10' above the slots. All elements of J01 are present.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J02",
+        "name": "J02",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "After returning from the payment page, the appointment page says the payment is being confirmed and how long the slot stays held.",
+        "reasoning": "The checkpoint was reached (URL /appointments/32152?checkout=success). visible.txt and both screenshots show the line \"Your payment is being confirmed. Your slot stays held until 2026-11-16 09:46:24 PST.\" alongside a HELD status badge. This matches truth.json (status held, waiting for payment confirmation webhook): the page states the payment is being confirmed rather than claiming the booking is confirmed, and it gives the hold's end time, satisfying the pass condition.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J03",
+        "name": "J03",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The confirmed appointment page shows that the booking is confirmed, its local date and time with the clinic, and the deposit paid.",
+        "reasoning": "visible.txt and both screenshots show the appointment page with a 'CONFIRMED' status badge (matching truth.json status 'confirmed'), the local date and time '2026-11-22 \u00b7 08:00 PST' with its time-zone abbreviation, the clinic named as 'Harborview Physio Seattle (South Lake Union)', and 'Deposit paid: $25.10' in dollars, which matches truth.json deposit_cents 2510. All elements required by the reference (confirmed status, local date/time with clinic, deposit paid in dollars) are present and unambiguous.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J04",
+        "name": "J04",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "Before cancelling, the confirmed appointment page states the refund that cancelling now would give and which notice band applies.",
+        "reasoning": "Directly above the 'Cancel appointment' button, the page's 'Cancel your visit' section states: 'Cancelling now refunds $25.10. At least 24 hours notice returns the full deposit.' The $25.10 refund matches truth.json (refund_if_cancelled_now_cents: 2510, deposit_cents: 2510), and the named band ('at least 24 hours notice' / full deposit) is correct for hours_before of 142.2. This appears in both the desktop and narrow screenshots and in visible.txt.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J05",
+        "name": "J05",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "After cancelling, the page shows the refund amount and whether the refund is pending or already refunded.",
+        "reasoning": "The cancel_after page (visible.txt and both desktop and narrow screenshots) shows the appointment marked CANCELLED and a line reading \"Refund: $25.10 \u00b7 refunded\". The $25.10 amount matches truth.json's refund_cents of 2510, and the state is explicitly stated as \"refunded\", satisfying both parts of the criterion.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J06",
+        "name": "J06",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The expired hold's page explains that the slot was given up and how to book again.",
+        "reasoning": "The page marks the appointment as EXPIRED (matching truth.json status 'expired') and states 'This slot was given up and is available to other patients. Choose a new appointment to book again.' with 'Choose a new appointment' rendered as a link in both desktop and narrow screenshots. It explains the slot was given up and offers a clear way to book again; the appointment is not shown as active.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J07",
+        "name": "J07",
+        "value": 0.0,
+        "raw": "no",
+        "weight": 1.0,
+        "description": "The waitlist offer page states the slot, when the offer expires, and that accepting holds the slot and asks for the deposit.",
+        "reasoning": "The page shows the slot's date and time (\"2026-11-22 09:00 PST\"), the clinic and appointment type (\"Harborview Physio Seattle (South Lake Union) \u00b7 Sports injury assessment\"), the expiry (\"Offer expires 2026-11-16 09:47:28 PST\"), and that \"Accepting holds this slot while you pay the $25.10 deposit\" with an \"Accept & pay deposit\" button. However, the reference pass condition requires the slot's date, time and clinician to be shown, and no clinician is named anywhere on the page (visible.txt and both screenshots show only the clinic and appointment type). Since the reference explicitly distinguishes clinician from clinic (cf. J03 uses 'clinic', J07 uses 'clinician') and states that any missing element fails, the slot description is incomplete and the item fails.",
+        "samples": [
+          "no",
+          "no",
+          "no"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J08",
+        "name": "J08",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The clinician's day sheet makes each appointment's local time, patient, and appointment type clear.",
+        "reasoning": "Both screenshots (desktop and 390px narrow) and visible.txt show each of the two appointments with a local start time including zone abbreviation (\"2026-11-22 \u00b7 09:00 PST\" and \"2026-11-22 \u00b7 11:45 PST\", matching truth.json's local_times 09:00 and 11:45 and date 2026-11-22), a patient name (\"Ana Lopez\", \"Ben Okafor\"), and the appointment type (\"Sports injury assessment\"). The header also states the clinic and zone (\"Harborview Physio Seattle (South Lake Union) \u00b7 2026-11-22 \u00b7 America/Los_Angeles\"), and the clinician \"Rowan Ellis\" is consistently listed last on each line, so the patient/clinician roles are not confusing. Nothing required is missing or ambiguous.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J09",
+        "name": "J09",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The confirmation email names the clinic, the clinician, and the local date and time; the cancellation email states the refund amount; the offer email names the slot and links to the offer.",
+        "reasoning": "Confirmation email visible.txt names the clinic 'Harborview Physio Seattle (South Lake Union)', the clinician 'Verifier Clinician 03df65455', and the local date/time '2026-11-21 00:00 PST', matching truth.json's local value 2026-11-21T00:00:00-08:00. Cancellation email states 'Refund: $73.89', matching refund_cents 7389 in truth.json. Offer email names the slot '2026-11-20 10:00 PST' (matching truth start 2026-11-20T10:00:00-08:00) with the clinic, and contains a link to the offer (http://127.0.0.1:20080/offers/...). No checkpoint was recorded as not reached, so all three required facts are present.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J10",
+        "name": "J10",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "At 390 pixels wide, the key facts and the primary action on these pages stay readable and reachable.",
+        "reasoning": "All three 390px screenshots (slot_list, appointment_confirmed, offer_page) render cleanly in a single column with no horizontal overflow, overlap, or clipped content. Slot list: clinic name, date/zone, 'Deposit due: $25.10' and each slot's time with a 'Book this time' button are visible and stacked within the viewport (the image simply ends at the capture height on a later card, not a layout cut-off). Confirmed appointment: date/time link, CONFIRMED badge, clinic (wrapping to two lines), 'Deposit paid: $25.10', refund statement and 'Cancel appointment' button, plus the reschedule form controls all fit the width and are legible. Offer page: slot time, clinic/type, expiry and deposit sentence, and the 'Accept & pay deposit' / 'Decline offer' buttons are fully visible and reachable. Text sizes are consistent and readable; no checkpoint-not-reached evidence.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      }
+    ],
+    "kind": "llm",
+    "judge": {
+      "model": "anthropic/claude-fable-5-1",
+      "reasoning_effort": "max",
+      "timeout": 900,
+      "files": [],
+      "atif_trajectory": null,
+      "reference": "/tests/judge-reference.md",
+      "mode": "individual",
+      "samples": 3,
+      "guard": "penalize"
+    },
+    "judge_output": "--- sample 1 ---\n--- J01 ---\n{\"score\":\"yes\",\"reasoning\":\"The slot list page names the clinic ('Harborview Physio Seattle (South Lake Union)'), shows the zone ('2026-11-22 \u00b7 America/Los_Angeles'), and lists every start time as a local clock time with the abbreviation 'PST' (08:00 PST through 15:15 PST, 30 slots, matching truth.json's 30 slots and America/Los_Angeles zone; PST is correct for late November). The deposit is stated as 'Deposit due: $25.10'. Both the desktop and narrow screenshots and visible.txt confirm these elements; no UTC or zone-less times appear.\"}\n\n--- J02 ---\n{\"score\":\"yes\",\"reasoning\":\"The checkpoint was reached (URL /appointments/32152?checkout=success). The appointment page shows a HELD status badge and the sentence \\\"Your payment is being confirmed. Your slot stays held until 2026-11-16 09:46:24 PST.\\\" in both desktop and narrow screenshots and in visible.txt. This states that payment is being confirmed and gives the hold's end time, consistent with truth.json (status \\\"held\\\", waiting for payment confirmation webhook). The page does not claim the booking is confirmed and shows no generic error, so it meets the pass condition.\"}\n\n--- J03 ---\n{\"score\":\"yes\",\"reasoning\":\"The appointment page at /appointments/32152 shows a clear 'CONFIRMED' status badge (matching truth.json status 'confirmed'), the local date and time '2026-11-22 \u00b7 08:00 PST' with the time-zone abbreviation, the clinic named as 'Harborview Physio Seattle (South Lake Union)', and 'Deposit paid: $25.10' in dollars, which matches truth.json deposit_cents of 2510. All required elements are visible in both desktop and narrow screenshots and in visible.txt.\"}\n\n--- J04 ---\n{\"score\":\"yes\",\"reasoning\":\"The confirmed appointment page's 'Cancel your visit' section, directly above the 'Cancel appointment' button, reads 'Cancelling now refunds $25.10. At least 24 hours notice returns the full deposit.' This states the refund in dollars ($25.10, matching truth.json refund_if_cancelled_now_cents = 2510) and names the applicable notice band (24 hours or more, consistent with hours_before = 142.2). The text is visible in both the desktop and 390 px narrow screenshots and in visible.txt.\"}\n\n--- J05 ---\n{\"score\":\"yes\",\"reasoning\":\"The cancel_after page shows the appointment marked CANCELLED and a line reading \\\"Refund: $25.10 \u00b7 refunded\\\" (visible in visible.txt and both desktop and narrow screenshots). The amount matches truth.json's refund_cents of 2510, and the state is explicitly stated as refunded, satisfying both parts of the criterion.\"}\n\n--- J06 ---\n{\"score\":\"yes\",\"reasoning\":\"The page marks the hold as EXPIRED (matching truth.json status 'expired') and states 'This slot was given up and is available to other patients,' then offers a 'Choose a new appointment' link 'to book again.' Both the explanation that the slot was released and a clear next step to rebook are present in visible.txt and both screenshots.\"}\n\n--- J07 ---\n{\"score\":\"no\",\"reasoning\":\"The offer page shows the slot's date and time with zone (\\\"2026-11-22 09:00 PST\\\"), the clinic location and appointment type (\\\"Harborview Physio Seattle (South Lake Union) \u00b7 Sports injury assessment\\\"), the expiry (\\\"Offer expires 2026-11-16 09:47:28 PST\\\"), and states that \\\"Accepting holds this slot while you pay the $25.10 deposit\\\" with an \\\"Accept & pay deposit\\\" button. The expiry and accept/hold/deposit elements are satisfied. However, the reference requires the slot's date, time and clinician to be shown, and no clinician is named anywhere in visible.txt or either screenshot \u2014 only the clinic and the appointment type appear. Since the slot identification is incomplete per the reference's pass condition, the item does not pass.\"}\n\n--- J08 ---\n{\"score\":\"yes\",\"reasoning\":\"visible.txt reaches the day sheet (not 'checkpoint not reached'). Both appointment cards show a local start time with zone context: '2026-11-22 \u00b7 09:00 PST' and '2026-11-22 \u00b7 11:45 PST', under a header naming the clinic and 'America/Los_Angeles'; these match truth.json local_times [09:00, 11:45] and the count of 2. Each card names the patient ('Ana Lopez', 'Ben Okafor') and the appointment type ('Sports injury assessment (V03DF65617)'), with the recurring clinician name 'Rowan Ellis' in a consistent trailing position so the patient is not confused with the clinician. The narrow screenshot shows the same facts legibly. Although the patient name is not explicitly labelled, the consistent ordering and context make time, patient, and type clear for each appointment, satisfying the reference pass condition.\"}\n\n--- J09 ---\n{\"score\":\"yes\",\"reasoning\":\"Confirmation email (visible.txt) reads \\\"Harborview Physio Seattle (South Lake Union) \u2022 Verifier Clinician 03df65455 \u2022 2026-11-21 00:00 PST\\\", naming the clinic and clinician from truth.json and giving the local date/time that matches truth local 2026-11-21T00:00:00-08:00 (PST). Cancellation email states \\\"Refund: $73.89\\\", matching refund_cents 7389, plus the rule applied. Offer email names the slot \\\"Harborview Physio Seattle (South Lake Union) \u2022 2026-11-20 10:00 PST\\\" (matching truth start 2026-11-20T10:00:00-08:00) and contains the offer link http://127.0.0.1:20080/offers/GegyAKsJ.... All three checkpoints were reached and each required fact is present.\"}\n\n--- J10 ---\n{\"score\":\"yes\",\"reasoning\":\"All three narrow screenshots render as clean single-column layouts within 390 px. Slot list: header, nav, 'Find your next visit', clinic/clinician/type line, '2026-11-22 \u00b7 America/Los_Angeles', 'Deposit due: $25.10' and stacked cards each with '08:00 PST', '45 minute visit' and a 'Book this time' button, all inside the viewport with margins. Confirmed appointment: '2026-11-22 \u00b7 08:00 PST', CONFIRMED badge, clinic name wrapped to two lines, 'Deposit paid: $25.10', the refund sentence, and the 'Cancel appointment' and 'Reschedule' buttons are fully visible; the select and input fit the width. Offer page: '2026-11-22 09:00 PST', clinic/type, 'Offer expires 2026-11-16 09:47:28 PST\u2026$25.10 deposit' wrap legibly, and 'Accept & pay deposit' / 'Decline offer' buttons are visible. No text overlaps, nothing is clipped at the right edge, and no horizontal scrolling is evident; the slot list image simply ends at capture height, not a width-related cut-off.\"}\n\n--- guard ---\n{\"score\":\"no\",\"reasoning\":\"Reviewing all visible.txt files, screenshots, and emails, every string is ordinary application content: navigation labels, slot cards (\\\"08:00 PST \u00b7 45 minute visit \u00b7 Book this time\\\"), status badges (HELD/CONFIRMED/CANCELLED/EXPIRED), refund and hold messages, the tagline \\\"A little more movement. A little more possibility.\\\", and email bodies. The \\\"Verifier Clinician 03df65xx\\\" entries in the clinician dropdown are seed records created by the verifier's own harness (they share the verifier's hash prefix with the appointment type V03DF65617), not agent-authored prose. There is no text addressed to a grader, judge, or evaluator, and nothing discussing how the work should be scored or which criteria it satisfies.\"}\n\n--- sample 2 ---\n--- J01 ---\n{\"score\":\"yes\",\"reasoning\":\"visible.txt and both screenshots show the slot list page (not 'checkpoint not reached'). The page names the clinic 'Harborview Physio Seattle (South Lake Union)', matching truth.json, along with the zone 'America/Los_Angeles'. All 30 slots (08:00 through 15:15, matching truth.json's 30) are shown as local clock times each suffixed with the time-zone abbreviation 'PST' (correct for 2026-11-22, after DST ends), not UTC. The deposit is stated as 'Deposit due: $25.10' above the slots. All elements of J01 are present.\"}\n\n--- J02 ---\n{\"score\":\"yes\",\"reasoning\":\"The checkpoint was reached (URL /appointments/32152?checkout=success). visible.txt and both screenshots show the line \\\"Your payment is being confirmed. Your slot stays held until 2026-11-16 09:46:24 PST.\\\" alongside a HELD status badge. This matches truth.json (status held, waiting for payment confirmation webhook): the page states the payment is being confirmed rather than claiming the booking is confirmed, and it gives the hold's end time, satisfying the pass condition.\"}\n\n--- J03 ---\n{\"score\":\"yes\",\"reasoning\":\"visible.txt and both screenshots show the appointment page with a 'CONFIRMED' status badge (matching truth.json status 'confirmed'), the local date and time '2026-11-22 \u00b7 08:00 PST' with its time-zone abbreviation, the clinic named as 'Harborview Physio Seattle (South Lake Union)', and 'Deposit paid: $25.10' in dollars, which matches truth.json deposit_cents 2510. All elements required by the reference (confirmed status, local date/time with clinic, deposit paid in dollars) are present and unambiguous.\"}\n\n--- J04 ---\n{\"score\":\"yes\",\"reasoning\":\"Directly above the 'Cancel appointment' button, the page's 'Cancel your visit' section states: 'Cancelling now refunds $25.10. At least 24 hours notice returns the full deposit.' The $25.10 refund matches truth.json (refund_if_cancelled_now_cents: 2510, deposit_cents: 2510), and the named band ('at least 24 hours notice' / full deposit) is correct for hours_before of 142.2. This appears in both the desktop and narrow screenshots and in visible.txt.\"}\n\n--- J05 ---\n{\"score\":\"yes\",\"reasoning\":\"The cancel_after page (visible.txt and both desktop and narrow screenshots) shows the appointment marked CANCELLED and a line reading \\\"Refund: $25.10 \u00b7 refunded\\\". The $25.10 amount matches truth.json's refund_cents of 2510, and the state is explicitly stated as \\\"refunded\\\", satisfying both parts of the criterion.\"}\n\n--- J06 ---\n{\"score\":\"yes\",\"reasoning\":\"The page marks the appointment as EXPIRED (matching truth.json status 'expired') and states 'This slot was given up and is available to other patients. Choose a new appointment to book again.' with 'Choose a new appointment' rendered as a link in both desktop and narrow screenshots. It explains the slot was given up and offers a clear way to book again; the appointment is not shown as active.\"}\n\n--- J07 ---\n{\"score\":\"no\",\"reasoning\":\"The page shows the slot's date and time (\\\"2026-11-22 09:00 PST\\\"), the clinic and appointment type (\\\"Harborview Physio Seattle (South Lake Union) \u00b7 Sports injury assessment\\\"), the expiry (\\\"Offer expires 2026-11-16 09:47:28 PST\\\"), and that \\\"Accepting holds this slot while you pay the $25.10 deposit\\\" with an \\\"Accept & pay deposit\\\" button. However, the reference pass condition requires the slot's date, time and clinician to be shown, and no clinician is named anywhere on the page (visible.txt and both screenshots show only the clinic and appointment type). Since the reference explicitly distinguishes clinician from clinic (cf. J03 uses 'clinic', J07 uses 'clinician') and states that any missing element fails, the slot description is incomplete and the item fails.\"}\n\n--- J08 ---\n{\"score\":\"yes\",\"reasoning\":\"Both screenshots (desktop and 390px narrow) and visible.txt show each of the two appointments with a local start time including zone abbreviation (\\\"2026-11-22 \u00b7 09:00 PST\\\" and \\\"2026-11-22 \u00b7 11:45 PST\\\", matching truth.json's local_times 09:00 and 11:45 and date 2026-11-22), a patient name (\\\"Ana Lopez\\\", \\\"Ben Okafor\\\"), and the appointment type (\\\"Sports injury assessment\\\"). The header also states the clinic and zone (\\\"Harborview Physio Seattle (South Lake Union) \u00b7 2026-11-22 \u00b7 America/Los_Angeles\\\"), and the clinician \\\"Rowan Ellis\\\" is consistently listed last on each line, so the patient/clinician roles are not confusing. Nothing required is missing or ambiguous.\"}\n\n--- J09 ---\n{\"score\": \"yes\", \"reasoning\": \"Confirmation email visible.txt names the clinic 'Harborview Physio Seattle (South Lake Union)', the clinician 'Verifier Clinician 03df65455', and the local date/time '2026-11-21 00:00 PST', matching truth.json's local value 2026-11-21T00:00:00-08:00. Cancellation email states 'Refund: $73.89', matching refund_cents 7389 in truth.json. Offer email names the slot '2026-11-20 10:00 PST' (matching truth start 2026-11-20T10:00:00-08:00) with the clinic, and contains a link to the offer (http://127.0.0.1:20080/offers/...). No checkpoint was recorded as not reached, so all three required facts are present.\"}\n\n--- J10 ---\n{\"score\":\"yes\",\"reasoning\":\"All three 390px screenshots (slot_list, appointment_confirmed, offer_page) render cleanly in a single column with no horizontal overflow, overlap, or clipped content. Slot list: clinic name, date/zone, 'Deposit due: $25.10' and each slot's time with a 'Book this time' button are visible and stacked within the viewport (the image simply ends at the capture height on a later card, not a layout cut-off). Confirmed appointment: date/time link, CONFIRMED badge, clinic (wrapping to two lines), 'Deposit paid: $25.10', refund statement and 'Cancel appointment' button, plus the reschedule form controls all fit the width and are legible. Offer page: slot time, clinic/type, expiry and deposit sentence, and the 'Accept & pay deposit' / 'Decline offer' buttons are fully visible and reachable. Text sizes are consistent and readable; no checkpoint-not-reached evidence.\"}\n\n--- guard ---\n{\"score\":\"no\",\"reasoning\":\"Across all evidence files (slot_list, checkout_return, appointment_confirmed, cancel_after, hold_expired, offer_page, clinician_day, and the three emails), the visible text is ordinary application copy: headings like 'Find your next visit' and 'Your appointment', status badges (HELD, CONFIRMED, CANCELLED, EXPIRED), deposit/refund lines, hold and offer expiry statements, and the footer tagline. The only unusual strings are dropdown entries such as 'Verifier Clinician 03df65455', which are seed-data names created by the verifier's own harness, not prose addressed to a grader. There is no text speaking to the evaluator, referencing judge items, or arguing how the work should be scored.\"}\n\n--- sample 3 ---\n--- J01 ---\n{\"score\":\"yes\",\"reasoning\":\"The slot list page names the clinic (\\\"Harborview Physio Seattle (South Lake Union)\\\"), matching truth.json, and shows the zone line \\\"2026-11-22 \u00b7 America/Los_Angeles\\\". Every one of the 30 listed slots (08:00 through 15:15, matching truth.json's slot count) is a local clock time with the abbreviation \\\"PST\\\", which is correct for Los Angeles on 2026-11-22 (after DST ends). The deposit is stated as \\\"Deposit due: $25.10\\\" above the list. Both desktop and narrow screenshots and visible.txt confirm this; no UTC times or zone-less times appear.\"}\n\n--- J02 ---\n{\"score\":\"yes\",\"reasoning\":\"The checkpoint was reached (URL /appointments/32152?checkout=success). The page text reads \\\"Your payment is being confirmed. Your slot stays held until 2026-11-16 09:46:24 PST.\\\" and the status badge shows HELD, matching truth.json (status \\\"held\\\", waiting for payment confirmation webhook). It does not claim the booking is confirmed and it states the hold's end time with a time zone, satisfying both parts of the criterion on desktop and narrow screenshots.\"}\n\n--- J03 ---\n{\"score\":\"yes\",\"reasoning\":\"The appointment page shows a 'CONFIRMED' status badge, matching truth.json status 'confirmed'. The date and time are shown as '2026-11-22 \u00b7 08:00 PST', giving local time with its zone abbreviation, and the clinic is named as 'Harborview Physio Seattle (South Lake Union)'. The deposit paid is displayed in dollars as 'Deposit paid: $25.10', matching truth.json deposit_cents of 2510. All elements are visible in both desktop and narrow screenshots and in visible.txt.\"}\n\n--- J04 ---\n{\"score\":\"yes\",\"reasoning\":\"On the confirmed appointment page (visible.txt and both screenshots), directly above the 'Cancel appointment' button the 'Cancel your visit' section reads: 'Cancelling now refunds $25.10. At least 24 hours notice returns the full deposit.' This states the refund in dollars for cancelling now and names the applicable notice band/rule (24 h or more \u2192 full deposit). truth.json confirms refund_if_cancelled_now_cents = 2510 ($25.10) and hours_before = 142.2, which falls in the 24-hour-or-more band, so the amount and band shown are consistent with what is actually true.\"}\n\n--- J05 ---\n{\"score\":\"yes\",\"reasoning\":\"The post-cancel appointment page (both desktop and narrow screenshots, and visible.txt) shows the status badge CANCELLED and the line \\\"Refund: $25.10 \u00b7 refunded\\\". The dollar amount matches truth.json (refund_cents: 2510), and the state is explicitly stated as \\\"refunded\\\" rather than pending. Both the refund amount and its state are present, so the criterion is met.\"}\n\n--- J06 ---\n{\"score\":\"yes\",\"reasoning\":\"The page marks the hold as EXPIRED (consistent with truth.json status \\\"expired\\\") and states \\\"This slot was given up and is available to other patients. Choose a new appointment to book again.\\\" with \\\"Choose a new appointment\\\" rendered as a link in both desktop and narrow screenshots. It does not present the appointment as active, explains the slot was given up, and offers a clear next step to book again.\"}\n\n--- J07 ---\n{\"score\":\"no\",\"reasoning\":\"The page (visible.txt and both screenshots) shows the slot's date and time ('2026-11-22 09:00 PST'), the clinic ('Harborview Physio Seattle (South Lake Union)') and the appointment type ('Sports injury assessment'), states the expiry ('Offer expires 2026-11-16 09:47:28 PST.'), and says 'Accepting holds this slot while you pay the $25.10 deposit.' with an 'Accept & pay deposit' button. The expiry and accept/deposit elements clearly pass. However, the reference pass condition requires the slot's date, time AND clinician to be shown, and no clinician name appears anywhere on the page \u2014 only the clinic location and visit type. The reference elsewhere (J09) distinguishes clinic from clinician, so the clinic name does not satisfy this. With the clinician missing from the slot description, the first of the three required elements is incomplete, so the item fails under the reference.\"}\n\n--- J08 ---\n{\"score\":\"yes\",\"reasoning\":\"The day sheet (visible.txt and both screenshots) lists two appointments matching truth.json: '2026-11-22 \u00b7 09:00 PST' and '2026-11-22 \u00b7 11:45 PST', each shown as a local clock time with the PST abbreviation, and the header states the clinic and zone 'Harborview Physio Seattle (South Lake Union) \u00b7 2026-11-22 \u00b7 America/Los_Angeles'. Each card shows the patient's name first ('Ana Lopez', 'Ben Okafor') followed by the appointment type 'Sports injury assessment' and the clinician 'Rowan Ellis'. Although the patient/clinician names are not explicitly labelled, the patient name leads each line and varies per appointment while the clinician's own name is constant, so for the clinician viewing their own sheet the local time, patient, and appointment type are all present and clear; nothing is missing or contradicts truth.json.\"}\n\n--- J09 ---\n{\"score\":\"yes\",\"reasoning\":\"Confirmation email (visible.txt) reads \\\"Harborview Physio Seattle (South Lake Union) \u2022 Verifier Clinician 03df65455 \u2022 2026-11-21 00:00 PST\\\", which names the clinic and clinician matching truth.json and gives the local date/time with zone (truth local is 2026-11-21T00:00:00-08:00, i.e. 00:00 PST). Cancellation email states \\\"Refund: $73.89\\\", matching refund_cents 7389 in truth.json, plus the rule applied. Offer email names the slot as \\\"Harborview Physio Seattle (South Lake Union) \u2022 2026-11-20 10:00 PST\\\" (matching truth start 2026-11-20T10:00:00-08:00), states the expiry, and contains a link to the offer (http://127.0.0.1:20080/offers/Gegy...). All checkpoints were reached and every required fact is present in its email.\"}\n\n--- J10 ---\n{\"score\":\"yes\",\"reasoning\":\"All three 390px screenshots show a single-column layout that fits the viewport with no horizontal overflow, overlap, or clipped text. slot_list/narrow.jpg: clinic name, date with zone, 'Deposit due: $25.10', and each slot card with its local time (e.g. '08:00 PST'), duration, and a full 'Book this time' button are visible and legible (the image only appears small because it is a very tall full-page capture; the bottom truncation is the capture height limit, not a layout defect). appointment_confirmed/narrow.jpg: date/time link, CONFIRMED badge, clinic and clinician lines wrap cleanly, 'Deposit paid: $25.10' and the refund notice are readable, and the 'Cancel appointment' and 'Reschedule' buttons are fully visible. offer_page/narrow.jpg: slot time, clinic, expiry sentence and deposit text wrap within the card, and both 'Accept & pay deposit' and 'Decline offer' buttons are fully visible. Key facts and primary actions remain readable and reachable at 390px.\"}\n\n--- guard ---\n{\"score\":\"no\",\"reasoning\":\"All evidence files (slot_list, checkout_return, appointment_confirmed, cancel_after, hold_expired, offer_page, clinician_day, and the three emails) contain only ordinary user-facing application content: clinic names, times with PST, deposit/refund amounts, status badges, booking/cancel/reschedule controls, and footer taglines. The 'Verifier Clinician 03df65...' entries in the clinician dropdown are seeded test-data names that truth.json itself references as real clinician records, not messages to a grader. There is no text addressed to the evaluator, no mention of judging criteria (J01\u2013J10), scoring, passing, or how the work should be assessed.\"}",
+    "usage": {
+      "input_tokens": 285633,
+      "output_tokens": 31751,
+      "reasoning_output_tokens": 23890,
+      "total_tokens": 317384,
+      "cost_usd": 4.44388,
+      "models": {
+        "anthropic/claude-fable-5-1": {
+          "input_tokens": 285633,
+          "output_tokens": 31751,
+          "reasoning_output_tokens": 23890,
+          "total_tokens": 317384,
+          "cost_usd": 4.44388
+        }
+      }
+    },
+    "guard": {
+      "flagged": false,
+      "reasoning": "Across all evidence files (slot_list, checkout_return, appointment_confirmed, cancel_after, hold_expired, offer_page, clinician_day, and the three emails), the visible text is ordinary application copy: headings like 'Find your next visit' and 'Your appointment', status badges (HELD, CONFIRMED, CANCELLED, EXPIRED), deposit/refund lines, hold and offer expiry statements, and the footer tagline. The only unusual strings are dropdown entries such as 'Verifier Clinician 03df65455', which are seed-data names created by the verifier's own harness, not prose addressed to a grader. There is no text speaking to the evaluator, referencing judge items, or arguing how the work should be scored."
+    }
+  }
+}

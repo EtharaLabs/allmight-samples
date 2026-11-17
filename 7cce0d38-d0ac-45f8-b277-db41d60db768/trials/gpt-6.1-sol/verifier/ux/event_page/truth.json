@@ -1,0 +1,17 @@
+{
+ "event_id": 1002668,
+ "venue_time_zone": "America/Chicago",
+ "start_local": "2026-11-27T02:39",
+ "section_prices_cents": {
+  "BALC": 3200,
+  "FLOOR": 4850
+ },
+ "accessible_seats": [
+  "FLOOR-A-1",
+  "FLOOR-A-2"
+ ],
+ "sold_seats": [
+  "FLOOR-C-4",
+  "FLOOR-C-5"
+ ]
+}

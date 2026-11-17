@@ -1,0 +1,133 @@
+# Experience criteria (instruction.md R12). Evidence is written by tests/workflows.py (W12, W23).
+[judge]
+judge = "anthropic/claude-fable-5-1"
+reasoning_effort = "max"
+mode = "individual"
+samples = 3
+guard = "penalize"
+timeout = 900
+prompt_template = "judge/prompt.md"
+reference = "/tests/judge-reference.md"
+
+[[criterion]]
+id = "J01"
+name = "J01"
+description = "The order page makes clear, for each line, how many units are reserved, shipped, backordered and cancelled."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/order_backorder"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.1"
+
+[[criterion]]
+id = "J02"
+name = "J02"
+description = "After backordered units are cancelled, the order page states the refund with its amount and whether it is pending or refunded."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/order_refund"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.1"
+
+[[criterion]]
+id = "J03"
+name = "J03"
+description = "Before cancelling backordered units, the page states that the cancelled units will be refunded."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/order_backorder"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.2"
+
+[[criterion]]
+id = "J04"
+name = "J04"
+description = "Before approving, the page states the order's total, the company's approval limit, and that approving lets the buyer pay."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/approve_before"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.2"
+
+[[criterion]]
+id = "J05"
+name = "J05"
+description = "The wave page lists the stops in walking order with each stop's bin, SKU, lot code and units, and states the total distance."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/wave_page"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.3"
+
+[[criterion]]
+id = "J06"
+name = "J06"
+description = "After a pick with the wrong bin is refused, the page explains what was wrong and what to do next."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/pick_refused"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.4"
+
+[[criterion]]
+id = "J07"
+name = "J07"
+description = "After a stale cycle count is refused, the page explains that the lot changed since it was opened and what to do next."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/count_refused"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.4"
+
+[[criterion]]
+id = "J08"
+name = "J08"
+description = "The invoice states its lines with units, unit price, amount and tax, any freight, and the invoice total."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/invoice"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.5"
+
+[[criterion]]
+id = "J09"
+name = "J09"
+description = "The shipment email states the tracking number and the invoice total in dollars."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/shipment_email"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.5"
+
+[[criterion]]
+id = "J10"
+name = "J10"
+description = "At 390 pixels wide, the key facts and the primary action on these pages stay readable and reachable."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/order_backorder/narrow.jpg", "/logs/verifier/ux/wave_page/narrow.jpg", "/logs/verifier/ux/invoice/narrow.jpg"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.6"
+
+[scoring]
+aggregation = "weighted-mean"

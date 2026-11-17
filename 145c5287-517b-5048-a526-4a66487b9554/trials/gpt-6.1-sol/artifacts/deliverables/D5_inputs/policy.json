@@ -1,0 +1,8 @@
+{
+  "amount_tolerance_cents": 50,
+  "category_limits_cents": {
+    "meals": 7500,
+    "travel": 50000
+  },
+  "match_window_days": 3
+}

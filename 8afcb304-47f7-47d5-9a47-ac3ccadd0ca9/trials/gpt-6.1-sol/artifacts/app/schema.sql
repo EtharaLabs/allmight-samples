@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS hv_auth(user_id integer PRIMARY KEY REFERENCES users(id), password_hash text, reset_hash text, reset_at timestamptz, reset_used boolean DEFAULT false);
+CREATE TABLE IF NOT EXISTS hv_sessions(token_hash text PRIMARY KEY, csrf_hash text NOT NULL, user_id integer REFERENCES users(id), created_at timestamptz DEFAULT now());
+CREATE TABLE IF NOT EXISTS hv_appointments(appointment_id integer PRIMARY KEY REFERENCES appointments(id), start_at timestamptz NOT NULL, hold_until timestamptz, checkout_id text, payment_intent text, refund_cents integer DEFAULT 0, refund_status text DEFAULT 'none', expire_sent boolean DEFAULT false, offer_until timestamptz);
+CREATE TABLE IF NOT EXISTS hv_events(id text PRIMARY KEY);
+CREATE TABLE IF NOT EXISTS hv_refunds(key text PRIMARY KEY, appointment_id integer REFERENCES appointments(id), payment_intent text, amount integer NOT NULL, accepted boolean DEFAULT false, next_try timestamptz DEFAULT now());
+CREATE TABLE IF NOT EXISTS hv_waitlist(id bigserial PRIMARY KEY, patient_id integer REFERENCES users(id), clinician_id integer REFERENCES clinicians(id), type_id integer REFERENCES appointment_types(id), on_date date, status text DEFAULT 'waiting', joined_at timestamptz DEFAULT now(), token_hash text UNIQUE, appointment_id integer REFERENCES appointments(id), expires_at timestamptz);
+CREATE TABLE IF NOT EXISTS hv_mail(key text PRIMARY KEY, user_id integer REFERENCES users(id), subject text NOT NULL, body text NOT NULL, sent boolean DEFAULT false);
+CREATE TABLE IF NOT EXISTS hv_reminders(appointment_id integer PRIMARY KEY REFERENCES appointments(id));
+CREATE INDEX IF NOT EXISTS hv_normal_email ON users(lower(trim(email)));
+CREATE TABLE IF NOT EXISTS hv_reset_links(token_hash text PRIMARY KEY, user_id integer REFERENCES users(id));

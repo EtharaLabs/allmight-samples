@@ -1,0 +1,5 @@
+RECEIPT-ID: RCP-0010
+DATE: 2026-03-22
+VENDOR: Ashgrove Stationery
+TOTAL: 18.40
+CATEGORY: other

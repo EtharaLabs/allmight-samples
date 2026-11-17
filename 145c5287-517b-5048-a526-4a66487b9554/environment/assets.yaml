@@ -1,0 +1,169 @@
+#
+# Agent-visible by design: this manifest describes
+# the shipped corpus and carries no answer, no derivation and no checker
+# value, so the leak gate scans it and finds only what a solver may read.
+schema: asset-manifest/v1
+
+upstream_provenance:
+  origin: original
+  source_kind: synthetic
+  provenance_date: "2026-10-26"
+  upstream_lift: none
+
+assets:
+  - path: inputs/policy.json
+    sha256: 57e53e3c763186275e4ace055165c635549e8e2c242f8a631f21ff478a969ff3
+    bytes: 134
+    modality: text
+    media_type: application/json
+    payload: policy-parameters
+    fidelity: synthetic-authored
+    license: MIT
+    decoys: []
+    license_chain:
+      - authored for this project under the parent MIT licence
+  - path: inputs/receipts/rcp-0001.txt
+    sha256: 639ecae1a33794a22082b4ed4dfe256e5986f3011fa437c6aad6053d5e901d81
+    bytes: 91
+    modality: text
+    media_type: text/plain
+    payload: receipt-document
+    fidelity: synthetic-authored
+    license: MIT
+    decoys: []
+    license_chain:
+      - authored for this project under the parent MIT licence
+  - path: inputs/receipts/rcp-0002.txt
+    sha256: ed850576875e9a20b41f67ccb78653529a55327c5c9183daa7f9aeb820b12364
+    bytes: 90
+    modality: text
+    media_type: text/plain
+    payload: receipt-document
+    fidelity: synthetic-authored
+    license: MIT
+    decoys: []
+    license_chain:
+      - authored for this project under the parent MIT licence
+  - path: inputs/receipts/rcp-0003.txt
+    sha256: 8b79922deb271b2141a6bd10df70bb8eab011892d53b9b54249a373172012b75
+    bytes: 111
+    modality: text
+    media_type: text/plain
+    payload: receipt-document
+    fidelity: synthetic-authored
+    license: MIT
+    decoys: []
+    license_chain:
+      - authored for this project under the parent MIT licence
+  - path: inputs/receipts/rcp-0004.txt
+    sha256: 5b9c710282fd1ba11492e9efc3c35b9e8f915bc3c47dd13b2e005a6da6783fa2
+    bytes: 176
+    modality: text
+    media_type: text/plain
+    payload: receipt-document
+    fidelity: synthetic-authored
+    license: MIT
+    decoys: []
+    license_chain:
+      - authored for this project under the parent MIT licence
+  - path: inputs/receipts/rcp-0005.txt
+    sha256: b53728eee5bed5d52249bde73e64cf56cf69955192de8185082c373a279b1c9c
+    bytes: 89
+    modality: text
+    media_type: text/plain
+    payload: receipt-document
+    fidelity: synthetic-authored
+    license: MIT
+    decoys: []
+    license_chain:
+      - authored for this project under the parent MIT licence
+  - path: inputs/receipts/rcp-0006.txt
+    sha256: 8cda3263753ce7ffe4eb8596c4725771de8d9feb2e83517a6e2e3dbf894c807d
+    bytes: 101
+    modality: text
+    media_type: text/plain
+    payload: receipt-document
+    fidelity: synthetic-authored
+    license: MIT
+    decoys: []
+    license_chain:
+      - authored for this project under the parent MIT licence
+  - path: inputs/receipts/rcp-0007.txt
+    sha256: 9e32b5db5ab7b921418e51247f40b4aa8373102ba5fab157762201336bc23971
+    bytes: 107
+    modality: text
+    media_type: text/plain
+    payload: receipt-document
+    fidelity: synthetic-authored
+    license: MIT
+    decoys: []
+    license_chain:
+      - authored for this project under the parent MIT licence
+  - path: inputs/receipts/rcp-0008.txt
+    sha256: 1f8337af5367273e49acb82401edbf499c40d6b6e8869798320d37be0af24f08
+    bytes: 90
+    modality: text
+    media_type: text/plain
+    payload: receipt-document
+    fidelity: synthetic-authored
+    license: MIT
+    decoys: []
+    license_chain:
+      - authored for this project under the parent MIT licence
+  - path: inputs/receipts/rcp-0009.txt
+    sha256: 16925ff22244bc5c1d42ae3460e22bbb16695b47678d53cb1011a26116691777
+    bytes: 101
+    modality: text
+    media_type: text/plain
+    payload: receipt-document
+    fidelity: synthetic-authored
+    license: MIT
+    decoys: []
+    license_chain:
+      - authored for this project under the parent MIT licence
+  - path: inputs/receipts/rcp-0010.txt
+    sha256: 728d2241e4fc4a424c3e1a6eda859217f3d8b6ab576f42352ec04606209b2960
+    bytes: 95
+    modality: text
+    media_type: text/plain
+    payload: receipt-document
+    fidelity: synthetic-authored
+    license: MIT
+    decoys: []
+    license_chain:
+      - authored for this project under the parent MIT licence
+  - path: inputs/receipts/rcp-0011.txt
+    sha256: 5bdcd56e1fe752494bff66bcd4126a34c1844b0e74290ea1ba11c31e205d9e76
+    bytes: 95
+    modality: text
+    media_type: text/plain
+    payload: receipt-document
+    fidelity: synthetic-authored
+    license: MIT
+    decoys: []
+    license_chain:
+      - authored for this project under the parent MIT licence
+  - path: inputs/receipts/rcp-0012.txt
+    sha256: 2540d6f94b8bc27b8e15e1d0097bf897f952fb54ae5d203e7d83180b78062f07
+    bytes: 95
+    modality: text
+    media_type: text/plain
+    payload: receipt-document
+    fidelity: synthetic-authored
+    license: MIT
+    decoys:
+      - RCP-0012
+    license_chain:
+      - authored for this project under the parent MIT licence
+  - path: inputs/statement.csv
+    sha256: 25f2f4db75cb446743b92452ac6095d7fc6458158658b216929da1ca37a2fa5c
+    bytes: 655
+    modality: text
+    media_type: text/csv
+    payload: statement-rows
+    fidelity: synthetic-authored
+    license: MIT
+    decoys:
+      - TXN-1011
+    license_chain:
+      - authored for this project under the parent MIT licence

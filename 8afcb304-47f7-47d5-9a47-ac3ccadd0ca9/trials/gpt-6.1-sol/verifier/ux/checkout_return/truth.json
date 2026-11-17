@@ -1,0 +1,5 @@
+{
+ "status": "held",
+ "waiting_for": "payment confirmation webhook",
+ "hold_ttl_seconds": 30
+}

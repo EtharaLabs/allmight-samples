@@ -1,0 +1,65 @@
+schema_version = "1.4"
+reward_type = "bounded_continuous"
+artifacts = [{ source = "/app", exclude = [".git", "**/.cache", "**/__pycache__", "**/.pytest_cache", "**/.mypy_cache", "**/.ruff_cache", "**/.npm"] }]
+
+[task]
+name = "ethara/c5e57df8-355f-4931-8167-b8c9ace8a425"
+version = "1.0.0"
+description = "Build a specialty-food distributor's order and warehouse application from a written specification over an existing database of bins, SKUs, prices, customers, 30,000 stock lots and the old system's movements and orders: a customer portal and order API with tiered effective-dated prices, per-line tax and dimensional-weight freight, approval limits, card checkout confirmed only by signed webhooks, FEFO allocation with shelf-life contracts, backorders and refunds through the provider, exact shortest pick paths, scanned picks with short-pick re-allocation, version-checked cycle counts, shipments with cumulative-tax invoices, returns with credit notes, low-stock email, and FIFO valuation over DST-ambiguous legacy times; graded by strict browser and HTTP workflows plus a judged experience review."
+authors = [{ name = "amrit.raj", email = "amrit.raj@ethara.ai" }]
+keywords = ["web-application", "zero-to-one", "warehouse", "fefo", "pick-path", "held-karp", "payments", "stripe", "webhooks", "refunds", "email", "time-zones", "dst", "postgresql", "csrf", "authorization", "idempotency", "concurrency", "rewardkit", "llm-judge"]
+
+[metadata]
+category = "programming"
+domain = "enterprise-tool"
+difficulty = "hard"
+tags = ["full-stack", "warehouse-management", "order-management", "payments", "email", "legacy-data", "security", "concurrency", "roles"]
+reference_benchmark = "Vibe Code Bench (arXiv 2603.04601)"
+reference_benchmark_relation = "Used only to calibrate the delivery format and the difficulty target. The specification, seed corpus, reference engine, grading workflows and reference solution are original work authored for this task; no instruction text, fixture, expected value or grading criterion is derived from that benchmark or from any other public source."
+valid_until = "2027-11-01"
+scoring = "reward = 0.9 * functional + 0.1 * judge; functional = weighted share of strict workflows (every substep must pass); any observed breach, or any failed critical workflow, caps each workflow at 0.4; a critical workflow that fails only because the verifier's time budget ran out scores 0 without triggering the cap"
+difficulty_explanation = "Fourteen interacting feature areas and five roles over a legacy database of 30,000 lots: tier prices effective on the ship date, per-line half-up tax, dimensional-weight freight with half-kilogram ceilings, a free-freight threshold and a cold-chain surcharge; approval limits; card checkout confirmed only by signed webhooks (forged, stale, duplicate, out-of-order and late events); FEFO allocation with shelf-life floors measured in calendar days across DST changes, expiry ties, whole cases and backorder-or-cancel contracts; refunds through the provider with idempotency under injected faults and restarts; exact Held-Karp pick paths with a dictionary-order tie-break; scanned picks with short-pick re-allocation; version-checked cycle counts that release the newest reservations; shipments whose invoices carry cumulative line tax; returns with exact credit notes and short-dated write-offs; low-stock email once per day; and FIFO valuation and order exports over wall-clock legacy times with folds and skipped hours. Rule workflows plant half-cent ties, threshold and boundary cases densely, the UI contract states exactly when each action appears, and a breach battery (tenancy, CSRF, XSS, mass assignment, webhook forgery, key scope, sessions, secrets, open redirects, duplicate effects, oversell, legacy tampering) and a critical cap keep any single core defect from scoring above 0.46."
+solution_explanation = "solution/app is a Python standard-library HTTP server with psycopg 3 (about 2,600 lines): one advisory lock serializes every stock and reservation change; pick tasks carry reservations; refunds are rows submitted by a worker that never holds a row lock across a provider call and retries with a stored Idempotency-Key; webhook events are de-duplicated by id in the transaction that applies them; an outbox sends email once; legacy wall-clock times are converted with zoneinfo folds and cached; routes use Held-Karp with a greedy lexicographic reconstruction; credentials, keys, tokens and sessions are hashed."
+verification_explanation = "tests/workflows.py runs 26 strict workflows (17 critical) through HTTP, the order API, the payments mock (admin faults, held and forged deliveries), the mail sink and a real Chromium; tests/reference holds the reference engine: the exact rules (money, FEFO, routes, legacy time, FIFO; the rule functions are shared with the solution, so tests/test.sh runs their self-test before any workflow and marks the evaluation invalid if it fails; that self-test reproduces every worked example in instruction.md) and a world model that replays every accepted action to predict allocations, refunds, invoices, credits, on-hand rows, routes and values, over generated entities and the baseline snapshot. Legacy checks are split by zone and by clock-change segment. Reward Kit applies the breach and critical caps; the fable-5.1 judge grades ten experience criteria from verifier-captured pages and email."
+
+[agent]
+timeout_sec = 18000.0
+user = 1000
+network_mode = "allowlist"
+allowed_hosts = ["registry.npmjs.org", "pypi.org", "files.pythonhosted.org"]
+
+[verifier]
+timeout_sec = 10800.0
+user = 0
+environment_mode = "separate"
+network_mode = "allowlist"
+allowed_hosts = ["api.anthropic.com"]
+
+[verifier.env]
+ANTHROPIC_API_KEY = "${ANTHROPIC_API_KEY:-}"
+
+[verifier.environment]
+network_mode = "allowlist"
+allowed_hosts = ["api.anthropic.com"]
+build_timeout_sec = 3600.0
+cpus = 4
+memory_mb = 8192
+storage_mb = 20480
+gpus = 0
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 3600.0
+cpus = 4
+memory_mb = 8192
+storage_mb = 20480
+gpus = 0
+workdir = "/app"
+
+[environment.healthcheck]
+command = "test -s /etc/pickpath/services.env && curl -fsS http://127.0.0.1:8025/healthz && curl -fsS http://127.0.0.1:4242/healthz"
+interval_sec = 5.0
+timeout_sec = 10.0
+start_period_sec = 60.0
+start_interval_sec = 2.0
+retries = 5

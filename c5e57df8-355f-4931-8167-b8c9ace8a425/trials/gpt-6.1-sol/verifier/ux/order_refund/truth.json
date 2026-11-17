@@ -1,0 +1,9 @@
+{
+ "refunds": [
+  {
+   "amount_cents": 3234,
+   "status": "pending"
+  }
+ ],
+ "why_pending": "the provider's refund.created event had not been delivered when this page was captured"
+}

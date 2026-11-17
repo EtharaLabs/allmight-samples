@@ -1,0 +1,161 @@
+# One strict workflow per entry: the workflow scores only when every substep passes (tests/scoring.py).
+# critical = core business correctness: a failed critical workflow caps every workflow at critical_cap.
+
+[scoring]
+critical_cap = 0.4
+
+[[workflow]]
+id = "W01"
+title = "Password links, sign-in, sessions and return paths (anti-enumeration, single use, expiry, fixation, open redirect)"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W02"
+title = "Setting up: customers, users, SKUs, receipts and prices with validation, lot identity and role checks"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W03"
+title = "Order pricing rules: tier prices on the ship date, per-line tax, dimensional-weight freight, cold chain, free freight"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W04"
+title = "Approval limits: the boundary, approvers only (never their own), other companies refused, emails to approvers"
+weight = 3
+critical = true
+
+[[workflow]]
+id = "W05"
+title = "Checkout and webhooks: session details, only signed events confirm, forged/stale refused, out of order, duplicates, late payment refunded"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W06"
+title = "FEFO allocation rules: shelf life on the ship date, expiry ties by lot id, whole and split cases, backorder or cancel, fills"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W07"
+title = "Backorders: whole cases, fills by order id with each order's own shelf life, cancelled units refunded exactly"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W09"
+title = "Pick paths: wave task selection and the exact shortest route with the dictionary-order tie-break"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W10"
+title = "Picking: scans must match bin and lot, quantities validated, zones enforced, short picks hold the lot and re-allocate"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W11"
+title = "Cycle counts: version checks, adjustments with picked units, releases newest first, re-allocation, holds cleared, fills"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W12"
+title = "Shipping and invoices: tracking, cumulative line tax across shipments, freight on the first shipment only, emails"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W13"
+title = "Refunds under provider faults: retries keep one Idempotency-Key, one provider refund each, complete only on a signed refund.created"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W14"
+title = "Returns: limits, quarantine, exact credit notes, restock only when not short-dated, write-offs, refills"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W08"
+title = "Concurrency: racing payments for the last units, double cancellations, double shipments and simultaneous counts"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W16"
+title = "The old system's ambient stock: on-hand rows for zone A lots and FEFO over them"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W26"
+title = "The old system's cold stock: on-hand rows for chilled, frozen and quarantined lots and FEFO over them"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W17"
+title = "FIFO valuation and the ledger on the fall-back nights: instants inside the repeated hour, wall-clock order versus real order"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W27"
+title = "FIFO valuation across the skipped spring hour and same-instant receipts, and now: newest layers, half-cent totals"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W18"
+title = "Order history export: the old system's orders in UTC (folds), company scoping, quoting and spreadsheet safety"
+weight = 3
+critical = true
+
+[[workflow]]
+id = "W19"
+title = "Low-stock email: below the reorder point, expired and held lots excluded, once per SKU per day to each active supervisor"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W20"
+title = "API keys and the order API: shown once, scoped to the company, revocation, inactive users, validation, mass assignment"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W21"
+title = "Tenancy and mass assignment: another company's orders, shipments, returns and actions; hidden fields change nothing"
+weight = 4
+critical = false
+
+[[workflow]]
+id = "W22"
+title = "Every state change needs the session token: orders, approvals, payments, returns, stock, prices, customers, users, keys"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W23"
+title = "In a real browser: layout at 1280 and 390 px, typed text never runs as script, paying through the hosted page"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W24"
+title = "Deployment: README, conservation, restart persistence, a pending refund survives a restart, nothing re-sent, no secrets at rest, records kept"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W25"
+title = "Health follows the database: non-2xx within 10 s of a stop, 200 within 60 s of a start"
+weight = 2
+critical = false

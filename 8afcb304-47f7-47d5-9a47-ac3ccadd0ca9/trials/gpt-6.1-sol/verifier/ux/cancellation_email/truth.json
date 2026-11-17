@@ -1,0 +1,8 @@
+{
+ "appointment_id": 31964,
+ "cancelled_by": "clinic",
+ "deposit_cents": 7389,
+ "refund_cents": 7389,
+ "hours_before_start_at_cancellation": 2.29,
+ "rule": "clinic cancellations refund the whole deposit"
+}

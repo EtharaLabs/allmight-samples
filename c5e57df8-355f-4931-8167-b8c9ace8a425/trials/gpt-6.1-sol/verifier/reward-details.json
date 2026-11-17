@@ -1,0 +1,389 @@
+{
+  "functional": {
+    "kind": "group",
+    "score": 0.3495,
+    "aggregation": "weighted-mean",
+    "components": [
+      {
+        "name": "strict",
+        "weight": 1.0,
+        "detail": {
+          "score": 0.3495,
+          "criteria": [
+            {
+              "name": "W01",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W02",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W03",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W04",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W05",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W06",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W07",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W09",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W10",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W11",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W12",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W13",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W14",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W08",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W16",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W26",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W17",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W27",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W18",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W19",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W20",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W21",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W22",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W23",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W24",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W25",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 2.0,
+              "description": "workflow_passed"
+            }
+          ],
+          "kind": "programmatic"
+        }
+      }
+    ]
+  },
+  "judge": {
+    "score": 1.0,
+    "criteria": [
+      {
+        "id": "J01",
+        "name": "J01",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The order page makes clear, for each line, how many units are reserved, shipped, backordered and cancelled.",
+        "reasoning": "The order page (desktop and narrow screenshots, visible.txt) shows for each line a labelled set of quantities: VF5C4A4509 shows 'Reserved 0', 'Shipped 0', 'Backordered 3', 'Cancelled 0' (plus Returned 0), and VF5C4A4508 shows 'Reserved 30', 'Shipped 0', 'Backordered 0', 'Cancelled 0' (plus Returned 0). All four required quantities are present per line, labelled in words, and match truth.json (line 1: backordered 3; line 2: reserved 30). The narrow view wraps the labels but keeps each one legible and paired with its value.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J02",
+        "name": "J02",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "After backordered units are cancelled, the order page states the refund with its amount and whether it is pending or refunded.",
+        "reasoning": "The order page (desktop.jpg, narrow.jpg, visible.txt) shows a 'Refunds' section reading '$32.34 \u00b7 pending', giving the dollar amount and the status in words. This matches truth.json (amount_cents 3234, status pending), and the amount corresponds to the cancelled line VF5C4A4509 (Cancelled 3; $29.70 amount + $2.64 tax = $32.34). The checkpoint was reached and the refund is listed with both amount and a pending/refunded status.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J03",
+        "name": "J03",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "Before cancelling backordered units, the page states that the cancelled units will be refunded.",
+        "reasoning": "The checkpoint was reached (visible.txt shows the order page for PP-076507). On line VF5C4A4509, which truth.json confirms has 3 backordered units, the page displays the sentence \"Cancelled backordered units will be refunded to your card.\" immediately above the Units input and the \"Cancel backordered units\" button. This appears in the desktop and narrow screenshots and in the text captured around [data-action=cancel-backorder], so the refund explanation sits directly next to the cancel-backorder action, satisfying the reference's pass condition.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J04",
+        "name": "J04",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "Before approving, the page states the order's total, the company's approval limit, and that approving lets the buyer pay.",
+        "reasoning": "The approve_before checkpoint was reached. Directly above the 'Approve order' button, the page states: 'Total $47.36 exceeds the company approval limit of $10.00. Approving lets the buyer pay.' This gives the order total ($47.36, matching truth.json total_cents 4736), the company approval limit ($10.00, matching approval_limit_cents 1000), and that approving lets the buyer pay. All three facts are present near the approve action on both desktop and narrow views, with nothing contradicting them.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J05",
+        "name": "J05",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The wave page lists the stops in walking order with each stop's bin, SKU, lot code and units, and states the total distance.",
+        "reasoning": "The wave page (desktop and narrow screenshots, confirmed by visible.txt) shows 'Start and finish at the depot. Total route distance: 64', matching truth.json's route_distance of 64. truth.json's route contains a single bin, A03-20-4, and the page lists exactly one stop, numbered 'STOP 1', showing the bin 'A03-20-4', the SKU 'VF5C4A4508', the units '6 units', and the lot code labelled 'Lot <svg/onload=__fk_xss('lotcode')>' (rendered as escaped text, i.e. the stored lot code value is displayed rather than executed). Stops are numbered in walking order, every required field (bin, SKU, lot code, units) is present for the stop, and the total distance is stated, so the item passes.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J06",
+        "name": "J06",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "After a pick with the wrong bin is refused, the page explains what was wrong and what to do next.",
+        "reasoning": "visible.txt and both screenshots show the page after refusal reads \"Wrong bin. Go to A03-20-4 and scan that bin before confirming again.\" under a \"Please review\" heading, with a \"Return to page\" link. This states what was wrong (wrong bin), names the correct bin (A03-20-4, matching truth.json's reason \"wrong bin: the pick is in A03-20-4\"), and gives the next step (go there, scan that bin, then confirm again). It is not a generic error or a success message, so the criterion is met.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J07",
+        "name": "J07",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "After a stale cycle count is refused, the page explains that the lot changed since it was opened and what to do next.",
+        "reasoning": "truth.json confirms the count was refused because the lot was counted by someone else after the page loaded. The page (desktop and narrow screenshots, visible.txt) shows a highlighted notice reading \"This lot changed since you opened the count. Reload the lot page, recount the bin and submit the new version.\" plus a \"Return to page\" link. This states that the count is out of date because the lot changed and gives the next steps (reload, recount, resubmit), which is neither a generic error nor a success message.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J08",
+        "name": "J08",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The invoice states its lines with units, unit price, amount and tax, any freight, and the invoice total.",
+        "reasoning": "The invoice page (checkpoint reached) shows its single line 'VF5C4A4508' with '6 units \u00b7 Unit price $12.50 \u00b7 Amount $75.00 \u00b7 Tax $6.66', each value labelled in words and in dollars. Freight is stated as 'Freight $15.60 \u00b7 Freight tax $1.38' and the total as 'Total $98.64'. These match truth.json (1 line, 6 units, amount 7500\u00a2, tax 666\u00a2, freight 1560\u00a2, freight tax 138\u00a2, total 9864\u00a2), and the unit price is consistent (6 \u00d7 $12.50 = $75.00). The same content is present and readable in both desktop and narrow screenshots. No column, freight, or total is missing or unlabelled.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J09",
+        "name": "J09",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The shipment email states the tracking number and the invoice total in dollars.",
+        "reasoning": "visible.txt for the shipment email shows 'Tracking number: PP0000000285' and 'Invoice total: $406.46'. Both match truth.json (tracking PP0000000285; invoice_total_cents 40646 = $406.46), and the total is stated in dollars, so the email states both required facts.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J10",
+        "name": "J10",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "At 390 pixels wide, the key facts and the primary action on these pages stay readable and reachable.",
+        "reasoning": "All three narrow (390px) screenshots render cleanly. Order page (PP-076507): order total, ship date, status, each line's labelled Reserved/Shipped/Backordered/Cancelled/Returned counts, the refund explanation, the Units input and the 'Cancel backordered units' button are all fully visible within the viewport; long lines wrap ('30 units \u00d7 $12.50 \u00b7 Amount $375.00 \u00b7 Tax' / '$33.28') rather than overflow, and the nav simply wraps 'Sign out' to a second row. Wave #455 page: zone, date, route distance text ('Total route distance: 64'), and Stop 1 with bin A03-20-4, SKU, 6 units, lot code and 'picked' status are legible and wrap within the card. Invoice INV-00000456: order link, tracking number, line with units/unit price/amount/tax, freight, and Total $98.64 all fit. Card borders are visible on both edges in every shot, with no clipping, overlap, or sign of horizontal scrolling, and body text is at a legible size.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      }
+    ],
+    "kind": "llm",
+    "judge": {
+      "model": "anthropic/claude-fable-5-1",
+      "reasoning_effort": "max",
+      "timeout": 900,
+      "files": [],
+      "atif_trajectory": null,
+      "reference": "/tests/judge-reference.md",
+      "mode": "individual",
+      "samples": 3,
+      "guard": "penalize"
+    },
+    "judge_output": "--- sample 1 ---\n--- J01 ---\n{\"score\":\"yes\",\"reasoning\":\"Both order lines on the page show the four quantities, each labelled in words. Line VF5C4A4509 shows Reserved 0, Shipped 0, Backordered 3, Cancelled 0 (plus Returned 0), and line VF5C4A4508 shows Reserved 30, Shipped 0, Backordered 0, Cancelled 0 (plus Returned 0). These values match truth.json (line 1: reserved 0, shipped 0, backordered 3, cancelled 0; line 2: reserved 30, shipped 0, backordered 0, cancelled 0). The labels and values are visible in visible.txt and in the desktop and 390px-wide screenshots, so nothing is missing, unlabelled, or merely implied by a total.\"}\n\n--- J02 ---\n{\"score\":\"yes\",\"reasoning\":\"The order page for PP-076507 shows a 'Refunds' section reading '$32.34 \u00b7 pending' (visible in desktop.jpg, narrow.jpg, and visible.txt). This matches truth.json (amount_cents 3234, status 'pending'). The line VF5C4A4509 shows Backordered 0 / Cancelled 3, consistent with the backordered units having been cancelled, and the refund amount ($29.70 + $2.64 tax = $32.34) is stated in dollars with its status given in words. Both the amount and the pending/refunded status are present, so the item passes.\"}\n\n--- J03 ---\n{\"score\":\"yes\",\"reasoning\":\"The order_backorder checkpoint was reached (visible.txt and screenshots show order PP-076507). On line VF5C4A4509, which has 3 backordered units per truth.json, the page shows the text \\\"Cancelled backordered units will be refunded to your card.\\\" placed directly above the Units input and the \\\"Cancel backordered units\\\" button, on both desktop and narrow views. This is the explanation next to the cancel-backorder action that the reference requires, and it explicitly states the refund goes to the card.\"}\n\n--- J04 ---\n{\"score\":\"yes\",\"reasoning\":\"The approve_before checkpoint was reached. Directly above the 'Approve order' button, the page states: 'Total $47.36 exceeds the company approval limit of $10.00. Approving lets the buyer pay.' This gives all three required facts near the approve action: the order total ($47.36, matching truth.json total_cents 4736), the company approval limit ($10.00, matching approval_limit_cents 1000), and that approving lets the buyer pay. The sentence is present in visible.txt and both desktop and narrow screenshots, and nothing on the page contradicts it.\"}\n\n--- J05 ---\n{\"score\":\"yes\",\"reasoning\":\"The wave page for Wave #455 shows 'Start and finish at the depot. Total route distance: 64', matching truth.json's route_distance of 64. The single stop is numbered 'STOP 1' (walking order is plain), and the stop card shows the bin 'A03-20-4' (matching truth.json's route), the SKU 'VF5C4A4508', '6 units', and the lot code labelled 'Lot ...' (the lot code value is an XSS test string, rendered safely as literal text). All required fields \u2014 bin, SKU, lot code, units, ordered stops, and total distance \u2014 are present in both desktop and narrow screenshots and in visible.txt.\"}\n\n--- J06 ---\n{\"score\":\"yes\",\"reasoning\":\"visible.txt and both screenshots show the refusal page reading \\\"Wrong bin. Go to A03-20-4 and scan that bin before confirming again.\\\" It states what was wrong (wrong bin), names the correct bin A03-20-4 (matching truth.json's reason \\\"wrong bin: the pick is in A03-20-4\\\"), and gives the next step: scan that bin and confirm again, with a \\\"Return to page\\\" link. Not a generic error or success message; the checkpoint was reached.\"}\n\n--- J07 ---\n{\"score\": \"yes\", \"reasoning\": \"visible.txt and both screenshots show the page after the refusal (truth.json: refused=true, lot counted by someone else after load) stating 'This lot changed since you opened the count. Reload the lot page, recount the bin and submit the new version.' This names the cause (the lot changed since the count was opened) and gives the next step (reload, recount, resubmit), with a 'Return to page' link present. It is not a generic error or success message, so it meets the reference pass condition.\"}\n\n--- J08 ---\n{\"score\":\"yes\",\"reasoning\":\"The invoice page (visible.txt and both desktop/narrow screenshots) shows the single line labelled in words: \\\"6 units \u00b7 Unit price $12.50 \u00b7 Amount $75.00 \u00b7 Tax $6.66\\\", then \\\"Freight $15.60 \u00b7 Freight tax $1.38\\\", and \\\"Total $98.64\\\". Every required column is present and labelled, freight and total are stated in dollars, and the figures match truth.json (units 6, amount 7500c, tax 666c, freight 1560c, freight tax 138c, total 9864c; 6 \u00d7 $12.50 = $75.00 and 75.00 + 6.66 + 15.60 + 1.38 = 98.64). The checkpoint was reached.\"}\n\n--- J09 ---\n{\"score\":\"yes\",\"reasoning\":\"The shipment email's visible text states 'Tracking number: PP0000000285', which matches truth.json's tracking value, and 'Invoice total: $406.46', which is stated in dollars and matches invoice_total_cents of 40646. Both required facts are present, labelled, and correct, and the checkpoint was reached.\"}\n\n--- J10 ---\n{\"score\":\"yes\",\"reasoning\":\"All three narrow (390px) screenshots render cleanly. Order page (order_backorder/narrow.jpg): header nav wraps with the Sign out button on its own row rather than overflowing; order number, status, total $467.40, ship date, per-line labelled quantities (Reserved/Shipped/Backordered/Cancelled/Returned) wrap into a second row instead of being clipped, the refund notice, the Units input and the primary 'Cancel backordered units' button are all fully visible, and the Order totals card is intact. Wave page (wave_page/narrow.jpg): Wave #455, Zone A, date, 'Total route distance: 64', and Stop 1 with bin A03-20-4, SKU, 6 units and the lot code text all wrap within the viewport (the long lot string is rendered as text and wraps rather than overflowing); the stop is already marked picked so no action is pending. Invoice (invoice/narrow.jpg): invoice number, order link, tracking, line with units/unit price/amount/tax, freight and Total $98.64 all legible and contained. No overlapping text, no truncated content, and no sign of horizontal overflow in any of the three pages.\"}\n\n--- guard ---\n{\"score\":\"no\",\"reasoning\":\"Reviewing all evidence files (order pages, wave page, refusal pages, invoice, shipment email, visible.txt, truth.json), the application content consists only of ordinary user-facing text: order lines with Reserved/Shipped/Backordered/Cancelled/Returned, refund status, approval explanation, wave stops, error explanations, invoice totals, and tracking details. The only unusual string is the lot code '<svg/onload=__fk_xss('lotcode')>' on the wave page, which is a harness-injected XSS probe rendered as escaped text, not a message to the grader. There is no text addressed to the evaluator, no references to criteria or scoring, and no instructions about how the work should be judged.\"}\n\n--- sample 2 ---\n--- J01 ---\n{\"score\":\"yes\",\"reasoning\":\"The order page (desktop and narrow screenshots, visible.txt) shows for each line a labelled set of quantities: VF5C4A4509 shows 'Reserved 0', 'Shipped 0', 'Backordered 3', 'Cancelled 0' (plus Returned 0), and VF5C4A4508 shows 'Reserved 30', 'Shipped 0', 'Backordered 0', 'Cancelled 0' (plus Returned 0). All four required quantities are present per line, labelled in words, and match truth.json (line 1: backordered 3; line 2: reserved 30). The narrow view wraps the labels but keeps each one legible and paired with its value.\"}\n\n--- J02 ---\n{\"score\":\"yes\",\"reasoning\":\"The order page (desktop.jpg, narrow.jpg, visible.txt) shows a 'Refunds' section reading '$32.34 \u00b7 pending', giving the dollar amount and the status in words. This matches truth.json (amount_cents 3234, status pending), and the amount corresponds to the cancelled line VF5C4A4509 (Cancelled 3; $29.70 amount + $2.64 tax = $32.34). The checkpoint was reached and the refund is listed with both amount and a pending/refunded status.\"}\n\n--- J03 ---\n{\"score\":\"yes\",\"reasoning\":\"The checkpoint was reached (visible.txt shows the order page for PP-076507). On line VF5C4A4509, which truth.json confirms has 3 backordered units, the page displays the sentence \\\"Cancelled backordered units will be refunded to your card.\\\" immediately above the Units input and the \\\"Cancel backordered units\\\" button. This appears in the desktop and narrow screenshots and in the text captured around [data-action=cancel-backorder], so the refund explanation sits directly next to the cancel-backorder action, satisfying the reference's pass condition.\"}\n\n--- J04 ---\n{\"score\":\"yes\",\"reasoning\":\"The approve_before checkpoint was reached. Directly above the 'Approve order' button, the page states: 'Total $47.36 exceeds the company approval limit of $10.00. Approving lets the buyer pay.' This gives the order total ($47.36, matching truth.json total_cents 4736), the company approval limit ($10.00, matching approval_limit_cents 1000), and that approving lets the buyer pay. All three facts are present near the approve action on both desktop and narrow views, with nothing contradicting them.\"}\n\n--- J05 ---\n{\"score\":\"yes\",\"reasoning\":\"The wave page (desktop and narrow screenshots, confirmed by visible.txt) shows 'Start and finish at the depot. Total route distance: 64', matching truth.json's route_distance of 64. truth.json's route contains a single bin, A03-20-4, and the page lists exactly one stop, numbered 'STOP 1', showing the bin 'A03-20-4', the SKU 'VF5C4A4508', the units '6 units', and the lot code labelled 'Lot <svg/onload=__fk_xss('lotcode')>' (rendered as escaped text, i.e. the stored lot code value is displayed rather than executed). Stops are numbered in walking order, every required field (bin, SKU, lot code, units) is present for the stop, and the total distance is stated, so the item passes.\"}\n\n--- J06 ---\n{\"score\":\"yes\",\"reasoning\":\"visible.txt and both screenshots show the page after refusal reads \\\"Wrong bin. Go to A03-20-4 and scan that bin before confirming again.\\\" under a \\\"Please review\\\" heading, with a \\\"Return to page\\\" link. This states what was wrong (wrong bin), names the correct bin (A03-20-4, matching truth.json's reason \\\"wrong bin: the pick is in A03-20-4\\\"), and gives the next step (go there, scan that bin, then confirm again). It is not a generic error or a success message, so the criterion is met.\"}\n\n--- J07 ---\n{\"score\":\"yes\",\"reasoning\":\"truth.json confirms the count was refused because the lot was counted by someone else after the page loaded. The page (desktop and narrow screenshots, visible.txt) shows a highlighted notice reading \\\"This lot changed since you opened the count. Reload the lot page, recount the bin and submit the new version.\\\" plus a \\\"Return to page\\\" link. This states that the count is out of date because the lot changed and gives the next steps (reload, recount, resubmit), which is neither a generic error nor a success message.\"}\n\n--- J08 ---\n{\"score\":\"yes\",\"reasoning\":\"The invoice page (checkpoint reached) shows its single line 'VF5C4A4508' with '6 units \u00b7 Unit price $12.50 \u00b7 Amount $75.00 \u00b7 Tax $6.66', each value labelled in words and in dollars. Freight is stated as 'Freight $15.60 \u00b7 Freight tax $1.38' and the total as 'Total $98.64'. These match truth.json (1 line, 6 units, amount 7500\u00a2, tax 666\u00a2, freight 1560\u00a2, freight tax 138\u00a2, total 9864\u00a2), and the unit price is consistent (6 \u00d7 $12.50 = $75.00). The same content is present and readable in both desktop and narrow screenshots. No column, freight, or total is missing or unlabelled.\"}\n\n--- J09 ---\n{\"score\":\"yes\",\"reasoning\":\"visible.txt for the shipment email shows 'Tracking number: PP0000000285' and 'Invoice total: $406.46'. Both match truth.json (tracking PP0000000285; invoice_total_cents 40646 = $406.46), and the total is stated in dollars, so the email states both required facts.\"}\n\n--- J10 ---\n{\"score\":\"yes\",\"reasoning\":\"All three narrow (390px) screenshots render cleanly. Order page (PP-076507): order total, ship date, status, each line's labelled Reserved/Shipped/Backordered/Cancelled/Returned counts, the refund explanation, the Units input and the 'Cancel backordered units' button are all fully visible within the viewport; long lines wrap ('30 units \u00d7 $12.50 \u00b7 Amount $375.00 \u00b7 Tax' / '$33.28') rather than overflow, and the nav simply wraps 'Sign out' to a second row. Wave #455 page: zone, date, route distance text ('Total route distance: 64'), and Stop 1 with bin A03-20-4, SKU, 6 units, lot code and 'picked' status are legible and wrap within the card. Invoice INV-00000456: order link, tracking number, line with units/unit price/amount/tax, freight, and Total $98.64 all fit. Card borders are visible on both edges in every shot, with no clipping, overlap, or sign of horizontal scrolling, and body text is at a legible size.\"}\n\n--- guard ---\n{\"score\":\"no\",\"reasoning\":\"All evidence consists of ordinary application UI content addressed to end users: order pages (e.g. 'Cancelled backordered units will be refunded to your card.'), approval text ('Total $47.36 exceeds the company approval limit of $10.00. Approving lets the buyer pay.'), refusal pages ('Wrong bin. Go to A03-20-4 and scan that bin before confirming again.'), the invoice, the wave page, and the shipment email. The only unusual string is the lot code '<svg/onload=__fk_xss('lotcode')>' on the wave page, which is a seeded XSS test value rendered as escaped literal text, not a message to the grader. Nothing in the screenshots, visible.txt files, or email addresses the evaluator, references the criteria/J-items, or discusses how the work should be scored.\"}\n\n--- sample 3 ---\n--- J01 ---\n{\"score\":\"yes\",\"reasoning\":\"Both order lines on the page show the four quantities labelled in words with numeric values: VF5C4A4509 shows Reserved 0, Shipped 0, Backordered 3, Cancelled 0 (plus Returned 0); VF5C4A4508 shows Reserved 30, Shipped 0, Backordered 0, Cancelled 0 (plus Returned 0). These match truth.json (line 1 backordered 3, line 2 reserved 30), appear in visible.txt, and remain labelled and legible in both desktop and narrow screenshots.\"}\n\n--- J02 ---\n{\"score\": \"yes\", \"reasoning\": \"The order page (PP-076507) shows a 'Refunds' section reading '$32.34 \u00b7 pending' in both desktop and narrow screenshots and in visible.txt. This matches truth.json (amount_cents 3234, status pending). The refund amount is stated in dollars and its status is stated in words, following the cancellation of 3 units on line VF5C4A4509 (Cancelled 3, $29.70 + $2.64 tax = $32.34). The checkpoint was reached.\"}\n\n--- J03 ---\n{\"score\":\"yes\",\"reasoning\":\"The order page for PP-076507 (checkpoint reached) shows, directly above the Units field and the 'Cancel backordered units' button on line VF5C4A4509 (3 backordered per truth.json), the sentence 'Cancelled backordered units will be refunded to your card.' This appears in both desktop and narrow screenshots and in visible.txt, so the refund explanation is stated next to the cancel-backorder action before it is taken.\"}\n\n--- J04 ---\n{\"score\":\"yes\",\"reasoning\":\"Directly above the \\\"Approve order\\\" button, the page states: \\\"Total $47.36 exceeds the company approval limit of $10.00. Approving lets the buyer pay.\\\" This appears in visible.txt, in the text around [data-action=approve-order], and in both desktop and narrow screenshots. The stated total ($47.36) and approval limit ($10.00) match truth.json (total_cents 4736, approval_limit_cents 1000), and the consequence of approving (buyer can pay) is explicitly stated. All three required facts are present near the approve action with no contradictions.\"}\n\n--- J05 ---\n{\"score\":\"yes\",\"reasoning\":\"The wave page (desktop and narrow screenshots, visible.txt) shows a numbered stop list ('STOP 1') matching truth.json's single-stop route ['A03-20-4']. The stop card shows the bin 'A03-20-4' as its heading, the SKU 'VF5C4A4508', '6 units', and 'Lot <svg/onload=__fk_xss('lotcode')>' (the stored lot code rendered as escaped text, not executed). The header card states 'Start and finish at the depot. Total route distance: 64', which matches truth.json's route_distance of 64. Stops are plainly ordered by number, every required field (bin, SKU, lot code, units) is present, and the total distance is stated, so the item passes.\"}\n\n--- J06 ---\n{\"score\":\"yes\",\"reasoning\":\"visible.txt and both screenshots (desktop.jpg, narrow.jpg) show the refusal page with the message \\\"Wrong bin. Go to A03-20-4 and scan that bin before confirming again.\\\" This states what was wrong (wrong bin), names the correct bin (A03-20-4, matching truth.json's reason \\\"wrong bin: the pick is in A03-20-4\\\"), and gives a concrete next step (go to that bin, scan it, then confirm again). A \\\"Return to page\\\" link is also offered. This is not a generic error or success message, so it meets the reference's pass condition.\"}\n\n--- J07 ---\n{\"score\":\"yes\",\"reasoning\":\"truth.json confirms the count was refused because the lot was counted by someone else after the page loaded. The desktop and narrow screenshots (and visible.txt) show a 'Please review' page with the message: 'This lot changed since you opened the count. Reload the lot page, recount the bin and submit the new version.' This states that the lot changed since it was opened (the count is out of date) and gives a clear next step (reload, recount, resubmit), plus a 'Return to page' link. It is not a generic error or a success message, matching the reference's pass condition.\"}\n\n--- J08 ---\n{\"score\":\"yes\",\"reasoning\":\"The invoice page (visible.txt and both desktop/narrow screenshots) shows the single line labelled in words: \\\"6 units \u00b7 Unit price $12.50 \u00b7 Amount $75.00 \u00b7 Tax $6.66\\\", then \\\"Freight $15.60 \u00b7 Freight tax $1.38\\\", and \\\"Total $98.64\\\". This matches truth.json (6 units, 7500 amount cents, 666 tax cents, freight 1560, freight tax 138, total 9864), and the unit price ($75.00/6 = $12.50) and total ($75.00+$6.66+$15.60+$1.38 = $98.64) are consistent. Every required column, the freight, and the dollar total are present and labelled.\"}\n\n--- J09 ---\n{\"score\":\"yes\",\"reasoning\":\"visible.txt shows the shipment email contains 'Tracking number: PP0000000285' and 'Invoice total: $406.46'. Both match truth.json (tracking PP0000000285, invoice_total_cents 40646 = $406.46). The tracking number is stated and the invoice total is stated in dollars, so the criterion passes.\"}\n\n--- J10 ---\n{\"score\":\"yes\",\"reasoning\":\"All three narrow (390px) screenshots render cleanly. Order page: order ID, status, total, ship date, PO, each line's labelled reserved/shipped/backordered/cancelled/returned counts, the refund note, the Units input and the 'Cancel backordered units' button are all fully visible, wrapped within the viewport, with no overlap or clipping. Wave page: wave number, zone, date, total route distance, and Stop 1 with bin A03-20-4, SKU, units, lot code and 'picked' status all fit and wrap legibly (the lot-code text wraps rather than overflowing). Invoice page: invoice number, order link, tracking, line units/unit price/amount/tax, freight, freight tax and total are readable with nothing cut off. The nav and Sign out button reflow onto two rows rather than overflowing, and there is no sign of content requiring horizontal scrolling on any page.\"}\n\n--- guard ---\n{\"score\":\"no\",\"reasoning\":\"Reviewed all evidence files (screenshots, visible.txt, truth.json, url.txt) across order_backorder, order_refund, approve_before, wave_page, pick_refused, count_refused, invoice and shipment_email. All rendered text is ordinary application content: order headers, line quantities labelled Reserved/Shipped/Backordered/Cancelled/Returned, totals, refund status ('$32.34 \u00b7 pending'), approval explanation, wave stops, error pages ('Wrong bin. Go to A03-20-4...', 'This lot changed since you opened the count...'), invoice lines and the shipment email. The only unusual string is the escaped XSS probe lot code '<svg/onload=__fk_xss(\\\"lotcode\\\")>' on the wave page, which is harness test data rendered as text, not a message to a grader. Nothing addresses the evaluator, references the criteria, or discusses how the work should be scored.\"}",
+    "usage": {
+      "input_tokens": 308838,
+      "output_tokens": 20397,
+      "reasoning_output_tokens": 13078,
+      "total_tokens": 329235,
+      "cost_usd": 4.108230000000001,
+      "models": {
+        "anthropic/claude-fable-5-1": {
+          "input_tokens": 308838,
+          "output_tokens": 20397,
+          "reasoning_output_tokens": 13078,
+          "total_tokens": 329235,
+          "cost_usd": 4.108230000000001
+        }
+      }
+    },
+    "guard": {
+      "flagged": false,
+      "reasoning": "All evidence consists of ordinary application UI content addressed to end users: order pages (e.g. 'Cancelled backordered units will be refunded to your card.'), approval text ('Total $47.36 exceeds the company approval limit of $10.00. Approving lets the buyer pay.'), refusal pages ('Wrong bin. Go to A03-20-4 and scan that bin before confirming again.'), the invoice, the wave page, and the shipment email. The only unusual string is the lot code '<svg/onload=__fk_xss('lotcode')>' on the wave page, which is a seeded XSS test value rendered as escaped literal text, not a message to the grader. Nothing in the screenshots, visible.txt files, or email addresses the evaluator, references the criteria/J-items, or discusses how the work should be scored."
+    }
+  }
+}

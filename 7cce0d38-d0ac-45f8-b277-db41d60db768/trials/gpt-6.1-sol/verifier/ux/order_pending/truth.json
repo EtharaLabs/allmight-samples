@@ -1,0 +1,13 @@
+{
+ "status": "pending",
+ "face_cents": [
+  4850,
+  4850
+ ],
+ "service_fee_cents": 728,
+ "facility_fee_cents": 500,
+ "tax_cents": 925,
+ "total_cents": 11853,
+ "hold_seconds": 120,
+ "order_id": 1002741
+}

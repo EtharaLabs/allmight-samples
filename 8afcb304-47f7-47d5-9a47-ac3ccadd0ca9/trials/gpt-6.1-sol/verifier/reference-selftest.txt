@@ -1,0 +1,28 @@
+ok   ex1
+ok   ex2 12-07
+ok   ex2 12-14
+ok   ex2 12-21
+ok   ex2 12-28
+ok   ex2 01-04
+ok   ex2 counts
+ok   ex3 rooms
+ok   ex3 gap
+ok   ex3 pick
+ok   ex3 daily limit
+ok   gap local
+ok   gap utc
+ok   gap window
+ok   fold local
+ok   fold count
+ok   fold window
+ok   ex4 deposit
+ok   ex4 refunds
+ok   bands
+ok   tie deposits
+ok   elapsed forward
+ok   elapsed forward refund
+ok   elapsed back
+ok   elapsed back refund
+ok   R8.4
+ok   R8.4 self
+all examples reproduce

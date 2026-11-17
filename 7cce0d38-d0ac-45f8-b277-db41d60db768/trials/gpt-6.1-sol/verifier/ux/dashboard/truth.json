@@ -1,0 +1,37 @@
+{
+ "event_id": 1002668,
+ "figures": {
+  "total": {
+   "capacity": 90,
+   "sold": 2,
+   "held": 0,
+   "available": 88,
+   "admitted": 0,
+   "gross": 11853,
+   "refunded": 0,
+   "net": 11853
+  },
+  "sections": {
+   "BALC": {
+    "capacity": 30,
+    "sold": 0,
+    "held": 0,
+    "available": 30,
+    "admitted": 0,
+    "gross": 0,
+    "refunded": 0,
+    "net": 0
+   },
+   "FLOOR": {
+    "capacity": 60,
+    "sold": 2,
+    "held": 0,
+    "available": 58,
+    "admitted": 0,
+    "gross": 11853,
+    "refunded": 0,
+    "net": 11853
+   }
+  }
+ }
+}

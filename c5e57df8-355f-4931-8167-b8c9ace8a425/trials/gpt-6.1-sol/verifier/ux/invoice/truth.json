@@ -1,0 +1,15 @@
+{
+ "invoice": {
+  "lines": [
+   {
+    "line_no": 1,
+    "units": 6,
+    "amount_cents": 7500,
+    "tax_cents": 666
+   }
+  ],
+  "freight": 1560,
+  "freight_tax": 138,
+  "total": 9864
+ }
+}

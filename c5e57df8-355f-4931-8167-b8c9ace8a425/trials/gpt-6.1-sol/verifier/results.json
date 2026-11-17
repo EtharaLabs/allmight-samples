@@ -1,0 +1,1039 @@
+{
+ "workflows": {
+  "W01": {
+   "title": "Password links, sign-in, sessions and return paths (anti-enumeration, single use, expiry, fixation, open redirect)",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "finance and a supervisor set passwords from emailed links and sign in",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.818
+    },
+    {
+     "name": "a known and an unknown address get the same status and message; the unknown one gets no email",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.4
+    },
+    {
+     "name": "an inactive user's address receives no email",
+     "ok": true,
+     "detail": "",
+     "seconds": 4.35
+    },
+    {
+     "name": "a newer link replaces the older one; the older one sets nothing; a used link changes nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.891
+    },
+    {
+     "name": "an expired link changes nothing; an unknown link answers 404",
+     "ok": true,
+     "detail": "",
+     "seconds": 93.782
+    },
+    {
+     "name": "sign-in matches the address case-insensitively and padded; wrong password and unknown address are refused alike",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.165
+    },
+    {
+     "name": "signing in starts a new session identifier; an identifier held before never becomes signed in",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.917
+    },
+    {
+     "name": "signing out ends the session on the server",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.678
+    },
+    {
+     "name": "a visitor sent to sign in returns to the page afterwards; sign-in never redirects to another site",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.754
+    }
+   ],
+   "error": null,
+   "seconds": 109.8
+  },
+  "W02": {
+   "title": "Setting up: customers, users, SKUs, receipts and prices with validation, lot identity and role checks",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "finance adds a customer and a buyer; an address on file (any case and spacing) and a control-character name are refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.157
+    },
+    {
+     "name": "a supervisor adds a SKU (code stored upper-cased); a duplicate code in other case and an invalid case pack are refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.483
+    },
+    {
+     "name": "receipts: a new lot, the same lot again (code in other case and spacing), conflicting lot data and wrong-zone bins are refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.887
+    },
+    {
+     "name": "finance adds prices; the same tier, SKU and date again is refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.627
+    },
+    {
+     "name": "each role is refused other roles' pages and actions with 403, and nothing changes",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.597
+    }
+   ],
+   "error": null,
+   "seconds": 13.8
+  },
+  "W03": {
+   "title": "Order pricing rules: tier prices on the ship date, per-line tax, dimensional-weight freight, cold chain, free freight",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "SKUs with tier prices that change on a ship date, plus a SKU priced only later",
+     "ok": true,
+     "detail": "",
+     "seconds": 28.036
+    },
+    {
+     "name": "customers in nine states and three tiers, with keys",
+     "ok": true,
+     "detail": "",
+     "seconds": 15.86
+    },
+    {
+     "name": "130 orders through the API: every price, tax, freight and total matches the rules; refused ones answer 422",
+     "ok": true,
+     "detail": "",
+     "seconds": 43.569
+    },
+    {
+     "name": "hard cases: half-cent line and freight taxes, exact half-kilogram boundaries, per-line billable weight, split cases",
+     "ok": true,
+     "detail": "",
+     "seconds": 54.951
+    }
+   ],
+   "error": null,
+   "seconds": 142.4
+  },
+  "W04": {
+   "title": "Approval limits: the boundary, approvers only (never their own), other companies refused, emails to approvers",
+   "weight": 3.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a company with an approval limit, a buyer, two approvers, and another company's approver",
+     "ok": true,
+     "detail": "",
+     "seconds": 7.204
+    },
+    {
+     "name": "a total equal to the limit needs no approval; one cent... one unit more does, and each other approver is emailed",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.925
+    },
+    {
+     "name": "an approver's own order emails only the other approver",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.797
+    },
+    {
+     "name": "the buyer cannot pay or approve; another company's approver and the creating approver cannot approve",
+     "ok": true,
+     "detail": "",
+     "seconds": 4.625
+    },
+    {
+     "name": "the other approver approves; approving again or approving a cancelled order is refused with 409",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.384
+    }
+   ],
+   "error": null,
+   "seconds": 23.9
+  },
+  "W05": {
+   "title": "Checkout and webhooks: session details, only signed events confirm, forged/stale refused, out of order, duplicates, late payment refunded",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a company, a SKU with stock, and three orders",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.293
+    },
+    {
+     "name": "paying redirects to a Checkout Session with the stated amount, metadata, email and return URLs; paying again reuses it",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.459
+    },
+    {
+     "name": "with deliveries held, the card is paid and the buyer returns to success_url: the order stays unpaid",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.835
+    },
+    {
+     "name": "unsigned, mis-signed, stale and wrong-key deliveries are answered 400 and change nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.773
+    },
+    {
+     "name": "payment_intent.succeeded first changes nothing; the signed checkout.session.completed then confirms once",
+     "ok": true,
+     "detail": "",
+     "seconds": 12.046
+    },
+    {
+     "name": "a declined card leaves the order unpaid",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.965
+    },
+    {
+     "name": "a payment that completes after the order was cancelled is refunded in full through the provider, once",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.919
+    }
+   ],
+   "error": null,
+   "seconds": 35.3
+  },
+  "W06": {
+   "title": "FEFO allocation rules: shelf life on the ship date, expiry ties by lot id, whole and split cases, backorder or cancel, fills",
+   "weight": 5.0,
+   "critical": true,
+   "passed": false,
+   "steps": [
+    {
+     "name": "six companies with different contracts; 24 SKUs with lots expiring around each shelf-life threshold",
+     "ok": true,
+     "detail": "",
+     "seconds": 46.297
+    },
+    {
+     "name": "lots received: 2 to 5 per SKU, with ties on expiry",
+     "ok": true,
+     "detail": "",
+     "seconds": 59.381
+    },
+    {
+     "name": "130 orders paid one after another (a second batch of receipts arrives half way): every allocation matches FEFO",
+     "ok": true,
+     "detail": "",
+     "seconds": 640.066
+    },
+    {
+     "name": "across the next two clock changes, a lot exactly at the shelf-life floor is eligible and one a day short is not",
+     "ok": false,
+     "detail": "adding a standard price for VF5C4A4248 answered 409",
+     "seconds": 61.871
+    }
+   ],
+   "error": "adding a standard price for VF5C4A4248 answered 409",
+   "seconds": 807.6
+  },
+  "W07": {
+   "title": "Backorders: whole cases, fills by order id with each order's own shelf life, cancelled units refunded exactly",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "two companies: backorders with whole cases and 10 days' shelf life; no backorders with split cases",
+     "ok": true,
+     "detail": "",
+     "seconds": 13.092
+    },
+    {
+     "name": "payments allocate whole cases and backorder the rest, or cancel and refund it",
+     "ok": true,
+     "detail": "",
+     "seconds": 26.851
+    },
+    {
+     "name": "receipts fill backorders by order id, each with its own ship date's shelf life",
+     "ok": true,
+     "detail": "",
+     "seconds": 18.548
+    },
+    {
+     "name": "cancelling backordered units refunds exactly; out-of-range cancellations are refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 13.727
+    },
+    {
+     "name": "every refund carries order and refund metadata and its own Idempotency-Key",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.04
+    },
+    {
+     "name": "an order whose every unit is cancelled at payment refunds its whole total, freight included, and is cancelled",
+     "ok": true,
+     "detail": "",
+     "seconds": 8.071
+    }
+   ],
+   "error": null,
+   "seconds": 86.3
+  },
+  "W09": {
+   "title": "Pick paths: wave task selection and the exact shortest route with the dictionary-order tie-break",
+   "weight": 5.0,
+   "critical": true,
+   "passed": false,
+   "steps": [
+    {
+     "name": "90 SKUs each with one lot in a chosen bin (shared bins, stacked levels, mirrored bays)",
+     "ok": false,
+     "detail": "adding a platinum price for VF5C4A4416 answered 409",
+     "seconds": 198.086
+    }
+   ],
+   "error": "adding a platinum price for VF5C4A4416 answered 409",
+   "seconds": 198.1
+  },
+  "W10": {
+   "title": "Picking: scans must match bin and lot, quantities validated, zones enforced, short picks hold the lot and re-allocate",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "pickers for zones A and C; a whole-case company; SKU lots in two bins",
+     "ok": true,
+     "detail": "",
+     "seconds": 23.026
+    },
+    {
+     "name": "a zone C picker gets 403 for the zone A wave and its picks, and nothing changes",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.674
+    },
+    {
+     "name": "a wrong bin or lot is refused with 409, bad quantities with 422, a token-less confirm with 403; nothing changes",
+     "ok": true,
+     "detail": "",
+     "seconds": 8.199
+    },
+    {
+     "name": "a short pick (codes typed in other case and spacing) holds the lot and re-allocates the rest from the next lot",
+     "ok": true,
+     "detail": "",
+     "seconds": 13.553
+    },
+    {
+     "name": "a short pick with nothing left to allocate cancels and refunds for a company without backorders",
+     "ok": true,
+     "detail": "",
+     "seconds": 7.642
+    }
+   ],
+   "error": null,
+   "seconds": 56.1
+  },
+  "W11": {
+   "title": "Cycle counts: version checks, adjustments with picked units, releases newest first, re-allocation, holds cleared, fills",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "lots with known versions; a stale count is refused with 409 and changes nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 10.38
+    },
+    {
+     "name": "picked units waiting to ship are added to the count",
+     "ok": true,
+     "detail": "",
+     "seconds": 10.607
+    },
+    {
+     "name": "a count below the open reservations releases the newest order's units first and re-allocates them",
+     "ok": true,
+     "detail": "",
+     "seconds": 26.21
+    },
+    {
+     "name": "a count clears a short pick's hold and fills backorders from the counted lot",
+     "ok": true,
+     "detail": "",
+     "seconds": 16.055
+    }
+   ],
+   "error": null,
+   "seconds": 63.3
+  },
+  "W12": {
+   "title": "Shipping and invoices: tracking, cumulative line tax across shipments, freight on the first shipment only, emails",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a NY company orders taxable tins, oil and cheese; part of the tins are backordered",
+     "ok": true,
+     "detail": "",
+     "seconds": 17.676
+    },
+    {
+     "name": "while picks are open there is no ship form and shipping is refused with 409",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.992
+    },
+    {
+     "name": "the first shipment invoices its lines with tax and the order's freight; the buyer is emailed the tracking number",
+     "ok": true,
+     "detail": "",
+     "seconds": 11.933
+    },
+    {
+     "name": "the backorder fills, ships second: cumulative tax and no freight; the order completes and invoices plus refunds equal the charge",
+     "ok": true,
+     "detail": "",
+     "seconds": 9.546
+    }
+   ],
+   "error": null,
+   "seconds": 42.1
+  },
+  "W13": {
+   "title": "Refunds under provider faults: retries keep one Idempotency-Key, one provider refund each, complete only on a signed refund.created",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a company with five paid orders whose units are all backordered",
+     "ok": true,
+     "detail": "",
+     "seconds": 32.187
+    },
+    {
+     "name": "provider fault 'error' on the refund call: exactly one provider refund, one key, refunded, one email",
+     "ok": true,
+     "detail": "",
+     "seconds": 14.491
+    },
+    {
+     "name": "provider fault 'timeout' on the refund call: exactly one provider refund, one key, refunded, one email",
+     "ok": true,
+     "detail": "",
+     "seconds": 18.249
+    },
+    {
+     "name": "provider fault 'lost_response' on the refund call: exactly one provider refund, one key, refunded, one email",
+     "ok": true,
+     "detail": "",
+     "seconds": 11.074
+    },
+    {
+     "name": "provider fault 'slow' on the refund call: exactly one provider refund, one key, refunded, one email",
+     "ok": true,
+     "detail": "",
+     "seconds": 11.134
+    },
+    {
+     "name": "a refund stays pending until its refund.created verifies; a forged one changes nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 10.176
+    }
+   ],
+   "error": null,
+   "seconds": 97.3
+  },
+  "W14": {
+   "title": "Returns: limits, quarantine, exact credit notes, restock only when not short-dated, write-offs, refills",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a NY company buys 30 tins from three lots expiring in 6, 7 and 30 days; they ship",
+     "ok": true,
+     "detail": "",
+     "seconds": 19.123
+    },
+    {
+     "name": "return requests beyond the shipped units, without a reason, or on another company's order are refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.25
+    },
+    {
+     "name": "receiving puts the units in quarantine and issues the exact credit note, emailed once; stock is unchanged",
+     "ok": true,
+     "detail": "",
+     "seconds": 8.141
+    },
+    {
+     "name": "restocking a lot that expires within 7 days writes it off; damaged goods are written off; nothing is added",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.425
+    },
+    {
+     "name": "a return from a lot with 7 days left is restocked into that lot and fills a backorder",
+     "ok": true,
+     "detail": "",
+     "seconds": 25.78
+    }
+   ],
+   "error": null,
+   "seconds": 61.7
+  },
+  "W08": {
+   "title": "Concurrency: racing payments for the last units, double cancellations, double shipments and simultaneous counts",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "six orders for the last 12 units are paid while confirmations are held",
+     "ok": true,
+     "detail": "",
+     "seconds": 58.273
+    },
+    {
+     "name": "the same cancellation submitted twice at once cancels and refunds once",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.156
+    },
+    {
+     "name": "two simultaneous ship requests make one shipment and one stock movement",
+     "ok": true,
+     "detail": "",
+     "seconds": 11.132
+    },
+    {
+     "name": "two counts with the same version at the same moment: exactly one succeeds",
+     "ok": true,
+     "detail": "",
+     "seconds": 4.274
+    }
+   ],
+   "error": null,
+   "seconds": 79.8
+  },
+  "W16": {
+   "title": "The old system's ambient stock: on-hand rows for zone A lots and FEFO over them",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "the on-hand report lists every ambient lot of the old system exactly, within 60 seconds",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.931
+    },
+    {
+     "name": "orders on 30 ambient SKUs of the old system allocate by FEFO over its lots (expired, held, quarantined, odd codes)",
+     "ok": true,
+     "detail": "",
+     "seconds": 254.757
+    },
+    {
+     "name": "the on-hand report shows those reservations on the ambient lots",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.944
+    }
+   ],
+   "error": null,
+   "seconds": 256.6
+  },
+  "W26": {
+   "title": "The old system's cold stock: on-hand rows for chilled, frozen and quarantined lots and FEFO over them",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "the on-hand report lists every cold lot of the old system exactly, within 60 seconds",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.055
+    },
+    {
+     "name": "orders on 30 cold SKUs of the old system allocate by FEFO over its lots (expired, held, quarantined, odd codes)",
+     "ok": true,
+     "detail": "",
+     "seconds": 258.67
+    },
+    {
+     "name": "the on-hand report shows those reservations on the cold lots",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.86
+    }
+   ],
+   "error": null,
+   "seconds": 260.6
+  },
+  "W17": {
+   "title": "FIFO valuation and the ledger on the fall-back nights: instants inside the repeated hour, wall-clock order versus real order",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "valuation as of 2026-11-01T01:30:00-04:00 matches FIFO over the old system's movements for every SKU",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.793
+    },
+    {
+     "name": "valuation as of 2026-11-01T01:30:00-05:00 matches FIFO over the old system's movements for every SKU",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.798
+    },
+    {
+     "name": "valuation as of 2026-11-01T01:05:00-05:00 matches FIFO over the old system's movements for every SKU",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.821
+    },
+    {
+     "name": "valuation as of 2025-11-02T06:20:00Z matches FIFO over the old system's movements for every SKU",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.332
+    },
+    {
+     "name": "valuation as of 2025-11-02T01:59:59-04:00 matches FIFO over the old system's movements for every SKU",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.404
+    },
+    {
+     "name": "valuation as of 2026-11-09T23:59:59+00:00 matches FIFO over the old system's movements for every SKU",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.778
+    },
+    {
+     "name": "the ledger of SKUs with movements in a repeated hour lists them at the right UTC instants, in order",
+     "ok": true,
+     "detail": "",
+     "seconds": 36.981
+    }
+   ],
+   "error": null,
+   "seconds": 40.9
+  },
+  "W27": {
+   "title": "FIFO valuation across the skipped spring hour and same-instant receipts, and now: newest layers, half-cent totals",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "valuation as of 2026-03-08T06:59:59Z matches FIFO over the old system's movements for every SKU",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.492
+    },
+    {
+     "name": "valuation as of 2026-03-08T07:00:00Z matches FIFO over the old system's movements for every SKU",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.486
+    },
+    {
+     "name": "valuation as of 2026-03-08T03:30:00-04:00 matches FIFO over the old system's movements for every SKU",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.536
+    },
+    {
+     "name": "valuation as of 2026-03-08T01:59:59-05:00 matches FIFO over the old system's movements for every SKU",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.542
+    },
+    {
+     "name": "valuation as of 2026-06-15T14:30:00Z matches FIFO over the old system's movements for every SKU",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.613
+    },
+    {
+     "name": "valuation as of 2026-06-15T14:29:59Z matches FIFO over the old system's movements for every SKU",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.653
+    },
+    {
+     "name": "the ledger of SKUs with movements stored in the skipped hour lists them at the stated instants",
+     "ok": true,
+     "detail": "",
+     "seconds": 18.78
+    },
+    {
+     "name": "new receipts at half-cent costs, negative and positive counts: valued now, newest layers first, half-up",
+     "ok": true,
+     "detail": "",
+     "seconds": 10.474
+    },
+    {
+     "name": "an as_of without an offset is answered 400; a supervisor gets 403",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.126
+    }
+   ],
+   "error": null,
+   "seconds": 33.7
+  },
+  "W18": {
+   "title": "Order history export: the old system's orders in UTC (folds), company scoping, quoting and spreadsheet safety",
+   "weight": 3.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a buyer of a company with an odd name (from the old system) exports their history: exact rows in UTC",
+     "ok": true,
+     "detail": "",
+     "seconds": 7.77
+    },
+    {
+     "name": "finance exports every order, the old system's exactly; a supervisor gets 403",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.733
+    }
+   ],
+   "error": null,
+   "seconds": 8.5
+  },
+  "W19": {
+   "title": "Low-stock email: below the reorder point, expired and held lots excluded, once per SKU per day to each active supervisor",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a deactivated supervisor, a SKU with a reorder point of 20 and 30 units: no email yet",
+     "ok": true,
+     "detail": "",
+     "seconds": 10.429
+    },
+    {
+     "name": "an allocation takes it to 18: every active supervisor gets one email naming the SKU, 18 and 20",
+     "ok": true,
+     "detail": "",
+     "seconds": 7.242
+    },
+    {
+     "name": "further drops and a receipt the same day send nothing more; the deactivated supervisor got nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 12.407
+    },
+    {
+     "name": "expired lots do not count: stock that is all expired triggers the email at once",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.727
+    }
+   ],
+   "error": null,
+   "seconds": 35.8
+  },
+  "W20": {
+   "title": "API keys and the order API: shown once, scoped to the company, revocation, inactive users, validation, mass assignment",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a key is shown once and works; it is not shown again",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.61
+    },
+    {
+     "name": "malformed bodies answer 400; invalid orders answer 422 with errors and create nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 30.138
+    },
+    {
+     "name": "extra JSON keys never change the company, prices or status",
+     "ok": true,
+     "detail": "",
+     "seconds": 7.029
+    },
+    {
+     "name": "a revoked key, an unknown key and the key of a deactivated user answer 401",
+     "ok": true,
+     "detail": "",
+     "seconds": 12.78
+    }
+   ],
+   "error": null,
+   "seconds": 56.6
+  },
+  "W21": {
+   "title": "Tenancy and mass assignment: another company's orders, shipments, returns and actions; hidden fields change nothing",
+   "weight": 4.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "company A has a shipped order with a received return; company B has a buyer and an approver",
+     "ok": true,
+     "detail": "",
+     "seconds": 20.762
+    },
+    {
+     "name": "company B's buyer gets 404/403 and none of the data for A's order, shipment, invoice and return",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.967
+    },
+    {
+     "name": "company B's buyer and approver cannot act on A's order; nothing changes",
+     "ok": true,
+     "detail": "",
+     "seconds": 7.548
+    },
+    {
+     "name": "hidden order fields change nothing: the order belongs to the buyer's company at list prices",
+     "ok": true,
+     "detail": "",
+     "seconds": 4.832
+    },
+    {
+     "name": "the profile form changes only the display name; an approver cannot change the company's limit",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.152
+    }
+   ],
+   "error": null,
+   "seconds": 37.3
+  },
+  "W22": {
+   "title": "Every state change needs the session token: orders, approvals, payments, returns, stock, prices, customers, users, keys",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "fixtures: orders awaiting approval, awaiting payment, backordered, shipped; returns; a wave; keys",
+     "ok": true,
+     "detail": "",
+     "seconds": 47.915
+    },
+    {
+     "name": "each form submitted without its token is refused with 403 and changes nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 27.637
+    }
+   ],
+   "error": null,
+   "seconds": 75.6
+  },
+  "W23": {
+   "title": "In a real browser: layout at 1280 and 390 px, typed text never runs as script, paying through the hosted page",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "records carrying script payloads in every typed field",
+     "ok": true,
+     "detail": "",
+     "seconds": 20.311
+    },
+    {
+     "name": "signing in through the browser form reaches a signed-in page",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.342
+    },
+    {
+     "name": "evidence pages for the experience review",
+     "ok": true,
+     "detail": "",
+     "seconds": 29.498
+    },
+    {
+     "name": "every page stays within 1280 and 390 CSS pixels without horizontal scrolling",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.979
+    },
+    {
+     "name": "names, codes, PO numbers, notes, reasons and labels are shown as text everywhere, error pages included",
+     "ok": true,
+     "detail": "",
+     "seconds": 10.304
+    },
+    {
+     "name": "the buyer pays by clicking through the hosted page and returns to an order awaiting confirmation, then paid",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.866
+    }
+   ],
+   "error": null,
+   "seconds": 73.4
+  },
+  "W24": {
+   "title": "Deployment: README, conservation, restart persistence, a pending refund survives a restart, nothing re-sent, no secrets at rest, records kept",
+   "weight": 3.0,
+   "critical": false,
+   "passed": false,
+   "steps": [
+    {
+     "name": "README.md and an executable start.sh are in the workspace",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.0
+    },
+    {
+     "name": "for every SKU the verifier touched, each lot's ledger adds up to its on-hand and nothing is negative",
+     "ok": true,
+     "detail": "",
+     "seconds": 48.018
+    },
+    {
+     "name": "a refund whose provider call hangs when the application restarts is completed afterwards, exactly once",
+     "ok": true,
+     "detail": "",
+     "seconds": 22.681
+    },
+    {
+     "name": "after the restart: passwords, keys, orders and stock are kept and no email is sent again",
+     "ok": true,
+     "detail": "",
+     "seconds": 10.911
+    },
+    {
+     "name": "no password, API key, reset token or session identifier is stored in plain text",
+     "ok": false,
+     "detail": "plain-text secret stored in ['pp_state.data']",
+     "seconds": 12.598
+    }
+   ],
+   "error": "plain-text secret stored in ['pp_state.data']",
+   "seconds": 94.2
+  },
+  "W25": {
+   "title": "Health follows the database: non-2xx within 10 s of a stop, 200 within 60 s of a start",
+   "weight": 2.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "/healthz answers 200 while the database is up",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.007
+    },
+    {
+     "name": "within 10 s of the database stopping, /healthz answers a non-2xx status within 5 s",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.225
+    },
+    {
+     "name": "within 60 s of the database starting again, /healthz answers 200 without a restart",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.012
+    }
+   ],
+   "error": null,
+   "seconds": 0.4
+  }
+ },
+ "breaches": {
+  "X8": [
+   "[W24] plain-text secret in ['pp_state.data']"
+  ]
+ },
+ "surfaces": {
+  "signin": true
+ },
+ "observations": {
+  "W01": {
+   "session_cookies": [
+    "pickpath"
+   ]
+  },
+  "W03": {
+   "accepted": 117,
+   "refused": 13,
+   "hard_cases": {
+    "line tax tie": 49,
+    "freight tax tie": 12,
+    "weight boundary": 72,
+    "split case": 14
+   }
+  },
+  "W06": {
+   "backordered_lines": 91,
+   "cancelled_lines": 72
+  },
+  "W16": {
+   "seconds": 0.8,
+   "lots": 17154,
+   "orders": 30
+  },
+  "W26": {
+   "seconds": 0.9,
+   "lots": 12850,
+   "orders": 29
+  },
+  "W25": {
+   "non2xx_after_s": 0.0,
+   "back_after_s": 0.0
+  }
+ }
+}

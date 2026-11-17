@@ -1,0 +1,1009 @@
+{
+ "workflows": {
+  "W01": {
+   "title": "Accounts and sessions: verification, reset links, refusals, session rotation, sign-out, next=",
+   "weight": 4.0,
+   "critical": false,
+   "passed": false,
+   "steps": [
+    {
+     "name": "sign-up sends a verification link; sign-in is refused until it is followed; addresses match ignoring case and spaces",
+     "ok": true,
+     "detail": "",
+     "seconds": 10.812
+    },
+    {
+     "name": "signing up again before verifying replaces the link and password; an old or expired link verifies nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 45.09
+    },
+    {
+     "name": "sign-up is refused for a verified address, an organization member's address, and a name with a control character",
+     "ok": true,
+     "detail": "",
+     "seconds": 19.032
+    },
+    {
+     "name": "password reset: same answer for known and unknown addresses; single use; replaced; expired; unknown link 404",
+     "ok": false,
+     "detail": "FormNotFound: no form with a data-action='request-reset' button",
+     "seconds": 1.094
+    }
+   ],
+   "error": "FormNotFound: no form with a data-action='request-reset' button",
+   "seconds": 76.0
+  },
+  "W02": {
+   "title": "Organizations: invitations, the five-role permission matrix, cross-organization isolation",
+   "weight": 4.0,
+   "critical": false,
+   "passed": false,
+   "steps": [
+    {
+     "name": "an account creates an organization and becomes its owner",
+     "ok": true,
+     "detail": "",
+     "seconds": 15.734
+    },
+    {
+     "name": "the owner invites a manager, box office and two scanners; invitations are emailed and accepted",
+     "ok": true,
+     "detail": "",
+     "seconds": 51.576
+    },
+    {
+     "name": "an invitation never makes an owner; an existing member cannot be invited again; a token-less invite is refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 19.898
+    },
+    {
+     "name": "an invitation link works only for the invited address; a visitor is sent to sign in",
+     "ok": true,
+     "detail": "",
+     "seconds": 38.3
+    },
+    {
+     "name": "each role reaches exactly the pages R1.3 allows (403 otherwise); a non-member gets 403; a visitor is sent to sign in",
+     "ok": true,
+     "detail": "",
+     "seconds": 44.74
+    },
+    {
+     "name": "forbidden actions answer 403 and change nothing; allowed ones work",
+     "ok": true,
+     "detail": "",
+     "seconds": 18.948
+    },
+    {
+     "name": "the owner changes roles and removes members; permissions follow at once; the owner's own role cannot change",
+     "ok": true,
+     "detail": "",
+     "seconds": 10.956
+    },
+    {
+     "name": "another organization's events, tickets and devices stay out of reach, even through this organization's URLs",
+     "ok": true,
+     "detail": "",
+     "seconds": 47.233
+    },
+    {
+     "name": "extra form fields never move an invitation or an event into another organization",
+     "ok": false,
+     "detail": "FormNotFound: no form with a data-action='request-reset' button",
+     "seconds": 17.625
+    }
+   ],
+   "error": "FormNotFound: no form with a data-action='request-reset' button",
+   "seconds": 265.0
+  },
+  "W03": {
+   "title": "Venues and seat maps; events in venue time zones (folds, gaps); drafts, publishing, rescheduling",
+   "weight": 3.0,
+   "critical": false,
+   "passed": false,
+   "steps": [
+    {
+     "name": "a manager builds a venue with sections, row ranges and accessible seats; bad sections are refused",
+     "ok": false,
+     "detail": "sections and seat counts on the venue page expected {'UPPER': '36', 'LOWER': '90'}, got {'UPPER': '36', 'LOWER': '90', 'LOWER2': '10'}",
+     "seconds": 38.284
+    }
+   ],
+   "error": "sections and seat counts on the venue page expected {'UPPER': '36', 'LOWER': '90'}, got {'UPPER': '36', 'LOWER': '90', 'LOWER2': '10'}",
+   "seconds": 38.3
+  },
+  "W04": {
+   "title": "Sales windows: presale with a code, on-sale, off-sale, at the venue's local times",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "an event with a presale, on-sale and off-sale a minute apart, typed in the venue's local time",
+     "ok": true,
+     "detail": "",
+     "seconds": 32.84
+    },
+    {
+     "name": "before the presale nobody may hold seats, code or not",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.478
+    },
+    {
+     "name": "during the presale a hold needs the code (any case, spaces ignored)",
+     "ok": true,
+     "detail": "",
+     "seconds": 87.083
+    },
+    {
+     "name": "from on-sale anyone may hold seats without a code",
+     "ok": true,
+     "detail": "",
+     "seconds": 60.857
+    },
+    {
+     "name": "from off-sale nobody may hold seats",
+     "ok": true,
+     "detail": "",
+     "seconds": 54.207
+    }
+   ],
+   "error": null,
+   "seconds": 237.5
+  },
+  "W05": {
+   "title": "Purchase: seat map, hold, price breakdown, Checkout Session, hosted payment, webhook, tickets, one email",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a published event shows its seat map with prices, availability and accessible seats",
+     "ok": true,
+     "detail": "",
+     "seconds": 28.163
+    },
+    {
+     "name": "an accessible seat needs the accessible-seating box; a hold creates a pending order with an expiry",
+     "ok": true,
+     "detail": "",
+     "seconds": 8.651
+    },
+    {
+     "name": "Pay redirects to one Checkout Session for the order total; pressing it again goes to the same session",
+     "ok": true,
+     "detail": "",
+     "seconds": 4.401
+    },
+    {
+     "name": "paying on the hosted page returns to the order page; only the webhook marks it paid and issues tickets",
+     "ok": true,
+     "detail": "",
+     "seconds": 4.527
+    },
+    {
+     "name": "exactly one confirmation email lists every seat, ticket id and QR token, addressed with the buyer's name",
+     "ok": true,
+     "detail": "",
+     "seconds": 4.645
+    },
+    {
+     "name": "My tickets and the ticket pages show the tickets; the event page shows the seats sold",
+     "ok": true,
+     "detail": "",
+     "seconds": 10.931
+    }
+   ],
+   "error": null,
+   "seconds": 61.3
+  },
+  "W06": {
+   "title": "Prices at scale: fees, tax, stacked codes, largest-remainder allocation and rounding ties on every line",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "pricing events with the fixture's section prices, facility fees and promo codes",
+     "ok": true,
+     "detail": "",
+     "seconds": 289.601
+    },
+    {
+     "name": "each of 116 orders shows every line's face, discount share, fees, tax share and total exactly",
+     "ok": true,
+     "detail": "",
+     "seconds": 1011.581
+    },
+    {
+     "name": "seat order decides ties: sections created out of order (ZED, MID, ALP), seat 9 before seat 10",
+     "ok": true,
+     "detail": "",
+     "seconds": 208.405
+    },
+    {
+     "name": "paid orders charge exactly the quoted total and keep their breakdown",
+     "ok": true,
+     "detail": "",
+     "seconds": 101.524
+    }
+   ],
+   "error": null,
+   "seconds": 1611.1
+  },
+  "W07": {
+   "title": "Promo codes: case-insensitive entry, one percent plus one fixed, refusals, locking at Pay, caps under concurrency",
+   "weight": 4.0,
+   "critical": true,
+   "passed": false,
+   "steps": [
+    {
+     "name": "an owner creates codes; malformed or duplicate codes are refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 78.395
+    },
+    {
+     "name": "codes apply in any case; one percent and one fixed stack; repeats, a second percent code and other events' codes are refused",
+     "ok": false,
+     "detail": "no remove form for code SPRING20 on order 1001014",
+     "seconds": 14.136
+    }
+   ],
+   "error": "no remove form for code SPRING20 on order 1001014",
+   "seconds": 92.5
+  },
+  "W08": {
+   "title": "Holds: expiry from creation, release, provider sessions expired, late payments confirmed or refunded",
+   "weight": 5.0,
+   "critical": true,
+   "passed": false,
+   "steps": [
+    {
+     "name": "a hold expires HOLD_TTL_SECONDS after it was created, even when Pay was pressed later",
+     "ok": true,
+     "detail": "",
+     "seconds": 95.324
+    },
+    {
+     "name": "at expiry the order is expired and its seats are available at once to the next buyer",
+     "ok": true,
+     "detail": "",
+     "seconds": 69.966
+    },
+    {
+     "name": "the expired order's Checkout Session is expired at the provider within 30 s",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.002
+    },
+    {
+     "name": "a payment completing after expiry, with the seats still free, is confirmed as normal",
+     "ok": true,
+     "detail": "",
+     "seconds": 138.247
+    },
+    {
+     "name": "a payment completing after expiry, when a seat was sold meanwhile, is refunded in full once and emailed once",
+     "ok": true,
+     "detail": "",
+     "seconds": 159.316
+    },
+    {
+     "name": "a late payment whose seat is now held by another buyer is refunded; the other hold is untouched",
+     "ok": true,
+     "detail": "",
+     "seconds": 152.58
+    },
+    {
+     "name": "a late payment whose seat is now under an open waitlist offer is refunded; the offer stays open",
+     "ok": false,
+     "detail": "the waiting entry expected '1', got None",
+     "seconds": 48.302
+    }
+   ],
+   "error": "the waiting entry expected '1', got None",
+   "seconds": 663.7
+  },
+  "W09": {
+   "title": "Webhooks: forged, unsigned and stale deliveries refused; duplicates and out-of-order events harmless; declined cards",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "forged, unsigned, stale or mis-signed completion events are answered 400 and change nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 41.0
+    },
+    {
+     "name": "a declined card leaves the order pending; paying again with a good card confirms it",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.913
+    },
+    {
+     "name": "the completion event delivered again changes nothing and sends nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 7.197
+    },
+    {
+     "name": "events delivered out of order (payment_intent.succeeded before checkout.session.completed) confirm once",
+     "ok": true,
+     "detail": "",
+     "seconds": 19.691
+    },
+    {
+     "name": "returning from the hosted page's cancel link leaves the order pending; the webhook path refuses junk",
+     "ok": true,
+     "detail": "",
+     "seconds": 19.992
+    }
+   ],
+   "error": null,
+   "seconds": 94.8
+  },
+  "W10": {
+   "title": "Seat races and the per-buyer limit: one winner per seat, six tickets per buyer across orders and old orders",
+   "weight": 4.0,
+   "critical": true,
+   "passed": false,
+   "steps": [
+    {
+     "name": "eight buyers holding the same last seat at the same moment: exactly one gets it",
+     "ok": true,
+     "detail": "",
+     "seconds": 99.361
+    },
+    {
+     "name": "two simultaneous holds of four seats by one buyer cannot together pass six",
+     "ok": true,
+     "detail": "",
+     "seconds": 11.105
+    },
+    {
+     "name": "paid tickets and unexpired holds count toward six; a refund gives room; a transfer does not",
+     "ok": true,
+     "detail": "",
+     "seconds": 59.545
+    },
+    {
+     "name": "the old platform's orders count, matched by address whatever their case and spacing",
+     "ok": false,
+     "detail": "FormNotFound: no form with a data-action='request-reset' button",
+     "seconds": 15.824
+    }
+   ],
+   "error": "FormNotFound: no form with a data-action='request-reset' button",
+   "seconds": 185.8
+  },
+  "W11": {
+   "title": "Buyer refunds: 168/48-hour tiers to the second, deadlines across DST, reschedules, who may ask",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "tickets for events 10 days, 100 hours and 20 hours away and across DST changes show their deadlines",
+     "ok": true,
+     "detail": "",
+     "seconds": 131.575
+    },
+    {
+     "name": "refunds at 100 % and 50 % return each ticket's share exactly; within 48 hours none is possible",
+     "ok": true,
+     "detail": "",
+     "seconds": 28.429
+    },
+    {
+     "name": "at the 168-hour and 48-hour deadlines (to the second): D-5 s and D+0.05 s get the higher tier, D+1.05 s and D+2 s the lower",
+     "ok": true,
+     "detail": "",
+     "seconds": 1039.794
+    },
+    {
+     "name": "after a reschedule, orders paid before it get 100 % until the new start; later orders follow the tiers",
+     "ok": true,
+     "detail": "",
+     "seconds": 27.154
+    },
+    {
+     "name": "a buyer who transferred a ticket away, and its new holder, cannot get a buyer refund",
+     "ok": true,
+     "detail": "",
+     "seconds": 19.672
+    }
+   ],
+   "error": null,
+   "seconds": 1246.6
+  },
+  "W12": {
+   "title": "Refund mechanics: Idempotency-Key retries through provider faults, pending until the webhook, events out of order",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a buyer with six tickets for an event ten days away",
+     "ok": true,
+     "detail": "",
+     "seconds": 37.408
+    },
+    {
+     "name": "a refund whose first provider call ends in 'lost_response' is retried with the same key and made exactly once",
+     "ok": true,
+     "detail": "",
+     "seconds": 22.237
+    },
+    {
+     "name": "a refund whose first provider call ends in 'timeout' is retried with the same key and made exactly once",
+     "ok": true,
+     "detail": "",
+     "seconds": 11.343
+    },
+    {
+     "name": "a refund whose first provider call ends in 'error' is retried with the same key and made exactly once",
+     "ok": true,
+     "detail": "",
+     "seconds": 9.464
+    },
+    {
+     "name": "a refund stays refund_pending (no email, not counted) until its refund.created event, delivered out of order",
+     "ok": true,
+     "detail": "",
+     "seconds": 13.387
+    },
+    {
+     "name": "refund.created delivered again changes nothing and sends nothing; every refund used its own key",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.581
+    }
+   ],
+   "error": null,
+   "seconds": 99.4
+  },
+  "W13": {
+   "title": "Organizer refunds and cancelling an event: top-up refunds, one email per address, late payment after cancellation",
+   "weight": 5.0,
+   "critical": true,
+   "passed": false,
+   "steps": [
+    {
+     "name": "an event 100 hours away with buyers, a 50 % buyer refund, a transfer, and a box office refund",
+     "ok": true,
+     "detail": "",
+     "seconds": 124.339
+    },
+    {
+     "name": "only the owner may cancel; the owner cancels while a pending order and a pending 50 % buyer refund exist",
+     "ok": true,
+     "detail": "",
+     "seconds": 20.88
+    },
+    {
+     "name": "every ticket is refunded exactly what it had left (counting the pending refund), once, at the provider",
+     "ok": true,
+     "detail": "",
+     "seconds": 28.667
+    },
+    {
+     "name": "each buyer and holder gets exactly one cancellation email; the only refund email is the buyer's own 50 % refund",
+     "ok": true,
+     "detail": "",
+     "seconds": 4.043
+    },
+    {
+     "name": "a payment completing after the cancellation is refunded in full and the buyer told",
+     "ok": true,
+     "detail": "",
+     "seconds": 7.995
+    },
+    {
+     "name": "an event with tickets from the old platform cannot be cancelled",
+     "ok": false,
+     "detail": "FormNotFound: no form with a data-action='request-reset' button",
+     "seconds": 1.299
+    }
+   ],
+   "error": "FormNotFound: no form with a data-action='request-reset' button",
+   "seconds": 187.2
+  },
+  "W14": {
+   "title": "Transfers: the recipient holds a new QR token, every earlier token stops admitting, emails, who may transfer",
+   "weight": 4.0,
+   "critical": false,
+   "passed": false,
+   "steps": [
+    {
+     "name": "a buyer transfers a ticket; the recipient and the buyer each get one email; the new token admits, the old one does not",
+     "ok": true,
+     "detail": "",
+     "seconds": 59.426
+    },
+    {
+     "name": "nobody else may transfer it, nor transfer to themselves, nor transfer an admitted ticket",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.507
+    },
+    {
+     "name": "a chain of transfers leaves only the newest token admitting; altered tokens are invalid",
+     "ok": true,
+     "detail": "",
+     "seconds": 43.687
+    },
+    {
+     "name": "an old-platform ticket is transferred here: its barcode stops admitting, the new token admits",
+     "ok": false,
+     "detail": "FormNotFound: no form with a data-action='request-reset' button",
+     "seconds": 22.412
+    }
+   ],
+   "error": "FormNotFound: no form with a data-action='request-reset' button",
+   "seconds": 132.0
+  },
+  "W15": {
+   "title": "Scanner devices and online check-in: keys shown once, scope, every refusal reason, idempotent rescans, door list",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "an owner and manager create devices (key shown once); box office and scanners may not",
+     "ok": true,
+     "detail": "",
+     "seconds": 155.313
+    },
+    {
+     "name": "a valid token is admitted once; scanning it again reports the first admission",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.011
+    },
+    {
+     "name": "refusals: invalid, wrong event (same and other organization), refunded, cancelled, outside the window",
+     "ok": true,
+     "detail": "",
+     "seconds": 24.153
+    },
+    {
+     "name": "unknown and revoked keys get 401; malformed bodies get 400",
+     "ok": true,
+     "detail": "",
+     "seconds": 11.348
+    },
+    {
+     "name": "the door list offers check-in only for valid tickets not yet admitted; a door check-in admits with gate Door",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.447
+    }
+   ],
+   "error": null,
+   "seconds": 200.3
+  },
+  "W16": {
+   "title": "Offline sync: earliest admission wins across gates and batches, ties, scan_id reuse, windows to the second across DST",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "events on the next spring-forward (Chicago) and fall-back (Denver) mornings with tickets and devices",
+     "ok": true,
+     "detail": "",
+     "seconds": 127.075
+    },
+    {
+     "name": "batch 1 (North): window edges to the second, a DST-shifted early scan, two scans of one ticket",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.497
+    },
+    {
+     "name": "batch 2 (South): an earlier scan takes the admission; equal times keep the first; repeated and reused scan_ids",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.586
+    },
+    {
+     "name": "batch 3 (East): later scans report the earliest admission; an online scan now is outside the window",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.081
+    },
+    {
+     "name": "batch 4: refunded, transferred-away and other-event tokens are refused for that reason, inside or outside the window",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.495
+    },
+    {
+     "name": "the fall-back event's window opens at the first 01:00 (07:00Z), not at local midnight",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.638
+    },
+    {
+     "name": "a later request with an equal scan time keeps the first admission; a scan_id belongs to one event only",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.106
+    },
+    {
+     "name": "the export and dashboard show each ticket's earliest admission and its gate",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.849
+    }
+   ],
+   "error": null,
+   "seconds": 141.3
+  },
+  "W17": {
+   "title": "Waiting lists: join rules, offers in join order with skip-over, offer expiry and decline, reserved seats",
+   "weight": 4.0,
+   "critical": false,
+   "passed": false,
+   "steps": [
+    {
+     "name": "a sold-out section offers a waiting list; a section with seats does not",
+     "ok": true,
+     "detail": "",
+     "seconds": 99.465
+    },
+    {
+     "name": "entries join in order; a second entry and a section with seats are refused",
+     "ok": false,
+     "detail": "data-my-waitlist of w1 on SMALL expected '2', got None",
+     "seconds": 35.361
+    }
+   ],
+   "error": "data-my-waitlist of w1 on SMALL expected '2', got None",
+   "seconds": 134.8
+  },
+  "W18": {
+   "title": "Dashboard figures at request time: sold, held, available, admitted, gross, refunded, net, per section",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "an event with paid orders, 50 % and organizer refunds, a late payment refunded, and admissions",
+     "ok": true,
+     "detail": "",
+     "seconds": 286.457
+    },
+    {
+     "name": "with a refund pending and a hold active, every figure matches for owner and box office; a scanner gets 403",
+     "ok": true,
+     "detail": "",
+     "seconds": 14.969
+    },
+    {
+     "name": "once the refund completes, refunded and net move; nothing else does",
+     "ok": true,
+     "detail": "",
+     "seconds": 4.993
+    },
+    {
+     "name": "the moment a hold expires its seats count as available, before any background work",
+     "ok": true,
+     "detail": "",
+     "seconds": 113.222
+    }
+   ],
+   "error": null,
+   "seconds": 419.6
+  },
+  "W19": {
+   "title": "Attendee export: header, CRLF, seat order (numeric), resold seats, quoting, spreadsheet safety, who may download",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "tickets whose names, addresses and gates need quoting or neutralizing; a refunded and resold seat",
+     "ok": true,
+     "detail": "",
+     "seconds": 225.908
+    },
+    {
+     "name": "the export has the exact header, CRLF line ends, and every row as the rules say",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.869
+    },
+    {
+     "name": "box office, scanners and other organizations cannot download it",
+     "ok": true,
+     "detail": "",
+     "seconds": 18.739
+    }
+   ],
+   "error": null,
+   "seconds": 246.5
+  },
+  "W20": {
+   "title": "Reminders and email safety: one email per holder address, one-time key, header injection, names in To",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "holders: one with two tickets, one who also received a transfer under another name, one transferred away, one refunded",
+     "ok": true,
+     "detail": "",
+     "seconds": 135.057
+    },
+    {
+     "name": "a reminder submitted twice at once and again later reaches each holder address exactly once, by name",
+     "ok": true,
+     "detail": "",
+     "seconds": 10.944
+    },
+    {
+     "name": "typed text never adds headers or recipients; other roles and token-less posts send nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 13.838
+    }
+   ],
+   "error": null,
+   "seconds": 159.8
+  },
+  "W21": {
+   "title": "Old platform, Lantern Room Presents (Chicago): dashboards, exports, sale pages, holders",
+   "weight": 4.0,
+   "critical": true,
+   "passed": false,
+   "steps": [
+    {
+     "name": "staff set passwords through reset links (addresses stored with odd case and spaces) and sign in",
+     "ok": false,
+     "detail": "FormNotFound: no form with a data-action='request-reset' button",
+     "seconds": 1.318
+    }
+   ],
+   "error": "FormNotFound: no form with a data-action='request-reset' button",
+   "seconds": 1.3
+  },
+  "W22": {
+   "title": "Old platform, Copperline Live (Denver): dashboards, exports, sale pages, holders",
+   "weight": 4.0,
+   "critical": true,
+   "passed": false,
+   "steps": [
+    {
+     "name": "staff set passwords through reset links (addresses stored with odd case and spaces) and sign in",
+     "ok": false,
+     "detail": "FormNotFound: no form with a data-action='request-reset' button",
+     "seconds": 1.223
+    }
+   ],
+   "error": "FormNotFound: no form with a data-action='request-reset' button",
+   "seconds": 1.2
+  },
+  "W23": {
+   "title": "Old platform, Saguaro Sounds (Phoenix): dashboards, exports, sale pages, holders, old barcodes at the door",
+   "weight": 4.0,
+   "critical": true,
+   "passed": false,
+   "steps": [
+    {
+     "name": "staff set passwords through reset links (addresses stored with odd case and spaces) and sign in",
+     "ok": false,
+     "detail": "FormNotFound: no form with a data-action='request-reset' button",
+     "seconds": 1.326
+    }
+   ],
+   "error": "FormNotFound: no form with a data-action='request-reset' button",
+   "seconds": 1.3
+  },
+  "W24": {
+   "title": "In a real browser: layout at 1280 and 390 px, typed text never runs as script, a click-through purchase",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a plainly named event at Juniper Hall with two seats sold; its dashboard and manage page (experience evidence)",
+     "ok": true,
+     "detail": "",
+     "seconds": 43.521
+    },
+    {
+     "name": "names, venues, sections, events, descriptions, holders and gates carry script payloads",
+     "ok": true,
+     "detail": "",
+     "seconds": 48.234
+    },
+    {
+     "name": "signing in through the browser form reaches a signed-in page",
+     "ok": true,
+     "detail": "",
+     "seconds": 4.554
+    },
+    {
+     "name": "a buyer clicks through: seats, hold, pay on the hosted page, back to a paid order",
+     "ok": true,
+     "detail": "",
+     "seconds": 13.779
+    },
+    {
+     "name": "a refused hold (6 more seats over the buyer's 4) for the experience review",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.399
+    },
+    {
+     "name": "typed text and URL parts are shown as text on every page (no script runs)",
+     "ok": true,
+     "detail": "",
+     "seconds": 31.893
+    },
+    {
+     "name": "every page stays within 1280 and 390 CSS pixels without horizontal scrolling",
+     "ok": true,
+     "detail": "",
+     "seconds": 20.333
+    }
+   ],
+   "error": null,
+   "seconds": 164.9
+  },
+  "W25": {
+   "title": "Deployment: README, restart persistence (accounts, orders, QR tokens), nothing re-sent, old records kept",
+   "weight": 2.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "README.md and an executable start.sh are in the workspace",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.0
+    },
+    {
+     "name": "after a restart: accounts, orders and QR tokens still work, and no email is sent again",
+     "ok": true,
+     "detail": "",
+     "seconds": 42.292
+    },
+    {
+     "name": "the old platform's records are all still there, unchanged",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.422
+    }
+   ],
+   "error": null,
+   "seconds": 42.7
+  },
+  "W26": {
+   "title": "Cross-cutting safety: secrets only hashed at rest, reset ends sessions, Host-proof links, headers, no stack traces",
+   "weight": 3.0,
+   "critical": false,
+   "passed": false,
+   "steps": [
+    {
+     "name": "setting a new password through a reset link signs out every existing session",
+     "ok": false,
+     "detail": "FormNotFound: no form with a data-action='request-reset' button",
+     "seconds": 11.984
+    }
+   ],
+   "error": "FormNotFound: no form with a data-action='request-reset' button",
+   "seconds": 12.0
+  },
+  "W27": {
+   "title": "Health follows the database: non-2xx within 10 s of a stop, 200 within 60 s of a start",
+   "weight": 2.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "/healthz answers 200 while the database is up",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.012
+    },
+    {
+     "name": "within 10 s of the database stopping, /healthz answers a non-2xx status within 5 s",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.22
+    },
+    {
+     "name": "within 60 s of the database starting again, /healthz answers 200 without a restart",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.041
+    }
+   ],
+   "error": null,
+   "seconds": 0.4
+  }
+ },
+ "breaches": {},
+ "surfaces": {
+  "signup": true
+ },
+ "observations": {
+  "W06": {
+   "orders_checked": 116,
+   "seat_order_orders": 25
+  },
+  "W11": {
+   "deadline_requests": [
+    [
+     "BALC-A-1",
+     -5.0,
+     1.172,
+     true
+    ],
+    [
+     "BALC-A-3",
+     0.05,
+     1.221,
+     false
+    ],
+    [
+     "BALC-A-4",
+     1.271,
+     1.171,
+     true
+    ],
+    [
+     "BALC-A-2",
+     2.442,
+     1.901,
+     true
+    ],
+    [
+     "FLOOR-A-5",
+     -5.0,
+     1.187,
+     true
+    ],
+    [
+     "FLOOR-A-7",
+     0.05,
+     1.378,
+     false
+    ],
+    [
+     "FLOOR-A-8",
+     1.428,
+     0.438,
+     true
+    ],
+    [
+     "FLOOR-A-6",
+     2.0,
+     0.435,
+     true
+    ]
+   ]
+  },
+  "W12": {
+   "retry_gaps_lost_response": [],
+   "retry_gaps_timeout": [
+    3
+   ],
+   "retry_gaps_error": [
+    3
+   ]
+  },
+  "W27": {
+   "non2xx_after_s": 0.0,
+   "back_after_s": 0.0
+  }
+ }
+}

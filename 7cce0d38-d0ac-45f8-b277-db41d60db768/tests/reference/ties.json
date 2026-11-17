@@ -1,0 +1,1618 @@
+{
+"events": [
+{
+"prices": {
+"PA": 4560,
+"PB": 7295,
+"PC": 8915,
+"PD": 8270,
+"PE": 3340,
+"PF": 3840
+},
+"fee": 200,
+"codes": [
+{
+"code": "E0PCT0",
+"kind": "percent",
+"value": 30
+},
+{
+"code": "E0PCT1",
+"kind": "percent",
+"value": 20
+},
+{
+"code": "E0PCT2",
+"kind": "percent",
+"value": 30
+}
+],
+"orders": [
+{
+"seats": {
+"PD": 1,
+"PE": 1,
+"PF": 1
+},
+"percent": "E0PCT1",
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E0T0",
+"value": 1764
+}
+},
+{
+"seats": {
+"PD": 2,
+"PE": 1
+},
+"percent": null,
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E0T1",
+"value": 432
+}
+},
+{
+"seats": {
+"PA": 1,
+"PE": 1,
+"PF": 1
+},
+"percent": "E0PCT0",
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E0T2",
+"value": 1087
+}
+},
+{
+"seats": {
+"PB": 1,
+"PD": 1
+},
+"percent": null,
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E0T3",
+"value": 1132
+}
+},
+{
+"seats": {
+"PB": 1,
+"PE": 2
+},
+"percent": "E0PCT1",
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E0T4",
+"value": 271
+}
+},
+{
+"seats": {
+"PA": 3,
+"PF": 3
+},
+"percent": "E0PCT1",
+"breaks": [
+"decimal",
+"float",
+"floatall"
+],
+"fixed": {
+"code": "E0T5",
+"value": 770
+}
+},
+{
+"seats": {
+"PA": 1,
+"PB": 2
+},
+"percent": "E0PCT2",
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E0T6",
+"value": 841
+}
+},
+{
+"seats": {
+"PA": 2,
+"PB": 2,
+"PD": 2
+},
+"percent": "E0PCT1",
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E0T7",
+"value": 2018
+}
+},
+{
+"seats": {
+"PA": 1,
+"PB": 1,
+"PD": 1
+},
+"percent": "E0PCT0",
+"breaks": [
+"float",
+"floatall"
+],
+"fixed": {
+"code": "E0T8",
+"value": 862
+}
+},
+{
+"seats": {
+"PB": 2,
+"PC": 1,
+"PD": 1
+},
+"percent": null,
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E0T9",
+"value": 958
+}
+},
+{
+"seats": {
+"PB": 4,
+"PF": 2
+},
+"percent": "E0PCT1",
+"breaks": [
+"float",
+"floatall"
+],
+"fixed": {
+"code": "E0T10",
+"value": 1244
+}
+},
+{
+"seats": {
+"PA": 1,
+"PB": 1,
+"PE": 3
+},
+"percent": "E0PCT1",
+"breaks": [
+"decimal",
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E0T11",
+"value": 625
+}
+},
+{
+"seats": {
+"PA": 1,
+"PB": 1,
+"PD": 2,
+"PF": 1
+},
+"percent": "E0PCT2",
+"breaks": [
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E0T12",
+"value": 1381
+}
+},
+{
+"seats": {
+"PA": 1,
+"PB": 1,
+"PD": 1
+},
+"percent": "E0PCT2",
+"breaks": [
+"float",
+"floatall"
+],
+"fixed": {
+"code": "E0T13",
+"value": 862
+}
+},
+{
+"seats": {
+"PB": 1,
+"PC": 1,
+"PD": 2,
+"PE": 2
+},
+"percent": null,
+"breaks": [
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E0T14",
+"value": 2188
+}
+},
+{
+"seats": {
+"PB": 1,
+"PD": 1,
+"PE": 1,
+"PF": 2
+},
+"percent": "E0PCT2",
+"breaks": [
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E0T15",
+"value": 1541
+}
+},
+{
+"seats": {
+"PA": 1,
+"PD": 1,
+"PE": 1,
+"PF": 1
+},
+"percent": null,
+"breaks": [
+"decimal",
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E0T16",
+"value": 2484
+}
+},
+{
+"seats": {
+"PA": 2,
+"PF": 4
+},
+"percent": "E0PCT1",
+"breaks": [
+"decimal",
+"float",
+"floatall"
+],
+"fixed": {
+"code": "E0T17",
+"value": 1258
+}
+},
+{
+"seats": {
+"PA": 1,
+"PB": 1,
+"PC": 1
+},
+"percent": "E0PCT1",
+"breaks": [
+"decimal",
+"float",
+"floatall"
+],
+"fixed": {
+"code": "E0T18",
+"value": 248
+}
+},
+{
+"seats": {
+"PB": 1,
+"PE": 1,
+"PF": 3
+},
+"percent": "E0PCT1",
+"breaks": [
+"decimal",
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E0T19",
+"value": 1899
+}
+},
+{
+"seats": {
+"PA": 1,
+"PF": 2
+},
+"percent": "E0PCT1",
+"breaks": [
+"decimal"
+],
+"fixed": {
+"code": "E0T20",
+"value": 272
+}
+},
+{
+"seats": {
+"PA": 1,
+"PB": 1,
+"PE": 2,
+"PF": 2
+},
+"percent": null,
+"breaks": [
+"decimal",
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E0T21",
+"value": 749
+}
+}
+]
+},
+{
+"prices": {
+"PA": 5890,
+"PB": 3790,
+"PC": 5210,
+"PD": 7420,
+"PE": 3955,
+"PF": 5100
+},
+"fee": 200,
+"codes": [
+{
+"code": "E1PCT0",
+"kind": "percent",
+"value": 15
+},
+{
+"code": "E1PCT1",
+"kind": "percent",
+"value": 10
+},
+{
+"code": "E1PCT2",
+"kind": "percent",
+"value": 20
+}
+],
+"orders": [
+{
+"seats": {
+"PD": 1,
+"PF": 1
+},
+"percent": null,
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E1T0",
+"value": 1147
+}
+},
+{
+"seats": {
+"PB": 2,
+"PD": 4
+},
+"percent": "E1PCT2",
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E1T1",
+"value": 1617
+}
+},
+{
+"seats": {
+"PE": 1,
+"PF": 2
+},
+"percent": "E1PCT0",
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E1T2",
+"value": 1385
+}
+},
+{
+"seats": {
+"PA": 1,
+"PD": 2,
+"PF": 1
+},
+"percent": "E1PCT1",
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E1T3",
+"value": 1672
+}
+},
+{
+"seats": {
+"PD": 1,
+"PE": 1,
+"PF": 1
+},
+"percent": null,
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E1T4",
+"value": 1972
+}
+},
+{
+"seats": {
+"PB": 1,
+"PC": 1,
+"PD": 1
+},
+"percent": null,
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E1T5",
+"value": 1377
+}
+},
+{
+"seats": {
+"PA": 1,
+"PC": 1,
+"PE": 1
+},
+"percent": null,
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E1T6",
+"value": 2185
+}
+},
+{
+"seats": {
+"PB": 1,
+"PD": 1,
+"PF": 1
+},
+"percent": "E1PCT0",
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E1T7",
+"value": 1140
+}
+},
+{
+"seats": {
+"PB": 2,
+"PD": 1,
+"PE": 3
+},
+"percent": null,
+"breaks": [
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E1T8",
+"value": 1791
+}
+},
+{
+"seats": {
+"PA": 1,
+"PB": 1,
+"PE": 1,
+"PF": 1
+},
+"percent": "E1PCT0",
+"breaks": [
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E1T9",
+"value": 2186
+}
+},
+{
+"seats": {
+"PA": 1,
+"PD": 1,
+"PE": 1,
+"PF": 1
+},
+"percent": null,
+"breaks": [
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E1T10",
+"value": 710
+}
+},
+{
+"seats": {
+"PB": 2,
+"PC": 1,
+"PE": 2,
+"PF": 1
+},
+"percent": null,
+"breaks": [
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E1T11",
+"value": 1720
+}
+},
+{
+"seats": {
+"PA": 1,
+"PD": 2
+},
+"percent": "E1PCT2",
+"breaks": [
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E1T12",
+"value": 2764
+}
+},
+{
+"seats": {
+"PB": 1,
+"PC": 1,
+"PD": 2,
+"PE": 1
+},
+"percent": "E1PCT2",
+"breaks": [
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E1T13",
+"value": 1853
+}
+},
+{
+"seats": {
+"PB": 1,
+"PD": 1,
+"PE": 1,
+"PF": 1
+},
+"percent": "E1PCT0",
+"breaks": [
+"decimal",
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E1T14",
+"value": 1399
+}
+},
+{
+"seats": {
+"PD": 3,
+"PE": 3
+},
+"percent": null,
+"breaks": [
+"decimal",
+"bankers"
+],
+"fixed": {
+"code": "E1T15",
+"value": 650
+}
+},
+{
+"seats": {
+"PB": 2,
+"PE": 1,
+"PF": 1
+},
+"percent": "E1PCT0",
+"breaks": [
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E1T16",
+"value": 1941
+}
+},
+{
+"seats": {
+"PA": 2,
+"PD": 1,
+"PF": 1
+},
+"percent": "E1PCT0",
+"breaks": [
+"decimal",
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E1T17",
+"value": 405
+}
+},
+{
+"seats": {
+"PB": 1,
+"PC": 1,
+"PD": 1,
+"PF": 2
+},
+"percent": "E1PCT1",
+"breaks": [
+"decimal",
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E1T18",
+"value": 1738
+}
+},
+{
+"seats": {
+"PB": 1,
+"PD": 3,
+"PF": 2
+},
+"percent": null,
+"breaks": [
+"decimal",
+"bankers"
+],
+"fixed": {
+"code": "E1T19",
+"value": 500
+}
+},
+{
+"seats": {
+"PD": 2,
+"PE": 1
+},
+"percent": "E1PCT1",
+"breaks": [
+"decimal",
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E1T20",
+"value": 1163
+}
+},
+{
+"seats": {
+"PD": 3,
+"PE": 3
+},
+"percent": "E1PCT1",
+"breaks": [
+"decimal",
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E1T21",
+"value": 2112
+}
+},
+{
+"seats": {
+"PA": 1,
+"PB": 1,
+"PC": 1,
+"PE": 2
+},
+"percent": "E1PCT0",
+"breaks": [
+"decimal"
+],
+"fixed": {
+"code": "E1T22",
+"value": 1444
+}
+}
+]
+},
+{
+"prices": {
+"PA": 6945,
+"PB": 6365,
+"PC": 2265,
+"PD": 3305,
+"PE": 9580,
+"PF": 2020
+},
+"fee": 150,
+"codes": [
+{
+"code": "E2PCT0",
+"kind": "percent",
+"value": 35
+},
+{
+"code": "E2PCT1",
+"kind": "percent",
+"value": 25
+},
+{
+"code": "E2PCT2",
+"kind": "percent",
+"value": 35
+}
+],
+"orders": [
+{
+"seats": {
+"PC": 2,
+"PD": 1
+},
+"percent": null,
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E2T0",
+"value": 823
+}
+},
+{
+"seats": {
+"PA": 3,
+"PE": 2
+},
+"percent": "E2PCT0",
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E2T1",
+"value": 677
+}
+},
+{
+"seats": {
+"PB": 1,
+"PE": 1
+},
+"percent": "E2PCT0",
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E2T2",
+"value": 1488
+}
+},
+{
+"seats": {
+"PB": 3,
+"PC": 2
+},
+"percent": null,
+"breaks": [
+"float",
+"floatall"
+],
+"fixed": {
+"code": "E2T3",
+"value": 2835
+}
+},
+{
+"seats": {
+"PA": 3,
+"PB": 1,
+"PC": 1,
+"PD": 1
+},
+"percent": "E2PCT0",
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E2T4",
+"value": 1758
+}
+},
+{
+"seats": {
+"PB": 1,
+"PC": 1,
+"PE": 1
+},
+"percent": "E2PCT2",
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E2T5",
+"value": 1213
+}
+},
+{
+"seats": {
+"PD": 1,
+"PE": 1,
+"PF": 2
+},
+"percent": "E2PCT1",
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E2T6",
+"value": 1683
+}
+},
+{
+"seats": {
+"PC": 1,
+"PD": 1,
+"PE": 1
+},
+"percent": null,
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E2T7",
+"value": 449
+}
+},
+{
+"seats": {
+"PA": 3,
+"PC": 1,
+"PF": 1
+},
+"percent": "E2PCT1",
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E2T8",
+"value": 1925
+}
+},
+{
+"seats": {
+"PB": 2,
+"PC": 3
+},
+"percent": "E2PCT0",
+"breaks": [
+"float",
+"floatall"
+],
+"fixed": {
+"code": "E2T9",
+"value": 1757
+}
+},
+{
+"seats": {
+"PC": 1,
+"PD": 1
+},
+"percent": "E2PCT2",
+"breaks": [
+"floatall"
+],
+"fixed": {
+"code": "E2T10",
+"value": 1156
+}
+},
+{
+"seats": {
+"PA": 3,
+"PB": 1,
+"PD": 1,
+"PF": 1
+},
+"percent": "E2PCT1",
+"breaks": [
+"float",
+"floatall"
+],
+"fixed": {
+"code": "E2T11",
+"value": 976
+}
+},
+{
+"seats": {
+"PD": 1,
+"PE": 3,
+"PF": 2
+},
+"percent": "E2PCT2",
+"breaks": [
+"decimal",
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E2T12",
+"value": 773
+}
+},
+{
+"seats": {
+"PE": 2,
+"PF": 1
+},
+"percent": "E2PCT1",
+"breaks": [
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E2T13",
+"value": 1412
+}
+},
+{
+"seats": {
+"PA": 1,
+"PC": 1,
+"PE": 1,
+"PF": 3
+},
+"percent": "E2PCT0",
+"breaks": [
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E2T14",
+"value": 1952
+}
+},
+{
+"seats": {
+"PD": 2,
+"PE": 1,
+"PF": 1
+},
+"percent": "E2PCT2",
+"breaks": [
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E2T15",
+"value": 2663
+}
+},
+{
+"seats": {
+"PB": 2,
+"PC": 1,
+"PD": 1
+},
+"percent": "E2PCT1",
+"breaks": [
+"float",
+"floatall"
+],
+"fixed": {
+"code": "E2T16",
+"value": 2379
+}
+},
+{
+"seats": {
+"PB": 1,
+"PC": 1,
+"PD": 1,
+"PF": 2
+},
+"percent": null,
+"breaks": [
+"decimal"
+],
+"fixed": {
+"code": "E2T17",
+"value": 355
+}
+},
+{
+"seats": {
+"PB": 1,
+"PC": 1,
+"PD": 1,
+"PE": 1
+},
+"percent": null,
+"breaks": [
+"decimal",
+"bankers"
+],
+"fixed": {
+"code": "E2T18",
+"value": 662
+}
+},
+{
+"seats": {
+"PB": 1,
+"PC": 1,
+"PD": 1,
+"PE": 1
+},
+"percent": "E2PCT2",
+"breaks": [
+"decimal",
+"bankers"
+],
+"fixed": {
+"code": "E2T19",
+"value": 1738
+}
+},
+{
+"seats": {
+"PA": 1,
+"PB": 2,
+"PC": 1,
+"PD": 1
+},
+"percent": "E2PCT2",
+"breaks": [
+"decimal"
+],
+"fixed": {
+"code": "E2T20",
+"value": 140
+}
+},
+{
+"seats": {
+"PB": 1,
+"PC": 2,
+"PE": 1
+},
+"percent": "E2PCT1",
+"breaks": [
+"decimal",
+"bankers"
+],
+"fixed": {
+"code": "E2T21",
+"value": 1901
+}
+},
+{
+"seats": {
+"PA": 2,
+"PC": 4
+},
+"percent": "E2PCT2",
+"breaks": [
+"decimal",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E2T22",
+"value": 1657
+}
+},
+{
+"seats": {
+"PC": 2,
+"PE": 1,
+"PF": 2
+},
+"percent": null,
+"breaks": [
+"decimal",
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E2T23",
+"value": 2420
+}
+}
+]
+},
+{
+"prices": {
+"PA": 8110,
+"PB": 2880,
+"PC": 2065,
+"PD": 7420,
+"PE": 6020,
+"PF": 4455
+},
+"fee": 0,
+"codes": [
+{
+"code": "E3PCT0",
+"kind": "percent",
+"value": 25
+},
+{
+"code": "E3PCT1",
+"kind": "percent",
+"value": 15
+},
+{
+"code": "E3PCT2",
+"kind": "percent",
+"value": 33
+}
+],
+"orders": [
+{
+"seats": {
+"PA": 5,
+"PB": 1
+},
+"percent": null,
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E3T0",
+"value": 2286
+}
+},
+{
+"seats": {
+"PB": 1,
+"PF": 1
+},
+"percent": null,
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E3T1",
+"value": 1885
+}
+},
+{
+"seats": {
+"PA": 1,
+"PC": 1,
+"PE": 1,
+"PF": 2
+},
+"percent": "E3PCT1",
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E3T2",
+"value": 2822
+}
+},
+{
+"seats": {
+"PC": 1,
+"PD": 1,
+"PE": 1,
+"PF": 1
+},
+"percent": "E3PCT2",
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E3T3",
+"value": 792
+}
+},
+{
+"seats": {
+"PB": 2,
+"PD": 1,
+"PE": 1,
+"PF": 1
+},
+"percent": "E3PCT1",
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E3T4",
+"value": 1192
+}
+},
+{
+"seats": {
+"PB": 2,
+"PD": 1
+},
+"percent": null,
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E3T5",
+"value": 399
+}
+},
+{
+"seats": {
+"PA": 1,
+"PB": 1,
+"PD": 2,
+"PE": 2
+},
+"percent": null,
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E3T6",
+"value": 1549
+}
+},
+{
+"seats": {
+"PA": 1,
+"PF": 2
+},
+"percent": "E3PCT1",
+"breaks": [
+"bankers"
+],
+"fixed": {
+"code": "E3T7",
+"value": 1743
+}
+},
+{
+"seats": {
+"PA": 1,
+"PB": 1,
+"PC": 1,
+"PE": 2
+},
+"percent": "E3PCT2",
+"breaks": [
+"float",
+"floatall"
+],
+"fixed": {
+"code": "E3T8",
+"value": 577
+}
+},
+{
+"seats": {
+"PB": 1,
+"PE": 2
+},
+"percent": "E3PCT2",
+"breaks": [
+"float",
+"floatall"
+],
+"fixed": {
+"code": "E3T9",
+"value": 628
+}
+},
+{
+"seats": {
+"PA": 1,
+"PC": 1,
+"PD": 1
+},
+"percent": null,
+"breaks": [
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E3T10",
+"value": 1035
+}
+},
+{
+"seats": {
+"PD": 3,
+"PE": 2
+},
+"percent": "E3PCT2",
+"breaks": [
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E3T11",
+"value": 294
+}
+},
+{
+"seats": {
+"PA": 1,
+"PC": 1,
+"PD": 1,
+"PF": 1
+},
+"percent": null,
+"breaks": [
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E3T12",
+"value": 560
+}
+},
+{
+"seats": {
+"PB": 1,
+"PC": 2,
+"PD": 1,
+"PF": 1
+},
+"percent": "E3PCT1",
+"breaks": [
+"decimal",
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E3T13",
+"value": 2203
+}
+},
+{
+"seats": {
+"PA": 3,
+"PD": 3
+},
+"percent": "E3PCT0",
+"breaks": [
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E3T14",
+"value": 776
+}
+},
+{
+"seats": {
+"PA": 2,
+"PD": 1
+},
+"percent": "E3PCT1",
+"breaks": [
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E3T15",
+"value": 2758
+}
+},
+{
+"seats": {
+"PA": 1,
+"PB": 1,
+"PC": 1,
+"PD": 1
+},
+"percent": "E3PCT0",
+"breaks": [
+"decimal",
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E3T16",
+"value": 1181
+}
+},
+{
+"seats": {
+"PC": 2,
+"PD": 1,
+"PF": 1
+},
+"percent": "E3PCT1",
+"breaks": [
+"decimal",
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E3T17",
+"value": 1867
+}
+},
+{
+"seats": {
+"PA": 1,
+"PB": 1,
+"PC": 1,
+"PD": 1
+},
+"percent": null,
+"breaks": [
+"decimal",
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E3T18",
+"value": 2730
+}
+},
+{
+"seats": {
+"PA": 1,
+"PC": 1,
+"PD": 1
+},
+"percent": null,
+"breaks": [
+"decimal",
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E3T19",
+"value": 2346
+}
+},
+{
+"seats": {
+"PA": 1,
+"PC": 1,
+"PD": 3,
+"PF": 1
+},
+"percent": null,
+"breaks": [
+"decimal",
+"float",
+"bankers",
+"floatall"
+],
+"fixed": {
+"code": "E3T20",
+"value": 744
+}
+},
+{
+"seats": {
+"PB": 1,
+"PC": 2,
+"PD": 1,
+"PF": 1
+},
+"percent": "E3PCT2",
+"breaks": [
+"decimal",
+"bankers"
+],
+"fixed": {
+"code": "E3T21",
+"value": 2581
+}
+},
+{
+"seats": {
+"PA": 1,
+"PC": 5
+},
+"percent": "E3PCT0",
+"breaks": [
+"decimal"
+],
+"fixed": {
+"code": "E3T22",
+"value": 1536
+}
+}
+]
+}
+],
+"breaks": {
+"decimal": 32,
+"float": 47,
+"bankers": 74,
+"floatall": 49
+}
+}

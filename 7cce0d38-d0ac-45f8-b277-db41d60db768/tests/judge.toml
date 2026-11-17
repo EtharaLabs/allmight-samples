@@ -1,0 +1,130 @@
+# Experience criteria (instruction.md R22, R17.4). Evidence is written by tests/wf_a.py (W05) and tests/wf_d.py (W24).
+[judge]
+judge = "anthropic/claude-fable-5-1"
+reasoning_effort = "max"
+mode = "individual"
+samples = 3
+guard = "penalize"
+timeout = 900
+prompt_template = "judge/prompt.md"
+reference = "/tests/judge-reference.md"
+
+[[criterion]]
+id = "J01"
+name = "J01"
+description = "The event page makes clear which seats are available, held, sold and accessible, shows each section's price, and states the event's local start time with its time zone."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/event_page"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R22.1"
+
+[[criterion]]
+id = "J02"
+name = "J02"
+description = "The order page explains the price breakdown: face prices, discount, service fees, facility fees, tax and the total, each labelled."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/order_pending"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R22.2"
+
+[[criterion]]
+id = "J03"
+name = "J03"
+description = "The order page tells the buyer how long the seats are held (an expiry time or a countdown) and what happens when the hold ends."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/order_pending"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R22.2"
+
+[[criterion]]
+id = "J04"
+name = "J04"
+description = "The ticket page states what a refund request would return now and shows the 100 % and 50 % refund deadlines in the venue's local time."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/ticket_page"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R22.3"
+
+[[criterion]]
+id = "J05"
+name = "J05"
+description = "The ticket page explains that transferring the ticket gives the recipient a new QR code and that the current QR code stops working."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/ticket_page"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R22.3"
+
+[[criterion]]
+id = "J06"
+name = "J06"
+description = "Before cancelling, the event's manage page states that every ticket will be refunded, every buyer and holder emailed, and that cancelling cannot be undone."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/cancel_before"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R22.4"
+
+[[criterion]]
+id = "J07"
+name = "J07"
+description = "After a refused hold (the buyer's 6-ticket limit), the page explains why it was refused and what the buyer can do next."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/hold_refused"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R22.4"
+
+[[criterion]]
+id = "J08"
+name = "J08"
+description = "The dashboard is readable at a glance: capacity, sold, held, available, admitted, gross, refunded and net are labelled, for each section and in total."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/dashboard"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R22.5"
+
+[[criterion]]
+id = "J09"
+name = "J09"
+description = "The order confirmation email names the event and, for each ticket, its seat, ticket id and QR token, in a form a fan can read."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/confirmation_email"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R17.4"
+
+[[criterion]]
+id = "J10"
+name = "J10"
+description = "At 390 pixels wide, the key facts and the primary action on these pages stay readable and reachable."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/event_page/narrow.jpg", "/logs/verifier/ux/order_pending/narrow.jpg", "/logs/verifier/ux/ticket_page/narrow.jpg"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R22.6"

@@ -1,0 +1,65 @@
+verifier: reference example self-test passed
+verifier: starting services
+verifier: starting the submission
+verifier: healthz 200 after 0 s
+verifier: running workflows
+[wf] W01 Accounts: registration against quirky legacy addresses, reset links, duplicate-address accounts
+[wf] W01 PASS 28.7s 
+[wf] W02 Sessions and roles: refusals, fixation, sign-out, role gates, profile mass assignment, CSRF
+[wf] W02 PASS 6.4s 
+[wf] W03 Availability: 15-minute grid, fitting inside working time, buffers, merged and overlapping windows
+[wf] W03 PASS 80.5s 
+[wf] W04 Availability: effective-dated schedule versions, exceptions, schedule edits and who may make them
+[wf] W04 PASS 117.8s 
+[wf] W05 Availability: shared rooms and lowest-id assignment, daily limits with holds, fees in effect, inactive records
+[wf] W05 PASS 25.9s 
+[wf] W06 Time: notice and horizon from now, clock-change days, local dates per clinic, fees by local date
+[wf] W06 PASS 20.2s 
+[wf] W07 Legacy Seattle: the old system's schedules, appointments, folds and gaps, served as they are
+[wf] W07 PASS 103.1s 
+[wf] W08 Booking: deposits on Checkout, mass assignment, confirmation only by signed webhook, one email
+[wf] W08 PASS 21.0s 
+[wf] W09 Holds: expiry measured from creation, release, late and out-of-order payments refunded in full
+[wf] W09 PASS 76.3s 
+[wf] W10 Webhook security: unsigned, mis-signed, tampered and stale deliveries change nothing
+[wf] W10 PASS 8.1s 
+[wf] W11 Races: the last slot, the last room and the last daily place each go to exactly one patient
+[wf] W11 PASS 5.5s 
+[wf] W12 Cancellation: refund bands by elapsed time, half-cent rounding, clinic cancellations, emails once
+[wf] W12 PASS 66.3s 
+[wf] W13 Refund retries: provider errors, lost answers and timeouts never refund twice; events before answers
+[wf] W13 PASS 31.5s 
+[wf] W14 Rescheduling: 24-hour window, the original never blocks itself, the deposit carries over
+[wf] W14 PASS 13.5s 
+[wf] W15 Waitlist: join order, offers that occupy, offer and hold lifetimes, decline and expiry chains
+[wf] W15 FAIL 139.2s 6 of 12 accepted offers differ: offer for clinician 487 on 2026-11-22 (new fee row added before acceptance, effective 2026-11-22): Checkout amount and deposit (7349, '7349'), expected 6521 | offer for clinician 488 on 2026-11-22 (new fee row added before acceptance, effective 2026-11-22): Checkout amount and deposit (7349, '7349'), expected 6521 | offer for clinician 489 on 20
+[wf] W16 Clinical notes and clinician scope: only the treating clinician and admins, authors from the session
+[wf] W16 PASS 2.3s 
+[wf] W17 Reminders: every booked appointment of a clinic's day once, quirky addresses normalized, never twice
+[wf] W17 PASS 12.8s 
+[wf] W18 In a real browser: book and pay on the hosted page, layout at 1280 and 390 px, escaping everywhere
+[wf] W18 PASS 43.9s 
+[wf] W19 Clinic closures: the old closures and new ones close every clinician; bookings stay; admins and the clinic's manager only
+[wf] W19 PASS 19.1s 
+[wf] W20 Appointment export: exact columns and order, local and UTC times with folds, quoting, spreadsheet safety
+[wf] W20 PASS 8.7s 
+[wf] W21 Front desk books for patients: holds for the account, payment-link emails, then the patient pays
+[wf] W21 PASS 37.3s 
+[wf] W22 Legacy Honolulu: the old system's schedules, appointments, closures and patients, served as they are
+[wf] W22 PASS 95.2s 
+[wf] W23 Clinic staff: managers edit their clinic's schedules, front desk books and cancels only for their clinic
+[wf] W23 PASS 8.0s 
+[wf] W24 A patient's journey: browse, register, book and pay, waitlist, reschedule into an offer, cancel, export
+[wf] W24 FAIL 3.4s the offer's Checkout amount expected 7349, got 3957
+[wf] W25 Cross-cutting safety: secrets nowhere at rest or in logs, reset ends sessions, Host-proof links, headers, no stack traces
+[wf] W25 PASS 2.7s 
+[wf] W26 Deployment: README, restart persistence, holds and refunds survive, nothing re-sent, no secrets, records kept
+[wf] W26 PASS 42.5s 
+[wf] W27 Health follows the database: non-2xx within 10 s of a stop, 200 within 60 s of a start
+[wf] W27 PASS 0.2s 
+verifier: scoring
+17:50:20 - LiteLLM:WARNING: anthropic_beta_headers_manager.py:155 - LiteLLM: Failed to fetch remote beta headers config from https://raw.githubusercontent.com/BerriAI/litellm/main/litellm/anthropic_beta_headers_config.json: [Errno -3] Temporary failure in name resolution. Falling back to local backup.
+functional: 0.3633
+judge: 0.9
+reward: 0.417
+verifier: done (scoring exit 0)

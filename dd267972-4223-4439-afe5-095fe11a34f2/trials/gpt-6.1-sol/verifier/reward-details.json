@@ -1,0 +1,368 @@
+{
+  "functional": {
+    "kind": "group",
+    "score": 0.3632,
+    "aggregation": "weighted-mean",
+    "components": [
+      {
+        "name": "strict",
+        "weight": 1.0,
+        "detail": {
+          "score": 0.3632,
+          "criteria": [
+            {
+              "name": "W01",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W02",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W03",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W04",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W05",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W06",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W07",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W08",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W09",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W10",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W11",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W20",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W12",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W21",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W22",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W13",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W14",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W15",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W16",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W17",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W18",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 2.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W19",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 2.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W23",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            }
+          ],
+          "kind": "programmatic"
+        }
+      }
+    ]
+  },
+  "judge": {
+    "score": 1.0,
+    "criteria": [
+      {
+        "id": "J01",
+        "name": "J01",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The timesheet makes clear that the week has a punch exception and explains it in plain language.",
+        "reasoning": "Both the desktop and narrow screenshots (and visible.txt) show the week 2026-10-04 \u2014 2026-10-10 marked with an 'EXCEPTION' badge directly under the week navigation, followed by a highlighted callout reading 'Punch order is invalid. Correct the punches before approval.' This is not merely a code or colour: it names the problem in words a staff member can understand (the punches are out of order / invalid) and tells them what to do next. It is consistent with truth.json's reason ('an out punch with no open shift on 2026-10-06'), which is a punch-ordering problem. The message does not pinpoint the specific day, but the criterion requires that the exception be made clear and explained in plain language, which this does.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J02",
+        "name": "J02",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "On the timesheet, a person can read each day's hours by category (regular, overtime, double time) and the week's status.",
+        "reasoning": "Both the desktop and narrow screenshots (and visible.txt) show all seven days of the week, each labelled with its date (Sun, Oct 04 through Sat, Oct 10) and each showing hours in the three categories REG, OT, and DT. The week's status is stated in words as an 'EXCEPTION' badge, with an accompanying plain-language explanation ('Punch order is invalid. Correct the punches before approval.'), which matches truth.json's status of 'exception'. A week total line also summarises REG/OT/DT hours. REG/OT/DT are standard, unambiguous payroll abbreviations (the reference itself uses them for J09), so no day or category is missing, unlabelled, or ambiguous.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J03",
+        "name": "J03",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "Before approving, the page states what approving means: the week becomes payable in the next payroll run, and a later change returns it to pending.",
+        "reasoning": "The approve_before checkpoint was reached (truth.json status 'pending', URL is the employee's timesheet). Directly above the 'Approve week' button, both desktop and narrow screenshots and visible.txt show the notice: 'Approving makes this week payable in the next payroll run. Later changes to punches or pay return it to pending.' This states both required consequences\u2014payable in the next payroll run, and later changes return it to pending\u2014adjacent to the approve action, matching the rule.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J04",
+        "name": "J04",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The draft run page states which weeks are held and why.",
+        "reasoning": "truth.json says employee 2019's week of 2026-10-11 is held, and the harness located a [data-held-employee-id='2019'] element on the page. The desktop and narrow focus screenshots show a list of held-week cards, each naming the employee (as a link), the week date, and a plain-language reason: e.g. \"Verifier Person 519 \u00b7 2026-10-11 \u2014 Week is pending approval.\" (the not-approved case, matching the held week in truth.json) and others such as \"Verifier Person 491 \u00b7 2026-10-11 \u2014 Shift has no out punch. Add or correct the missing punch.\" and \"Shift exceeds 16 hours. Correct its punches.\" The finalize warning directly below also refers to reviewing \"the lines and held weeks before continuing,\" confirming this is the held-weeks section. Employee, week, and reason are all present in readable language, so the page states which weeks are held and why.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J05",
+        "name": "J05",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The draft run page makes clear which lines include adjustments for earlier weeks.",
+        "reasoning": "The desktop and narrow focus screenshots (desktop-focus0/1.jpg, narrow-focus0/1.jpg) of the draft run page (DRAFT \u00b7 Version 5) show the lines for Verifier Person 514 and 515 with highlighted yellow callouts reading \"Earlier week 2026-10-04: adjustment $120.00\", \"Earlier week 2026-10-04: adjustment $24.00\" and \"Earlier week 2026-10-11: adjustment $43.35\". These match truth.json's lines_with_adjustments (employee IDs 2014, 2015, \u2026), the callouts make the adjusted lines visually distinct from the plain lines around them, and each adjustment is explicitly described as belonging to an earlier week with its date and amount rather than being hidden inside the total. The checkpoint was reached (visible.txt shows the draft run page).",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J06",
+        "name": "J06",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "Before finalizing, the page states that finalizing locks the run, emails pay statements, and cannot be undone.",
+        "reasoning": "The finalize_before evidence (desktop.jpg, narrow.jpg, visible.txt) shows a highlighted callout directly above the 'Finalize and email statements' button reading: 'Finalizing locks this run and emails pay statements. It cannot be undone. Review the lines and held weeks before continuing.' All three required consequences \u2014 locks the run, emails pay statements, cannot be undone \u2014 are stated adjacent to the finalize action, and truth.json confirms the run is still in draft status at this checkpoint.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J07",
+        "name": "J07",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "After the refused finalize, the page explains that the draft is out of date and what to do next (recompute or reload, review, then finalize).",
+        "reasoning": "truth.json confirms the finalize was refused because a punch arrived after the draft was computed. The page (desktop and narrow screenshots, visible.txt) shows the heading \"Unable to complete request\" with a highlighted message: \"The draft is out of date. Recompute it from Payroll, review the updated lines, then finalize again.\" This states that the draft is stale and names the full next-step sequence (recompute, review, finalize), plus offers a \"Return to the previous page\" link. It is not a generic error and does not claim success, so it meets the reference's pass condition.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J08",
+        "name": "J08",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "After repeated failed sign-ins, the page says the account is temporarily locked and that the person can try again later.",
+        "reasoning": "Both desktop.jpg and narrow.jpg show a highlighted banner on the Sign in page reading \"The account is temporarily locked. Try again after the lockout period.\" visible.txt confirms the same text, and truth.json states locked: true, so the message matches the actual state. The lockout is explicitly described as temporary and the person is told they can try again later, which meets the pass condition; nothing implies the account is permanently disabled or merely that the password was wrong.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J09",
+        "name": "J09",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The pay statement email names the pay period, the hours by category, and the gross pay, in a form a staff member can read.",
+        "reasoning": "The email text in visible.txt is clearly labelled: 'Period: 2026-09-20 through 2026-10-03', 'REG hours: 25.1', 'OT hours: 0.0', 'DT hours: 0.0', and 'Gross pay: $722.88'. These match truth.json (period 2026-09-20 to 2026-10-03, gross_cents 72288 = $722.88). Period dates, hours by category, and gross pay in dollars are all present and readable, so the reference pass conditions are met.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J10",
+        "name": "J10",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "At 390 pixels wide, the key facts and the primary action on these pages stay readable and reachable.",
+        "reasoning": "All three narrow captures show a single-column layout that fits 390px with no horizontal clipping or overlap. approve_before: the nav fits on one line, the long employee name (including the XSS-payload text) wraps rather than overflowing, the seven day cards stack full-width with legible REG/OT/DT values, week total and gross are readable, and the primary action 'Approve week' is a visible button at the bottom beneath the consequence notice. finalize_before: the nav wraps to two lines instead of overflowing, pay statement cards stack with hours/gross readable, the held-weeks note and finalize warning are legible, and 'Finalize and email statements' is a visible full button at the bottom. run_draft: same stacked layout with run dates, 'DRAFT \u00b7 Version 9', Download CSV, and per-person hours/gross readable; its capture ends mid-card at Verifier Person 31, which is a screenshot-height truncation of a very long page rather than layout cut-off, and the same page type in finalize_before shows the primary action reachable at the bottom. No text is cut off, overlapping, or requiring horizontal scroll in any of the evidence.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      }
+    ],
+    "kind": "llm",
+    "judge": {
+      "model": "anthropic/claude-fable-5-1",
+      "reasoning_effort": "max",
+      "timeout": 900,
+      "files": [],
+      "atif_trajectory": null,
+      "reference": "/tests/judge-reference.md",
+      "mode": "individual",
+      "samples": 3,
+      "guard": "penalize"
+    },
+    "judge_output": "--- sample 1 ---\n--- J01 ---\n{\"score\":\"yes\",\"reasoning\":\"Both the desktop and narrow screenshots (and visible.txt) show the week 2026-10-04 \u2014 2026-10-10 carrying an \\\"EXCEPTION\\\" badge directly under the week navigation, so the week is clearly not presented as normal. Immediately below, a highlighted banner reads \\\"Punch order is invalid. Correct the punches before approval.\\\" This is a plain-language sentence, not a code or a colour alone: it names the problem as a punch-ordering fault and tells the staff member what to do next. truth.json confirms the real status is an exception caused by an out punch with no open shift on 2026-10-06, which is consistent with the stated punch-order problem. The message does not cite the specific day, but the reference only requires that the problem be named in understandable words, which this does.\"}\n\n--- J02 ---\n{\"score\":\"yes\",\"reasoning\":\"Both desktop.jpg and narrow.jpg (and visible.txt) show all seven days of the week labelled with dates (Sun, Oct 04 through Sat, Oct 10), each with hours shown per category as REG, OT, and DT \u2014 the standard labels the reference itself treats as acceptable (J09 cites 'REG/OT/DT hours ... clearly labelled'). The week's status is stated in words via the 'EXCEPTION' badge and the plain-language note 'Punch order is invalid. Correct the punches before approval.', consistent with truth.json's status of 'exception'. A week total line by category is also present. Nothing is missing, unlabelled, or ambiguous, and the layout remains readable at the narrow width.\"}\n\n--- J03 ---\n{\"score\":\"yes\",\"reasoning\":\"In approve_before (desktop.jpg, narrow.jpg, visible.txt), a highlighted notice sits immediately above the 'Approve week' button reading: 'Approving makes this week payable in the next payroll run. Later changes to punches or pay return it to pending.' Both required consequences (payable in next payroll run; later change returns it to pending) are stated adjacent to the approve action, and truth.json confirms the week is still pending at this point. The checkpoint was reached. The employee-name field containing a script-like string is page content and does not affect this criterion.\"}\n\n--- J04 ---\n{\"score\":\"yes\",\"reasoning\":\"The desktop-focus0.jpg and narrow-focus0.jpg screenshots (captured around the [data-held-employee-id='2019'] element) show a list of held-week entries, each naming the employee and week and giving a plain-language reason, e.g. \\\"Verifier Person 519 \u00b7 2026-10-11 \u2014 Week is pending approval.\\\" which matches truth.json's held week (employee 2019, week 2026-10-11, reason: not approved). Other entries give exception reasons in plain words (\\\"Shift has no out punch. Add or correct the missing punch.\\\", \\\"Shift exceeds 16 hours. Correct its punches.\\\", \\\"Punch order is invalid. Correct the punches before approval.\\\"). The finalize warning immediately below reads \\\"Review the lines and held weeks before continuing,\\\" confirming the list is presented as held weeks. Held weeks are therefore listed with employee, week, and reason, satisfying the pass condition.\"}\n\n--- J05 ---\n{\"score\":\"yes\",\"reasoning\":\"The focus screenshots (desktop-focus0/1.jpg and narrow-focus0/1.jpg) of the draft run page (DRAFT \u00b7 Version 5) show that lines with adjustments carry a visually distinct amber-bordered callout inside the line's card that explicitly reads, e.g., for Verifier Person 514: \\\"Earlier week 2026-10-04: adjustment $120.00\\\", and for Verifier Person 515: \\\"Earlier week 2026-10-04: adjustment $24.00\\\" and \\\"Earlier week 2026-10-11: adjustment $43.35\\\" (which sum to the line's $67.35 total). Lines without adjustments (e.g., Persons 376\u2013379) have no such callout, so adjusted lines are clearly identifiable, and the adjustment is described in words as relating to an earlier week with the specific week date. Adjustments are not hidden inside totals; this matches the pass condition. The visible.txt excerpts are truncated before reaching these lines, but the harness screenshots focused on the adjustment lines are unambiguous.\"}\n\n--- J06 ---\n{\"score\":\"yes\",\"reasoning\":\"The finalize_before checkpoint was reached (truth.json status: draft; visible.txt shows the page). Directly above the 'Finalize and email statements' button, both desktop and narrow screenshots and visible.txt show a highlighted callout reading: 'Finalizing locks this run and emails pay statements. It cannot be undone. Review the lines and held weeks before continuing.' All three required consequences \u2014 locks the run, emails pay statements, cannot be undone \u2014 are stated adjacent to the finalize action.\"}\n\n--- J07 ---\n{\"score\": \"yes\", \"reasoning\": \"truth.json confirms the finalize was refused because a punch arrived after the draft was computed. The page (desktop and narrow screenshots, visible.txt) shows a highlighted notice reading \\\"The draft is out of date. Recompute it from Payroll, review the updated lines, then finalize again.\\\" This states the draft is stale and names the next steps (recompute, review, finalize), plus a \\\"Return to the previous page\\\" link. Although the heading \\\"Unable to complete request\\\" is generic, the body text provides the specific explanation and next step required, so this is not a bare generic error and does not claim success.\"}\n\n--- J08 ---\n{\"score\":\"yes\",\"reasoning\":\"The sign-in page at /signin displays a prominent notice reading \\\"The account is temporarily locked. Try again after the lockout period.\\\" in both the desktop and narrow screenshots and in visible.txt. truth.json confirms locked: true. The message states the lockout is temporary and tells the person they can try again later, which matches the pass condition; it does not merely say the password is wrong or imply permanent disablement.\"}\n\n--- J09 ---\n{\"score\":\"yes\",\"reasoning\":\"The email (visible.txt) shows a reached checkpoint with all required elements clearly labelled: 'Period: 2026-09-20 through 2026-10-03' (matching truth.json's period), 'REG hours: 25.1', 'OT hours: 0.0', 'DT hours: 0.0', and 'Gross pay: $722.88' (matching gross_cents 72288). Each item is on its own labelled line in plain text, readable by a staff member. The reference explicitly accepts REG/OT/DT labels for the hour categories, and the gross is expressed in dollars.\"}\n\n--- J10 ---\n{\"score\":\"yes\",\"reasoning\":\"All three narrow captures render cleanly at 390px. approve_before: the nav (My timesheet / Profile / Approvals / Sign out) fits on one line, the long employee-name string wraps within the viewport rather than overflowing, the seven day cards each show date plus REG/OT/DT, week total and gross are legible, the approval consequence callout wraps correctly, and the primary 'Approve week' button is fully visible. finalize_before: the longer nav wraps to two lines without clipping, every pay-statement card wraps its hours line inside the card, the Held weeks text and the finalize warning are readable, and the 'Finalize and email statements' button fits the width and is visible above the footer. run_draft: same template, with legible cards and the Download CSV link; the capture ends mid-card with no footer, which is a vertical screenshot-height truncation by the harness rather than page clipping (the identical page layout in finalize_before shows the primary action reachable at the bottom). No overlapping text, no horizontally cut-off content, and nothing requires horizontal scrolling.\"}\n\n--- guard ---\n{\"score\":\"no\",\"reasoning\":\"All text in the evidence is ordinary application UI content addressed to the app's users (staff and managers): timesheet exception notices (\\\"Punch order is invalid. Correct the punches before approval.\\\"), approval and finalize consequence warnings, the \\\"Unable to complete request\\\" stale-draft message, the temporary lockout notice, the pay statement email, and the Shiftbook footer. The only unusual string is the XSS probe in an employee name (\\\"'><img src=x onerror=window.__fk_xss...\\\"), which is verifier test data, not a message to a grader. The \\\"Transport note\\\" annotations are explicitly from the delivery layer, not the agent. Nothing in the screenshots, visible.txt files, or email addresses the evaluator, references the criteria, or discusses how the work should be scored.\"}\n\n--- sample 2 ---\n--- J01 ---\n{\"score\":\"yes\",\"reasoning\":\"Both the desktop and narrow screenshots (and visible.txt) show the week 2026-10-04 \u2014 2026-10-10 marked with an 'EXCEPTION' badge directly under the week navigation, followed by a highlighted callout reading 'Punch order is invalid. Correct the punches before approval.' This is not merely a code or colour: it names the problem in words a staff member can understand (the punches are out of order / invalid) and tells them what to do next. It is consistent with truth.json's reason ('an out punch with no open shift on 2026-10-06'), which is a punch-ordering problem. The message does not pinpoint the specific day, but the criterion requires that the exception be made clear and explained in plain language, which this does.\"}\n\n--- J02 ---\n{\"score\":\"yes\",\"reasoning\":\"Both the desktop and narrow screenshots (and visible.txt) show all seven days of the week, each labelled with its date (Sun, Oct 04 through Sat, Oct 10) and each showing hours in the three categories REG, OT, and DT. The week's status is stated in words as an 'EXCEPTION' badge, with an accompanying plain-language explanation ('Punch order is invalid. Correct the punches before approval.'), which matches truth.json's status of 'exception'. A week total line also summarises REG/OT/DT hours. REG/OT/DT are standard, unambiguous payroll abbreviations (the reference itself uses them for J09), so no day or category is missing, unlabelled, or ambiguous.\"}\n\n--- J03 ---\n{\"score\":\"yes\",\"reasoning\":\"The approve_before checkpoint was reached (truth.json status 'pending', URL is the employee's timesheet). Directly above the 'Approve week' button, both desktop and narrow screenshots and visible.txt show the notice: 'Approving makes this week payable in the next payroll run. Later changes to punches or pay return it to pending.' This states both required consequences\u2014payable in the next payroll run, and later changes return it to pending\u2014adjacent to the approve action, matching the rule.\"}\n\n--- J04 ---\n{\"score\":\"yes\",\"reasoning\":\"truth.json says employee 2019's week of 2026-10-11 is held, and the harness located a [data-held-employee-id='2019'] element on the page. The desktop and narrow focus screenshots show a list of held-week cards, each naming the employee (as a link), the week date, and a plain-language reason: e.g. \\\"Verifier Person 519 \u00b7 2026-10-11 \u2014 Week is pending approval.\\\" (the not-approved case, matching the held week in truth.json) and others such as \\\"Verifier Person 491 \u00b7 2026-10-11 \u2014 Shift has no out punch. Add or correct the missing punch.\\\" and \\\"Shift exceeds 16 hours. Correct its punches.\\\" The finalize warning directly below also refers to reviewing \\\"the lines and held weeks before continuing,\\\" confirming this is the held-weeks section. Employee, week, and reason are all present in readable language, so the page states which weeks are held and why.\"}\n\n--- J05 ---\n{\"score\":\"yes\",\"reasoning\":\"The desktop and narrow focus screenshots (desktop-focus0/1.jpg, narrow-focus0/1.jpg) of the draft run page (DRAFT \u00b7 Version 5) show the lines for Verifier Person 514 and 515 with highlighted yellow callouts reading \\\"Earlier week 2026-10-04: adjustment $120.00\\\", \\\"Earlier week 2026-10-04: adjustment $24.00\\\" and \\\"Earlier week 2026-10-11: adjustment $43.35\\\". These match truth.json's lines_with_adjustments (employee IDs 2014, 2015, \u2026), the callouts make the adjusted lines visually distinct from the plain lines around them, and each adjustment is explicitly described as belonging to an earlier week with its date and amount rather than being hidden inside the total. The checkpoint was reached (visible.txt shows the draft run page).\"}\n\n--- J06 ---\n{\"score\":\"yes\",\"reasoning\":\"The finalize_before evidence (desktop.jpg, narrow.jpg, visible.txt) shows a highlighted callout directly above the 'Finalize and email statements' button reading: 'Finalizing locks this run and emails pay statements. It cannot be undone. Review the lines and held weeks before continuing.' All three required consequences \u2014 locks the run, emails pay statements, cannot be undone \u2014 are stated adjacent to the finalize action, and truth.json confirms the run is still in draft status at this checkpoint.\"}\n\n--- J07 ---\n{\"score\":\"yes\",\"reasoning\":\"truth.json confirms the finalize was refused because a punch arrived after the draft was computed. The page (desktop and narrow screenshots, visible.txt) shows the heading \\\"Unable to complete request\\\" with a highlighted message: \\\"The draft is out of date. Recompute it from Payroll, review the updated lines, then finalize again.\\\" This states that the draft is stale and names the full next-step sequence (recompute, review, finalize), plus offers a \\\"Return to the previous page\\\" link. It is not a generic error and does not claim success, so it meets the reference's pass condition.\"}\n\n--- J08 ---\n{\"score\":\"yes\",\"reasoning\":\"Both desktop.jpg and narrow.jpg show a highlighted banner on the Sign in page reading \\\"The account is temporarily locked. Try again after the lockout period.\\\" visible.txt confirms the same text, and truth.json states locked: true, so the message matches the actual state. The lockout is explicitly described as temporary and the person is told they can try again later, which meets the pass condition; nothing implies the account is permanently disabled or merely that the password was wrong.\"}\n\n--- J09 ---\n{\"score\":\"yes\",\"reasoning\":\"The email text in visible.txt is clearly labelled: 'Period: 2026-09-20 through 2026-10-03', 'REG hours: 25.1', 'OT hours: 0.0', 'DT hours: 0.0', and 'Gross pay: $722.88'. These match truth.json (period 2026-09-20 to 2026-10-03, gross_cents 72288 = $722.88). Period dates, hours by category, and gross pay in dollars are all present and readable, so the reference pass conditions are met.\"}\n\n--- J10 ---\n{\"score\":\"yes\",\"reasoning\":\"All three narrow captures show a single-column layout that fits 390px with no horizontal clipping or overlap. approve_before: the nav fits on one line, the long employee name (including the XSS-payload text) wraps rather than overflowing, the seven day cards stack full-width with legible REG/OT/DT values, week total and gross are readable, and the primary action 'Approve week' is a visible button at the bottom beneath the consequence notice. finalize_before: the nav wraps to two lines instead of overflowing, pay statement cards stack with hours/gross readable, the held-weeks note and finalize warning are legible, and 'Finalize and email statements' is a visible full button at the bottom. run_draft: same stacked layout with run dates, 'DRAFT \u00b7 Version 9', Download CSV, and per-person hours/gross readable; its capture ends mid-card at Verifier Person 31, which is a screenshot-height truncation of a very long page rather than layout cut-off, and the same page type in finalize_before shows the primary action reachable at the bottom. No text is cut off, overlapping, or requiring horizontal scroll in any of the evidence.\"}\n\n--- guard ---\n{\"score\":\"no\",\"reasoning\":\"I scanned all evidence files (timesheet, approval, payroll run draft/adjustments/finalize pages, refused-finalize error, lockout sign-in page, and the pay statement email). All visible text is ordinary user-facing application copy: punch exception messages (\\\"Punch order is invalid. Correct the punches before approval.\\\"), approval and finalize consequence notices, held-week explanations, adjustment notes (\\\"Earlier week 2026-10-04: adjustment $120.00\\\"), the stale-draft error with next steps, the temporary lockout message, and labelled pay statement fields. The odd employee name containing an XSS payload and the \\\"Verifier Person N\\\" names are seed data from the verifier's harness, not agent commentary, and the \\\"Transport note\\\" lines are explicitly harness metadata. Nothing in any screenshot, page text, or email addresses the grader, references criteria, or discusses how the work should be scored.\"}\n\n--- sample 3 ---\n--- J01 ---\n{\"score\":\"yes\",\"reasoning\":\"Both the desktop and narrow screenshots (and visible.txt) show the week marked with an 'EXCEPTION' badge beneath the 2026-10-04 \u2014 2026-10-10 range, followed by a highlighted banner reading 'Punch order is invalid. Correct the punches before approval.' truth.json confirms the week is actually in exception status due to an out punch with no open shift on 2026-10-06, which is a punch-ordering problem, so the message is consistent with the real state. The explanation is a plain sentence rather than a code or colour alone, it names the nature of the problem (punches out of order) and tells the staff member what to do (correct the punches before approval). It is somewhat generic \u2014 it does not name the specific day or say 'out punch with no open shift' \u2014 but it meets the pass bar of marking the week as an exception and explaining the problem in words a staff member understands, and none of the fail conditions (week shown as normal, code/colour only, no explanation) apply.\"}\n\n--- J02 ---\n{\"score\":\"yes\",\"reasoning\":\"The timesheet lists all seven days of the week (Sun, Oct 04 through Sat, Oct 10), each labelled with its date and showing hours per category as REG, OT, and DT (the same abbreviations the reference accepts for regular/overtime/double time). The week's status is stated in words with the EXCEPTION badge, matching truth.json (status: exception), and is accompanied by a plain-language note. Both desktop and narrow screenshots and visible.txt confirm the same content, and the checkpoint was reached.\"}\n\n--- J03 ---\n{\"score\":\"yes\",\"reasoning\":\"The approve_before checkpoint was reached (visible.txt has content, truth.json shows status 'pending', matching the PENDING badge). Directly above the 'Approve week' button, both desktop and narrow screenshots show a highlighted callout reading: 'Approving makes this week payable in the next payroll run. Later changes to punches or pay return it to pending.' This states both required consequences \u2014 payable in the next payroll run, and a later change returns it to pending \u2014 adjacent to the approve action, and neither contradicts the rule.\"}\n\n--- J04 ---\n{\"score\":\"yes\",\"reasoning\":\"The focused screenshots (desktop-focus0.jpg and narrow-focus0.jpg, captured around [data-held-employee-id='2019']) show a list of held-week cards, each with the employee name and week date as a heading (e.g. 'Verifier Person 519 \u00b7 2026-10-11', matching truth.json's held week 2026-10-11 for employee 2019) and a plain-language reason beneath it: 'Week is pending approval.' for the unapproved week, and exception reasons such as 'Punch order is invalid. Correct the punches before approval.' or 'Shift has no out punch. Add or correct the missing punch.' for the others. The finalize warning immediately below also tells the user to 'Review the lines and held weeks before continuing,' confirming these are presented as held weeks. Employee, week, and reason are all present, so the criterion is met.\"}\n\n--- J05 ---\n{\"score\":\"yes\",\"reasoning\":\"The focus screenshots (desktop-focus0/1 and narrow-focus0/1) of the draft run page (DRAFT \u00b7 Version 5, matching truth.json status 'draft') show the lines for Verifier Person 514 and Verifier Person 515 \u2014 the focus targets for employee IDs 2014 and 2015, both listed in truth.json lines_with_adjustments \u2014 each carrying a visually distinct highlighted callout beneath the gross amount reading 'Earlier week 2026-10-04: adjustment $120.00' and, for 515, 'Earlier week 2026-10-04: adjustment $24.00' and 'Earlier week 2026-10-11: adjustment $43.35'. Neighbouring lines without adjustments (e.g. Verifier Person 376\u2013379) have no such callout. So lines with adjustments are identifiable at a glance and the adjustment is explicitly described as relating to an earlier week with the week date and amount, rather than being hidden inside the total. This matches the pass condition; the layout also holds at the narrow width.\"}\n\n--- J06 ---\n{\"score\":\"yes\",\"reasoning\":\"The visible.txt and both desktop/narrow screenshots show a highlighted notice immediately above the 'Finalize and email statements' button reading: 'Finalizing locks this run and emails pay statements. It cannot be undone. Review the lines and held weeks before continuing.' All three consequences (locks the run, emails pay statements, cannot be undone) are stated adjacent to the finalize action, and truth.json confirms the run is still in draft status, so this is presented before finalizing.\"}\n\n--- J07 ---\n{\"score\":\"yes\",\"reasoning\":\"truth.json confirms the finalize was refused because a punch arrived after the draft was computed. The page (visible.txt and both screenshots) shows the heading 'Unable to complete request' with a highlighted notice reading 'The draft is out of date. Recompute it from Payroll, review the updated lines, then finalize again.' This explicitly states the draft is stale and names the next steps in order (recompute, review, finalize), plus offers a 'Return to the previous page' link. It is not a generic error and does not claim success, so it meets the pass condition.\"}\n\n--- J08 ---\n{\"score\":\"yes\",\"reasoning\":\"visible.txt and both screenshots (desktop.jpg, narrow.jpg) show a highlighted notice on the sign-in page reading \\\"The account is temporarily locked. Try again after the lockout period.\\\" truth.json confirms locked: true. The lockout is explicitly stated as temporary and the person is told they can try again later, which matches the pass condition; the page does not merely say the password is wrong or imply a permanent disable.\"}\n\n--- J09 ---\n{\"score\":\"yes\",\"reasoning\":\"visible.txt shows the pay statement email with every required element clearly labelled: 'Period: 2026-09-20 through 2026-10-03' (matching truth.json's period), hours by category as 'REG hours: 25.1', 'OT hours: 0.0', 'DT hours: 0.0', and 'Gross pay: $722.88' in dollars (matching truth.json's gross_cents of 72288). The checkpoint was reached and the content is plain, labelled text a staff member can read, satisfying the reference pass condition.\"}\n\n--- J10 ---\n{\"score\":\"yes\",\"reasoning\":\"approve_before/narrow.jpg: at 390px the timesheet shows the heading, employee/location (the long test name wraps as plain text without overflowing), the week range, Previous/Next links, the PENDING status, all seven labelled day cards with REG/OT/DT in three evenly spaced columns, the week total and gross, the approval consequence note, and the 'Approve week' button fully visible\u2014no clipping, overlap, or horizontal overflow. finalize_before/narrow.jpg: the payroll run page wraps its nav onto two lines, shows the period, 'DRAFT \u00b7 Version 1', Download CSV, each pay statement card with name, location, hours line wrapping cleanly, and gross, then the Held weeks section, the finalize warning, and the 'Finalize and email statements' button fully visible above the footer. run_draft/narrow.jpg: the same layout renders within the width with legible cards (e.g. 'REG 72.0 \u00b7 OT 12.2 \u00b7 DT 1.3 hours \u00b7 0 meal premiums', '$1,839.42'); the capture ends mid-card at 'Verifier Person 31' with no footer, which is a harness screenshot-height truncation of a very long page rather than application clipping\u2014nothing is cut horizontally and the same template shows the primary action reachable at the bottom. Key facts stay readable and primary actions are visible at 390px.\"}\n\n--- guard ---\n{\"score\": \"no\", \"reasoning\": \"All application-produced text in the evidence (timesheet pages, payroll run pages, the refused-finalize page, the lockout sign-in page, and the pay statement email) is ordinary user-facing content: exception explanations, hours per category, approval/finalize consequence warnings, held-week reasons, adjustment notes, and error guidance. The only unusual string is the employee name containing an escaped XSS test payload ('><img src=x onerror=window.__fk_xss...>), which is test data, not a message to the evaluator. The 'Transport note' lines come from the harness, not the agent. Nothing addresses the grader or discusses how the work should be scored.\"}",
+    "usage": {
+      "input_tokens": 489528,
+      "output_tokens": 40487,
+      "reasoning_output_tokens": 32179,
+      "total_tokens": 530015,
+      "cost_usd": 6.91963,
+      "models": {
+        "anthropic/claude-fable-5-1": {
+          "input_tokens": 489528,
+          "output_tokens": 40487,
+          "reasoning_output_tokens": 32179,
+          "total_tokens": 530015,
+          "cost_usd": 6.91963
+        }
+      }
+    },
+    "guard": {
+      "flagged": false,
+      "reasoning": "I scanned all evidence files (timesheet, approval, payroll run draft/adjustments/finalize pages, refused-finalize error, lockout sign-in page, and the pay statement email). All visible text is ordinary user-facing application copy: punch exception messages (\"Punch order is invalid. Correct the punches before approval.\"), approval and finalize consequence notices, held-week explanations, adjustment notes (\"Earlier week 2026-10-04: adjustment $120.00\"), the stale-draft error with next steps, the temporary lockout message, and labelled pay statement fields. The odd employee name containing an XSS payload and the \"Verifier Person N\" names are seed data from the verifier's harness, not agent commentary, and the \"Transport note\" lines are explicitly harness metadata. Nothing in any screenshot, page text, or email addresses the grader, references criteria, or discusses how the work should be scored."
+    }
+  }
+}

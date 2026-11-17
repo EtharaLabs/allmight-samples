@@ -1,0 +1,6 @@
+{
+ "status": "cancelled",
+ "cancelled_by": "patient",
+ "deposit_cents": 2510,
+ "refund_cents": 2510
+}

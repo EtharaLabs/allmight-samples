@@ -1,0 +1,4 @@
+{
+  "image": "localhost:5001/ledgerline-tests@sha256:e854a0cc649e9d9376465b5e4911c4e419945f5bdd841907fd085f017300aaf2",
+  "schema": "image-lock/v1"
+}

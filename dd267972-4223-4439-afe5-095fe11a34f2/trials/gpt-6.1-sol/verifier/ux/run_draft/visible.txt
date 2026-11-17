@@ -1,0 +1,1036 @@
+◷ Shiftbook
+RESTAURANT OPERATIONS
+My timesheet
+Profile
+Approvals
+Staff
+Time clocks
+Payroll
+Sign out
+TIME & PAY
+Payroll run
+
+2026-10-04 — 2026-10-17
+
+DRAFT · Version 9
+
+Download CSV
+
+Pay statements
+Verifier Person 7
+
+Mission St, San Francisco
+
+REG 72.0 · OT 12.2 · DT 1.3 hours · 0 meal premiums
+
+$1,839.42
+Verifier Person 8
+
+Mission St, San Francisco
+
+REG 71.5 · OT 18.0 · DT 2.1 hours · 0 meal premiums
+
+$2,511.03
+Verifier Person 9
+
+Mission St, San Francisco
+
+REG 71.6 · OT 17.6 · DT 2.1 hours · 0 meal premiums
+
+$1,900.92
+Verifier Person 10
+
+Mission St, San Francisco
+
+REG 68.5 · OT 13.0 · DT 1.1 hours · 0 meal premiums
+
+$1,835.58
+Verifier Person 11
+
+Mission St, San Francisco
+
+REG 63.4 · OT 18.7 · DT 2.1 hours · 0 meal premiums
+
+$2,458.21
+Verifier Person 12
+
+Mission St, San Francisco
+
+REG 61.5 · OT 16.6 · DT 3.1 hours · 0 meal premiums
+
+$2,463.16
+Verifier Person 13
+
+Mission St, San Francisco
+
+REG 69.8 · OT 19.3 · DT 1.0 hours · 0 meal premiums
+
+$3,057.77
+Verifier Person 14
+
+Mission St, San Francisco
+
+REG 71.5 · OT 13.5 · DT 4.2 hours · 0 meal premiums
+
+$2,623.93
+Verifier Person 15
+
+Mission St, San Francisco
+
+REG 67.5 · OT 13.7 · DT 2.9 hours · 1 meal premiums
+
+$2,015.57
+Verifier Person 16
+
+Mission St, San Francisco
+
+REG 78.0 · OT 18.7 · DT 1.0 hours · 0 meal premiums
+
+$3,246.91
+Verifier Person 17
+
+Mission St, San Francisco
+
+REG 61.1 · OT 9.8 · DT 2.1 hours · 0 meal premiums
+
+$2,452.02
+Verifier Person 18
+
+Mission St, San Francisco
+
+REG 77.0 · OT 11.1 · DT 0.0 hours · 0 meal premiums
+
+$1,835.54
+Verifier Person 19
+
+Mission St, San Francisco
+
+REG 64.0 · OT 21.0 · DT 7.0 hours · 0 meal premiums
+
+$2,200.96
+Verifier Person 20
+
+Mission St, San Francisco
+
+REG 68.0 · OT 14.5 · DT 4.2 hours · 0 meal premiums
+
+$2,929.78
+Verifier Person 21
+
+Mission St, San Francisco
+
+REG 61.5 · OT 14.5 · DT 3.0 hours · 0 meal premiums
+
+$2,695.35
+Verifier Person 22
+
+Mission St, San Francisco
+
+REG 71.1 · OT 12.0 · DT 2.8 hours · 0 meal premiums
+
+$2,973.58
+Verifier Person 23
+
+Mission St, San Francisco
+
+REG 72.0 · OT 21.5 · DT 2.1 hours · 0 meal premiums
+
+$2,358.81
+Verifier Person 24
+
+Mission St, San Francisco
+
+REG 70.0 · OT 11.6 · DT 0.9 hours · 0 meal premiums
+
+$2,622.48
+Verifier Person 25
+
+Mission St, San Francisco
+
+REG 71.9 · OT 25.0 · DT 1.1 hours · 0 meal premiums
+
+$2,103.67
+Verifier Person 26
+
+Mission St, San Francisco
+
+REG 63.4 · OT 27.5 · DT 2.1 hours · 0 meal premiums
+
+$2,857.33
+Verifier Person 27
+
+Mission St, San Francisco
+
+REG 61.9 · OT 9.1 · DT 0.1 hours · 0 meal premiums
+
+$1,624.85
+Verifier Person 28
+
+Mission St, San Francisco
+
+REG 70.6 · OT 15.2 · DT 2.0 hours · 0 meal premiums
+
+$2,970.71
+Verifier Person 29
+
+Mission St, San Francisco
+
+REG 59.8 · OT 11.7 · DT 2.0 hours · 0 meal premiums
+
+$2,355.09
+Verifier Person 30
+
+Mission St, San Francisco
+
+REG 71.0 · OT 24.5 · DT 1.1 hours · 0 meal premiums
+
+$2,215.51
+Verifier Person 31
+
+Mission St, San Francisco
+
+REG 62.1 · OT 19.0 · DT 1.2 hours · 0 meal premiums
+
+$2,083.20
+Verifier Person 32
+
+Mission St, San Francisco
+
+REG 63.5 · OT 14.7 · DT 1.0 hours · 0 meal premiums
+
+$2,425.14
+Verifier Person 33
+
+Mission St, San Francisco
+
+REG 68.9 · OT 9.5 · DT 0.0 hours · 0 meal premiums
+
+$2,020.55
+Verifier Person 34
+
+Mission St, San Francisco
+
+REG 59.6 · OT 14.1 · DT 1.0 hours · 0 meal premiums
+
+$2,201.15
+Verifier Person 35
+
+Mission St, San Francisco
+
+REG 67.1 · OT 12.9 · DT 2.0 hours · 0 meal premiums
+
+$2,500.95
+Verifier Person 36
+
+Mission St, San Francisco
+
+REG 59.6 · OT 12.5 · DT 1.2 hours · 0 meal premiums
+
+$1,808.80
+Verifier Person 37
+
+Mission St, San Francisco
+
+REG 70.0 · OT 17.5 · DT 0.0 hours · 0 meal premiums
+
+$2,035.69
+Verifier Person 38
+
+Mission St, San Francisco
+
+REG 61.0 · OT 17.4 · DT 0.2 hours · 0 meal premiums
+
+$1,675.64
+Verifier Person 39
+
+Mission St, San Francisco
+
+REG 79.4 · OT 20.7 · DT 1.1 hours · 0 meal premiums
+
+$2,940.17
+Verifier Person 40
+
+Mission St, San Francisco
+
+REG 75.3 · OT 13.4 · DT 1.1 hours · 0 meal premiums
+
+$2,635.20
+Verifier Person 41
+
+Mission St, San Francisco
+
+REG 70.0 · OT 17.4 · DT 0.0 hours · 0 meal premiums
+
+$1,825.90
+Verifier Person 42
+
+Mission St, San Francisco
+
+REG 61.7 · OT 8.7 · DT 2.1 hours · 0 meal premiums
+
+$1,879.01
+Verifier Person 43
+
+Mission St, San Francisco
+
+REG 71.5 · OT 14.7 · DT 2.3 hours · 0 meal premiums
+
+$1,830.51
+Verifier Person 44
+
+Mission St, San Francisco
+
+REG 62.0 · OT 19.7 · DT 6.1 hours · 0 meal premiums
+
+$2,386.25
+Verifier Person 45
+
+Mission St, San Francisco
+
+REG 69.4 · OT 13.1 · DT 1.2 hours · 0 meal premiums
+
+$2,341.12
+Verifier Person 46
+
+Mission St, San Francisco
+
+REG 69.9 · OT 21.0 · DT 2.0 hours · 0 meal premiums
+
+$2,187.05
+Verifier Person 47
+
+Mission St, San Francisco
+
+REG 69.4 · OT 20.4 · DT 5.0 hours · 0 meal premiums
+
+$3,201.01
+Verifier Person 48
+
+Mission St, San Francisco
+
+REG 69.4 · OT 13.9 · DT 2.2 hours · 0 meal premiums
+
+$1,703.70
+Verifier Person 49
+
+Mission St, San Francisco
+
+REG 72.0 · OT 22.5 · DT 2.4 hours · 0 meal premiums
+
+$3,040.13
+Verifier Person 50
+
+Mission St, San Francisco
+
+REG 69.5 · OT 12.1 · DT 2.0 hours · 0 meal premiums
+
+$2,653.28
+Verifier Person 51
+
+Mission St, San Francisco
+
+REG 61.9 · OT 25.0 · DT 3.0 hours · 0 meal premiums
+
+$2,830.00
+Verifier Person 52
+
+Mission St, San Francisco
+
+REG 63.5 · OT 9.0 · DT 1.0 hours · 0 meal premiums
+
+$1,449.66
+Verifier Person 53
+
+Mission St, San Francisco
+
+REG 64.0 · OT 12.8 · DT 1.1 hours · 0 meal premiums
+
+$2,497.96
+Verifier Person 54
+
+Mission St, San Francisco
+
+REG 71.1 · OT 23.1 · DT 3.1 hours · 0 meal premiums
+
+$2,037.49
+Verifier Person 55
+
+Mission St, San Francisco
+
+REG 72.0 · OT 24.0 · DT 3.3 hours · 0 meal premiums
+
+$3,254.64
+Verifier Person 56
+
+Mission St, San Francisco
+
+REG 72.0 · OT 15.1 · DT 2.1 hours · 0 meal premiums
+
+$1,952.29
+Verifier Person 57
+
+Mission St, San Francisco
+
+REG 69.5 · OT 8.8 · DT 0.0 hours · 0 meal premiums
+
+$1,554.76
+Verifier Person 58
+
+Mission St, San Francisco
+
+REG 71.4 · OT 13.0 · DT 2.2 hours · 0 meal premiums
+
+$1,844.06
+Verifier Person 59
+
+Mission St, San Francisco
+
+REG 71.5 · OT 21.6 · DT 6.1 hours · 0 meal premiums
+
+$2,507.76
+Verifier Person 60
+
+Mission St, San Francisco
+
+REG 76.1 · OT 15.5 · DT 1.1 hours · 0 meal premiums
+
+$2,244.26
+Verifier Person 61
+
+Mission St, San Francisco
+
+REG 64.0 · OT 22.6 · DT 3.3 hours · 0 meal premiums
+
+$2,544.59
+Verifier Person 62
+
+Mission St, San Francisco
+
+REG 64.0 · OT 19.6 · DT 3.0 hours · 0 meal premiums
+
+$1,938.31
+Verifier Person 63
+
+Mission St, San Francisco
+
+REG 71.5 · OT 22.1 · DT 2.2 hours · 1 meal premiums
+
+$2,239.52
+Verifier Person 64
+
+Mission St, San Francisco
+
+REG 64.0 · OT 13.7 · DT 2.2 hours · 0 meal premiums
+
+$2,490.60
+Verifier Person 65
+
+Mission St, San Francisco
+
+REG 67.9 · OT 11.8 · DT 0.0 hours · 1 meal premiums
+
+$2,013.45
+Verifier Person 66
+
+Mission St, San Francisco
+
+REG 61.9 · OT 16.0 · DT 4.2 hours · 0 meal premiums
+
+$2,984.60
+Verifier Person 67
+
+Mission St, San Francisco
+
+REG 63.0 · OT 15.1 · DT 2.1 hours · 0 meal premiums
+
+$2,403.51
+Verifier Person 68
+
+Mission St, San Francisco
+
+REG 66.1 · OT 14.1 · DT 1.9 hours · 0 meal premiums
+
+$1,884.74
+Verifier Person 69
+
+Mission St, San Francisco
+
+REG 63.5 · OT 14.9 · DT 0.1 hours · 0 meal premiums
+
+$1,871.60
+Verifier Person 70
+
+Mission St, San Francisco
+
+REG 64.0 · OT 18.7 · DT 2.9 hours · 0 meal premiums
+
+$2,612.60
+Verifier Person 71
+
+Mission St, San Francisco
+
+REG 69.9 · OT 15.8 · DT 2.1 hours · 0 meal premiums
+
+$2,019.58
+Verifier Person 72
+
+Mission St, San Francisco
+
+REG 64.0 · OT 22.6 · DT 1.1 hours · 0 meal premiums
+
+$2,147.16
+Verifier Person 73
+
+Mission St, San Francisco
+
+REG 72.0 · OT 15.7 · DT 0.1 hours · 0 meal premiums
+
+$1,809.68
+Verifier Person 74
+
+Mission St, San Francisco
+
+REG 77.9 · OT 15.7 · DT 4.2 hours · 0 meal premiums
+
+$3,312.00
+Verifier Person 75
+
+Mission St, San Francisco
+
+REG 80.0 · OT 15.0 · DT 1.9 hours · 0 meal premiums
+
+$2,880.74
+Verifier Person 76
+
+Mission St, San Francisco
+
+REG 59.8 · OT 14.1 · DT 2.1 hours · 0 meal premiums
+
+$1,843.51
+Verifier Person 77
+
+Mission St, San Francisco
+
+REG 57.9 · OT 20.0 · DT 7.9 hours · 0 meal premiums
+
+$2,027.34
+Verifier Person 78
+
+Mission St, San Francisco
+
+REG 71.9 · OT 10.0 · DT 2.0 hours · 0 meal premiums
+
+$2,663.38
+Verifier Person 79
+
+Mission St, San Francisco
+
+REG 69.9 · OT 17.7 · DT 3.9 hours · 0 meal premiums
+
+$1,923.43
+Verifier Person 80
+
+Mission St, San Francisco
+
+REG 67.4 · OT 11.9 · DT 1.1 hours · 0 meal premiums
+
+$2,238.72
+Verifier Person 81
+
+Mission St, San Francisco
+
+REG 61.9 · OT 18.9 · DT 0.3 hours · 0 meal premiums
+
+$2,534.72
+Verifier Person 82
+
+Mission St, San Francisco
+
+REG 63.5 · OT 23.0 · DT 3.2 hours · 0 meal premiums
+
+$2,991.07
+Verifier Person 83
+
+Mission St, San Francisco
+
+REG 60.8 · OT 15.5 · DT 2.1 hours · 0 meal premiums
+
+$2,232.73
+Verifier Person 84
+
+Mission St, San Francisco
+
+REG 72.0 · OT 28.5 · DT 6.0 hours · 0 meal premiums
+
+$3,067.35
+Verifier Person 85
+
+Mission St, San Francisco
+
+REG 70.0 · OT 25.0 · DT 1.3 hours · 0 meal premiums
+
+$2,835.09
+Verifier Person 86
+
+Mission St, San Francisco
+
+REG 64.0 · OT 27.0 · DT 1.2 hours · 0 meal premiums
+
+$2,127.32
+Verifier Person 87
+
+Mission St, San Francisco
+
+REG 80.0 · OT 26.6 · DT 1.1 hours · 6 meal premiums
+
+$2,660.03
+Verifier Person 88
+
+Mission St, San Francisco
+
+REG 74.0 · OT 15.2 · DT 1.6 hours · 7 meal premiums
+
+$2,151.57
+Verifier Person 89
+
+Mission St, San Francisco
+
+REG 79.0 · OT 28.9 · DT 2.4 hours · 8 meal premiums
+
+$3,009.69
+Verifier Person 90
+
+Mission St, San Francisco
+
+REG 80.0 · OT 24.7 · DT 2.8 hours · 3 meal premiums
+
+$2,785.25
+Verifier Person 91
+
+Mission St, San Francisco
+
+REG 71.1 · OT 21.1 · DT 2.1 hours · 3 meal premiums
+
+$2,649.34
+Verifier Person 92
+
+Mission St, San Francisco
+
+REG 80.0 · OT 28.5 · DT 2.3 hours · 3 meal premiums
+
+$3,029.44
+Verifier Person 93
+
+Mission St, San Francisco
+
+REG 71.6 · OT 11.2 · DT 0.0 hours · 4 meal premiums
+
+$2,037.39
+Verifier Person 94
+
+Mission St, San Francisco
+
+REG 72.3 · OT 16.7 · DT 4.3 hours · 2 meal premiums
+
+$2,395.03
+Verifier Person 95
+
+Roosevelt Row, Phoenix
+
+REG 80.0 · OT 29.4 · DT 0.0 hours · 0 meal premiums
+
+$3,642.34
+Verifier Person 96
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 17.6 · DT 0.0 hours · 0 meal premiums
+
+$3,133.48
+Verifier Person 97
+
+Mission St, San Francisco
+
+REG 78.0 · OT 16.9 · DT 0.0 hours · 0 meal premiums
+
+$1,756.95
+Verifier Person 98
+
+Roosevelt Row, Phoenix
+
+REG 80.0 · OT 34.5 · DT 0.0 hours · 0 meal premiums
+
+$2,799.69
+Verifier Person 99
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 32.8 · DT 0.0 hours · 0 meal premiums
+
+$2,990.98
+Verifier Person 100
+
+Mission St, San Francisco
+
+REG 77.9 · OT 14.7 · DT 0.0 hours · 0 meal premiums
+
+$1,894.06
+Verifier Person 101
+
+Roosevelt Row, Phoenix
+
+REG 80.0 · OT 30.4 · DT 0.0 hours · 0 meal premiums
+
+$3,428.89
+Verifier Person 102
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 17.5 · DT 0.0 hours · 0 meal premiums
+
+$2,103.75
+Verifier Person 103
+
+Mission St, San Francisco
+
+REG 77.0 · OT 11.3 · DT 0.0 hours · 0 meal premiums
+
+$2,151.46
+Verifier Person 104
+
+Roosevelt Row, Phoenix
+
+REG 80.0 · OT 31.8 · DT 0.0 hours · 0 meal premiums
+
+$3,179.74
+Verifier Person 105
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 36.9 · DT 0.0 hours · 0 meal premiums
+
+$3,884.55
+Verifier Person 106
+
+Mission St, San Francisco
+
+REG 80.0 · OT 24.2 · DT 0.0 hours · 0 meal premiums
+
+$2,727.24
+Verifier Person 107
+
+Roosevelt Row, Phoenix
+
+REG 80.0 · OT 19.0 · DT 0.0 hours · 0 meal premiums
+
+$2,018.10
+Verifier Person 108
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 19.6 · DT 0.0 hours · 0 meal premiums
+
+$2,636.55
+Verifier Person 109
+
+Mission St, San Francisco
+
+REG 80.0 · OT 20.1 · DT 0.0 hours · 0 meal premiums
+
+$2,021.26
+Verifier Person 110
+
+Roosevelt Row, Phoenix
+
+REG 80.0 · OT 13.2 · DT 0.0 hours · 0 meal premiums
+
+$2,030.94
+Verifier Person 111
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 23.7 · DT 0.0 hours · 0 meal premiums
+
+$3,102.52
+Verifier Person 112
+
+Mission St, San Francisco
+
+REG 80.0 · OT 32.2 · DT 0.0 hours · 0 meal premiums
+
+$2,424.88
+Verifier Person 113
+
+Roosevelt Row, Phoenix
+
+REG 80.0 · OT 35.0 · DT 0.0 hours · 0 meal premiums
+
+$3,266.13
+Verifier Person 114
+
+Wicker Park, Chicago
+
+REG 80.0 · OT 27.6 · DT 0.0 hours · 
+--- text around [data-held-employee-id='2019'] ---
+◷ Shiftbook
+RESTAURANT OPERATIONS
+My timesheet
+Profile
+Approvals
+Staff
+Time clocks
+Payroll
+Sign out
+TIME & PAY
+Payroll run
+
+2026-10-04 — 2026-10-17
+
+DRAFT · Version 9
+
+Download CSV
+
+Pay statements
+Verifier Person 7
+
+Mission St, San Francisco
+
+REG 72.0 · OT 12.2 · DT 1.3 hours · 0 meal premiums
+
+$1,839.42
+Verifier Person 8
+
+Mission St, San Francisco
+
+REG 71.5 · OT 18.0 · DT 2.1 hours · 0 meal premiums
+
+$2,511.03
+Verifier Person 9
+
+Mission St, San Francisco
+
+REG 71.6 · OT 17.6 · DT 2.1 hours · 0 meal premiums
+
+$1,900.92
+Verifier Person 10
+
+Mission St, San Francisco
+
+REG 68.5 · OT 13.0 · DT 1.1 hours · 0 meal premiums
+
+$1,835.58
+Verifier Person 11
+
+Mission St, San Francisco
+
+REG 63.4 · OT 18.7 · DT 2.1 hours · 0 meal premiums
+
+$2,458.21
+Verifier Person 12
+
+Mission St, San Francisco
+
+REG 61.5 · OT 16.6 · DT 3.1 hours · 0 meal premiums
+
+$2,463.16
+Verifier Person 13
+
+Mission St, San Francisco
+
+REG 69.8 · OT 19.3 · DT 1.0 hours · 0 meal premiums
+
+$3,057.77
+Verifier Person 14
+
+Mission St, San Francisco
+
+REG 71.5 · OT 13.5 · DT 4.2 hours · 0 meal premiums
+
+$2,623.93
+Verifier Person 15
+
+Mission St, San Francisco
+
+REG 67.5 · OT 13.7 · DT 2.9 hours · 1 meal premiums
+
+$2,015.57
+Verifier Person 16
+
+Mission St, San Francisco
+
+REG 78.0 · OT 18.7 · DT 1.0 hours · 0 meal premiums
+
+$3,246.91
+Verifier Person 17
+
+Mission St, San Francisco
+
+REG 61.1 · OT 9.8 · DT 2.1 hours · 0 meal premiums
+
+$2,452.02
+Verifier Person 18
+
+Mission St, San Francisco
+
+REG 77.0 · OT 11.1 · DT 0.0 hours · 0 meal premiums
+
+$1,835.54
+Verifier Person 19
+
+Mission St, San Francisco
+
+REG 64.0 · OT 21.0 · DT 7.0 hours · 0 meal premiums
+
+$2,200.96
+Verifier Person 20
+
+Mission St, San Francisco
+
+REG 68.0 · OT 14.5 · DT 4.2 hours · 0 meal premiums
+
+$2,929.78
+Verifier Person 21
+
+Mission St, San Francisco
+
+REG 61.5 · OT 14.5 · DT 3.0 hours · 0 meal premiums
+
+$2,695.35
+Verifier Person 22
+
+Mission St, San Francisco
+
+REG 71.1 · OT 12.0 · DT 2.8 hours · 0 meal premiums
+
+$2,973.58
+Verifier Person 23
+
+Mission St, San Francisco
+
+REG 72.0 · OT 21.5 · DT 2.1 hours · 0 meal premiums
+
+$2,358.81
+Verifier Person 24
+
+Mission St, San Francisco
+
+REG 70.0 · OT 11.6 · DT 0.9 hours · 0 meal premiums
+
+$2,622.48
+Verifier Person 25
+
+Mission St, San Francisco
+
+REG 71.9 · OT 25.0 · DT 1.1 hours · 0 meal premiums
+
+$2,103.67
+Verifier Person 26
+
+Mission St, San Francisco
+
+REG 63.4 · OT 27.5 · DT 2.1 hours · 0 meal premiums
+
+$2,857.33
+Verifier Person 27
+
+Mission St, San Francisco
+
+REG 61.9 · OT 9.1 · DT 0.1 hours · 0 meal premiums
+
+$1,624.85
+Verifier Person 28
+
+Mission St, San Francisco
+
+REG 70.6 · OT 15.2 · DT 2.0 hours · 0 meal premiums
+
+$2,970.71
+Verifier Person 29
+
+Mission St, San Francisco
+
+REG 59.8 · OT 11.7 · DT 2.0 hours · 0 meal premiums
+
+$2,355.09
+Verifier Person 30
+
+Mission St, San Francisco
+
+REG 71.0 · OT 24.5 · DT 1.1 hours · 0 meal premiums
+
+$2,215.51
+Verifier Person 31
+
+Mission St, San Francisco
+
+REG 62.1 · OT 19.0 · DT 1.2 hours · 0 meal premiums
+
+$2,083.20
+Verifier Person 32
+
+Mission St, San Francisco
+
+REG 63.5 · OT 14.7 · DT 1.0 hours · 0 meal premiums
+
+$2,425.14
+Verifier Person 33
+
+Mission St, San Francisco
+
+REG 68.9 · OT 9.5 · DT 0.0 hours · 0 meal premiums
+
+$2,020.55
+Verifier Person 34
+
+Mission St, San Francisco
+
+REG 59.6 · OT 14.1 · DT 1.0 hours · 0 meal premiums
+
+$2,201.15
+Verifier Person 35
+
+Mission St, San Francisco
+
+REG 67.1 · OT 12.9 · DT 2.0 hours · 0 meal premiums
+
+$2,500.95
+Verifier Person 36
+
+Mission St, San Francisco
+
+REG 59.6 · OT 12.5 · DT 1.2 hours · 0 meal premiums
+
+$1,808.80
+Verifier Person 37
+
+Mission St, San Francisco
+
+REG 70.0 · OT 17.5 · DT 0.0 hours · 0 meal premiums
+
+$2,035.69
+Verifier Person 38
+
+Mission St, San Francisco
+
+REG 61.0 · OT 17.4 · DT 0.2 hours · 0 meal premiums
+
+$1,675.64
+Verifier Person 39
+
+Mission St, San Francisco
+
+REG 79.4 · OT 20.7 · DT 1.1 hours · 0 meal premiums
+
+$2,940.17
+Verifier Person 40
+
+Mission St, San Francisco
+
+REG 75.3 · OT 13.4 · DT 1.1 hours · 0 meal premiums
+
+$2,635.20
+Verifier Person 41
+
+Mission St, San Francisco
+
+REG 70.0 · OT 17.4 · D

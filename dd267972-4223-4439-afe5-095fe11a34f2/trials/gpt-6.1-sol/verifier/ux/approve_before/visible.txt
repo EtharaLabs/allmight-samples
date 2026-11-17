@@ -1,0 +1,53 @@
+◷ Shiftbook
+RESTAURANT OPERATIONS
+My timesheet
+Profile
+Approvals
+Sign out
+TIME & PAY
+Weekly timesheet
+
+'><img src=x onerror=window.__fk_xss&&__fk_xss('name3-sq')> · Wicker Park, Chicago
+
+← Previous
+2026-11-01 — 2026-11-07
+Next →
+
+PENDING
+
+Sun, Nov 01
+REG 0.0
+OT 0.0
+DT 0.0
+Mon, Nov 02
+REG 0.0
+OT 0.0
+DT 0.0
+Tue, Nov 03
+REG 7.9
+OT 0.0
+DT 0.0
+Wed, Nov 04
+REG 0.0
+OT 0.0
+DT 0.0
+Thu, Nov 05
+REG 0.0
+OT 0.0
+DT 0.0
+Fri, Nov 06
+REG 0.0
+OT 0.0
+DT 0.0
+Sat, Nov 07
+REG 0.0
+OT 0.0
+DT 0.0
+
+Week total: REG 7.9 · OT 0.0 · DT 0.0 hours
+
+Gross: $189.60 · Meal premiums: 0
+
+Approving makes this week payable in the next payroll run. Later changes to punches or pay return it to pending.
+Approve week
+Shiftbook · Mission St / Roosevelt Row / Wicker Park

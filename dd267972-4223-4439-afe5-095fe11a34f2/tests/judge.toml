@@ -1,0 +1,133 @@
+# Experience criteria (instruction.md R12, R2.5, R7.5). Evidence is written by tests/workflows.py (W14, W15, W17).
+[judge]
+judge = "anthropic/claude-fable-5-1"
+reasoning_effort = "max"
+mode = "individual"
+samples = 3
+guard = "penalize"
+timeout = 900
+prompt_template = "judge/prompt.md"
+reference = "/tests/judge-reference.md"
+
+[[criterion]]
+id = "J01"
+name = "J01"
+description = "The timesheet makes clear that the week has a punch exception and explains it in plain language."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/timesheet_exception"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.1"
+
+[[criterion]]
+id = "J02"
+name = "J02"
+description = "On the timesheet, a person can read each day's hours by category (regular, overtime, double time) and the week's status."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/timesheet_exception"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.1"
+
+[[criterion]]
+id = "J03"
+name = "J03"
+description = "Before approving, the page states what approving means: the week becomes payable in the next payroll run, and a later change returns it to pending."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/approve_before"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.2"
+
+[[criterion]]
+id = "J04"
+name = "J04"
+description = "The draft run page states which weeks are held and why."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/run_draft"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.3"
+
+[[criterion]]
+id = "J05"
+name = "J05"
+description = "The draft run page makes clear which lines include adjustments for earlier weeks."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/run_adjustments"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.3"
+
+[[criterion]]
+id = "J06"
+name = "J06"
+description = "Before finalizing, the page states that finalizing locks the run, emails pay statements, and cannot be undone."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/finalize_before"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.4"
+
+[[criterion]]
+id = "J07"
+name = "J07"
+description = "After the refused finalize, the page explains that the draft is out of date and what to do next (recompute or reload, review, then finalize)."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/finalize_refused"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.4"
+
+[[criterion]]
+id = "J08"
+name = "J08"
+description = "After repeated failed sign-ins, the page says the account is temporarily locked and that the person can try again later."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/lockout"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R2.5"
+
+[[criterion]]
+id = "J09"
+name = "J09"
+description = "The pay statement email names the pay period, the hours by category, and the gross pay, in a form a staff member can read."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/paystub_email"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R7.5"
+
+[[criterion]]
+id = "J10"
+name = "J10"
+description = "At 390 pixels wide, the key facts and the primary action on these pages stay readable and reachable."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/approve_before/narrow.jpg", "/logs/verifier/ux/run_draft/narrow.jpg", "/logs/verifier/ux/finalize_before/narrow.jpg"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.5"
+
+[scoring]
+aggregation = "weighted-mean"

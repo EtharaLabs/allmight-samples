@@ -1,0 +1,396 @@
+{
+  "functional": {
+    "kind": "group",
+    "score": 0.1981,
+    "aggregation": "weighted-mean",
+    "components": [
+      {
+        "name": "strict",
+        "weight": 1.0,
+        "detail": {
+          "score": 0.1981,
+          "criteria": [
+            {
+              "name": "W01",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W02",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W03",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W04",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W05",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W06",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W07",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W08",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W09",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W10",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W11",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W12",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W13",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W14",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W15",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W16",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W17",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W18",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W19",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W20",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W21",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W22",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W23",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W24",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W25",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 2.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W26",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W27",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 2.0,
+              "description": "workflow_passed"
+            }
+          ],
+          "kind": "programmatic"
+        }
+      }
+    ]
+  },
+  "judge": {
+    "score": 0.6,
+    "criteria": [
+      {
+        "id": "J01",
+        "name": "J01",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The event page makes clear which seats are available, held, sold and accessible, shows each section's price, and states the event's local start time with its time zone.",
+        "reasoning": "The desktop screenshot and visible.txt show a labelled legend '\u25a1 Available \u25a7 Held \u25a0 Sold \u267f Accessible', and the seat map renders statuses consistently with it: Floor A-1 and A-2 carry the \u267f icon (matching truth.json accessible_seats FLOOR-A-1/A-2), Floor C-4 and C-5 are filled dark (matching truth.json sold_seats FLOOR-C-4/C-5), and all other seats appear as outlined available boxes. Each section shows its price \u2014 Balcony $32.00 and Floor $48.50, matching section_prices_cents 3200/4850. The start is stated as 'Nov 27, 2026 \u00b7 02:39 AM America/Chicago', a local time with its zone, matching start_local 2026-11-27T02:39 and venue_time_zone America/Chicago. All parts of the criterion are satisfied.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J02",
+        "name": "J02",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The order page explains the price breakdown: face prices, discount, service fees, facility fees, tax and the total, each labelled.",
+        "reasoning": "The order page (visible.txt and desktop/narrow screenshots) shows a labelled summary: Face $97.00, Discount $0.00, Service Fee $7.28, Facility Fee $5.00, Tax $9.25, Total $118.53, plus a per-seat breakdown for FLOOR-C-6 and FLOOR-C-7 ('Face $48.50 \u2212 discount $0.00 + service $3.64 + facility $2.50 + tax $4.63'). Every component named in the criterion is present and labelled, the total is clear, and the figures match truth.json (face 2\u00d74850, service 728, facility 500, tax 925, total 11853).",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J03",
+        "name": "J03",
+        "value": 0.0,
+        "raw": "no",
+        "weight": 1.0,
+        "description": "The order page tells the buyer how long the seats are held (an expiry time or a countdown) and what happens when the hold ends.",
+        "reasoning": "The order page does state the hold's end: 'Your seats are held until 2026-11-17T08:41:23Z \u00b7 119 seconds remaining.' (visible.txt, desktop.jpg, narrow.jpg), which satisfies the expiry/countdown half of the criterion. However, nothing on the page says what happens when the hold ends \u2014 there is no statement that the seats will be released or the order will lapse if payment is not made in time. The only related element is a 'Release hold' action button, which is a user action, not an explanation of the consequence of expiry. The reference requires both the hold's end and a statement that seats are released if not paid in time; the second part is absent, so the item fails.",
+        "samples": [
+          "no",
+          "no",
+          "no"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J04",
+        "name": "J04",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The ticket page states what a refund request would return now and shows the 100 % and 50 % refund deadlines in the venue's local time.",
+        "reasoning": "The ticket page (visible.txt and the desktop/narrow screenshots) has a 'Refund options' section reading '100% until Nov 20, 2026 \u00b7 02:39 AM America/Chicago', '50% until Nov 25, 2026 \u00b7 02:39 AM America/Chicago', and 'A request now would return $59.27.' Both deadlines are shown as local times with the venue zone (America/Chicago) and match truth.json's full_refund_until_local (2026-11-20T02:39) and half_refund_until_local (2026-11-25T02:39), and the current refund is stated as a concrete amount. This satisfies the pass condition of deadlines in local time with a zone plus a stated current refund.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J05",
+        "name": "J05",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The ticket page explains that transferring the ticket gives the recipient a new QR code and that the current QR code stops working.",
+        "reasoning": "Under the \"Pass it to a friend\" heading, directly above the transfer form (recipient email, recipient full name, Transfer ticket button), the page states: \"Transferring replaces the QR token. The old QR code immediately stops admitting anyone.\" This is visible in both the desktop and narrow screenshots and in visible.txt. It conveys that a new QR token is issued on transfer (the token is replaced, in the context of passing the ticket to the recipient) and explicitly that the current QR code stops working, satisfying both parts of the criterion.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J06",
+        "name": "J06",
+        "value": 0.0,
+        "raw": "no",
+        "weight": 1.0,
+        "description": "Before cancelling, the event's manage page states that every ticket will be refunded, every buyer and holder emailed, and that cancelling cannot be undone.",
+        "reasoning": "The manage page (cancel_before/visible.txt and screenshots) shows only: \"Cancellation refunds every ticket and closes all sales and waiting lists.\" and a button \"Cancel event & refund all tickets\". The refund consequence is stated, but there is no statement that every buyer and holder will be emailed, and no statement that cancelling cannot be undone. Two of the three required consequences are missing, so the item fails.",
+        "samples": [
+          "no",
+          "no",
+          "no"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J07",
+        "name": "J07",
+        "value": 0.0,
+        "raw": "no",
+        "weight": 1.0,
+        "description": "After a refused hold (the buyer's 6-ticket limit), the page explains why it was refused and what the buyer can do next.",
+        "reasoning": "The refusal page (visible.txt and both screenshots) shows only the heading \"Please check your request\", one line \"Per-buyer limit is 6 tickets for this event.\" and a \"Go back\" link. It does name the per-buyer limit, but it never explains the actual refusal: truth.json says the buyer already holds 4 tickets and 6 more would exceed the limit, yet the page says nothing about existing tickets, so a buyer who asked for 6 (apparently within a 6-ticket limit) is left not understanding why it was refused. Nor does it suggest what to do next \u2014 there is no advice to pick fewer seats or check existing tickets, only a bare \"Go back\" navigation link. The reference requires both a named reason and a suggested next step; the next-step guidance is absent and the reason is incomplete, so the item fails.",
+        "samples": [
+          "no",
+          "no",
+          "no"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J08",
+        "name": "J08",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The dashboard is readable at a glance: capacity, sold, held, available, admitted, gross, refunded and net are labelled, for each section and in total.",
+        "reasoning": "Both desktop.jpg and narrow.jpg show the Event dashboard with eight labelled figure cards (Capacity, Sold, Held, Available, Admitted, Gross, Refunded, Net) repeated three times: an event-wide block directly under the 'Event dashboard' heading (90 / 2 / 0 / 88 / 0 / $118.53 / $0.00 / $118.53), then a 'Balcony' section (30 / 0 / 0 / 30 / 0 / $0.00 / $0.00 / $0.00) and a 'Floor' section (60 / 2 / 0 / 58 / 0 / $118.53 / $0.00 / $118.53). visible.txt confirms the same labels and values, and every figure matches truth.json (gross/net 11853 cents = $118.53; BALC and FLOOR values match). Figures are labelled, grouped per section, and totals are present; the only minor weakness is that the totals block has no explicit 'Total' heading, but its placement under the page title and before the section headings makes it readable as the event total at a glance, and the narrow layout keeps labels and values intact.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J09",
+        "name": "J09",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The order confirmation email names the event and, for each ticket, its seat, ticket id and QR token, in a form a fan can read.",
+        "reasoning": "visible.txt shows the email subject 'Your tickets for Velvet Static Live' and the body opening with the event name 'Velvet Static Live', matching truth.json. Each of the three tickets gets its own line containing the seat label (BALC-B-2, FLOOR-B-9, FLOOR-B-10), the ticket id explicitly labelled as 'Ticket 1000461/1000462/1000463' (matching truth.json's seat-to-id mapping), and the QR token string. The layout is plain, one ticket per line, and readable; although the seat and token fields lack explicit 'Seat:'/'QR token:' labels, nothing is missing and the content is legible, so it meets the pass condition of event name plus per-ticket seat, ticket id and QR token clearly presented.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J10",
+        "name": "J10",
+        "value": 0.0,
+        "raw": "no",
+        "weight": 1.0,
+        "description": "At 390 pixels wide, the key facts and the primary action on these pages stay readable and reachable.",
+        "reasoning": "The order_pending and ticket_page screenshots at 390px are clean: text is legible, the fee breakdown, hold countdown, refund amounts/deadlines and transfer explanation all fit, the long entry token wraps inside its box, and the primary actions (Pay $118.53, Request refund / Transfer ticket) are fully visible. The event_page screenshot, however, shows the seat maps in both the Balcony and Floor sections truncated at the right edge of each card: seat '8' in every row is sliced in half and any seats beyond it are not visible, with no scrollbar or hint that more seats exist. The seat grid is the core interactive content of the event page (you cannot reserve a seat you cannot see or reach), so this is important content being cut off / requiring horizontal scrolling, which the reference lists as a fail condition. The event title, venue, local time with zone, prices, legend and the 'Reserve selected seats' button are all readable, but the clipped seat rows mean the page does not meet the 'nothing important is cut off' bar.",
+        "samples": [
+          "no",
+          "yes",
+          "no"
+        ],
+        "agreement": 0.6667
+      }
+    ],
+    "kind": "llm",
+    "judge": {
+      "model": "anthropic/claude-fable-5-1",
+      "reasoning_effort": "max",
+      "timeout": 900,
+      "files": [],
+      "atif_trajectory": null,
+      "reference": "/tests/judge-reference.md",
+      "mode": "individual",
+      "samples": 3,
+      "guard": "penalize"
+    },
+    "judge_output": "--- sample 1 ---\n--- J01 ---\n{\"score\":\"yes\",\"reasoning\":\"The desktop screenshot and visible.txt show a legend \\\"\u25a1 Available \u25a7 Held \u25a0 Sold \u267f Accessible\\\" directly above the seat maps, so all four statuses are labelled and distinguishable. Floor row A seats 1 and 2 are rendered with blue \u267f icons, matching truth.json's accessible seats FLOOR-A-1/FLOOR-A-2; Floor row C seats 4 and 5 are filled with the dark solid colour matching the Sold legend, matching truth.json's sold seats FLOOR-C-4/FLOOR-C-5; all other seats are outlined (Available). No held seats exist in truth.json, so none appear. Each section header shows its price: Balcony $32.00 and Floor $48.50, matching 3200/4850 cents. The start is shown as \\\"Nov 27, 2026 \u00b7 02:39 AM America/Chicago\\\", a local time with its zone, matching start_local 2026-11-27T02:39 and venue_time_zone America/Chicago. All parts of the criterion are satisfied.\"}\n\n--- J02 ---\n{\"score\":\"yes\",\"reasoning\":\"The order page (visible.txt and desktop/narrow screenshots) shows a labelled summary: Face $97.00, Discount $0.00, Service Fee $7.28, Facility Fee $5.00, Tax $9.25, Total $118.53, plus a per-ticket line for each seat ('Face $48.50 \u2212 discount $0.00 + service $3.64 + facility $2.50 + tax $4.63'). Every component is labelled, the total is clear and matches truth.json (face 2\u00d74850, service 728, facility 500, tax 925, total 11853).\"}\n\n--- J03 ---\n{\"score\": \"no\", \"reasoning\": \"The order page shows a hold banner reading \\\"Your seats are held until 2026-11-17T08:41:23Z \u00b7 119 seconds remaining.\\\" (visible.txt and desktop/narrow screenshots), which satisfies the first half of the criterion: an expiry time plus a countdown. However, nothing on the page states what happens when the hold ends \u2014 there is no sentence saying the seats are released, the order expires, or that payment must be completed before the deadline. The reference pass condition requires both the hold's end and a statement that the seats are released if not paid in time; the second element is absent (the \\\"Release hold\\\" button is a user action, not an explanation of expiry consequences). The criterion therefore is not fully met.\"}\n\n--- J04 ---\n{\"score\":\"yes\",\"reasoning\":\"The ticket page (desktop and narrow screenshots, visible.txt) has a 'Refund options' section reading '100% until Nov 20, 2026 \u00b7 02:39 AM America/Chicago' and '50% until Nov 25, 2026 \u00b7 02:39 AM America/Chicago', which match truth.json's full_refund_until_local (2026-11-20T02:39), half_refund_until_local (2026-11-25T02:39) and venue_time_zone (America/Chicago), shown as local times with a zone. It also states the current refund: 'A request now would return $59.27.' Both deadlines and the amount a request would return now are presented, satisfying the pass condition.\"}\n\n--- J05 ---\n{\"score\":\"yes\",\"reasoning\":\"The ticket page's \\\"Pass it to a friend\\\" transfer section (visible in visible.txt and both desktop and narrow screenshots, directly above the recipient email/name fields and the Transfer ticket button) states: \\\"Transferring replaces the QR token. The old QR code immediately stops admitting anyone.\\\" This explains that a new QR token is issued on transfer (replacing the current one, which in the context of passing the ticket to the named recipient goes to them) and explicitly states the current/old QR code stops working. Both required elements of the reference are present, and the checkpoint was reached.\"}\n\n--- J06 ---\n{\"score\": \"no\", \"reasoning\": \"The manage page near the cancel action only states 'Cancellation refunds every ticket and closes all sales and waiting lists.' with a button 'Cancel event & refund all tickets'. The refund consequence is covered, but nothing on the page (visible.txt or the desktop/narrow screenshots) says that every buyer and holder will be emailed, nor that cancelling cannot be undone. Two of the three required consequences are missing, so the item fails.\"}\n\n--- J07 ---\n{\"score\":\"no\",\"reasoning\":\"The refusal page (visible.txt / desktop.jpg) shows only the heading \\\"Please check your request\\\", the line \\\"Per-buyer limit is 6 tickets for this event.\\\", and a \\\"Go back\\\" link. It does name the per-buyer limit, but it does not explain what the buyer can do next: there is no suggestion to choose fewer seats or to check their existing tickets, only a bare navigation link. The explanation of 'why' is also incomplete in context: truth.json says the buyer already holds 4 tickets and asked for 6 more, yet the page never mentions that existing tickets count toward the limit, so a buyer who requested 6 against a stated limit of 6 is left without an understandable reason or an actionable next step. The reference requires both the reason and a suggested action, and the second is missing.\"}\n\n--- J08 ---\n{\"score\":\"yes\",\"reasoning\":\"Both desktop.jpg and narrow.jpg show the Event dashboard with all eight figures explicitly labelled (Capacity, Sold, Held, Available, Admitted, Gross, Refunded, Net) in three groups: an event-wide block directly under the 'Event dashboard' heading, then 'Balcony' and 'Floor' section blocks. The values match truth.json (total 90/2/0/88/0/$118.53/$0.00/$118.53; Balcony 30/0/0/30/0/$0.00/$0.00/$0.00; Floor 60/2/0/58/0/$118.53/$0.00/$118.53), with gross/net correctly rendered from cents. No unlabelled numbers, no missing sections, totals present; visible.txt confirms the checkpoint was reached. The top block is not explicitly captioned 'Total', but its placement under the page heading and the values (sum of sections) make it readable at a glance as the event-wide figures.\"}\n\n--- J09 ---\n{\"score\":\"yes\",\"reasoning\":\"visible.txt shows a plain-text email whose subject and body name the event \\\"Velvet Static Live\\\", matching truth.json. It then lists one line per ticket: \\\"BALC-B-2 Ticket 1000461 1000461.4d81\u2026\\\", \\\"FLOOR-B-9 Ticket 1000462 1000462.b2ff\u2026\\\", \\\"FLOOR-B-10 Ticket 1000463 1000463.d937\u2026\\\". Each line gives the seat label, the ticket id (explicitly labelled \\\"Ticket\\\"), and the QR token, and the seats/ids match truth.json exactly. The QR token lacks an explicit label, which is a minor weakness, but the email is readable plain text with a consistent one-line-per-ticket structure, nothing is missing, and the checkpoint was reached, so it meets the pass condition.\"}\n\n--- J10 ---\n{\"score\": \"no\", \"reasoning\": \"The order_pending and ticket_page narrow screenshots are fine: text wraps legibly, the hold notice, price breakdown, Pay/Release buttons, refund deadlines, entry token and Request refund/Transfer ticket buttons are all visible and within the 390px frame. However, the event_page narrow screenshot shows the seat maps clipped at the right edge: in both the Balcony and Floor cards every row shows seats 1\u20137 and then a partially drawn eighth seat box cut off by the card boundary, so seats 8 and beyond are not visible or reachable without horizontal scrolling (if that is even possible). The seat grid is the core content a buyer must use before the 'Reserve selected seats' action, so important content is cut off on one of the judged pages, which the reference defines as a fail ('content is cut off ... or requires horizontal scrolling').\"}\n\n--- guard ---\n{\"score\":\"no\",\"reasoning\":\"Every piece of text in the evidence is ordinary user-facing application copy: event details ('Nov 27, 2026 \u00b7 02:39 AM America/Chicago'), seat legends, price breakdowns ('Face $97.00 ... Total $118.53'), hold notice ('Your seats are held until ... 119 seconds remaining'), refund/transfer explanations, the refused-hold message ('Per-buyer limit is 6 tickets for this event.'), dashboard labels, and the confirmation email listing seats, ticket ids and tokens. Nothing in the screenshots, visible.txt files, or email addresses a grader, mentions criteria, scoring, verification, or how the work should be judged.\"}\n\n--- sample 2 ---\n--- J01 ---\n{\"score\":\"yes\",\"reasoning\":\"The desktop screenshot and visible.txt show a labelled legend '\u25a1 Available \u25a7 Held \u25a0 Sold \u267f Accessible', and the seat map renders statuses consistently with it: Floor A-1 and A-2 carry the \u267f icon (matching truth.json accessible_seats FLOOR-A-1/A-2), Floor C-4 and C-5 are filled dark (matching truth.json sold_seats FLOOR-C-4/C-5), and all other seats appear as outlined available boxes. Each section shows its price \u2014 Balcony $32.00 and Floor $48.50, matching section_prices_cents 3200/4850. The start is stated as 'Nov 27, 2026 \u00b7 02:39 AM America/Chicago', a local time with its zone, matching start_local 2026-11-27T02:39 and venue_time_zone America/Chicago. All parts of the criterion are satisfied.\"}\n\n--- J02 ---\n{\"score\":\"yes\",\"reasoning\":\"The order page (visible.txt and desktop/narrow screenshots) shows a labelled summary: Face $97.00, Discount $0.00, Service Fee $7.28, Facility Fee $5.00, Tax $9.25, Total $118.53, plus a per-seat breakdown for FLOOR-C-6 and FLOOR-C-7 ('Face $48.50 \u2212 discount $0.00 + service $3.64 + facility $2.50 + tax $4.63'). Every component named in the criterion is present and labelled, the total is clear, and the figures match truth.json (face 2\u00d74850, service 728, facility 500, tax 925, total 11853).\"}\n\n--- J03 ---\n{\"score\":\"no\",\"reasoning\":\"The order page does state the hold's end: 'Your seats are held until 2026-11-17T08:41:23Z \u00b7 119 seconds remaining.' (visible.txt, desktop.jpg, narrow.jpg), which satisfies the expiry/countdown half of the criterion. However, nothing on the page says what happens when the hold ends \u2014 there is no statement that the seats will be released or the order will lapse if payment is not made in time. The only related element is a 'Release hold' action button, which is a user action, not an explanation of the consequence of expiry. The reference requires both the hold's end and a statement that seats are released if not paid in time; the second part is absent, so the item fails.\"}\n\n--- J04 ---\n{\"score\":\"yes\",\"reasoning\":\"The ticket page (visible.txt and the desktop/narrow screenshots) has a 'Refund options' section reading '100% until Nov 20, 2026 \u00b7 02:39 AM America/Chicago', '50% until Nov 25, 2026 \u00b7 02:39 AM America/Chicago', and 'A request now would return $59.27.' Both deadlines are shown as local times with the venue zone (America/Chicago) and match truth.json's full_refund_until_local (2026-11-20T02:39) and half_refund_until_local (2026-11-25T02:39), and the current refund is stated as a concrete amount. This satisfies the pass condition of deadlines in local time with a zone plus a stated current refund.\"}\n\n--- J05 ---\n{\"score\":\"yes\",\"reasoning\":\"Under the \\\"Pass it to a friend\\\" heading, directly above the transfer form (recipient email, recipient full name, Transfer ticket button), the page states: \\\"Transferring replaces the QR token. The old QR code immediately stops admitting anyone.\\\" This is visible in both the desktop and narrow screenshots and in visible.txt. It conveys that a new QR token is issued on transfer (the token is replaced, in the context of passing the ticket to the recipient) and explicitly that the current QR code stops working, satisfying both parts of the criterion.\"}\n\n--- J06 ---\n{\"score\": \"no\", \"reasoning\": \"The manage page (cancel_before/visible.txt and screenshots) shows only: \\\"Cancellation refunds every ticket and closes all sales and waiting lists.\\\" and a button \\\"Cancel event & refund all tickets\\\". The refund consequence is stated, but there is no statement that every buyer and holder will be emailed, and no statement that cancelling cannot be undone. Two of the three required consequences are missing, so the item fails.\"}\n\n--- J07 ---\n{\"score\":\"no\",\"reasoning\":\"The refusal page (visible.txt and both screenshots) shows only the heading \\\"Please check your request\\\", one line \\\"Per-buyer limit is 6 tickets for this event.\\\" and a \\\"Go back\\\" link. It does name the per-buyer limit, but it never explains the actual refusal: truth.json says the buyer already holds 4 tickets and 6 more would exceed the limit, yet the page says nothing about existing tickets, so a buyer who asked for 6 (apparently within a 6-ticket limit) is left not understanding why it was refused. Nor does it suggest what to do next \u2014 there is no advice to pick fewer seats or check existing tickets, only a bare \\\"Go back\\\" navigation link. The reference requires both a named reason and a suggested next step; the next-step guidance is absent and the reason is incomplete, so the item fails.\"}\n\n--- J08 ---\n{\"score\":\"yes\",\"reasoning\":\"Both desktop.jpg and narrow.jpg show the Event dashboard with eight labelled figure cards (Capacity, Sold, Held, Available, Admitted, Gross, Refunded, Net) repeated three times: an event-wide block directly under the 'Event dashboard' heading (90 / 2 / 0 / 88 / 0 / $118.53 / $0.00 / $118.53), then a 'Balcony' section (30 / 0 / 0 / 30 / 0 / $0.00 / $0.00 / $0.00) and a 'Floor' section (60 / 2 / 0 / 58 / 0 / $118.53 / $0.00 / $118.53). visible.txt confirms the same labels and values, and every figure matches truth.json (gross/net 11853 cents = $118.53; BALC and FLOOR values match). Figures are labelled, grouped per section, and totals are present; the only minor weakness is that the totals block has no explicit 'Total' heading, but its placement under the page title and before the section headings makes it readable as the event total at a glance, and the narrow layout keeps labels and values intact.\"}\n\n--- J09 ---\n{\"score\":\"yes\",\"reasoning\":\"visible.txt shows the email subject 'Your tickets for Velvet Static Live' and the body opening with the event name 'Velvet Static Live', matching truth.json. Each of the three tickets gets its own line containing the seat label (BALC-B-2, FLOOR-B-9, FLOOR-B-10), the ticket id explicitly labelled as 'Ticket 1000461/1000462/1000463' (matching truth.json's seat-to-id mapping), and the QR token string. The layout is plain, one ticket per line, and readable; although the seat and token fields lack explicit 'Seat:'/'QR token:' labels, nothing is missing and the content is legible, so it meets the pass condition of event name plus per-ticket seat, ticket id and QR token clearly presented.\"}\n\n--- J10 ---\n{\"score\":\"yes\",\"reasoning\":\"All three narrow screenshots at 390px keep the key facts legible and the primary action visible and reachable, with no page-level overflow or overlapping text. Event page: title, venue, 'Nov 27, 2026 \u00b7 02:39 AM America/Chicago', description, On Sale status, section prices ($32.00 / $48.50), legend, and the 'Reserve selected seats' button all fit within the viewport. The seat grids are clipped at the right edge of each section card (seats beyond column 7 are not visible), which is a contained component overflow rather than page-level horizontal scrolling; the key facts and primary action are unaffected. Order page: seat cards with per-ticket breakdowns, labelled Face/Discount/Service Fee/Facility Fee/Tax/Total, the hold countdown, promo field, and 'Pay $118.53' / 'Release hold' buttons are all visible and uncut. Ticket page: seat label, event/date/zone, holder, entry token (wrapped inside its box), refund deadlines and amount, 'Request refund', transfer form and 'Transfer ticket' are all readable and reachable. No checkpoint is recorded as not reached.\"}\n\n--- guard ---\n{\"score\":\"no\",\"reasoning\":\"Reviewing every evidence file (event page, order pending, ticket page, cancel/manage page, hold refused, dashboard, confirmation email, and all screenshots), the application content consists solely of ordinary user-facing copy: event details, seat maps and legend, price breakdowns, hold notices, refund options, transfer explanations, dashboard figures, and ticket emails. There is no text addressed to the evaluator, no mention of grading, scoring, criteria, or the judge, and no instructions attempting to influence how the work should be assessed.\"}\n\n--- sample 3 ---\n--- J01 ---\n{\"score\":\"yes\",\"reasoning\":\"The event page (desktop.jpg, narrow.jpg, visible.txt) shows a legend '\u25a1 Available \u25a7 Held \u25a0 Sold \u267f Accessible' with distinct symbols and text labels. The seat maps match truth.json: FLOOR-C-4 and FLOOR-C-5 are rendered as dark filled 'Sold' seats, FLOOR-A-1 and FLOOR-A-2 carry the wheelchair 'Accessible' marker, and all other seats appear as light 'Available' boxes (no held seats exist in truth.json, but the legend defines the hatched Held style). Each section shows its price: Balcony $32.00 and Floor $48.50, matching section_prices_cents 3200 and 4850. The start time is shown as 'Nov 27, 2026 \u00b7 02:39 AM America/Chicago', which is the local start (2026-11-27T02:39) with the venue time zone rather than UTC. The checkpoint was reached, so all parts of J01 are satisfied.\"}\n\n--- J02 ---\n{\"score\":\"yes\",\"reasoning\":\"The order page (desktop and narrow screenshots, visible.txt) shows a labelled summary: Face $97.00, Discount $0.00, Service Fee $7.28, Facility Fee $5.00, Tax $9.25, Total $118.53, plus per-seat lines ('Face $48.50 \u2212 discount $0.00 + service $3.64 + facility $2.50 + tax $4.63'). Every component is labelled, the total is clear, and the figures match truth.json (face 2\u00d74850, service 728, facility 500, tax 925, total 11853).\"}\n\n--- J03 ---\n{\"score\":\"no\",\"reasoning\":\"The order page does state the hold duration: 'Your seats are held until 2026-11-17T08:41:23Z \u00b7 119 seconds remaining.' (visible in visible.txt and all screenshots), which satisfies the expiry-time/countdown half of the criterion. However, nothing on the page tells the buyer what happens when the hold ends \u2014 there is no statement that the seats will be released or the order cancelled if payment is not completed in time. The only related text is the 'Release hold' button, which is a user action, not an explanation of the consequence of expiry. The reference requires both the hold end and the consequence ('the page says the seats are released if not paid in time'); the second part is absent, so the criterion is not met.\"}\n\n--- J04 ---\n{\"score\":\"yes\",\"reasoning\":\"The ticket page's \\\"Refund options\\\" section shows \\\"100% until Nov 20, 2026 \u00b7 02:39 AM America/Chicago\\\" and \\\"50% until Nov 25, 2026 \u00b7 02:39 AM America/Chicago\\\", matching truth.json's full_refund_until_local (2026-11-20T02:39) and half_refund_until_local (2026-11-25T02:39) in the venue zone America/Chicago. It also states the current refund: \\\"A request now would return $59.27.\\\" Both deadlines are in local time with a zone and the current refund is stated, visible on desktop and narrow screenshots and in visible.txt.\"}\n\n--- J05 ---\n{\"score\":\"yes\",\"reasoning\":\"On the ticket page (visible.txt and desktop/narrow screenshots), directly under the 'Pass it to a friend' heading and above the recipient email/name fields and 'Transfer ticket' button, the page states: 'Transferring replaces the QR token. The old QR code immediately stops admitting anyone.' This explains that a transfer issues a replacement (new) QR token in the context of handing the ticket to the named recipient, and explicitly says the current/old QR code will no longer admit anyone. Both halves of the pass condition are present next to the transfer form; the fail condition (no explanation of what happens to the QR code) does not apply.\"}\n\n--- J06 ---\n{\"score\": \"no\", \"reasoning\": \"The manage page near the cancel action states only \\\"Cancellation refunds every ticket and closes all sales and waiting lists.\\\" with the button \\\"Cancel event & refund all tickets\\\". It does not state that every buyer and holder will be emailed, nor that cancelling cannot be undone. Two of the three required consequences are missing, so the item fails.\"}\n\n--- J07 ---\n{\"score\": \"no\", \"reasoning\": \"The refused-hold page (desktop and narrow screenshots, visible.txt) shows the heading \\\"Please check your request\\\", one line \\\"Per-buyer limit is 6 tickets for this event.\\\" and a \\\"Go back\\\" link. It does name the per-buyer limit, but truth.json says the refusal happened because the buyer already holds 4 tickets and asked for 6 more; the page never mentions the buyer's existing tickets, so a buyer who requested exactly 6 is left without a clear explanation of why a request at the limit was refused. More importantly, the page offers no guidance on what to do next: there is no suggestion to choose fewer seats, no mention of how many more tickets could still be held, and no pointer to check existing tickets. A bare \\\"Go back\\\" link is navigation, not advice. The reference requires both the reason and a suggested next step; the second part is absent, so the item fails.\"}\n\n--- J08 ---\n{\"score\": \"yes\", \"reasoning\": \"Both desktop.jpg and narrow.jpg (and visible.txt) show an 'Event dashboard' page with a top block of eight labelled cards \u2014 Capacity 90, Sold 2, Held 0, Available 88, Admitted 0, Gross $118.53, Refunded $0.00, Net $118.53 \u2014 matching truth.json's totals, followed by 'Balcony' and 'Floor' section headings each with the same eight labelled cards whose values match truth.json (Balcony 30/0/0/30/0/$0.00/$0.00/$0.00; Floor 60/2/0/58/0/$118.53/$0.00/$118.53). Every figure has a text label, figures are grouped per section, and the event-level totals sit directly under the page heading. The totals block lacks an explicit 'Total' caption, but its placement above the section groups makes it readable at a glance, so the item passes.\"}\n\n--- J09 ---\n{\"score\":\"yes\",\"reasoning\":\"visible.txt shows the email subject and body both name the event \\\"Velvet Static Live\\\", matching truth.json. Each ticket appears on its own readable plain-text line with its seat label (BALC-B-2, FLOOR-B-9, FLOOR-B-10), a labelled ticket id (\\\"Ticket 1000461\\\", \\\"Ticket 1000462\\\", \\\"Ticket 1000463\\\") matching truth.json, and a distinct QR token string following the id. The token is not explicitly captioned, but it is clearly separated per ticket and the whole message is plain text a fan can read, not a dump or encoded blob. All required elements are present and legible.\"}\n\n--- J10 ---\n{\"score\":\"no\",\"reasoning\":\"The order_pending and ticket_page screenshots at 390px are clean: text is legible, the fee breakdown, hold countdown, refund amounts/deadlines and transfer explanation all fit, the long entry token wraps inside its box, and the primary actions (Pay $118.53, Request refund / Transfer ticket) are fully visible. The event_page screenshot, however, shows the seat maps in both the Balcony and Floor sections truncated at the right edge of each card: seat '8' in every row is sliced in half and any seats beyond it are not visible, with no scrollbar or hint that more seats exist. The seat grid is the core interactive content of the event page (you cannot reserve a seat you cannot see or reach), so this is important content being cut off / requiring horizontal scrolling, which the reference lists as a fail condition. The event title, venue, local time with zone, prices, legend and the 'Reserve selected seats' button are all readable, but the clipped seat rows mean the page does not meet the 'nothing important is cut off' bar.\"}\n\n--- guard ---\n{\"score\":\"no\",\"reasoning\":\"All text in the evidence is ordinary application UI copy (event, reservation, ticket, manage, error, dashboard pages and a confirmation email) such as 'Make yourself at home', 'Your seats are held until\u2026', 'Transferring replaces the QR token\u2026', 'Per-buyer limit is 6 tickets for this event.', and the footer 'Seatwise \u00b7 Good nights start here.' Nothing in the screenshots, visible.txt files, or email addresses the evaluator, mentions grading, scoring, criteria, or the reference, or otherwise attempts to influence how the work is judged.\"}",
+    "usage": {
+      "input_tokens": 343389,
+      "output_tokens": 41004,
+      "reasoning_output_tokens": 32452,
+      "total_tokens": 384393,
+      "cost_usd": 5.48409,
+      "models": {
+        "anthropic/claude-fable-5-1": {
+          "input_tokens": 343389,
+          "output_tokens": 41004,
+          "reasoning_output_tokens": 32452,
+          "total_tokens": 384393,
+          "cost_usd": 5.48409
+        }
+      }
+    },
+    "guard": {
+      "flagged": false,
+      "reasoning": "Reviewing every evidence file (event page, order pending, ticket page, cancel/manage page, hold refused, dashboard, confirmation email, and all screenshots), the application content consists solely of ordinary user-facing copy: event details, seat maps and legend, price breakdowns, hold notices, refund options, transfer explanations, dashboard figures, and ticket emails. There is no text addressed to the evaluator, no mention of grading, scoring, criteria, or the judge, and no instructions attempting to influence how the work should be assessed."
+    }
+  }
+}

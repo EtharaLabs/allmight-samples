@@ -1,0 +1,1245 @@
+{
+ "workflows": {
+  "W01": {
+   "title": "Accounts: registration against quirky legacy addresses, reset links, duplicate-address accounts",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "staff set passwords from emailed links and sign in; a new patient registers and is signed in",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.435
+    },
+    {
+     "name": "registering an address already on file, in any case or spacing, is refused and adds no row",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.15
+    },
+    {
+     "name": "a known and an unknown address get the same reset response; only the known one gets an email",
+     "ok": true,
+     "detail": "",
+     "seconds": 4.114
+    },
+    {
+     "name": "a newer link replaces the older; a used link and an unknown link change nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.287
+    },
+    {
+     "name": "an expired link changes nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 23.084
+    },
+    {
+     "name": "an address on two rows signs in as its account (lowest active id) and sees only that row's appointments",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.342
+    }
+   ],
+   "error": null,
+   "seconds": 28.7
+  },
+  "W02": {
+   "title": "Sessions and roles: refusals, fixation, sign-out, role gates, profile mass assignment, CSRF",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a wrong password and an unknown address are refused with the same message and no session",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.205
+    },
+    {
+     "name": "signing in starts a new session identifier; one held before never becomes signed in; cookies are HttpOnly",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.12
+    },
+    {
+     "name": "signing out ends the session on the server",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.077
+    },
+    {
+     "name": "role gates: 403 for signed-in users outside their role, sign-in redirect for visitors, public availability",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.212
+    },
+    {
+     "name": "sign-in follows next only to a path on this site; visitors are sent to /signin?next=<path>",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.48
+    },
+    {
+     "name": "names with line breaks are refused; typed text never adds an email recipient or header",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.239
+    },
+    {
+     "name": "the profile form changes only the display name; a token-less change is refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.071
+    }
+   ],
+   "error": null,
+   "seconds": 6.4
+  },
+  "W03": {
+   "title": "Availability: 15-minute grid, fitting inside working time, buffers, merged and overlapping windows",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "120 clinicians at both clinics with weekly hours dense in edge cases; six types; plenty of rooms",
+     "ok": true,
+     "detail": "",
+     "seconds": 7.743
+    },
+    {
+     "name": "confirmed bookings, each pair touching at a busy-interval boundary",
+     "ok": true,
+     "detail": "",
+     "seconds": 16.796
+    },
+    {
+     "name": "every slot list (three days of the week per clinician, six types) matches the rules exactly",
+     "ok": true,
+     "detail": "",
+     "seconds": 55.929
+    },
+    {
+     "name": "unknown clinician or type answers 404; a malformed date 400",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.042
+    }
+   ],
+   "error": null,
+   "seconds": 80.5
+  },
+  "W04": {
+   "title": "Availability: effective-dated schedule versions, exceptions, schedule edits and who may make them",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "100 clinicians with several weekly-hours versions each, ties on the same date, versions with no hours",
+     "ok": true,
+     "detail": "",
+     "seconds": 15.428
+    },
+    {
+     "name": "one-day exceptions aligned with each clinician's windows: whole and partial days off, joining extra hours",
+     "ok": true,
+     "detail": "",
+     "seconds": 17.609
+    },
+    {
+     "name": "a malformed schedule form is refused and changes nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.224
+    },
+    {
+     "name": "nobody edits another clinician's schedule; a token-less edit is refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.114
+    },
+    {
+     "name": "slot lists across version changes, ties, versions without hours, and every exception match",
+     "ok": true,
+     "detail": "",
+     "seconds": 84.407
+    }
+   ],
+   "error": null,
+   "seconds": 117.8
+  },
+  "W05": {
+   "title": "Availability: shared rooms and lowest-id assignment, daily limits with holds, fees in effect, inactive records",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "worked example 3: two shared rooms, three clinicians, lowest-id room for each booking",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.352
+    },
+    {
+     "name": "four groups of eight clinicians share two or three rooms each; 120 bookings each get the lowest-id free room",
+     "ok": true,
+     "detail": "",
+     "seconds": 15.032
+    },
+    {
+     "name": "every group's slot lists match: rooms, daily limits, buffers",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.307
+    },
+    {
+     "name": "a clinician at the daily limit has no slots; an unexpired hold counts toward it",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.571
+    },
+    {
+     "name": "no fee in effect yet, no room of the type, inactive types and clinicians: no slots",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.651
+    }
+   ],
+   "error": null,
+   "seconds": 25.9
+  },
+  "W06": {
+   "title": "Time: notice and horizon from now, clock-change days, local dates per clinic, fees by local date",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "round-the-clock clinicians at both clinics: notice from now and the last bookable date",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.456
+    },
+    {
+     "name": "forty clinicians whose hours and exceptions cross the next Seattle clock change get exactly the rules' slots",
+     "ok": true,
+     "detail": "",
+     "seconds": 13.051
+    },
+    {
+     "name": "deposits around a fee change use each appointment's local date at its own clinic",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.493
+    },
+    {
+     "name": "each new appointment is a row in appointments whose local_start and fold give its start at its clinic",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.182
+    }
+   ],
+   "error": null,
+   "seconds": 20.2
+  },
+  "W07": {
+   "title": "Legacy Seattle: the old system's schedules, appointments, folds and gaps, served as they are",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "slot lists for every old clinician of the clinic on busy, exceptional, version-change and closure dates match",
+     "ok": true,
+     "detail": "",
+     "seconds": 94.098
+    },
+    {
+     "name": "the clinic's front desk sees its day sheets with the old appointments in time order",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.516
+    },
+    {
+     "name": "old patients with quirky or shared addresses see exactly their account's appointments, with no change actions",
+     "ok": true,
+     "detail": "",
+     "seconds": 8.166
+    },
+    {
+     "name": "an old night-clinic clinician sees the clock-change night on their own day sheet, both 01:30s in order",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.298
+    }
+   ],
+   "error": null,
+   "seconds": 103.1
+  },
+  "W08": {
+   "title": "Booking: deposits on Checkout, mass assignment, confirmation only by signed webhook, one email",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "thirty appointment types with fees that land on half cents; clinicians in both clinics",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.37
+    },
+    {
+     "name": "each hold's Checkout Session carries the exact deposit, metadata, URLs and address, whatever extra fields say",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.194
+    },
+    {
+     "name": "returning from payment does not confirm; the verified event does, and one confirmation email follows",
+     "ok": true,
+     "detail": "",
+     "seconds": 4.191
+    },
+    {
+     "name": "repeated and simultaneous deliveries of the same event change nothing and send nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.111
+    },
+    {
+     "name": "a declined card leaves the hold in place; a good card then confirms it",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.615
+    },
+    {
+     "name": "refused bookings create nothing: staff, no token, not a slot, unknown type, provider failure",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.537
+    }
+   ],
+   "error": null,
+   "seconds": 21.0
+  },
+  "W09": {
+   "title": "Holds: expiry measured from creation, release, late and out-of-order payments refunded in full",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a dozen holds occupy their slots until HOLD_TTL_SECONDS after creation, then free them",
+     "ok": true,
+     "detail": "",
+     "seconds": 34.621
+    },
+    {
+     "name": "the application expires each expired hold's Checkout Session at the provider",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.041
+    },
+    {
+     "name": "payments whose events arrive after the hold expired are refunded in full and never confirm",
+     "ok": true,
+     "detail": "",
+     "seconds": 34.494
+    },
+    {
+     "name": "a hold released by the patient frees its slot at once; a payment forced through afterwards is refunded",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.185
+    },
+    {
+     "name": "each late payment is refunded once, in full, with an Idempotency-Key; one refund email each; no confirmation",
+     "ok": true,
+     "detail": "",
+     "seconds": 4.316
+    },
+    {
+     "name": "visiting the cancel link alone changes nothing; paying within the hold then confirms",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.66
+    }
+   ],
+   "error": null,
+   "seconds": 76.3
+  },
+  "W10": {
+   "title": "Webhook security: unsigned, mis-signed, tampered and stale deliveries change nothing",
+   "weight": 4.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a held appointment and forged completion events for it",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.261
+    },
+    {
+     "name": "missing, malformed, wrong-key, tampered, stale and future signatures are answered 400 and change nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.107
+    },
+    {
+     "name": "verified events of other types or for unknown appointments are answered 2xx within 5 s and ignored",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.037
+    },
+    {
+     "name": "the genuine payment then confirms; a second verified completion with a new event id sends nothing more",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.646
+    }
+   ],
+   "error": null,
+   "seconds": 8.1
+  },
+  "W11": {
+   "title": "Races: the last slot, the last room and the last daily place each go to exactly one patient",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "fixtures: a one-slot day, a one-room pair of clinicians, a clinician with one place left",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.862
+    },
+    {
+     "name": "eight patients ask for the only slot of the day at the same moment: exactly one hold",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.86
+    },
+    {
+     "name": "two clinicians, one room: simultaneous requests for the same hour get one booking between them",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.05
+    },
+    {
+     "name": "a clinician with one place left that day: simultaneous requests for different times get one booking",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.097
+    },
+    {
+     "name": "the same patient submitting the same booking twice at once gets one hold",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.664
+    }
+   ],
+   "error": null,
+   "seconds": 5.5
+  },
+  "W12": {
+   "title": "Cancellation: refund bands by elapsed time, half-cent rounding, clinic cancellations, emails once",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "round-the-clock clinicians; patients book and pay appointments near the 2-hour and 24-hour boundaries",
+     "ok": true,
+     "detail": "",
+     "seconds": 52.646
+    },
+    {
+     "name": "another patient cannot cancel; a cancellation without the session token is refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.069
+    },
+    {
+     "name": "each cancellation fixes the refund its band gives at the moment it happens",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.187
+    },
+    {
+     "name": "refunds go through the provider once each, keyed, and complete on the refund webhook",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.552
+    },
+    {
+     "name": "one cancellation email per appointment; one refund email per refund above zero",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.365
+    },
+    {
+     "name": "a cancelled appointment cannot be cancelled again; its slot is free; the old system's appointments refuse",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.462
+    }
+   ],
+   "error": null,
+   "seconds": 66.3
+  },
+  "W13": {
+   "title": "Refund retries: provider errors, lost answers and timeouts never refund twice; events before answers",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "paid appointments more than a day ahead",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.305
+    },
+    {
+     "name": "a provider error: the cancellation stands, the refund is pending, then retried with the same key",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.137
+    },
+    {
+     "name": "a lost answer: the provider refunds but answers 503; the retry with the same key replays it",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.058
+    },
+    {
+     "name": "a timeout: the provider does nothing and answers late; the retry refunds once",
+     "ok": true,
+     "detail": "",
+     "seconds": 8.15
+    },
+    {
+     "name": "refund events held back: the refund stays pending until its event arrives, in any order",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.577
+    },
+    {
+     "name": "every refund completes exactly once with one Idempotency-Key per refund; one refund email each",
+     "ok": true,
+     "detail": "",
+     "seconds": 4.276
+    }
+   ],
+   "error": null,
+   "seconds": 31.5
+  },
+  "W14": {
+   "title": "Rescheduling: 24-hour window, the original never blocks itself, the deposit carries over",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "clinicians at both clinics; a type whose fee changes mid-way; paid appointments",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.085
+    },
+    {
+     "name": "moving 15 minutes later the same day is allowed: the original does not block itself",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.289
+    },
+    {
+     "name": "moving to another clinician after the fee change carries the deposit paid, not the new fee's",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.131
+    },
+    {
+     "name": "refused: another clinic, a taken time, another patient, the old system's appointments, under 24 hours",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.379
+    },
+    {
+     "name": "a move to a time a few hours away, then a cancellation, refunds the carried deposit by its band",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.181
+    },
+    {
+     "name": "one reschedule email per move, no new confirmation",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.056
+    },
+    {
+     "name": "thirty moves at the daily limit and in single rooms: rooms, deposits and slot lists follow the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.392
+    }
+   ],
+   "error": null,
+   "seconds": 13.5
+  },
+  "W15": {
+   "title": "Waitlist: join order, offers that occupy, offer and hold lifetimes, decline and expiry chains",
+   "weight": 5.0,
+   "critical": true,
+   "passed": false,
+   "steps": [
+    {
+     "name": "a full day: two appointments fill a short window; four patients join the waitlist in order",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.176
+    },
+    {
+     "name": "a cancellation frees 40 minutes: the FU30 waiter first in line gets the offer, the INIT60 waiter keeps waiting",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.288
+    },
+    {
+     "name": "someone else cannot accept the offer; when it expires the next FU30 waiter gets one",
+     "ok": true,
+     "detail": "",
+     "seconds": 61.903
+    },
+    {
+     "name": "Cy accepts the offer, pays, and the booking is confirmed",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.61
+    },
+    {
+     "name": "another cancellation offers to Ana first; her decline passes it to Dee, the next in line",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.254
+    },
+    {
+     "name": "Dee accepts late in her offer; the hold then lasts HOLD_TTL_SECONDS from acceptance and the payment confirms",
+     "ok": true,
+     "detail": "",
+     "seconds": 67.541
+    },
+    {
+     "name": "offers accepted after a fee change pay the deposit in effect when the hold is created",
+     "ok": false,
+     "detail": "6 of 12 accepted offers differ: offer for clinician 487 on 2026-11-22 (new fee row added before acceptance, effective 2026-11-22): Checkout amount and deposit (7349, '7349'), expected 6521 | offer for clinician 488 on 2026-11-22 (new fee row added before acceptance, effective 2026-11-22): Checkout amount and deposit (7349, '7349'), expected 6521 | offer for clinician 489 on 2026-11-22 (new fee row added before acceptance, effective 2026-11-22): Checkout amount and deposit (7349, '7349'), expected 6521 | offer for clinician 491 on 2026-11-23 (new fee row added before acceptance, effective 2026-11-21): Checkout amount and deposit (3485, '3485'), expected 3945",
+     "seconds": 5.425
+    }
+   ],
+   "error": "6 of 12 accepted offers differ: offer for clinician 487 on 2026-11-22 (new fee row added before acceptance, effective 2026-11-22): Checkout amount and deposit (7349, '7349'), expected 6521 | offer for clinician 488 on 2026-11-22 (new fee row added before acceptance, effective 2026-11-22): Checkout amount and deposit (7349, '7349'), expected 6521 | offer for clinician 489 on 2026-11-22 (new fee row added before acceptance, effective 2026-11-22): Checkout amount and deposit (7349, '7349'), expected 6521 | offer for clinician 491 on 2026-11-23 (new fee row added before acceptance, effective 2026-11-21): Checkout amount and deposit (3485, '3485'), expected 3945",
+   "seconds": 139.2
+  },
+  "W16": {
+   "title": "Clinical notes and clinician scope: only the treating clinician and admins, authors from the session",
+   "weight": 4.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "two clinicians, a patient with one appointment each, accounts for everyone",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.853
+    },
+    {
+     "name": "the treating clinician adds a note; its author is the signed-in clinician whatever the form says",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.041
+    },
+    {
+     "name": "other clinicians, front desk, and the patient get 403 and never see the note; an admin sees it",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.164
+    },
+    {
+     "name": "an old system's clinician reads exactly the old notes of their appointment",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.19
+    },
+    {
+     "name": "day sheets and appointment pages are scoped: each clinician sees only their own",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.076
+    }
+   ],
+   "error": null,
+   "seconds": 2.3
+  },
+  "W17": {
+   "title": "Reminders: every booked appointment of a clinic's day once, quirky addresses normalized, never twice",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "pick a Honolulu day ahead with old bookings, including quirky and inactive patients; add new bookings",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.222
+    },
+    {
+     "name": "a patient cannot send reminders; front desk sends one per booked appointment with an active patient",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.379
+    },
+    {
+     "name": "sending again reaches nobody; a booking made since gets exactly one",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.066
+    },
+    {
+     "name": "the clinic's day sheet lists exactly the day's appointments in time order",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.114
+    }
+   ],
+   "error": null,
+   "seconds": 12.8
+  },
+  "W18": {
+   "title": "In a real browser: book and pay on the hosted page, layout at 1280 and 390 px, escaping everywhere",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a clean booking setup: a clinician, a type and two rooms, a patient, and an expiring hold",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.337
+    },
+    {
+     "name": "a patient signs in through the form, picks a slot, and pays on the provider's hosted page",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.06
+    },
+    {
+     "name": "an expired hold, a clinician's day sheet, and a waitlist offer as people see them",
+     "ok": true,
+     "detail": "",
+     "seconds": 33.579
+    },
+    {
+     "name": "every page stays within 1280 and 390 CSS pixels without horizontal scrolling",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.567
+    },
+    {
+     "name": "a clinician, a type, a room, a patient and a note carrying script payloads, and a booking with them",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.983
+    },
+    {
+     "name": "names, type and room names, notes, old records, and echoed request text never run as script",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.248
+    }
+   ],
+   "error": null,
+   "seconds": 43.9
+  },
+  "W19": {
+   "title": "Clinic closures: the old closures and new ones close every clinician; bookings stay; admins and the clinic's manager only",
+   "weight": 3.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "the old system's closures within the horizon leave no slots for any clinician of that clinic",
+     "ok": true,
+     "detail": "",
+     "seconds": 12.896
+    },
+    {
+     "name": "an admin closes each clinic on a future day; booked appointments that day stay confirmed and listed",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.943
+    },
+    {
+     "name": "on the closed days no clinician has a slot; the days around them are unaffected",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.926
+    },
+    {
+     "name": "a second closure for the same day is refused; only admins and the clinic's manager add closures; a token-less closure is refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.288
+    },
+    {
+     "name": "the clinic page offers add-closure to admins and that clinic's manager only",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.043
+    }
+   ],
+   "error": null,
+   "seconds": 19.1
+  },
+  "W20": {
+   "title": "Appointment export: exact columns and order, local and UTC times with folds, quoting, spreadsheet safety",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "the old system's past weeks export exactly, including the clock-change night",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.798
+    },
+    {
+     "name": "patients and clinicians with commas, quotes and formula-like names book, cancel and reschedule",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.805
+    },
+    {
+     "name": "the export of those days lists exactly the right rows, quoted and spreadsheet-safe",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.383
+    },
+    {
+     "name": "ranges over 31 days or backwards are refused; patients cannot export",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.759
+    }
+   ],
+   "error": null,
+   "seconds": 8.7
+  },
+  "W21": {
+   "title": "Front desk books for patients: holds for the account, payment-link emails, then the patient pays",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "front desk holds slots for patients by address, including the old system's quirky addresses; the patients pay",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.864
+    },
+    {
+     "name": "each session is for the account's address and the deposit; each patient gets one payment-link email",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.762
+    },
+    {
+     "name": "the paid bookings are confirmed and belong to the patients' accounts",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.394
+    },
+    {
+     "name": "the last unpaid hold expires like any other",
+     "ok": true,
+     "detail": "",
+     "seconds": 31.933
+    },
+    {
+     "name": "refused: unknown or inactive addresses, non-patients, patients using the desk, no token",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.322
+    }
+   ],
+   "error": null,
+   "seconds": 37.3
+  },
+  "W22": {
+   "title": "Legacy Honolulu: the old system's schedules, appointments, closures and patients, served as they are",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "slot lists for every old clinician of the clinic on busy, exceptional, version-change and closure dates match",
+     "ok": true,
+     "detail": "",
+     "seconds": 86.317
+    },
+    {
+     "name": "the clinic's front desk sees its day sheets with the old appointments in time order",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.525
+    },
+    {
+     "name": "old patients with quirky or shared addresses see exactly their account's appointments, with no change actions",
+     "ok": true,
+     "detail": "",
+     "seconds": 7.831
+    },
+    {
+     "name": "Honolulu clinicians' own day sheets list their old appointments",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.52
+    }
+   ],
+   "error": null,
+   "seconds": 95.2
+  },
+  "W23": {
+   "title": "Clinic staff: managers edit their clinic's schedules, front desk books and cancels only for their clinic",
+   "weight": 4.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a Seattle and a Honolulu clinician; the Seattle manager sets the Seattle clinician's hours",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.484
+    },
+    {
+     "name": "a manager cannot see or edit another clinic's schedules; front desk cannot edit schedules",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.159
+    },
+    {
+     "name": "Seattle front desk books for a patient with a Seattle clinician; a Honolulu clinician is refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.84
+    },
+    {
+     "name": "the appointment is visible to its clinic's staff only; other-clinic desk pages are refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.212
+    },
+    {
+     "name": "another clinic's manager cannot cancel; the clinic's manager cancels with a full refund and one email each",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.326
+    }
+   ],
+   "error": null,
+   "seconds": 8.0
+  },
+  "W24": {
+   "title": "A patient's journey: browse, register, book and pay, waitlist, reschedule into an offer, cancel, export",
+   "weight": 5.0,
+   "critical": true,
+   "passed": false,
+   "steps": [
+    {
+     "name": "a visitor sees a clinician's times without booking buttons, registers, and then sees the buttons",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.328
+    },
+    {
+     "name": "the patient books 10:00 and pays; one confirmation; the list shows it",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.152
+    },
+    {
+     "name": "another patient takes 11:00, the day is full, and the patient joins its waitlist",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.752
+    },
+    {
+     "name": "moving the 10:00 appointment to a time soon after now frees the slot, and the waitlist offers it back",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.16
+    },
+    {
+     "name": "the fee changes while the offer is open; accepting pays the deposit in effect on that date",
+     "ok": false,
+     "detail": "the offer's Checkout amount expected 7349, got 3957",
+     "seconds": 0.053
+    }
+   ],
+   "error": "the offer's Checkout amount expected 7349, got 3957",
+   "seconds": 3.4
+  },
+  "W25": {
+   "title": "Cross-cutting safety: secrets nowhere at rest or in logs, reset ends sessions, Host-proof links, headers, no stack traces",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "setting a new password through a reset link signs out every existing session of that account",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.368
+    },
+    {
+     "name": "a reset link always starts with PUBLIC_BASE_URL, whatever Host header the request carried",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.066
+    },
+    {
+     "name": "signed-in responses carry Cache-Control: no-store and every page an anti-framing header",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.518
+    },
+    {
+     "name": "malformed requests get a plain error page without stack traces, SQL, or file paths",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.171
+    },
+    {
+     "name": "a waitlist offer is made; its link reaches the patient",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.989
+    },
+    {
+     "name": "no password, reset token, offer token, session identifier, or signing key is stored in plain text (database or workspace files)",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.601
+    }
+   ],
+   "error": null,
+   "seconds": 2.7
+  },
+  "W26": {
+   "title": "Deployment: README, restart persistence, holds and refunds survive, nothing re-sent, no secrets, records kept",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "README.md and an executable start.sh are in the workspace",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.0
+    },
+    {
+     "name": "before a restart: an unpaid hold, and a refund the provider has not answered yet",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.959
+    },
+    {
+     "name": "after a restart: passwords, appointments and the hold's expiry are kept",
+     "ok": true,
+     "detail": "",
+     "seconds": 32.0
+    },
+    {
+     "name": "the refund still pending at the restart completes once",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.089
+    },
+    {
+     "name": "no email sent before the restart is sent again",
+     "ok": true,
+     "detail": "",
+     "seconds": 8.046
+    },
+    {
+     "name": "no password is stored in plain text",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.166
+    },
+    {
+     "name": "the old system's records are all still there, unchanged",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.229
+    },
+    {
+     "name": "every appointment the verifier made is a row in appointments with local_start and fold of its start",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.01
+    }
+   ],
+   "error": null,
+   "seconds": 42.5
+  },
+  "W27": {
+   "title": "Health follows the database: non-2xx within 10 s of a stop, 200 within 60 s of a start",
+   "weight": 2.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "/healthz answers 200 while the database is up",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.007
+    },
+    {
+     "name": "within 10 s of the database stopping, /healthz answers a non-2xx status within 5 s",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.113
+    },
+    {
+     "name": "within 60 s of the database starting again, /healthz answers 200 without a restart",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.009
+    }
+   ],
+   "error": null,
+   "seconds": 0.2
+  }
+ },
+ "breaches": {},
+ "surfaces": {
+  "register": true
+ },
+ "observations": {
+  "W03": {
+   "clinicians": 120,
+   "bookings": 152,
+   "w03_lists": 2160,
+   "w03_nonempty": 1814
+  },
+  "W04": {
+   "exceptions": 452,
+   "w04_lists": 3200,
+   "w04_nonempty": 2551
+  },
+  "W05": {
+   "bookings": 121,
+   "w05_groups_lists": 192,
+   "w05_groups_nonempty": 83,
+   "w05_misc_lists": 31,
+   "w05_misc_nonempty": 2
+  },
+  "W06": {
+   "w06_notice_lists": 120,
+   "w06_notice_nonempty": 72,
+   "w06_dst_lists": 480,
+   "w06_dst_nonempty": 395,
+   "clock_change_day": "2027-03-14"
+  },
+  "W07": {
+   "w07_lists": 2418,
+   "w07_nonempty": 1680
+  },
+  "W09": {
+   "w09_held_lists": 3,
+   "w09_held_nonempty": 3,
+   "w09_still_held_lists": 3,
+   "w09_still_held_nonempty": 3,
+   "w09_expired_lists": 3,
+   "w09_expired_nonempty": 3,
+   "w09_after_late_lists": 3,
+   "w09_after_late_nonempty": 3
+  },
+  "W11": {
+   "w11_room_lists": 2,
+   "w11_room_nonempty": 2,
+   "w11_limit_lists": 1,
+   "w11_limit_nonempty": 0
+  },
+  "W12": {
+   "refunds": [
+    0,
+    501,
+    915,
+    1001,
+    1740,
+    1829,
+    2741,
+    3480,
+    3639,
+    3695,
+    5481,
+    7277,
+    7389
+   ],
+   "w12_freed_lists": 8,
+   "w12_freed_nonempty": 8
+  },
+  "W14": {
+   "w14_same_day_lists": 1,
+   "w14_same_day_nonempty": 1,
+   "w14_moved_lists": 2,
+   "w14_moved_nonempty": 2,
+   "moves": 39,
+   "w14_moves_lists": 20,
+   "w14_moves_nonempty": 10
+  },
+  "W15": {
+   "fee_change_offers": 12,
+   "fee_change_offers_skipped": 0
+  },
+  "W17": {
+   "day": "2026-12-03"
+  },
+  "W19": {
+   "legacy_closure_lists": 360,
+   "w19_legacy_lists": 360,
+   "w19_legacy_nonempty": 125,
+   "w19_new_lists": 111,
+   "w19_new_nonempty": 48
+  },
+  "W20": {
+   "seattle-legacy_rows": 573,
+   "honolulu-legacy_rows": 617,
+   "seattle-new_rows": 567
+  },
+  "W21": {
+   "w21_after_lists": 3,
+   "w21_after_nonempty": 3
+  },
+  "W22": {
+   "w22_lists": 2100,
+   "w22_nonempty": 1547
+  },
+  "W23": {
+   "w23_hours_lists": 8,
+   "w23_hours_nonempty": 6,
+   "w23_untouched_lists": 2,
+   "w23_untouched_nonempty": 1
+  },
+  "W25": {
+   "offer_tokens_scanned": 16
+  },
+  "W27": {
+   "non2xx_after_s": 0.0,
+   "back_after_s": 0.0
+  }
+ }
+}

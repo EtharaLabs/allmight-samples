@@ -1,0 +1,4 @@
+started /app/start.sh as app (uid 10001), logging to /logs/verifier/app-start.log
+reward: 0.8435
+test_output_score: 0.7882
+judge_score: 1.0
