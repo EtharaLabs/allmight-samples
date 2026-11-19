@@ -1,0 +1,7761 @@
+{
+"fx": [
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-02",
+"qty": "21",
+"amount": 700000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-08",
+"qty": "6",
+"amount": 350000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-11-28",
+"qty": "24",
+"amount": 727013
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-27",
+"qty": "9/2",
+"amount": 125000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-02",
+"qty": "12",
+"amount": 500000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-11-21",
+"qty": "9/2",
+"amount": 812500
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-12",
+"qty": "9",
+"amount": 368970
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-26",
+"qty": "3/2",
+"amount": 250000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-07-04",
+"qty": "19/2",
+"amount": 500000
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-02",
+"qty": "6",
+"amount": 466857
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-12",
+"qty": "3/4",
+"amount": 875000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-02-14",
+"qty": "51/8",
+"amount": 125000
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-26",
+"qty": "7",
+"amount": 750000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-30",
+"qty": "21/2",
+"amount": 500000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-05-14",
+"qty": "7",
+"amount": 177750
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-12",
+"qty": "3/2",
+"amount": 835675
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-24",
+"qty": "3/2",
+"amount": 63197
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-07-16",
+"qty": "3/2",
+"amount": 617137
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-15",
+"qty": "14",
+"amount": 750000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-25",
+"qty": "27/2",
+"amount": 775570
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-08-31",
+"qty": "37/2",
+"amount": 687500
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-26",
+"qty": "18",
+"amount": 250000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-30",
+"qty": "18",
+"amount": 500000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-06-28",
+"qty": "30",
+"amount": 422500
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-07",
+"qty": "15",
+"amount": 569554
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-12",
+"qty": "15",
+"amount": 395125
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-10-07",
+"qty": "45/2",
+"amount": 75000
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-12",
+"qty": "6",
+"amount": 51775
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-19",
+"qty": "3/2",
+"amount": 638099
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-02-15",
+"qty": "13/2",
+"amount": 375000
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-21",
+"qty": "21",
+"amount": 125000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-09",
+"qty": "21",
+"amount": 900000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-04-13",
+"qty": "28",
+"amount": 331500
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-20",
+"qty": "3",
+"amount": 767165
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-21",
+"qty": "9",
+"amount": 719847
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-10-31",
+"qty": "15/2",
+"amount": 725275
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-12",
+"qty": "27/2",
+"amount": 752450
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-02",
+"qty": "15",
+"amount": 375000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-05-30",
+"qty": "47/2",
+"amount": 500000
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-09",
+"qty": "7",
+"amount": 700000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-20",
+"qty": "21",
+"amount": 770578
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-12-17",
+"qty": "21",
+"amount": 170675
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-13",
+"qty": "6",
+"amount": 327721
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-21",
+"qty": "15",
+"amount": 160129
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-03-23",
+"qty": "27/2",
+"amount": 500000
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-21",
+"qty": "3",
+"amount": 449353
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-09",
+"qty": "9/2",
+"amount": 550355
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-01-15",
+"qty": "21/4",
+"amount": 768600
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-19",
+"qty": "21",
+"amount": 625000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-25",
+"qty": "3/2",
+"amount": 250000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-06-05",
+"qty": "87/4",
+"amount": 676854
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-12",
+"qty": "3/4",
+"amount": 780828
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-25",
+"qty": "21/2",
+"amount": 250000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-03-11",
+"qty": "6",
+"amount": 125000
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-18",
+"qty": "12",
+"amount": 500000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-27",
+"qty": "27/2",
+"amount": 701162
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-09-26",
+"qty": "33/2",
+"amount": 151875
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-12",
+"qty": "21/2",
+"amount": 417175
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-17",
+"qty": "9/2",
+"amount": 175000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-07-18",
+"qty": "51/4",
+"amount": 500000
+}
+],
+"approximations_wrong": [
+"float",
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-11",
+"qty": "6",
+"amount": 537000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-17",
+"qty": "3/2",
+"amount": 239250
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-09-20",
+"qty": "27/4",
+"amount": 357950
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-11",
+"qty": "3",
+"amount": 700000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-25",
+"qty": "27/2",
+"amount": 250000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-01-12",
+"qty": "39/4",
+"amount": 275000
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-13",
+"qty": "3/2",
+"amount": 199973
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-26",
+"qty": "7",
+"amount": 612150
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-09-24",
+"qty": "5",
+"amount": 156546
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-02",
+"qty": "3/2",
+"amount": 500000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-13",
+"qty": "6",
+"amount": 750000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-07-26",
+"qty": "9/2",
+"amount": 750000
+}
+],
+"approximations_wrong": [
+"float",
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-10",
+"qty": "3/4",
+"amount": 233125
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-12",
+"qty": "3/2",
+"amount": 245266
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-08-18",
+"qty": "3/2",
+"amount": 703431
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-16",
+"qty": "21/2",
+"amount": 420000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-04",
+"qty": "6",
+"amount": 240369
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-09-22",
+"qty": "27/2",
+"amount": 728950
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-14",
+"qty": "3/4",
+"amount": 875000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-18",
+"qty": "9",
+"amount": 125000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-06-22",
+"qty": "21/4",
+"amount": 343750
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-16",
+"qty": "3",
+"amount": 750000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-22",
+"qty": "9/2",
+"amount": 60000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-02-03",
+"qty": "21/4",
+"amount": 250000
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2024-04-29",
+"qty": "21/2",
+"amount": 653259
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2024-05-09",
+"qty": "6",
+"amount": 117275
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-02-16",
+"qty": "27/2",
+"amount": 291183
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-03",
+"qty": "3/4",
+"amount": 500000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-09",
+"qty": "9/2",
+"amount": 525000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-11-22",
+"qty": "3",
+"amount": 187500
+}
+],
+"approximations_wrong": [
+"float",
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-19",
+"qty": "9",
+"amount": 250000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-22",
+"qty": "12",
+"amount": 125000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-08-08",
+"qty": "15",
+"amount": 188290
+}
+],
+"approximations_wrong": [
+"float",
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-07",
+"qty": "3",
+"amount": 350000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-25",
+"qty": "27/2",
+"amount": 250000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-12-12",
+"qty": "39/4",
+"amount": 697250
+}
+],
+"approximations_wrong": [
+"float",
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2024-04-12",
+"qty": "3",
+"amount": 639680
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2024-04-27",
+"qty": "6",
+"amount": 218840
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2024-11-14",
+"qty": "6",
+"amount": 450000
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-21",
+"qty": "6",
+"amount": 259681
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-05",
+"qty": "3",
+"amount": 544776
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-08-18",
+"qty": "6",
+"amount": 235335
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-22",
+"qty": "6",
+"amount": 671511
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-27",
+"qty": "21/2",
+"amount": 125346
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-11-16",
+"qty": "45/4",
+"amount": 444319
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-06",
+"qty": "21",
+"amount": 446753
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-09",
+"qty": "21/2",
+"amount": 325000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-10-04",
+"qty": "105/4",
+"amount": 150000
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-06",
+"qty": "18",
+"amount": 625000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-12",
+"qty": "3/4",
+"amount": 112550
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-02-07",
+"qty": "147/8",
+"amount": 235000
+}
+],
+"approximations_wrong": [
+"float",
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-26",
+"qty": "21",
+"amount": 260000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-10",
+"qty": "9/2",
+"amount": 100000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-09-15",
+"qty": "93/4",
+"amount": 500000
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-03",
+"qty": "14",
+"amount": 816918
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-05",
+"qty": "9/2",
+"amount": 125000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-11-11",
+"qty": "65/4",
+"amount": 809275
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-09",
+"qty": "21",
+"amount": 250000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-14",
+"qty": "14",
+"amount": 199292
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-06-25",
+"qty": "28",
+"amount": 314787
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+}
+],
+"share": [
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-26",
+"qty": "21/2",
+"amount": 250000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-07",
+"qty": "12",
+"amount": 247226
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-09",
+"qty": "15",
+"amount": 300000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-10-18",
+"qty": "25",
+"amount": 169850
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-24",
+"qty": "18",
+"amount": 156250
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-04",
+"qty": "18",
+"amount": 12250
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-17",
+"qty": "3/4",
+"amount": 250000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-05-02",
+"qty": "49/8",
+"amount": 300000
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-24",
+"qty": "15",
+"amount": 66500
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-03",
+"qty": "15",
+"amount": 125000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-15",
+"qty": "12",
+"amount": 219500
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-11-02",
+"qty": "21",
+"amount": 346325
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-07",
+"qty": "27/2",
+"amount": 219025
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-24",
+"qty": "3/2",
+"amount": 140000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-28",
+"qty": "14",
+"amount": 231440
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-07-28",
+"qty": "87/4",
+"amount": 112120
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-01-22",
+"qty": "87/16",
+"amount": 62500
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-17",
+"qty": "6",
+"amount": 175000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-22",
+"qty": "12",
+"amount": 258005
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-04-18",
+"qty": "3",
+"amount": 98163
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-08-18",
+"qty": "45/4",
+"amount": 313355
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-26",
+"qty": "21",
+"amount": 263041
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-02",
+"qty": "27/2",
+"amount": 194607
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-10-29",
+"qty": "69/4",
+"amount": 343750
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-02-21",
+"qty": "23/8",
+"amount": 235689
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-12",
+"qty": "3",
+"amount": 172725
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-17",
+"qty": "14",
+"amount": 125000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-08-06",
+"qty": "17/4",
+"amount": 205000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-02-14",
+"qty": "17/8",
+"amount": 125000
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-11",
+"qty": "3/2",
+"amount": 83275
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-25",
+"qty": "21",
+"amount": 150623
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-06",
+"qty": "21",
+"amount": 125000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-04-25",
+"qty": "29/4",
+"amount": 250000
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-06",
+"qty": "9/2",
+"amount": 183900
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-28",
+"qty": "7",
+"amount": 300000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-08-08",
+"qty": "69/8",
+"amount": 214390
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-21",
+"qty": "21/2",
+"amount": 125000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-04",
+"qty": "18",
+"amount": 300000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-11-02",
+"qty": "57/8",
+"amount": 223225
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-04-09",
+"qty": "14",
+"amount": 125000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-04-23",
+"qty": "3/4",
+"amount": 149463
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-10-29",
+"qty": "177/16",
+"amount": 343750
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-03",
+"qty": "21",
+"amount": 125000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-24",
+"qty": "3/4",
+"amount": 271605
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-10-12",
+"qty": "29/2",
+"amount": 46750
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-07",
+"qty": "27/2",
+"amount": 164584
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-24",
+"qty": "21/2",
+"amount": 156250
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-17",
+"qty": "18",
+"amount": 158542
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-09-18",
+"qty": "21",
+"amount": 385000
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-07",
+"qty": "12",
+"amount": 19375
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-19",
+"qty": "21",
+"amount": 210097
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-06-17",
+"qty": "33/2",
+"amount": 250000
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-04-29",
+"qty": "9",
+"amount": 136282
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-03",
+"qty": "9/2",
+"amount": 184492
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-06-30",
+"qty": "9/4",
+"amount": 222431
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-23",
+"qty": "6",
+"amount": 99941
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-03",
+"qty": "6",
+"amount": 158185
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-11-10",
+"qty": "9",
+"amount": 183832
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-04-18",
+"qty": "6",
+"amount": 139698
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-05",
+"qty": "9/2",
+"amount": 213004
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-16",
+"qty": "12",
+"amount": 15167
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-07-24",
+"qty": "15",
+"amount": 243229
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-01-29",
+"qty": "15/4",
+"amount": 164131
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-21",
+"qty": "9",
+"amount": 291167
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-15",
+"qty": "6",
+"amount": 142736
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-21",
+"qty": "3/4",
+"amount": 172387
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-06-27",
+"qty": "189/16",
+"amount": 140890
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-31",
+"qty": "7",
+"amount": 251942
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-10",
+"qty": "3/2",
+"amount": 191943
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-15",
+"qty": "9/2",
+"amount": 79836
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-04-18",
+"qty": "13/4",
+"amount": 284890
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-08-20",
+"qty": "117/16",
+"amount": 171367
+}
+],
+"approximations_wrong": [
+"float",
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-09",
+"qty": "7",
+"amount": 1875
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-01",
+"qty": "6",
+"amount": 187500
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-07",
+"qty": "15",
+"amount": 158274
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-08-15",
+"qty": "14",
+"amount": 222944
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-12-13",
+"qty": "7/2",
+"amount": 168680
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-06",
+"qty": "3/2",
+"amount": 125000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-01",
+"qty": "9",
+"amount": 125000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-09-09",
+"qty": "7/2",
+"amount": 162754
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-10-28",
+"qty": "21/4",
+"amount": 289373
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-06",
+"qty": "12",
+"amount": 36840
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-20",
+"qty": "18",
+"amount": 250000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-09-17",
+"qty": "15/2",
+"amount": 134875
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-11-22",
+"qty": "15/2",
+"amount": 187500
+}
+],
+"approximations_wrong": [
+"float",
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-05",
+"qty": "6",
+"amount": 125000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-22",
+"qty": "21",
+"amount": 273465
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-26",
+"qty": "15",
+"amount": 250000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-06-23",
+"qty": "7",
+"amount": 128842
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-12-22",
+"qty": "105/4",
+"amount": 116688
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-08",
+"qty": "9",
+"amount": 272772
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-25",
+"qty": "27/2",
+"amount": 236394
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-06",
+"qty": "21/2",
+"amount": 208291
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-09-16",
+"qty": "22",
+"amount": 82178
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-10-27",
+"qty": "11/2",
+"amount": 375065
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-25",
+"qty": "9/2",
+"amount": 158274
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-20",
+"qty": "27/2",
+"amount": 59010
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-09-01",
+"qty": "6",
+"amount": 64730
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-21",
+"qty": "6",
+"amount": 119762
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-05",
+"qty": "6",
+"amount": 178364
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-08-18",
+"qty": "3",
+"amount": 347388
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-02-23",
+"qty": "9/4",
+"amount": 182065
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-20",
+"qty": "14",
+"amount": 241741
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-07-02",
+"qty": "7",
+"amount": 134094
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-07-26",
+"qty": "15",
+"amount": 278529
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-01-24",
+"qty": "27",
+"amount": 19769
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-07-04",
+"qty": "9/2",
+"amount": 20447
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-12",
+"qty": "14",
+"amount": 29653
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-06",
+"qty": "21",
+"amount": 249528
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-07-29",
+"qty": "35/4",
+"amount": 143384
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-11-22",
+"qty": "315/16",
+"amount": 194856
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-04-12",
+"qty": "6",
+"amount": 132984
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-04-20",
+"qty": "15",
+"amount": 250745
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-08-04",
+"qty": "35/2",
+"amount": 362235
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-02-17",
+"qty": "7/4",
+"amount": 175223
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-09",
+"qty": "27/2",
+"amount": 155244
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-20",
+"qty": "7",
+"amount": 287390
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-15",
+"qty": "6",
+"amount": 211210
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-06-02",
+"qty": "53/4",
+"amount": 31259
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-08-03",
+"qty": "53/8",
+"amount": 396283
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-04-15",
+"qty": "9/2",
+"amount": 216688
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-04-19",
+"qty": "12",
+"amount": 290240
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-07-26",
+"qty": "55/4",
+"amount": 115067
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-02-06",
+"qty": "11/8",
+"amount": 31823
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-09",
+"qty": "9/2",
+"amount": 127158
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-27",
+"qty": "9",
+"amount": 292350
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-06-17",
+"qty": "27/4",
+"amount": 255670
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-09-21",
+"qty": "45/8",
+"amount": 212076
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-13",
+"qty": "3",
+"amount": 298087
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-26",
+"qty": "21/2",
+"amount": 1373
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-29",
+"qty": "9/2",
+"amount": 245836
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-04-14",
+"qty": "6",
+"amount": 14231
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-27",
+"qty": "3/2",
+"amount": 189251
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-18",
+"qty": "12",
+"amount": 205957
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-09",
+"qty": "9",
+"amount": 229675
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-07-12",
+"qty": "135/8",
+"amount": 199470
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-09-27",
+"qty": "135/32",
+"amount": 219699
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-16",
+"qty": "9",
+"amount": 168810
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-25",
+"qty": "3/4",
+"amount": 89133
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-08-27",
+"qty": "13/4",
+"amount": 276965
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-12-06",
+"qty": "39/8",
+"amount": 83796
+}
+],
+"approximations_wrong": [
+"float",
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-25",
+"qty": "21/2",
+"amount": 166554
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-04",
+"qty": "7",
+"amount": 221578
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-08-04",
+"qty": "105/8",
+"amount": 294039
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-01-16",
+"qty": "105/32",
+"amount": 199345
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-07",
+"qty": "9",
+"amount": 93802
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-09",
+"qty": "3",
+"amount": 208949
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-23",
+"qty": "3/2",
+"amount": 135975
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-08-23",
+"qty": "27/4",
+"amount": 249224
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-04-19",
+"qty": "9",
+"amount": 72769
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-04-28",
+"qty": "18",
+"amount": 269871
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-19",
+"qty": "21",
+"amount": 4176
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-10-08",
+"qty": "12",
+"amount": 191591
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-01-18",
+"qty": "30",
+"amount": 154956
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-17",
+"qty": "6",
+"amount": 250000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-06",
+"qty": "27/2",
+"amount": 175734
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-08-03",
+"qty": "39/4",
+"amount": 17500
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-10-28",
+"qty": "39/16",
+"amount": 236817
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-19",
+"qty": "3/2",
+"amount": 281144
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-04",
+"qty": "21",
+"amount": 77500
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-08-17",
+"qty": "75/4",
+"amount": 367500
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-11-17",
+"qty": "5/4",
+"amount": 251678
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+}
+],
+"split": [
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-29",
+"qty": "21/2",
+"amount": 192967
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-11",
+"qty": "21",
+"amount": 168119
+},
+{
+"a": 2,
+"kind": "split",
+"day": "2025-05-26",
+"ratio": [
+2,
+1
+]
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-10-01",
+"qty": "42",
+"amount": 129538
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-16",
+"qty": "3/4",
+"amount": 222416
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-23",
+"qty": "3",
+"amount": 47478
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-30",
+"qty": "15",
+"amount": 235864
+},
+{
+"a": 0,
+"kind": "split",
+"day": "2025-02-18",
+"ratio": [
+3,
+1
+]
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-05-13",
+"qty": "75/2",
+"amount": 136262
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-08-03",
+"qty": "75/8",
+"amount": 393982
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-22",
+"qty": "3/2",
+"amount": 240517
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-07",
+"qty": "27/2",
+"amount": 143095
+},
+{
+"a": 2,
+"kind": "split",
+"day": "2025-02-27",
+"ratio": [
+10,
+1
+]
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-07-05",
+"qty": "75/2",
+"amount": 146498
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-10-22",
+"qty": "675/8",
+"amount": 206616
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-17",
+"qty": "3/4",
+"amount": 254961
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-05",
+"qty": "3/2",
+"amount": 155128
+},
+{
+"a": 0,
+"kind": "split",
+"day": "2025-03-23",
+"ratio": [
+2,
+1
+]
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-08-23",
+"qty": "27/8",
+"amount": 86219
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-01-27",
+"qty": "3/16",
+"amount": 123655
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-08",
+"qty": "21",
+"amount": 3535
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-10",
+"qty": "21/2",
+"amount": 196734
+},
+{
+"a": 2,
+"kind": "split",
+"day": "2025-06-05",
+"ratio": [
+10,
+1
+]
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-09-27",
+"qty": "210",
+"amount": 41524
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-02-04",
+"qty": "70",
+"amount": 70950
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-20",
+"qty": "18",
+"amount": 220000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-23",
+"qty": "15",
+"amount": 273119
+},
+{
+"a": 0,
+"kind": "split",
+"day": "2025-07-04",
+"ratio": [
+2,
+1
+]
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-01-10",
+"qty": "33",
+"amount": 364400
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-06-29",
+"qty": "11",
+"amount": 294160
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-04-15",
+"qty": "3",
+"amount": 113040
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-04-18",
+"qty": "21",
+"amount": 235449
+},
+{
+"a": 0,
+"kind": "split",
+"day": "2025-05-03",
+"ratio": [
+1,
+5
+]
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-10-01",
+"qty": "18/5",
+"amount": 327250
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-02",
+"qty": "3",
+"amount": 63977
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-15",
+"qty": "3/4",
+"amount": 47179
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-25",
+"qty": "12",
+"amount": 3716
+},
+{
+"a": 0,
+"kind": "split",
+"day": "2025-06-07",
+"ratio": [
+2,
+1
+]
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-01-22",
+"qty": "21/2",
+"amount": 82551
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-25",
+"qty": "3/2",
+"amount": 100000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-14",
+"qty": "9/2",
+"amount": 250000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-28",
+"qty": "21",
+"amount": 125000
+},
+{
+"a": 0,
+"kind": "split",
+"day": "2025-03-20",
+"ratio": [
+1,
+5
+]
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-10-28",
+"qty": "81/20",
+"amount": 187500
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-02-07",
+"qty": "81/80",
+"amount": 155000
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-02",
+"qty": "6",
+"amount": 100000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-05",
+"qty": "3/4",
+"amount": 206047
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-07",
+"qty": "14",
+"amount": 300000
+},
+{
+"a": 0,
+"kind": "split",
+"day": "2025-05-26",
+"ratio": [
+2,
+1
+]
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-10-29",
+"qty": "249/8",
+"amount": 343750
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-12-06",
+"qty": "249/32",
+"amount": 96500
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-07",
+"qty": "3/2",
+"amount": 74825
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-13",
+"qty": "3/4",
+"amount": 293190
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-01",
+"qty": "18",
+"amount": 98346
+},
+{
+"a": 2,
+"kind": "split",
+"day": "2025-02-07",
+"ratio": [
+1,
+2
+]
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-06-02",
+"qty": "27/4",
+"amount": 168394
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-08",
+"qty": "21/2",
+"amount": 150000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-01",
+"qty": "3/4",
+"amount": 100000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-23",
+"qty": "9/2",
+"amount": 300000
+},
+{
+"a": 2,
+"kind": "split",
+"day": "2025-05-02",
+"ratio": [
+2,
+1
+]
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-09-06",
+"qty": "21",
+"amount": 375000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-11-26",
+"qty": "7",
+"amount": 197532
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-25",
+"qty": "3",
+"amount": 23992
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-06",
+"qty": "6",
+"amount": 151554
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-23",
+"qty": "9/2",
+"amount": 202285
+},
+{
+"a": 0,
+"kind": "split",
+"day": "2025-07-05",
+"ratio": [
+1,
+5
+]
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-01-22",
+"qty": "9/10",
+"amount": 218862
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-04-22",
+"qty": "9/20",
+"amount": 129867
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-29",
+"qty": "21",
+"amount": 106493
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-03",
+"qty": "3",
+"amount": 104639
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-22",
+"qty": "3/2",
+"amount": 155883
+},
+{
+"a": 2,
+"kind": "split",
+"day": "2025-05-17",
+"ratio": [
+1,
+4
+]
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-11-07",
+"qty": "51/32",
+"amount": 156775
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-04-05",
+"qty": "153/64",
+"amount": 34723
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-04-10",
+"qty": "3/2",
+"amount": 258991
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-04-20",
+"qty": "9",
+"amount": 42668
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-01",
+"qty": "3/2",
+"amount": 203948
+},
+{
+"a": 0,
+"kind": "split",
+"day": "2025-05-27",
+"ratio": [
+1,
+4
+]
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-08-18",
+"qty": "3/2",
+"amount": 204758
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-01-22",
+"qty": "3/8",
+"amount": 382430
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-04",
+"qty": "3",
+"amount": 153147
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-21",
+"qty": "3/4",
+"amount": 84129
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-10",
+"qty": "3/4",
+"amount": 180456
+},
+{
+"a": 2,
+"kind": "split",
+"day": "2025-04-26",
+"ratio": [
+1,
+4
+]
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-07-17",
+"qty": "3/8",
+"amount": 49295
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-31",
+"qty": "21",
+"amount": 71065
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-23",
+"qty": "6",
+"amount": 287465
+},
+{
+"a": 0,
+"kind": "split",
+"day": "2025-07-08",
+"ratio": [
+3,
+1
+]
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-12-18",
+"qty": "81/2",
+"amount": 283435
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-03-02",
+"qty": "27",
+"amount": 109011
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-12",
+"qty": "6",
+"amount": 252851
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-26",
+"qty": "15",
+"amount": 64930
+},
+{
+"a": 2,
+"kind": "split",
+"day": "2025-02-07",
+"ratio": [
+2,
+1
+]
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-08-17",
+"qty": "63/2",
+"amount": 47871
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-11-09",
+"qty": "21/4",
+"amount": 293436
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-17",
+"qty": "12",
+"amount": 62476
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-21",
+"qty": "3",
+"amount": 49736
+},
+{
+"a": 2,
+"kind": "split",
+"day": "2025-07-08",
+"ratio": [
+3,
+1
+]
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-02-13",
+"qty": "45/2",
+"amount": 252092
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-01",
+"qty": "9/2",
+"amount": 73667
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-12",
+"qty": "9/2",
+"amount": 94207
+},
+{
+"a": 0,
+"kind": "split",
+"day": "2025-06-08",
+"ratio": [
+1,
+5
+]
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-11-19",
+"qty": "3/2",
+"amount": 42048
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-03-09",
+"qty": "3/40",
+"amount": 273904
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-04",
+"qty": "3/2",
+"amount": 193162
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-09",
+"qty": "9",
+"amount": 150635
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-21",
+"qty": "27/2",
+"amount": 139080
+},
+{
+"a": 2,
+"kind": "split",
+"day": "2025-03-17",
+"ratio": [
+10,
+1
+]
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-10-28",
+"qty": "60",
+"amount": 331253
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-05-12",
+"qty": "90",
+"amount": 381725
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-01",
+"qty": "21/2",
+"amount": 200935
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-14",
+"qty": "3/4",
+"amount": 73912
+},
+{
+"a": 0,
+"kind": "split",
+"day": "2025-03-03",
+"ratio": [
+1,
+2
+]
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-08-18",
+"qty": "15/8",
+"amount": 308999
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-05",
+"qty": "6",
+"amount": 114813
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-23",
+"qty": "21",
+"amount": 137830
+},
+{
+"a": 2,
+"kind": "split",
+"day": "2025-05-01",
+"ratio": [
+1,
+4
+]
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-11-26",
+"qty": "81/16",
+"amount": 218410
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-05-26",
+"qty": "45/32",
+"amount": 67621
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-12",
+"qty": "6",
+"amount": 29233
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-07-01",
+"qty": "18",
+"amount": 76566
+},
+{
+"a": 0,
+"kind": "split",
+"day": "2025-07-13",
+"ratio": [
+2,
+1
+]
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-03-03",
+"qty": "36",
+"amount": 97434
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-06-29",
+"qty": "3",
+"amount": 5605
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+}
+],
+"transfer": [
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-12",
+"qty": "21",
+"amount": 150525
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-14",
+"qty": "27/2",
+"amount": 125000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-03",
+"qty": "9",
+"amount": 116157
+},
+{
+"a": 0,
+"kind": "transfer",
+"day": "2025-02-23",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-04-23",
+"qty": "29/4",
+"amount": 273500
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-07-14",
+"qty": "435/16",
+"amount": 154375
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-16",
+"qty": "21",
+"amount": 177750
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-25",
+"qty": "6",
+"amount": 140000
+},
+{
+"a": 2,
+"kind": "transfer",
+"day": "2025-02-15",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-07-21",
+"qty": "18",
+"amount": 296590
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-06",
+"qty": "6",
+"amount": 297313
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-19",
+"qty": "12",
+"amount": 273675
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-24",
+"qty": "18",
+"amount": 30529
+},
+{
+"a": 2,
+"kind": "transfer",
+"day": "2025-05-12",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-07-02",
+"qty": "12",
+"amount": 163915
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-22",
+"qty": "6",
+"amount": 82251
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-25",
+"qty": "6",
+"amount": 170590
+},
+{
+"a": 2,
+"kind": "transfer",
+"day": "2025-03-22",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-06-29",
+"qty": "6",
+"amount": 325687
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-07",
+"qty": "9",
+"amount": 100000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-17",
+"qty": "9/2",
+"amount": 169500
+},
+{
+"a": 2,
+"kind": "transfer",
+"day": "2025-06-08",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-09-01",
+"qty": "45/4",
+"amount": 100000
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-11",
+"qty": "3/4",
+"amount": 100000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-25",
+"qty": "6",
+"amount": 258155
+},
+{
+"a": 0,
+"kind": "transfer",
+"day": "2025-03-14",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-08-23",
+"qty": "27/16",
+"amount": 257290
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-11",
+"qty": "6",
+"amount": 243200
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-26",
+"qty": "21/2",
+"amount": 181727
+},
+{
+"a": 0,
+"kind": "transfer",
+"day": "2025-04-11",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-10-09",
+"qty": "33/4",
+"amount": 273355
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-09",
+"qty": "6",
+"amount": 250000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-16",
+"qty": "9",
+"amount": 225850
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-04",
+"qty": "21",
+"amount": 25000
+},
+{
+"a": 2,
+"kind": "transfer",
+"day": "2025-02-18",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-07-01",
+"qty": "12",
+"amount": 96136
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-12-16",
+"qty": "6",
+"amount": 300000
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-22",
+"qty": "6",
+"amount": 155000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-02",
+"qty": "9",
+"amount": 300000
+},
+{
+"a": 2,
+"kind": "transfer",
+"day": "2025-05-09",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-08-19",
+"qty": "15/4",
+"amount": 294839
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2026-02-18",
+"qty": "45/8",
+"amount": 46250
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-20",
+"qty": "21/2",
+"amount": 94394
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-30",
+"qty": "21/2",
+"amount": 170387
+},
+{
+"a": 0,
+"kind": "transfer",
+"day": "2025-07-21",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-12-15",
+"qty": "21/4",
+"amount": 385726
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2026-05-26",
+"qty": "21/2",
+"amount": 64390
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-13",
+"qty": "9/2",
+"amount": 297179
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-21",
+"qty": "9",
+"amount": 199762
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-26",
+"qty": "9/2",
+"amount": 44835
+},
+{
+"a": 0,
+"kind": "transfer",
+"day": "2025-03-26",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-09-28",
+"qty": "9",
+"amount": 138729
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2026-02-04",
+"qty": "9/2",
+"amount": 160303
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-18",
+"qty": "3/4",
+"amount": 91798
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-04",
+"qty": "3/2",
+"amount": 177797
+},
+{
+"a": 2,
+"kind": "transfer",
+"day": "2025-05-31",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-07-25",
+"qty": "9/16",
+"amount": 144856
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-02",
+"qty": "3/2",
+"amount": 80466
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-10",
+"qty": "9/2",
+"amount": 178392
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-16",
+"qty": "15",
+"amount": 16432
+},
+{
+"a": 0,
+"kind": "transfer",
+"day": "2025-05-23",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-09-19",
+"qty": "35/2",
+"amount": 232369
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2026-01-21",
+"qty": "7/8",
+"amount": 4886
+}
+],
+"approximations_wrong": [
+"float",
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-17",
+"qty": "14",
+"amount": 228681
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-20",
+"qty": "14",
+"amount": 146985
+},
+{
+"a": 2,
+"kind": "transfer",
+"day": "2025-07-17",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2026-01-29",
+"qty": "21",
+"amount": 1195
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-04-30",
+"qty": "21/2",
+"amount": 29125
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-09",
+"qty": "3",
+"amount": 250861
+},
+{
+"a": 0,
+"kind": "transfer",
+"day": "2025-05-25",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-08-30",
+"qty": "9/2",
+"amount": 136825
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-10-31",
+"qty": "3",
+"amount": 76005
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-19",
+"qty": "3",
+"amount": 13383
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-24",
+"qty": "15",
+"amount": 72893
+},
+{
+"a": 0,
+"kind": "transfer",
+"day": "2025-06-17",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-12-17",
+"qty": "12",
+"amount": 228214
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2026-03-18",
+"qty": "5",
+"amount": 244297
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-13",
+"qty": "9/2",
+"amount": 169156
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-25",
+"qty": "9/2",
+"amount": 276289
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-10",
+"qty": "18",
+"amount": 239086
+},
+{
+"a": 0,
+"kind": "transfer",
+"day": "2025-03-23",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-07-15",
+"qty": "18",
+"amount": 324474
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2026-01-15",
+"qty": "3",
+"amount": 377299
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-12",
+"qty": "15",
+"amount": 193121
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-15",
+"qty": "3/2",
+"amount": 288020
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-07-05",
+"qty": "6",
+"amount": 157786
+},
+{
+"a": 2,
+"kind": "transfer",
+"day": "2025-07-20",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-12-03",
+"qty": "15/2",
+"amount": 213035
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2026-03-17",
+"qty": "45/4",
+"amount": 182061
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-27",
+"qty": "21/2",
+"amount": 82527
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-13",
+"qty": "6",
+"amount": 99407
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-21",
+"qty": "15",
+"amount": 220386
+},
+{
+"a": 2,
+"kind": "transfer",
+"day": "2025-03-06",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-05-06",
+"qty": "21",
+"amount": 181955
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-07-27",
+"qty": "21/8",
+"amount": 131893
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-16",
+"qty": "3/2",
+"amount": 111484
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-18",
+"qty": "21",
+"amount": 66958
+},
+{
+"a": 2,
+"kind": "transfer",
+"day": "2025-02-27",
+"to": 1
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-04-28",
+"qty": "135/8",
+"amount": 363690
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-07-04",
+"qty": "45/16",
+"amount": 84553
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+}
+],
+"wash": [
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-30",
+"qty": "6",
+"amount": 162707
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-09-08",
+"qty": "9/2",
+"amount": 20083
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-09-28",
+"qty": "3",
+"amount": 7685
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-13",
+"qty": "18",
+"amount": 250000
+},
+{
+"a": 1,
+"kind": "buy",
+"day": "2025-10-02",
+"qty": "27",
+"amount": 159750
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-10-07",
+"qty": "18",
+"amount": 25000
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-27",
+"qty": "21/2",
+"amount": 269240
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-12-05",
+"qty": "21/4",
+"amount": 18903
+},
+{
+"a": 1,
+"kind": "buy",
+"day": "2026-01-05",
+"qty": "21/8",
+"amount": 191750
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2026-04-08",
+"qty": "21/8",
+"amount": 152500
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-03",
+"qty": "12",
+"amount": 100000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-09-17",
+"qty": "12",
+"amount": 29425
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-10-18",
+"qty": "12",
+"amount": 156830
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-11-23",
+"qty": "6",
+"amount": 86754
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2024-05-17",
+"qty": "9/2",
+"amount": 166855
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-02-15",
+"qty": "9/4",
+"amount": 20000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-17",
+"qty": "9/4",
+"amount": 104250
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-24",
+"qty": "21/2",
+"amount": 187849
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-01-24",
+"qty": "21/4",
+"amount": 37463
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2026-02-05",
+"qty": "21/4",
+"amount": 42938
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-03-20",
+"qty": "21/8",
+"amount": 118086
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-05",
+"qty": "14",
+"amount": 321682
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-06-02",
+"qty": "7",
+"amount": 12500
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-07-02",
+"qty": "7",
+"amount": 40070
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-09-13",
+"qty": "7/2",
+"amount": 227834
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-20",
+"qty": "27/2",
+"amount": 260000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-09-17",
+"qty": "27/2",
+"amount": 22725
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-10-18",
+"qty": "27/2",
+"amount": 66250
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-16",
+"qty": "14",
+"amount": 250000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-03-15",
+"qty": "7",
+"amount": 2558
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2026-04-14",
+"qty": "7",
+"amount": 17500
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-14",
+"qty": "27/2",
+"amount": 318750
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-06-21",
+"qty": "9",
+"amount": 31250
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-24",
+"qty": "6",
+"amount": 129958
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-18",
+"qty": "21/2",
+"amount": 114511
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-10-12",
+"qty": "7/4",
+"amount": 86963
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-11-01",
+"qty": "21/4",
+"amount": 21140
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-04-02",
+"qty": "7/4",
+"amount": 253620
+}
+],
+"approximations_wrong": [
+"float",
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-08",
+"qty": "18",
+"amount": 202275
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-09-05",
+"qty": "9",
+"amount": 7824
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-09-25",
+"qty": "9",
+"amount": 4081
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-01-07",
+"qty": "9/2",
+"amount": 145413
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-03",
+"qty": "3/4",
+"amount": 195439
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-06-08",
+"qty": "3/8",
+"amount": 27053
+},
+{
+"a": 1,
+"kind": "buy",
+"day": "2025-07-08",
+"qty": "1/8",
+"amount": 150237
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2026-01-24",
+"qty": "1/16",
+"amount": 273410
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-19",
+"qty": "3/2",
+"amount": 157535
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-10-27",
+"qty": "3/4",
+"amount": 28665
+},
+{
+"a": 1,
+"kind": "buy",
+"day": "2025-11-26",
+"qty": "3/4",
+"amount": 50590
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-22",
+"qty": "21/2",
+"amount": 218076
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-10-09",
+"qty": "21/4",
+"amount": 37589
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-10-12",
+"qty": "21/8",
+"amount": 24652
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-04-20",
+"qty": "21/8",
+"amount": 269525
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-17",
+"qty": "3",
+"amount": 316494
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-07-20",
+"qty": "2",
+"amount": 111786
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-08-09",
+"qty": "2",
+"amount": 25090
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-27",
+"qty": "21",
+"amount": 61947
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-12-11",
+"qty": "21/2",
+"amount": 3466
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2026-01-11",
+"qty": "35/4",
+"amount": 105974
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-04-12",
+"qty": "35/8",
+"amount": 123865
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-18",
+"qty": "27/2",
+"amount": 175000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-08-29",
+"qty": "9/2",
+"amount": 4236
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-09-03",
+"qty": "27/4",
+"amount": 12693
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-16",
+"qty": "21",
+"amount": 123247
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-14",
+"qty": "21/4",
+"amount": 179239
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-04-03",
+"qty": "21/2",
+"amount": 12623
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-12-06",
+"qty": "21/8",
+"amount": 153975
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-29",
+"qty": "9/2",
+"amount": 126135
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-01-18",
+"qty": "9/2",
+"amount": 37956
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2026-01-21",
+"qty": "15/4",
+"amount": 171199
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-06-12",
+"qty": "5/4",
+"amount": 251113
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-03",
+"qty": "21/2",
+"amount": 353671
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-07-04",
+"qty": "21/4",
+"amount": 34567
+},
+{
+"a": 1,
+"kind": "buy",
+"day": "2025-08-03",
+"qty": "21/8",
+"amount": 90272
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2025-09-23",
+"qty": "21/8",
+"amount": 127924
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-13",
+"qty": "21",
+"amount": 213933
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-12-14",
+"qty": "7/2",
+"amount": 99877
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-01-13",
+"qty": "7",
+"amount": 9654
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-04-14",
+"qty": "7/4",
+"amount": 153469
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-03-06",
+"qty": "9",
+"amount": 112261
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-06-04",
+"qty": "9/2",
+"amount": 28731
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-07",
+"qty": "3",
+"amount": 1459
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-01-21",
+"qty": "1",
+"amount": 203831
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-02-03",
+"qty": "12",
+"amount": 68136
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-05-09",
+"qty": "4",
+"amount": 38341
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-09",
+"qty": "6",
+"amount": 69941
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-10-30",
+"qty": "3",
+"amount": 202859
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2024-04-30",
+"qty": "21/2",
+"amount": 297583
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-26",
+"qty": "7",
+"amount": 60000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-02-15",
+"qty": "21/2",
+"amount": 20000
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-08",
+"qty": "12",
+"amount": 177037
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-05-17",
+"qty": "6",
+"amount": 16898
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-17",
+"qty": "3",
+"amount": 53539
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-02-10",
+"qty": "3/2",
+"amount": 241760
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-08",
+"qty": "12",
+"amount": 224784
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-06-24",
+"qty": "6",
+"amount": 30871
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-07-23",
+"qty": "3",
+"amount": 55120
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-23",
+"qty": "21",
+"amount": 99538
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-18",
+"qty": "21/2",
+"amount": 68311
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-04-23",
+"qty": "21",
+"amount": 5684
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-12-09",
+"qty": "21/4",
+"amount": 225845
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-23",
+"qty": "27/2",
+"amount": 255055
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-02-01",
+"qty": "27/4",
+"amount": 37225
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2026-02-04",
+"qty": "45/8",
+"amount": 115810
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-09",
+"qty": "9",
+"amount": 175000
+},
+{
+"a": 1,
+"kind": "buy",
+"day": "2025-04-28",
+"qty": "9",
+"amount": 103800
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-05-03",
+"qty": "6",
+"amount": 26732
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-08",
+"qty": "21/2",
+"amount": 227980
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-10-01",
+"qty": "7",
+"amount": 7666
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-10-31",
+"qty": "7/2",
+"amount": 126326
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-06-08",
+"qty": "7/2",
+"amount": 258480
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-08",
+"qty": "9/2",
+"amount": 188518
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-07-12",
+"qty": "9/2",
+"amount": 14537
+},
+{
+"a": 1,
+"kind": "buy",
+"day": "2025-08-11",
+"qty": "9/4",
+"amount": 153349
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-04-28",
+"qty": "7",
+"amount": 142200
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-09-02",
+"qty": "7/4",
+"amount": 100000
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-10-02",
+"qty": "7/2",
+"amount": 24053
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-04",
+"qty": "9",
+"amount": 300000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2026-01-05",
+"qty": "9/4",
+"amount": 93910
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-02-04",
+"qty": "9/2",
+"amount": 8757
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-04-08",
+"qty": "9/8",
+"amount": 165250
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-05-27",
+"qty": "3/2",
+"amount": 211339
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-16",
+"qty": "3/4",
+"amount": 16951
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2025-07-06",
+"qty": "3/2",
+"amount": 39980
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-01",
+"qty": "21",
+"amount": 243438
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-11-14",
+"qty": "21/2",
+"amount": 4655
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-12-15",
+"qty": "63/4",
+"amount": 168616
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-05-15",
+"qty": "21/4",
+"amount": 117775
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-20",
+"qty": "27/2",
+"amount": 283665
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-12-30",
+"qty": "27/2",
+"amount": 24383
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2026-01-30",
+"qty": "45/4",
+"amount": 133667
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-06-02",
+"qty": "45/8",
+"amount": 145617
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-28",
+"qty": "15",
+"amount": 208842
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-06-15",
+"qty": "15/2",
+"amount": 8846
+},
+{
+"a": 1,
+"kind": "buy",
+"day": "2025-07-15",
+"qty": "15/4",
+"amount": 35475
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2026-03-12",
+"qty": "15/4",
+"amount": 292668
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "USD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-22",
+"qty": "27/2",
+"amount": 60283
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-07-07",
+"qty": "45/8",
+"amount": 85846
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-08-06",
+"qty": "27/4",
+"amount": 36860
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-10-14",
+"qty": "15/8",
+"amount": 292857
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2024-01-17",
+"qty": "15",
+"amount": 217366
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2024-04-17",
+"qty": "15/2",
+"amount": 28115
+},
+{
+"a": 1,
+"kind": "buy",
+"day": "2024-05-17",
+"qty": "5/2",
+"amount": 198295
+},
+{
+"a": 1,
+"kind": "sell",
+"day": "2024-12-23",
+"qty": "5/4",
+"amount": 144050
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+}
+],
+"dividend": [
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-31",
+"qty": "14",
+"amount": 435155
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-11",
+"qty": "6",
+"amount": 824131
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-03-09",
+"amount": 50000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-04-14",
+"amount": 81250
+},
+{
+"a": 0,
+"kind": "reinvest",
+"day": "2025-04-14",
+"qty": "891/2500",
+"amount": 81250
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-05-31",
+"amount": 62500
+},
+{
+"a": 0,
+"kind": "reinvest",
+"day": "2025-05-31",
+"qty": "4381/5000",
+"amount": 62500
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-09-21",
+"qty": "17",
+"amount": 698550
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-04",
+"qty": "12",
+"amount": 875000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-14",
+"qty": "9/2",
+"amount": 831566
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-03-11",
+"amount": 73000
+},
+{
+"a": 0,
+"kind": "reinvest",
+"day": "2025-03-11",
+"qty": "3149/5000",
+"amount": 73000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-04-16",
+"amount": 50000
+},
+{
+"a": 0,
+"kind": "reinvest",
+"day": "2025-04-16",
+"qty": "3079/10000",
+"amount": 50000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-05-27",
+"amount": 25000
+},
+{
+"a": 0,
+"kind": "reinvest",
+"day": "2025-05-27",
+"qty": "131/500",
+"amount": 25000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-04-01",
+"qty": "27/2",
+"amount": 900000
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-17",
+"qty": "6",
+"amount": 750000
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-06-22",
+"qty": "18",
+"amount": 134375
+},
+{
+"a": 2,
+"kind": "dividend",
+"day": "2025-07-21",
+"amount": 13570
+},
+{
+"a": 2,
+"kind": "dividend",
+"day": "2025-08-27",
+"amount": 65000
+},
+{
+"a": 2,
+"kind": "dividend",
+"day": "2025-10-12",
+"amount": 30250
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-03-05",
+"qty": "18",
+"amount": 826144
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-15",
+"qty": "27/2",
+"amount": 750000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-25",
+"qty": "27/2",
+"amount": 695470
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-03-18",
+"amount": 81000
+},
+{
+"a": 0,
+"kind": "reinvest",
+"day": "2025-03-18",
+"qty": "1239/1250",
+"amount": 81000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-04-29",
+"amount": 63125
+},
+{
+"a": 0,
+"kind": "reinvest",
+"day": "2025-04-29",
+"qty": "4427/10000",
+"amount": 63125
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-06-10",
+"amount": 13750
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-02-03",
+"qty": "45/2",
+"amount": 155656
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-27",
+"qty": "6",
+"amount": 151150
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-28",
+"qty": "18",
+"amount": 625000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-03-05",
+"amount": 48630
+},
+{
+"a": 0,
+"kind": "reinvest",
+"day": "2025-03-05",
+"qty": "317/500",
+"amount": 48630
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-04-08",
+"amount": 50000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-05-23",
+"amount": 19500
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-04-28",
+"qty": "12",
+"amount": 484200
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-09",
+"qty": "3/4",
+"amount": 344074
+},
+{
+"a": 2,
+"kind": "buy",
+"day": "2025-01-25",
+"qty": "18",
+"amount": 860000
+},
+{
+"a": 2,
+"kind": "dividend",
+"day": "2025-02-14",
+"amount": 20000
+},
+{
+"a": 2,
+"kind": "reinvest",
+"day": "2025-02-14",
+"qty": "441/2500",
+"amount": 20000
+},
+{
+"a": 2,
+"kind": "dividend",
+"day": "2025-03-26",
+"amount": 26500
+},
+{
+"a": 2,
+"kind": "dividend",
+"day": "2025-05-03",
+"amount": 31250
+},
+{
+"a": 2,
+"kind": "sell",
+"day": "2026-01-15",
+"qty": "39/4",
+"amount": 500000
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-27",
+"qty": "3",
+"amount": 802850
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-13",
+"qty": "21/2",
+"amount": 500000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-03-04",
+"amount": 49250
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-04-08",
+"amount": 50000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-05-23",
+"amount": 11500
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-07-28",
+"qty": "33/4",
+"amount": 250000
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-06",
+"qty": "3/4",
+"amount": 625000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-24",
+"qty": "27/2",
+"amount": 156250
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-03-09",
+"amount": 45000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-04-22",
+"amount": 15000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-06-05",
+"amount": 62500
+},
+{
+"a": 0,
+"kind": "reinvest",
+"day": "2025-06-05",
+"qty": "4299/10000",
+"amount": 62500
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-01-29",
+"qty": "39/4",
+"amount": 589030
+}
+],
+"approximations_wrong": [
+"float"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-04-11",
+"qty": "18",
+"amount": 300000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-04-25",
+"qty": "18",
+"amount": 875000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-05-13",
+"amount": 47850
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-06-23",
+"amount": 31250
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-08-08",
+"amount": 50000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-01-29",
+"qty": "24",
+"amount": 500000
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-12",
+"qty": "27/2",
+"amount": 443574
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-17",
+"qty": "9/2",
+"amount": 825000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-02-14",
+"amount": 60000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-03-26",
+"amount": 54500
+},
+{
+"a": 0,
+"kind": "reinvest",
+"day": "2025-03-26",
+"qty": "913/1000",
+"amount": 54500
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-05-12",
+"amount": 72250
+},
+{
+"a": 0,
+"kind": "reinvest",
+"day": "2025-05-12",
+"qty": "1531/10000",
+"amount": 72250
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-08-25",
+"qty": "63/4",
+"amount": 500000
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-05-20",
+"qty": "14",
+"amount": 632915
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-04",
+"qty": "7",
+"amount": 750000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-06-20",
+"amount": 20000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-08-02",
+"amount": 37500
+},
+{
+"a": 0,
+"kind": "reinvest",
+"day": "2025-08-02",
+"qty": "2789/10000",
+"amount": 37500
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-09-09",
+"amount": 78125
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-01-15",
+"qty": "35/2",
+"amount": 869607
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-06",
+"qty": "18",
+"amount": 245000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-20",
+"qty": "3/4",
+"amount": 201164
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-03-10",
+"amount": 43000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-04-22",
+"amount": 86250
+},
+{
+"a": 0,
+"kind": "reinvest",
+"day": "2025-04-22",
+"qty": "2427/5000",
+"amount": 86250
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-06-03",
+"amount": 35500
+},
+{
+"a": 0,
+"kind": "reinvest",
+"day": "2025-06-03",
+"qty": "751/1000",
+"amount": 35500
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-10-04",
+"qty": "147/8",
+"amount": 700530
+}
+],
+"approximations_wrong": [
+"float",
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-27",
+"qty": "21/2",
+"amount": 500000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-03-10",
+"qty": "21/2",
+"amount": 186377
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-04-06",
+"amount": 75000
+},
+{
+"a": 0,
+"kind": "reinvest",
+"day": "2025-04-06",
+"qty": "1961/5000",
+"amount": 75000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-05-12",
+"amount": 84650
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-06-20",
+"amount": 31250
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-11-10",
+"qty": "63/4",
+"amount": 500000
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-14",
+"qty": "3",
+"amount": 705596
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-06-15",
+"qty": "9/2",
+"amount": 413818
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-07-21",
+"amount": 48490
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-08-29",
+"amount": 62500
+},
+{
+"a": 0,
+"kind": "reinvest",
+"day": "2025-08-29",
+"qty": "2573/10000",
+"amount": 62500
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-10-05",
+"amount": 50000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-10-07",
+"qty": "21/4",
+"amount": 875000
+}
+],
+"approximations_wrong": [
+"float",
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-02",
+"qty": "15",
+"amount": 510500
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-17",
+"qty": "6",
+"amount": 813058
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-03-05",
+"amount": 73714
+},
+{
+"a": 0,
+"kind": "reinvest",
+"day": "2025-03-05",
+"qty": "109/500",
+"amount": 73714
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-04-22",
+"amount": 24150
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-05-27",
+"amount": 75000
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-08-17",
+"qty": "18",
+"amount": 424500
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "EUR",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-06",
+"qty": "27/2",
+"amount": 750000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-25",
+"qty": "3/4",
+"amount": 860000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-02-09",
+"amount": 75000
+},
+{
+"a": 0,
+"kind": "reinvest",
+"day": "2025-02-09",
+"qty": "4581/5000",
+"amount": 75000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-03-18",
+"amount": 3000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-04-29",
+"amount": 79375
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2025-11-11",
+"qty": "111/8",
+"amount": 395461
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+},
+{
+"currency": "CAD",
+"methods": [
+"FIFO",
+"FIFO",
+"HIFO"
+],
+"rows": [
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-01-30",
+"qty": "12",
+"amount": 500000
+},
+{
+"a": 0,
+"kind": "buy",
+"day": "2025-02-16",
+"qty": "7",
+"amount": 100000
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-03-04",
+"amount": 27500
+},
+{
+"a": 0,
+"kind": "reinvest",
+"day": "2025-03-04",
+"qty": "953/1250",
+"amount": 27500
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-04-14",
+"amount": 56250
+},
+{
+"a": 0,
+"kind": "dividend",
+"day": "2025-05-22",
+"amount": 31250
+},
+{
+"a": 0,
+"kind": "sell",
+"day": "2026-03-03",
+"qty": "31/2",
+"amount": 267500
+}
+],
+"approximations_wrong": [
+"decimal"
+]
+}
+]
+}

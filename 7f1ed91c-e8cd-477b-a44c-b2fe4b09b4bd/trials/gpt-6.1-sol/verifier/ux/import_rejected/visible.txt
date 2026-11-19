@@ -1,0 +1,25 @@
+Lotbook.
+Priya R. Raman
+Households
+Profile
+Sign out
+Nothing was imported
+
+Correct these problems and upload the statement again.
+
+Line 8: time data '05/39/2026' does not match format '%m/%d/%Y'
+Back to account
+LOTBOOK   /   Household investment records · All report amounts in USD
+--- text around [data-import-status] ---
+Lotbook.
+Priya R. Raman
+Households
+Profile
+Sign out
+Nothing was imported
+
+Correct these problems and upload the statement again.
+
+Line 8: time data '05/39/2026' does not match format '%m/%d/%Y'
+Back to account
+LOTBOOK   /   Household investment records · All report amounts in USD

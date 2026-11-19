@@ -1,0 +1,191 @@
+# One strict workflow per entry: the workflow scores only when every substep passes (tests/scoring.py).
+# critical = core business correctness: a failed critical workflow caps every workflow at critical_cap.
+
+[scoring]
+critical_cap = 0.4
+
+[[workflow]]
+id = "W01"
+title = "Password links: anti-enumeration, single use, replacement, expiry, address matching"
+weight = 2
+critical = false
+
+[[workflow]]
+id = "W02"
+title = "Sessions: refusals, rotation, sign-out, cookie attributes, safe next= redirects"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W03"
+title = "Household isolation: pages, exports and form ids of other households"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W04"
+title = "The advisor's read-only views: same figures as members, no write controls, every write refused"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W05"
+title = "Roles: a read-only viewer, a member who cannot lock, a preparer who reads and locks only, an inactive preparer"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W06"
+title = "CSRF on every change, mass assignment, profile edits change only the name"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W07"
+title = "Northwind statements: quirks, junk lines, natural keys, overlaps, legacy references, concurrent uploads"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W08"
+title = "Harbor Direct statements: number formats, row errors, atomicity, short checks, size limit, file names"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W09"
+title = "Legacy 2024 of the Raman-Okafor household: realized rows, summary with 2023 corrections, year page"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W10"
+title = "Legacy 2025 of the Raman-Okafor household: realized rows, summary, year page"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W11"
+title = "Legacy 2024 and 2025 of the Lindqvist household, read by a member and by the advisor"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W12"
+title = "Legacy open lots account by account, and unrealized gains at the stored prices"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W13"
+title = "Exchange rates and rounding: fallback dates, quote directions, half-cent ties, the share rule"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W14"
+title = "Lot methods: FIFO, HIFO with ties, per-account effective-dated method changes"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W15"
+title = "Specific-lot sales: chosen lots by form and in the browser, portion order, refusals"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W16"
+title = "Holding periods and splits: anniversaries, February 29, forward and reverse splits"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W17"
+title = "Transfers between accounts: whole positions, carried basis and dates, same-day order, refusals"
+weight = 3
+critical = true
+
+[[workflow]]
+id = "W18"
+title = "Dividends and reinvestments: income by year, weekend pay dates, reinvested lots"
+weight = 3
+critical = true
+
+[[workflow]]
+id = "W19"
+title = "Wash sales I: replacements bought after the loss, edges at 30/31 days, partial matches, divided lots"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W20"
+title = "Wash sales II: earlier purchases, same-purchase shares, reinvestments, single use, chains"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W21"
+title = "Locked years and retroactive corrections: frozen reports, adjustments landing in the next year, emails"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W22"
+title = "Locking under concurrency by an owner and a preparer: one lock, one summary per active household user, refusals"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W23"
+title = "CSV exports: exact headers, CRLF, quoting, order, spreadsheet-safe text columns"
+weight = 2
+critical = false
+
+[[workflow]]
+id = "W24"
+title = "In a real browser: stored and reflected markup shown as text, layout at 1280 and 390 px, uploads by click"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W25"
+title = "Deployment: README, restart persistence, nothing re-sent, no secrets at rest, legacy records kept"
+weight = 2
+critical = false
+
+[[workflow]]
+id = "W26"
+title = "Health follows the database: non-2xx within 10 s of a stop, 200 within 60 s of a start"
+weight = 2
+critical = false
+
+[[workflow]]
+id = "W27"
+title = "Cross-cutting safety: secrets nowhere at rest or in logs, reset ends sessions, Host-proof links, headers, no stack traces"
+weight = 3
+critical = false
+
+[[workflow]]
+id = "W28"
+title = "Spin-offs: basis allocation, cash in lieu, carried holding periods, same-day splits, refusals"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W29"
+title = "Cash-and-stock mergers: recognized gain capped at the cash, unrecognized losses, carried lots, cash-only sales"
+weight = 5
+critical = true
+
+[[workflow]]
+id = "W31"
+title = "Retirement accounts: an IRA account by form, no reporting, losses disallowed for good, transfers refused"
+weight = 4
+critical = true
+
+[[workflow]]
+id = "W30"
+title = "Returns of capital: basis reduced per lot, excess as a gain, never below zero, same-day buys untouched"
+weight = 4
+critical = false

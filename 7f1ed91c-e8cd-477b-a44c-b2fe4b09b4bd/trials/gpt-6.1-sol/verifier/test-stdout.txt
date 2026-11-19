@@ -1,0 +1,72 @@
+verifier: starting services
+verifier: starting the submission
+verifier: healthz 200 after 6 s
+verifier: running workflows
+[wf] W01 Password links: anti-enumeration, single use, replacement, expiry, address matching
+[wf] W01 PASS 129.8s 
+[wf] W02 Sessions: refusals, rotation, sign-out, cookie attributes, safe next= redirects
+[wf] W02 PASS 0.6s 
+[wf] W03 Household isolation: pages, exports and form ids of other households
+[wf] W03 PASS 16.2s 
+[wf] W04 The advisor's read-only views: same figures as members, no write controls, every write refused
+[wf] W04 PASS 66.6s 
+[wf] W05 Roles: a read-only viewer, a member who cannot lock, a preparer who reads and locks only, an inactive preparer
+[wf] W05 PASS 92.7s 
+[wf] W06 CSRF on every change, mass assignment, profile edits change only the name
+[wf] W06 PASS 30.0s 
+[wf] W07 Northwind statements: quirks, junk lines, natural keys, overlaps, legacy references, concurrent uploads
+[wf] W07 PASS 76.0s 
+[wf] W08 Harbor Direct statements: number formats, row errors, atomicity, short checks, size limit, file names
+[wf] W08 FAIL 39.4s a file of exactly 180000 bytes: 422 rejected None [0, 1]
+[wf] W09 Legacy 2024 of the Raman-Okafor household: realized rows, summary with 2023 corrections, year page
+[wf] W09 PASS 41.6s 
+[wf] W10 Legacy 2025 of the Raman-Okafor household: realized rows, summary, year page
+[wf] W10 PASS 38.9s 
+[wf] W11 Legacy 2024 and 2025 of the Lindqvist household, read by a member and by the advisor
+[wf] W11 PASS 16.3s 
+[wf] W12 Legacy open lots account by account, and unrealized gains at the stored prices
+[wf] W12 PASS 35.8s 
+[wf] W13 Exchange rates and rounding: fallback dates, quote directions, half-cent ties, the share rule
+[wf] W13 PASS 301.1s 
+[wf] W14 Lot methods: FIFO, HIFO with ties, per-account effective-dated method changes
+[wf] W14 PASS 125.9s 
+[wf] W15 Specific-lot sales: chosen lots by form and in the browser, portion order, refusals
+[wf] W15 PASS 296.5s 
+[wf] W16 Holding periods and splits: anniversaries, February 29, forward and reverse splits
+[wf] W16 PASS 89.8s 
+[wf] W17 Transfers between accounts: whole positions, carried basis and dates, same-day order, refusals
+[wf] W17 PASS 338.9s 
+[wf] W18 Dividends and reinvestments: income by year, weekend pay dates, reinvested lots
+[wf] W18 PASS 147.4s 
+[wf] W19 Wash sales I: replacements bought after the loss, edges at 30/31 days, partial matches, divided lots
+[wf] W19 PASS 105.6s 
+[wf] W20 Wash sales II: earlier purchases, same-purchase shares, reinvestments, single use, chains
+[wf] W20 PASS 106.5s 
+[wf] W21 Locked years and retroactive corrections: frozen reports, adjustments landing in the next year, emails
+[wf] W21 PASS 12.4s 
+[wf] W22 Locking under concurrency by an owner and a preparer: one lock, one summary per active household user, refusals
+[wf] W22 PASS 29.8s 
+[wf] W23 CSV exports: exact headers, CRLF, quoting, order, spreadsheet-safe text columns
+[wf] W23 PASS 44.4s 
+[wf] W24 In a real browser: stored and reflected markup shown as text, layout at 1280 and 390 px, uploads by click
+[wf] W24 PASS 110.8s 
+[wf] W25 Deployment: README, restart persistence, nothing re-sent, no secrets at rest, legacy records kept
+[wf] W25 PASS 23.8s 
+[wf] W26 Health follows the database: non-2xx within 10 s of a stop, 200 within 60 s of a start
+[wf] W26 PASS 0.3s 
+[wf] W27 Cross-cutting safety: secrets nowhere at rest or in logs, reset ends sessions, Host-proof links, headers, no stack traces
+[wf] W27 PASS 38.7s 
+[wf] W28 Spin-offs: basis allocation, cash in lieu, carried holding periods, same-day splits, refusals
+[wf] W28 PASS 512.4s 
+[wf] W29 Cash-and-stock mergers: recognized gain capped at the cash, unrecognized losses, carried lots, cash-only sales
+[wf] W29 PASS 433.7s 
+[wf] W31 Retirement accounts: an IRA account by form, no reporting, losses disallowed for good, transfers refused
+[wf] W31 PASS 97.6s 
+[wf] W30 Returns of capital: basis reduced per lot, excess as a gain, never below zero, same-day buys untouched
+[wf] W30 PASS 595.1s 
+verifier: scoring
+12:12:03 - LiteLLM:WARNING: anthropic_beta_headers_manager.py:155 - LiteLLM: Failed to fetch remote beta headers config from https://raw.githubusercontent.com/BerriAI/litellm/main/litellm/anthropic_beta_headers_config.json: [Errno -3] Temporary failure in name resolution. Falling back to local backup.
+functional: 0.3857
+judge: 0.8
+reward: 0.4271
+verifier: done (scoring exit 0)

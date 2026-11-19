@@ -1,0 +1,63 @@
+Lotbook.
+Morgan Ellis
+Households
+Sign out
+← Household
+NORTHWIND · TAXABLE
+<img src=x onerror="window.__fk_xss&&__fk_xss('acct-img')">
+
+Account NW-W24-7B58-1 · FIFO lot method
+
+View open lots
+Statement imports
+upload-good.csv 2026-11-19 11:42:13.484813+00
+upload-good.csv 2026-11-19 11:42:07.690785+00
+<script>window.__fk_xss&&__fk_xss('file-script')<script>.csv 2026-11-19 11:42:01.673465+00
+w24-65-1.csv 2026-11-19 11:41:45.927915+00
+Transaction history
+DATE	ACTIVITY	SECURITY	QUANTITY	AMOUNT (LOCAL)	DESCRIPTION / REFERENCE
+2026-05-09	dividend	W247B5802	0	7.77	Plain Maple Co
+V7B58-W24-02473
+2026-05-04	buy	W247B5802	3	300	Plain Maple Co
+V7B58-W24-02472
+2026-04-01	sell	W247B5802	1	120	Plain Maple Co
+V7B58-W24-02471
+2026-03-04	buy	W247B5801	2	199	<img src=x onerror="window.__fk_xss&&__fk_xss('memo-img')">
+
+2026-03-03	buy	W247B5802	5	500	'><img src=x onerror=window.__fk_xss&&__fk_xss('desc2-sq')>
+V7B58-W24-02470
+2026-03-02	buy	W247B5801	10	1000	"><svg onload="window.__fk_xss&&__fk_xss('desc-svg')">
+V7B58-W24-02469
+LOTBOOK   /   Household investment records · All report amounts in USD
+--- text around [data-account-id] ---
+Lotbook.
+Morgan Ellis
+Households
+Sign out
+← Household
+NORTHWIND · TAXABLE
+<img src=x onerror="window.__fk_xss&&__fk_xss('acct-img')">
+
+Account NW-W24-7B58-1 · FIFO lot method
+
+View open lots
+Statement imports
+upload-good.csv 2026-11-19 11:42:13.484813+00
+upload-good.csv 2026-11-19 11:42:07.690785+00
+<script>window.__fk_xss&&__fk_xss('file-script')<script>.csv 2026-11-19 11:42:01.673465+00
+w24-65-1.csv 2026-11-19 11:41:45.927915+00
+Transaction history
+DATE	ACTIVITY	SECURITY	QUANTITY	AMOUNT (LOCAL)	DESCRIPTION / REFERENCE
+2026-05-09	dividend	W247B5802	0	7.77	Plain Maple Co
+V7B58-W24-02473
+2026-05-04	buy	W247B5802	3	300	Plain Maple Co
+V7B58-W24-02472
+2026-04-01	sell	W247B5802	1	120	Plain Maple Co
+V7B58-W24-02471
+2026-03-04	buy	W247B5801	2	199	<img src=x onerror="window.__fk_xss&&__fk_xss('memo-img')">
+
+2026-03-03	buy	W247B5802	5	500	'><img src=x onerror=window.__fk_xss&&__fk_xss('desc2-sq')>
+V7B58-W24-02470
+2026-03-02	buy	W247B5801	10	1000	"><svg onload="window.__fk_xss&&__fk_xss('desc-svg')">
+V7B58-W24-02469
+LOTBOOK   /   Household investment records · All report amounts in USD

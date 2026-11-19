@@ -1,0 +1,1314 @@
+{
+ "workflows": {
+  "W01": {
+   "title": "Password links: anti-enumeration, single use, replacement, expiry, address matching",
+   "weight": 2.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "members and the advisor set passwords from emailed links and sign in",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.417
+    },
+    {
+     "name": "a known and an unknown address get the same status and message; the unknown one gets no email",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.039
+    },
+    {
+     "name": "an inactive user's address receives no email",
+     "ok": true,
+     "detail": "",
+     "seconds": 4.018
+    },
+    {
+     "name": "a newer link replaces the older one; the older one sets nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.162
+    },
+    {
+     "name": "a used link changes nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.064
+    },
+    {
+     "name": "an expired link changes nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 123.058
+    },
+    {
+     "name": "an unknown link answers 404; sign-in matches the address ignoring case and spaces",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.058
+    }
+   ],
+   "error": null,
+   "seconds": 129.8
+  },
+  "W02": {
+   "title": "Sessions: refusals, rotation, sign-out, cookie attributes, safe next= redirects",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a wrong password, an unknown address and an inactive user are refused alike, with no session",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.12
+    },
+    {
+     "name": "signing in starts a new session identifier; one held before never becomes signed in",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.083
+    },
+    {
+     "name": "signing out ends the session on the server",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.064
+    },
+    {
+     "name": "a visitor is sent to /signin with next=, and lands on the page after signing in",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.057
+    },
+    {
+     "name": "next= never leaves the site (//host, /\\host, scheme:host, full URLs)",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.269
+    }
+   ],
+   "error": null,
+   "seconds": 0.6
+  },
+  "W03": {
+   "title": "Household isolation: pages, exports and form ids of other households",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "the advisor sees the households listed for them, and gets 403 on the third",
+     "ok": true,
+     "detail": "",
+     "seconds": 10.122
+    },
+    {
+     "name": "a member gets 403 for another household's pages, exports and accounts",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.192
+    },
+    {
+     "name": "ids of another household in a member's forms are refused and change nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.888
+    }
+   ],
+   "error": null,
+   "seconds": 16.2
+  },
+  "W04": {
+   "title": "The advisor's read-only views: same figures as members, no write controls, every write refused",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "the advisor reads the same accounts, lots, year totals and exports as the household's members",
+     "ok": true,
+     "detail": "",
+     "seconds": 40.546
+    },
+    {
+     "name": "no page offers the advisor a form or button for a change",
+     "ok": true,
+     "detail": "",
+     "seconds": 15.115
+    },
+    {
+     "name": "every change the advisor attempts is refused with 403 and changes nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 10.967
+    }
+   ],
+   "error": null,
+   "seconds": 66.6
+  },
+  "W05": {
+   "title": "Roles: a read-only viewer, a member who cannot lock, a preparer who reads and locks only, an inactive preparer",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "the viewer reads the household's pages and exports exactly as the owner does",
+     "ok": true,
+     "detail": "",
+     "seconds": 47.304
+    },
+    {
+     "name": "every change the viewer attempts is refused, and no page offers one other than their display name",
+     "ok": true,
+     "detail": "",
+     "seconds": 22.988
+    },
+    {
+     "name": "a member sees no lock button and a lock request is refused with 403; the owner sees the button",
+     "ok": true,
+     "detail": "",
+     "seconds": 14.112
+    },
+    {
+     "name": "the preparer reads assigned households only, may lock their year, and changes nothing else",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.253
+    },
+    {
+     "name": "an inactive preparer gets no password email and cannot sign in",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.047
+    }
+   ],
+   "error": null,
+   "seconds": 92.7
+  },
+  "W06": {
+   "title": "CSRF on every change, mass assignment, profile edits change only the name",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "every state-changing form without the session token is refused with 403 and changes nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 29.852
+    },
+    {
+     "name": "the profile form changes only the display name, whatever else it carries",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.046
+    },
+    {
+     "name": "extra household_id fields on account and security forms are ignored",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.06
+    },
+    {
+     "name": "an account number already on file is refused with 409; a duplicate symbol too",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.046
+    }
+   ],
+   "error": null,
+   "seconds": 30.0
+  },
+  "W07": {
+   "title": "Northwind statements: quirks, junk lines, natural keys, overlaps, legacy references, concurrent uploads",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "a Northwind account and 14 USD/CAD securities; a quirky first statement is recorded exactly",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.228
+    },
+    {
+     "name": "re-importing the same file records nothing and counts every row as a duplicate",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.362
+    },
+    {
+     "name": "an overlapping statement (one shared row) records only its new rows",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.35
+    },
+    {
+     "name": "a known reference with different content rejects the whole file, naming that line",
+     "ok": true,
+     "detail": "",
+     "seconds": 10.316
+    },
+    {
+     "name": "inside one file, a repeated row is a duplicate and a repeated reference with other content rejects the file",
+     "ok": true,
+     "detail": "",
+     "seconds": 15.679
+    },
+    {
+     "name": "a statement for another account number is rejected as a whole-file problem (line 0)",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.087
+    },
+    {
+     "name": "a statement repeating the old tool's last rows for account 1 is all duplicates (legacy references count)",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.57
+    },
+    {
+     "name": "two simultaneous uploads of one new statement record each row once",
+     "ok": true,
+     "detail": "",
+     "seconds": 12.38
+    },
+    {
+     "name": "the account's reports and lots match the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 14.002
+    }
+   ],
+   "error": null,
+   "seconds": 76.0
+  },
+  "W08": {
+   "title": "Harbor Direct statements: number formats, row errors, atomicity, short checks, size limit, file names",
+   "weight": 4.0,
+   "critical": true,
+   "passed": false,
+   "steps": [
+    {
+     "name": "a Harbor account and 12 EUR/USD/CAD securities; a statement with BOM, 1.200-style numbers and reinvestments",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.464
+    },
+    {
+     "name": "a file with bad rows is rejected whole and every bad line is listed",
+     "ok": true,
+     "detail": "",
+     "seconds": 11.073
+    },
+    {
+     "name": "a sale beyond the holding is listed by its line; an older sale that starves an existing one is listed as line 0",
+     "ok": true,
+     "detail": "",
+     "seconds": 10.712
+    },
+    {
+     "name": "a file of exactly IMPORT_MAX_BYTES is imported; one byte more is refused with 413 and records nothing",
+     "ok": false,
+     "detail": "a file of exactly 180000 bytes: 422 rejected None [0, 1]",
+     "seconds": 11.115
+    }
+   ],
+   "error": "a file of exactly 180000 bytes: 422 rejected None [0, 1]",
+   "seconds": 39.4
+  },
+  "W09": {
+   "title": "Legacy 2024 of the Raman-Okafor household: realized rows, summary with 2023 corrections, year page",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "summary.csv for 2024 answers within 60 s and matches every legacy security, 2023 corrections included",
+     "ok": true,
+     "detail": "",
+     "seconds": 12.507
+    },
+    {
+     "name": "every realized row of 2024 matches, in order",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.198
+    },
+    {
+     "name": "the 2024 page shows its summary's totals, the lock state, and a lock button only to those who may lock",
+     "ok": true,
+     "detail": "",
+     "seconds": 23.906
+    }
+   ],
+   "error": null,
+   "seconds": 41.6
+  },
+  "W10": {
+   "title": "Legacy 2025 of the Raman-Okafor household: realized rows, summary, year page",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "summary.csv for 2025 answers within 60 s and matches every legacy security, 2023 corrections included",
+     "ok": true,
+     "detail": "",
+     "seconds": 9.62
+    },
+    {
+     "name": "every realized row of 2025 matches, in order",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.295
+    },
+    {
+     "name": "the 2025 page shows its summary's totals, the lock state, and a lock button only to those who may lock",
+     "ok": true,
+     "detail": "",
+     "seconds": 23.971
+    }
+   ],
+   "error": null,
+   "seconds": 38.9
+  },
+  "W11": {
+   "title": "Legacy 2024 and 2025 of the Lindqvist household, read by a member and by the advisor",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "summary.csv for 2024 answers within 60 s and matches every legacy security, 2023 corrections included",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.7
+    },
+    {
+     "name": "every realized row of 2024 matches, in order",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.715
+    },
+    {
+     "name": "the 2024 page shows its summary's totals, the lock state, and a lock button only to those who may lock",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.274
+    },
+    {
+     "name": "summary.csv for 2025 answers within 60 s and matches every legacy security, 2023 corrections included",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.333
+    },
+    {
+     "name": "every realized row of 2025 matches, in order",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.758
+    },
+    {
+     "name": "the 2025 page shows its summary's totals, the lock state, and a lock button only to those who may lock",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.288
+    },
+    {
+     "name": "the advisor's exports of both years are byte-identical to the members'",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.273
+    }
+   ],
+   "error": null,
+   "seconds": 16.3
+  },
+  "W12": {
+   "title": "Legacy open lots account by account, and unrealized gains at the stored prices",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "lots pages of accounts (1, 2, 3): every open lot's quantity, dates, basis and wash-sale marker",
+     "ok": true,
+     "detail": "",
+     "seconds": 14.191
+    },
+    {
+     "name": "lots pages of accounts (4, 5, 8): every open lot's quantity, dates, basis and wash-sale marker",
+     "ok": true,
+     "detail": "",
+     "seconds": 14.046
+    },
+    {
+     "name": "lots pages of accounts (6, 7, 9): every open lot's quantity, dates, basis and wash-sale marker",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.949
+    },
+    {
+     "name": "household 1: unrealized.csv values every open lot at the latest price and rate",
+     "ok": true,
+     "detail": "",
+     "seconds": 4.899
+    },
+    {
+     "name": "household 2: unrealized.csv values every open lot at the latest price and rate",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.689
+    }
+   ],
+   "error": null,
+   "seconds": 35.8
+  },
+  "W13": {
+   "title": "Exchange rates and rounding: fallback dates, quote directions, half-cent ties, the share rule",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "36 CAD, EUR and USD securities with trades on days without a rate, under both quote directions, at half-cent ties",
+     "ok": true,
+     "detail": "",
+     "seconds": 27.029
+    },
+    {
+     "name": "hand-entered buys and sales round quantity x price +/- fee to the cent first, then convert once",
+     "ok": true,
+     "detail": "",
+     "seconds": 193.98
+    },
+    {
+     "name": "a row dated before the first exchange rate (2022-12-01) rejects its file, naming that line",
+     "ok": true,
+     "detail": "",
+     "seconds": 21.755
+    },
+    {
+     "name": "each account page lists every recorded transaction with its markers; the year page offers lock-year only to the owner",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.64
+    },
+    {
+     "name": "every realized row, year summary and open lot of these securities matches the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 51.693
+    }
+   ],
+   "error": null,
+   "seconds": 301.1
+  },
+  "W14": {
+   "title": "Lot methods: FIFO, HIFO with ties, per-account effective-dated method changes",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "three accounts (FIFO, HIFO, and one switching methods four times) with 36 securities",
+     "ok": true,
+     "detail": "",
+     "seconds": 32.452
+    },
+    {
+     "name": "account 3 records HIFO from 2025-06-01, FIFO from 2025-09-15, then FIFO and HIFO both from 2026-02-02",
+     "ok": true,
+     "detail": "",
+     "seconds": 23.59
+    },
+    {
+     "name": "a change effective before existing sales re-matches them: account 1 switches to HIFO from 2025-09-13",
+     "ok": true,
+     "detail": "",
+     "seconds": 5.819
+    },
+    {
+     "name": "each account page lists every recorded transaction with its markers; the year page offers lock-year only to the owner",
+     "ok": true,
+     "detail": "",
+     "seconds": 7.025
+    },
+    {
+     "name": "every realized row, year summary and open lot of these securities matches the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 56.996
+    }
+   ],
+   "error": null,
+   "seconds": 125.9
+  },
+  "W15": {
+   "title": "Specific-lot sales: chosen lots by form and in the browser, portion order, refusals",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "two accounts with 20 securities of four or five lots each",
+     "ok": true,
+     "detail": "",
+     "seconds": 26.267
+    },
+    {
+     "name": "16 sales name lots and partial quantities; each takes exactly the named shares, whatever the method",
+     "ok": true,
+     "detail": "",
+     "seconds": 158.206
+    },
+    {
+     "name": "named lots that do not add up, belong to another account or household, or lack the shares are refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 39.843
+    },
+    {
+     "name": "in a real browser, the sale form lists the lots; choosing two of them records exactly that sale",
+     "ok": true,
+     "detail": "",
+     "seconds": 11.463
+    },
+    {
+     "name": "each account page lists every recorded transaction with its markers; the year page offers lock-year only to the owner",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.752
+    },
+    {
+     "name": "every realized row, year summary and open lot of these securities matches the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 53.871
+    }
+   ],
+   "error": null,
+   "seconds": 296.5
+  },
+  "W16": {
+   "title": "Holding periods and splits: anniversaries, February 29, forward and reverse splits",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "32 securities: sales on, before and after anniversaries, leap days, and splits from 10:1 to 1:25",
+     "ok": true,
+     "detail": "",
+     "seconds": 29.07
+    },
+    {
+     "name": "each account page lists every recorded transaction with its markers; the year page offers lock-year only to the owner",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.875
+    },
+    {
+     "name": "every realized row, year summary and open lot of these securities matches the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 53.878
+    }
+   ],
+   "error": null,
+   "seconds": 89.8
+  },
+  "W17": {
+   "title": "Transfers between accounts: whole positions, carried basis and dates, same-day order, refusals",
+   "weight": 3.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "24 securities bought in two Northwind accounts, then moved whole to Harbor or the other account",
+     "ok": true,
+     "detail": "",
+     "seconds": 127.722
+    },
+    {
+     "name": "each transfer is recorded; the destination then sells, some on the transfer day itself",
+     "ok": true,
+     "detail": "",
+     "seconds": 130.109
+    },
+    {
+     "name": "a transfer of a security the account does not hold, or to the same account, is refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 16.362
+    },
+    {
+     "name": "each account page lists every recorded transaction with its markers; the year page offers lock-year only to the owner",
+     "ok": true,
+     "detail": "",
+     "seconds": 7.295
+    },
+    {
+     "name": "every realized row, year summary and open lot of these securities matches the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 57.412
+    }
+   ],
+   "error": null,
+   "seconds": 338.9
+  },
+  "W18": {
+   "title": "Dividends and reinvestments: income by year, weekend pay dates, reinvested lots",
+   "weight": 3.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "30 securities pay cash dividends (many on days without a rate) and reinvest some of them",
+     "ok": true,
+     "detail": "",
+     "seconds": 28.478
+    },
+    {
+     "name": "a dividend entered by hand on a Sunday converts at the Friday rate",
+     "ok": true,
+     "detail": "",
+     "seconds": 59.378
+    },
+    {
+     "name": "each account page lists every recorded transaction with its markers; the year page offers lock-year only to the owner",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.874
+    },
+    {
+     "name": "every realized row, year summary and open lot of these securities matches the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 52.644
+    }
+   ],
+   "error": null,
+   "seconds": 147.4
+  },
+  "W19": {
+   "title": "Wash sales I: replacements bought after the loss, edges at 30/31 days, partial matches, divided lots",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "44 securities across three accounts and two brokers, one loss scenario each",
+     "ok": true,
+     "detail": "",
+     "seconds": 41.128
+    },
+    {
+     "name": "each account page lists every recorded transaction with its markers; the year page offers lock-year only to the owner",
+     "ok": true,
+     "detail": "",
+     "seconds": 7.229
+    },
+    {
+     "name": "every realized row, year summary and open lot of these securities matches the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 57.274
+    }
+   ],
+   "error": null,
+   "seconds": 105.6
+  },
+  "W20": {
+   "title": "Wash sales II: earlier purchases, same-purchase shares, reinvestments, single use, chains",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "48 securities across three accounts, one scenario each",
+     "ok": true,
+     "detail": "",
+     "seconds": 41.356
+    },
+    {
+     "name": "each account page lists every recorded transaction with its markers; the year page offers lock-year only to the owner",
+     "ok": true,
+     "detail": "",
+     "seconds": 7.426
+    },
+    {
+     "name": "every realized row, year summary and open lot of these securities matches the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 57.694
+    }
+   ],
+   "error": null,
+   "seconds": 106.5
+  },
+  "W21": {
+   "title": "Locked years and retroactive corrections: frozen reports, adjustments landing in the next year, emails",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "the Castellano household records 2023-2025 activity across two accounts and 18 securities",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.045
+    },
+    {
+     "name": "before locking, the 2024 page explains locking; the current year cannot be locked",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.798
+    },
+    {
+     "name": "Elena locks 2024: its reports freeze, and each member gets one year-end summary",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.676
+    },
+    {
+     "name": "late imports (a missed 2024 buy, a January replacement, a 2023 dividend) and a 2024 method change",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.303
+    },
+    {
+     "name": "2023 and 2024 reports are unchanged byte for byte; 2025 carries the adjustments",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.297
+    },
+    {
+     "name": "Marco, whose display name carries line breaks and a Bcc header, locks 2025; nothing leaks into headers",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.293
+    },
+    {
+     "name": "later corrections to 2024 and 2025 land in 2026 net of what 2025 already carried",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.884
+    }
+   ],
+   "error": null,
+   "seconds": 12.4
+  },
+  "W22": {
+   "title": "Locking under concurrency by an owner and a preparer: one lock, one summary per active household user, refusals",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "the owner and the preparer lock 2024 at the same moment: exactly one succeeds",
+     "ok": true,
+     "detail": "",
+     "seconds": 3.318
+    },
+    {
+     "name": "each active member gets exactly one summary whose totals are the frozen summary's; nobody else gets one",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.641
+    },
+    {
+     "name": "locking out of order or twice is refused with 409 and sends nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 19.861
+    }
+   ],
+   "error": null,
+   "seconds": 29.8
+  },
+  "W23": {
+   "title": "CSV exports: exact headers, CRLF, quoting, order, spreadsheet-safe text columns",
+   "weight": 2.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "accounts and securities whose names need quoting or neutralizing trade in 2026",
+     "ok": true,
+     "detail": "",
+     "seconds": 24.953
+    },
+    {
+     "name": "realized.csv: exact header, CRLF everywhere, rows in order, text columns neutralized",
+     "ok": true,
+     "detail": "",
+     "seconds": 9.753
+    },
+    {
+     "name": "summary.csv: rows by symbol, quoted names (commas, quotes, line breaks), neutralized formulas",
+     "ok": true,
+     "detail": "",
+     "seconds": 9.725
+    }
+   ],
+   "error": null,
+   "seconds": 44.4
+  },
+  "W24": {
+   "title": "In a real browser: stored and reflected markup shown as text, layout at 1280 and 390 px, uploads by click",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "names, descriptions, memos, file names and a display name carrying script payloads exist",
+     "ok": true,
+     "detail": "",
+     "seconds": 22.064
+    },
+    {
+     "name": "uploading a statement by clicking records it and says how many rows were recorded and skipped",
+     "ok": true,
+     "detail": "",
+     "seconds": 13.02
+    },
+    {
+     "name": "signing in through the browser form reaches a signed-in page",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.209
+    },
+    {
+     "name": "pages stay within 1280 and 390 CSS pixels without horizontal scrolling",
+     "ok": true,
+     "detail": "",
+     "seconds": 20.116
+    },
+    {
+     "name": "typed and uploaded text, and request parts echoed on error pages, never run as script",
+     "ok": true,
+     "detail": "",
+     "seconds": 39.526
+    }
+   ],
+   "error": null,
+   "seconds": 110.8
+  },
+  "W25": {
+   "title": "Deployment: README, restart persistence, nothing re-sent, no secrets at rest, legacy records kept",
+   "weight": 2.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "README.md and an executable start.sh are in the workspace",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.0
+    },
+    {
+     "name": "after a restart: passwords, locked reports, imports and method changes are kept and no email is sent again",
+     "ok": true,
+     "detail": "",
+     "seconds": 23.469
+    },
+    {
+     "name": "no password is stored in plain text",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.225
+    },
+    {
+     "name": "the pre-existing records are all still there, unchanged",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.073
+    }
+   ],
+   "error": null,
+   "seconds": 23.8
+  },
+  "W26": {
+   "title": "Health follows the database: non-2xx within 10 s of a stop, 200 within 60 s of a start",
+   "weight": 2.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "/healthz answers 200 while the database is up",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.007
+    },
+    {
+     "name": "within 10 s of the database stopping, /healthz answers a non-2xx status within 5 s",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.113
+    },
+    {
+     "name": "within 60 s of the database starting again, /healthz answers 200 without a restart",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.013
+    }
+   ],
+   "error": null,
+   "seconds": 0.3
+  },
+  "W27": {
+   "title": "Cross-cutting safety: secrets nowhere at rest or in logs, reset ends sessions, Host-proof links, headers, no stack traces",
+   "weight": 3.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "setting a new password through a reset link signs out every existing session of that user",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.352
+    },
+    {
+     "name": "a reset link always starts with PUBLIC_BASE_URL, whatever Host header the request carried",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.021
+    },
+    {
+     "name": "signed-in pages and exports carry Cache-Control: no-store and an anti-framing header",
+     "ok": true,
+     "detail": "",
+     "seconds": 24.611
+    },
+    {
+     "name": "malformed requests get a plain error page without stack traces, SQL, or file paths",
+     "ok": true,
+     "detail": "",
+     "seconds": 13.211
+    },
+    {
+     "name": "no password, reset token or session identifier appears in the database, the app's files or its output",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.481
+    }
+   ],
+   "error": null,
+   "seconds": 38.7
+  },
+  "W28": {
+   "title": "Spin-offs: basis allocation, cash in lieu, carried holding periods, same-day splits, refusals",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "34 spin-off scenarios: lots in FIFO and HIFO accounts, same-day splits, later sales of the new shares",
+     "ok": true,
+     "detail": "",
+     "seconds": 455.088
+    },
+    {
+     "name": "the corporate-actions page lists every recorded action with its markers",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.094
+    },
+    {
+     "name": "spin-offs naming another household's security, the same security twice, another currency or a 9-decimal ratio are refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 2.121
+    },
+    {
+     "name": "a viewer's or advisor's spin-off is refused with 403 and records nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.35
+    },
+    {
+     "name": "each account page lists every recorded transaction with its markers; the year page offers lock-year only to the owner",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.522
+    },
+    {
+     "name": "every realized row, year summary and open lot of these securities matches the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 48.262
+    }
+   ],
+   "error": null,
+   "seconds": 512.4
+  },
+  "W29": {
+   "title": "Cash-and-stock mergers: recognized gain capped at the cash, unrecognized losses, carried lots, cash-only sales",
+   "weight": 5.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "30 merger scenarios: cash and stock, stock only, cash only, same-day buys of the target, later sales of the acquirer",
+     "ok": true,
+     "detail": "",
+     "seconds": 366.955
+    },
+    {
+     "name": "the corporate-actions page lists every recorded action with its markers",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.055
+    },
+    {
+     "name": "a merger that would leave a later sale of the target short, or a cash-only merger naming an acquirer, is refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 11.399
+    },
+    {
+     "name": "each account page lists every recorded transaction with its markers; the year page offers lock-year only to the owner",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.592
+    },
+    {
+     "name": "every realized row, year summary and open lot of these securities matches the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 48.681
+    }
+   ],
+   "error": null,
+   "seconds": 433.7
+  },
+  "W31": {
+   "title": "Retirement accounts: an IRA account by form, no reporting, losses disallowed for good, transfers refused",
+   "weight": 4.0,
+   "critical": true,
+   "passed": true,
+   "steps": [
+    {
+     "name": "an IRA is created through the account form and shown with data-account-type=ira",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.877
+    },
+    {
+     "name": "26 scenarios: taxable loss sales replaced in the IRA (and sometimes a taxable account), IRA loss sales bought back, IRA dividends",
+     "ok": true,
+     "detail": "",
+     "seconds": 19.802
+    },
+    {
+     "name": "a transfer between the IRA and a taxable account is refused with 422 and moves nothing",
+     "ok": true,
+     "detail": "",
+     "seconds": 20.363
+    },
+    {
+     "name": "each account page lists every recorded transaction with its markers; the year page offers lock-year only to the owner",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.662
+    },
+    {
+     "name": "every realized row, year summary and open lot of these securities matches the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 48.87
+    }
+   ],
+   "error": null,
+   "seconds": 97.6
+  },
+  "W30": {
+   "title": "Returns of capital: basis reduced per lot, excess as a gain, never below zero, same-day buys untouched",
+   "weight": 4.0,
+   "critical": false,
+   "passed": true,
+   "steps": [
+    {
+     "name": "26 return-of-capital scenarios: one to three distributions, lots driven to zero, buys on the distribution date",
+     "ok": true,
+     "detail": "",
+     "seconds": 537.927
+    },
+    {
+     "name": "the corporate-actions page lists every recorded action with its markers",
+     "ok": true,
+     "detail": "",
+     "seconds": 0.061
+    },
+    {
+     "name": "a return of capital of 0 or with 7 decimals is refused",
+     "ok": true,
+     "detail": "",
+     "seconds": 1.155
+    },
+    {
+     "name": "each account page lists every recorded transaction with its markers; the year page offers lock-year only to the owner",
+     "ok": true,
+     "detail": "",
+     "seconds": 6.684
+    },
+    {
+     "name": "every realized row, year summary and open lot of these securities matches the rules",
+     "ok": true,
+     "detail": "",
+     "seconds": 49.318
+    }
+   ],
+   "error": null,
+   "seconds": 595.1
+  }
+ },
+ "breaches": {},
+ "surfaces": {
+  "signin": true
+ },
+ "observations": {
+  "W09": {
+   "summary_2024_s": 4.7,
+   "summary_2024_problems": 0,
+   "realized_2024_rows": 13491,
+   "realized_2024_problems": 0
+  },
+  "W10": {
+   "summary_2025_s": 4.8,
+   "summary_2025_problems": 0,
+   "realized_2025_rows": 15067,
+   "realized_2025_problems": 0
+  },
+  "W11": {
+   "summary_2024_s": 0.7,
+   "summary_2024_problems": 0,
+   "realized_2024_rows": 2310,
+   "realized_2024_problems": 0,
+   "summary_2025_s": 0.7,
+   "summary_2025_problems": 0,
+   "realized_2025_rows": 3219,
+   "realized_2025_problems": 0
+  },
+  "W12": {
+   "lots_1_2_3": 2705,
+   "lots_4_5_8": 2012,
+   "lots_6_7_9": 890
+  },
+  "W13": {
+   "compared": {
+    "realized_rows": 121,
+    "open_lots": 94,
+    "wash_portions": 0,
+    "securities": 66
+   }
+  },
+  "W14": {
+   "compared": {
+    "realized_rows": 190,
+    "open_lots": 171,
+    "wash_portions": 0,
+    "securities": 56
+   }
+  },
+  "W15": {
+   "compared": {
+    "realized_rows": 100,
+    "open_lots": 92,
+    "wash_portions": 0,
+    "securities": 40
+   }
+  },
+  "W16": {
+   "compared": {
+    "realized_rows": 145,
+    "open_lots": 57,
+    "wash_portions": 0,
+    "securities": 56
+   }
+  },
+  "W17": {
+   "compared": {
+    "realized_rows": 79,
+    "open_lots": 104,
+    "wash_portions": 0,
+    "securities": 44
+   }
+  },
+  "W18": {
+   "compared": {
+    "realized_rows": 65,
+    "open_lots": 142,
+    "wash_portions": 1,
+    "securities": 57
+   }
+  },
+  "W19": {
+   "wash_portions": 53,
+   "compared": {
+    "realized_rows": 102,
+    "open_lots": 130,
+    "wash_portions": 53,
+    "securities": 64
+   }
+  },
+  "W20": {
+   "wash_portions": 65,
+   "compared": {
+    "realized_rows": 107,
+    "open_lots": 126,
+    "wash_portions": 65,
+    "securities": 68
+   }
+  },
+  "W26": {
+   "non2xx_after_s": 0.0,
+   "back_after_s": 0.0
+  },
+  "W27": {
+   "secrets_checked": 26
+  },
+  "W28": {
+   "actions": 34,
+   "compared": {
+    "realized_rows": 82,
+    "open_lots": 190,
+    "wash_portions": 0,
+    "securities": 68
+   }
+  },
+  "W29": {
+   "actions": 30,
+   "compared": {
+    "realized_rows": 100,
+    "open_lots": 100,
+    "wash_portions": 0,
+    "securities": 61
+   }
+  },
+  "W31": {
+   "disallowed_portions": 25,
+   "compared": {
+    "realized_rows": 26,
+    "open_lots": 64,
+    "wash_portions": 25,
+    "securities": 26
+   }
+  },
+  "W30": {
+   "actions": 54,
+   "compared": {
+    "realized_rows": 66,
+    "open_lots": 93,
+    "wash_portions": 0,
+    "securities": 26
+   }
+  }
+ }
+}

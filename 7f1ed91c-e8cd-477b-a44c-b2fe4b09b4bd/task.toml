@@ -1,0 +1,65 @@
+schema_version = "1.4"
+reward_type = "bounded_continuous"
+artifacts = [{ source = "/app", exclude = [".git", "**/.cache", "**/__pycache__", "**/.pytest_cache", "**/.mypy_cache", "**/.ruff_cache", "**/.npm"] }]
+
+[task]
+name = "ethara/7f1ed91c-e8cd-477b-a44c-b2fe4b09b4bd"
+version = "2.0.0"
+description = "Build a household's tax-lot investment tracker from a written specification over an existing database of three years of broker transactions: two broker statement formats with idempotent all-or-nothing imports, exact FX conversion and rounding, FIFO/HIFO and specific-lot relief, splits, transfers, the US wash-sale rule across accounts, corporate actions (spin-offs with cash in lieu, cash-and-stock mergers, returns of capital), IRA accounts that report nothing and disallow wash losses for good, locked tax years with retroactive adjustments, year-end summary emails, five roles (owner, member, viewer, advisor, preparer), and spreadsheet-safe exports; graded by strict browser and HTTP workflows plus a judged experience review."
+authors = [{ name = "Aman Yadav", email = "aman.yadav@ethara.ai" }]
+keywords = ["web-application", "zero-to-one", "tax-lots", "capital-gains", "wash-sale", "fx", "csv-import", "postgresql", "email", "csrf", "authorization", "idempotency", "concurrency", "tax-reporting", "role-based-access", "corporate-actions", "retirement-accounts"]
+
+[metadata]
+category = "programming"
+domain = "individual"
+difficulty = "hard"
+tags = ["full-stack", "personal-finance", "tax-lots", "wash-sales", "corporate-actions", "ira", "exchange-rates", "legacy-data", "security", "concurrency", "email"]
+reference_benchmark = "Vibe Code Bench (arXiv 2603.04601)"
+reference_benchmark_relation = "Used only to calibrate the delivery format and the difficulty target. The specification, seed corpus, reference engine, grading workflows and reference solution are original work authored for this task; no instruction text, fixture, expected value or grading criterion is derived from that benchmark or from any other public source."
+valid_until = "2027-11-11"
+scoring = "reward = 0.9 * functional + 0.1 * judge; functional = weighted share of strict workflows (every substep must pass); any observed breach, or any failed critical (core-correctness) workflow, caps each workflow at 0.4; a critical workflow that fails only because the verifier's time budget ran out scores 0 without triggering the cap"
+difficulty_explanation = "The lot rules are exact and interact: per-transaction FX conversion with a latest-earlier-date fallback and two quote directions, half-up rounding at stated points only, one remainder-carrying share rule for every split of cents, FIFO/HIFO with effective-dated method changes and specific-lot sales, splits, whole-position transfers, an anniversary rule with February 29, and the wash-sale rule over the whole history (replacements 30 days either side in any account, same-purchase exclusion, reinvestments, single use, divided replacement lots, tacked holding periods, chains). Corporate actions apply between a date's splits and its buys: a spin-off allocates each lot's basis by an exact fair-value fraction rounded once per lot, splits off the fractional share as cash in lieu that takes its part of the allocated basis by the share rule and the parent lot's holding period, and carries lot ids, dates and wash state to the new lots; a cash-and-stock merger recognizes the smaller of the realized gain and the cash, never a loss, and carries the rest of the basis to the acquirer (a cash-only merger is a sale); a return of capital reduces each lot's basis, never below zero, with the excess as a gain by that lot's holding period. IRA accounts follow the same lot rules but report nothing, and a taxable loss replaced inside an IRA is disallowed for good without touching the IRA lot. Locked years freeze byte-for-byte while late imports surface as signed adjustments in the next year, net of earlier ones. Reports are checked to the cent, per tax year and per account, against 21,000 legacy transactions in two households (about 44,000 lot portions, 5,600 open lots, 23 corporate actions, two IRA accounts, an old-tool 2023 lock that ignored wash sales) and against several hundred verifier-generated scenarios dense in boundary cases: wash-sale windows at exactly 30 and 31 days, partial replacements, splits on replacement lots, dates without a rate, 181 precomputed half-cent cases where binary floating point or 28-digit Decimal arithmetic rounds the other way, and 116 precomputed corporate-action and IRA scenarios (ca_ties.json), each chosen because a plausible misreading (rounding the parent's share, computing per share or in 28-digit Decimal, splitting the fraction's basis as a remainder, converting once, recognizing a merger loss or the whole gain, letting a basis go negative, spreading a return of capital over an account, applying a spin-off before the same day's split or an action after the day's trades, reporting an IRA) gives different cents. Two quirky broker CSV formats must import idempotently and atomically. Five roles split reading, changing and locking. A breach battery (household isolation, read-only viewers and advisors, a lock-only preparer, secrets at rest and in logs, sessions surviving a password reset, Host-header reset links, CSRF, stored and reflected XSS, CSV formula injection, mass assignment, session fixation and survival, open redirects, email header injection, upload file names as paths, plain-text secrets, legacy record changes, duplicate locks or year-end emails, locked reports changing across a restart) caps the reward."
+solution_explanation = "solution/app is a Python standard-library HTTP server with psycopg 3: an exact Fraction-based lot engine computed per group of securities linked by spin-offs and mergers and cached per household version, corporate actions recorded by form with all-or-nothing validation, IRA sales, actions and dividends left out of realized, summary and year figures, two statement parsers with a two-pass all-or-nothing import under a household advisory lock, frozen CSV snapshots and figure ledgers for locked years with adjustment arithmetic, an outbox mailer with explicit envelope recipients, scrypt-hashed passwords and per-session CSRF tokens."
+verification_explanation = "tests/workflows.py runs 31 strict workflows (18 critical) through HTTP, multipart uploads, the mail sink and a real Chromium; tests/reference holds the reference lot engine (the same code as the solution's, apart from its first line), the precomputed half-cent scenarios (gen_ties.py -> ties.json), the precomputed corporate-action and IRA scenarios (gen_ca.py -> ca_ties.json, each kept only when an emulated wrong reading of R13 changes a reported cent) and a household model (locks, frozen figures, adjustments) that predicts every realized row, summary row, open lot, unrealized row and email total from the pre-run snapshot (including its corporate actions and IRA accounts) plus the verifier's own imports and recorded corporate actions. Reward Kit turns results.json into the functional score; the fable-5.1 judge grades ten experience criteria from verifier-captured screenshots and text."
+
+[agent]
+timeout_sec = 18000.0
+user = 1000
+network_mode = "allowlist"
+allowed_hosts = ["registry.npmjs.org", "pypi.org", "files.pythonhosted.org"]
+
+[verifier]
+timeout_sec = 10800.0
+user = 0
+environment_mode = "separate"
+network_mode = "allowlist"
+allowed_hosts = ["api.anthropic.com"]
+
+[verifier.env]
+ANTHROPIC_API_KEY = "${ANTHROPIC_API_KEY:-}"
+
+[verifier.environment]
+network_mode = "allowlist"
+allowed_hosts = ["api.anthropic.com"]
+build_timeout_sec = 3600.0
+cpus = 4
+memory_mb = 8192
+storage_mb = 20480
+gpus = 0
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 3600.0
+cpus = 4
+memory_mb = 8192
+storage_mb = 20480
+gpus = 0
+workdir = "/app"
+
+[environment.healthcheck]
+command = "test -s /etc/lotbook/services.env && curl -fsS http://127.0.0.1:8025/healthz"
+interval_sec = 5.0
+timeout_sec = 10.0
+start_period_sec = 60.0
+start_interval_sec = 2.0
+retries = 5

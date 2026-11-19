@@ -1,0 +1,4 @@
+[[reward]]
+name = "reward"
+aggregation = "weighted-sum"
+weights = { functional = 0.9, judge = 0.1 }

@@ -1,5 +1,0 @@
-RECEIPT-ID: RCP-0012
-DATE: 2026-03-26
-VENDOR: Thornbury Removals
-TOTAL: 610.00
-CATEGORY: other

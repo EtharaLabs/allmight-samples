@@ -1,7 +1,0 @@
-*
-**
-!.dockerignore
-!Dockerfile
-!start-postgres.sh
-!inputs
-!inputs/**

@@ -1,0 +1,7 @@
+# uv 0.13.5, its Linux x86_64 and aarch64 wheels, sha256 from https://pypi.org/pypi/uv/0.13.5/json
+# read 2026-10-27T14:29:30Z.
+uv==0.13.5 \
+    --hash=sha256:2386c2dc9b59fc1d39b1c500e4319d71d3268232eb3b38e29cd6775d6269e8d4 \
+    --hash=sha256:fa8d26e08e34c29c0c4e820cf3181757086d547240b4f4d31ff1d8bd810ca946 \
+    --hash=sha256:91e58e304b63b6c91bac5561459ab0c3ea24f17bc01ea9359d69fed72142978f \
+    --hash=sha256:d162669e3a7811c584b03690eaa11e796ad1d309aa8229d5dfe3cbcd68a90400

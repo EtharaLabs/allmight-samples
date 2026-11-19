@@ -1,0 +1,424 @@
+{
+  "functional": {
+    "kind": "group",
+    "score": 0.3857,
+    "aggregation": "weighted-mean",
+    "components": [
+      {
+        "name": "strict",
+        "weight": 1.0,
+        "detail": {
+          "score": 0.3857,
+          "criteria": [
+            {
+              "name": "W01",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 2.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W02",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W03",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W04",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W05",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W06",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W07",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W08",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W09",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W10",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W11",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W12",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W13",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W14",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W15",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W16",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W17",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W18",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W19",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W20",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W21",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W22",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W23",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 2.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W24",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W25",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 2.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W26",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 2.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W27",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 3.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W28",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W29",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 5.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W31",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            },
+            {
+              "name": "W30",
+              "value": 0.4,
+              "raw": 0.4,
+              "weight": 4.0,
+              "description": "workflow_passed"
+            }
+          ],
+          "kind": "programmatic"
+        }
+      }
+    ]
+  },
+  "judge": {
+    "score": 0.8,
+    "criteria": [
+      {
+        "id": "J01",
+        "name": "J01",
+        "value": 0.0,
+        "raw": "no",
+        "weight": 1.0,
+        "description": "After a rejected statement upload, the page says that nothing was imported and lists each failing line with a plain-language reason.",
+        "reasoning": "The page does state 'Nothing was imported' and identifies the failing line by number ('Line 8'), but the reason shown is a verbatim Python strptime exception: \"time data '05/39/2026' does not match format '%m/%d/%Y'\". That is developer jargon, not plain language: a household user does not know what '%m/%d/%Y' means, and the message is actually misleading because 05/39/2026 does fit the MM/DD/YYYY pattern \u2014 the real problem (per truth.json) is that day 39 is an impossible date, which the message never says. The reference requires 'a reason a person understands (for example an impossible date)'; a leaked format-code error does not meet that bar, so the criterion fails despite the correct heading and line number.",
+        "samples": [
+          "no",
+          "no",
+          "no"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J02",
+        "name": "J02",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "After a successful statement upload, the page says how many rows were recorded and how many were skipped as duplicates.",
+        "reasoning": "The import_done page (visible.txt and desktop/narrow screenshots) shows the heading 'Statement imported' followed by '2 rows recorded \u00b7 0 duplicates skipped.' and the filename. Both counts are stated in words next to the result, and they match truth.json (recorded: 2, duplicates: 0). The checkpoint was reached and the message is not merely a status code or redirect.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J03",
+        "name": "J03",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The open-lots page shows, for each lot, the quantity, cost basis, acquisition date, holding-period start and whether it is short- or long-term, and marks lots whose basis includes a disallowed wash-sale loss.",
+        "reasoning": "visible.txt and the desktop/narrow screenshots show each lot row with all five facts labelled inline: quantity (\"9 shares\"), cost basis (\"$775.16 basis\"), a short-term/long-term pill, \"Acquired 2025-05-01\" and \"Holding-period start 2025-03-22\". Wash-adjusted lots carry a distinct visible badge \"Basis includes wash-sale disallowed loss\" while unadjusted lots (e.g. W197B5804's 7-share lots) do not; counting the badges in visible.txt gives 18, matching truth.json's wash_adjusted_lots of 18. Both short-term (e.g. W197B5810 7 shares) and long-term lots are distinguished, and the narrow-focus screenshot shows the same labelled facts remain readable.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J04",
+        "name": "J04",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The sale form lists the lots that can be chosen and explains that, without chosen lots, the account's lot method (FIFO or HIFO) decides which lots are sold.",
+        "reasoning": "The sale form (desktop.jpg, narrow.jpg, visible.txt) shows a 'Choose specific lots' section listing five lots (574201, 574211, 574221, 574231, 574236, each with date and share count), each with its own input field, matching truth.json lots_listed=5. Above the fields the page states in words: \"Without chosen lots, the account's effective lot method (FIFO, FIFO or HIFO) applies. For a specific-lot sale, chosen quantities must add up to the sale quantity.\" This explains what happens when no lot is chosen and correctly attributes the choice to the account's lot method (FIFO or HIFO) rather than claiming FIFO always applies. The parenthetical \"FIFO, FIFO or HIFO\" is awkwardly worded (the account's current method appears to be interpolated before the generic list), but it does not contradict the rule, so the pass conditions are met.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J05",
+        "name": "J05",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The tax-year page shows labelled totals for short-term gains, long-term gains, wash-sale disallowed losses, dividends and adjustments for earlier years, and says whether the year is locked.",
+        "reasoning": "The page (visible.txt and desktop/narrow screenshots) shows five labelled summary cards: 'SHORT-TERM GAINS $0.00', 'LONG-TERM GAINS $0.00', 'WASH-SALE LOSS DISALLOWED $0.00', 'DIVIDENDS $0.00', and 'ADJUSTMENTS FOR EARLIER YEARS $1,067.77'. The adjustments total is explicitly identified as relating to earlier years, consistent with truth.json (has_adjustments: true). The lock state is stated explicitly via the 'TAX REPORT \u00b7 OPEN YEAR' badge next to the heading '2026 year in review', which matches truth.json (locked: false) and is a stated status rather than one merely implied by a missing button. Labels and amounts are legible at both desktop and 390px widths.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J06",
+        "name": "J06",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "Before locking, the year page states that locking freezes the year's reports, that later changes appear as adjustments in the next year, that each person in the household gets a summary email, and that it cannot be undone.",
+        "reasoning": "truth.json confirms the year is unlocked (locked: false), and visible.txt plus the desktop and narrow screenshots show a 'Close this tax year' panel directly above the 'Lock 2024' button reading: 'Locking freezes this year's reports. Later changes appear as adjustments in the next year. Each active person in the household gets a summary email. This cannot be undone.' All four consequences \u2014 frozen reports, later changes as next-year adjustments, summary email to each household member, and irreversibility \u2014 are stated adjacent to the lock action, with no contradictions.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J07",
+        "name": "J07",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "A locked year's page makes clear that the year is locked and its figures are frozen.",
+        "reasoning": "truth.json confirms 2024 is locked, and the page states this explicitly rather than implying it. The header eyebrow reads \"TAX REPORT \u00b7 LOCKED\" as a badge next to the \"2024 year in review\" title (visible in both desktop and narrow screenshots), and a highlighted callout at the bottom says \"This year is locked. Its reports are frozen. Later changes appear as adjustments in the first unlocked year.\" This conveys both the lock state and that the figures no longer change. The lock date is not given, but the reference lists that as ideal, not required.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J08",
+        "name": "J08",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "The year-end summary email names the household and the year and gives labelled short-term, long-term, disallowed, dividend and adjustment totals in dollars, in a form a household member can read.",
+        "reasoning": "visible.txt shows the email as plain readable text: it names the household (\"Castellano household\") and the year (\"Year-end summary 2024\", matching truth.json year 2024), and lists all five labelled dollar totals: \"Short-term gains: $1,741.81\", \"Long-term gains: $72.69\", \"Wash-sale loss disallowed: $581.63\", \"Dividends: $1,784.88\", and \"Adjustments for earlier years: $0.00\". No markup, codes, or unreadable content appears, and the checkpoint was reached.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J09",
+        "name": "J09",
+        "value": 0.0,
+        "raw": "no",
+        "weight": 1.0,
+        "description": "Viewing an account as the advisor, the page makes clear the access is read-only and offers no action the advisor cannot take.",
+        "reasoning": "truth.json confirms the viewer is the advisor with read-only access, and the account page (desktop and narrow screenshots, visible.txt) correctly omits write controls: there is no upload form, transaction entry, lot-method change, or lock control \u2014 only '\u2190 Household', 'View open lots', the statement imports list and the transaction history table. However, nothing on the page tells the advisor the access is read-only: visible.txt contains no 'read-only', 'view only', or advisor-access note anywhere, and the page looks identical to what a full-access user would see minus buttons. The reference requires both a visible read-only label and absence of write controls; the missing label means the item fails.",
+        "samples": [
+          "no",
+          "no",
+          "no"
+        ],
+        "agreement": 1.0
+      },
+      {
+        "id": "J10",
+        "name": "J10",
+        "value": 1.0,
+        "raw": "yes",
+        "weight": 1.0,
+        "description": "At 390 pixels wide, the key facts and the primary action on these pages stay readable and reachable.",
+        "reasoning": "All four 390px screenshots stack into a single column with no horizontal overflow, cut-off or overlapping content. Open lots: each lot card shows shares, basis, term badge, acquired date, holding-period start and the wash-sale note, with the 'Sell / choose lots' link on every card. Sell form: every field, the lot-choice inputs and the 'Record transaction' button are full-width and visible. Year pages: the five labelled totals are large and legible, 'Download summary CSV' / 'Download realized CSV' links are visible, and on the 2024 page the 'Close this tax year' card and 'Lock 2024' button are reachable at the bottom. The only weakness is the 'By security' table, where headings and some dollar values wrap mid-word (e.g. '$0.0 / 0', '$32.8 / 5') \u2014 awkward, but nothing is clipped or overlapping and it is secondary detail rather than the page's key facts or primary action.",
+        "samples": [
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "agreement": 1.0
+      }
+    ],
+    "kind": "llm",
+    "judge": {
+      "model": "anthropic/claude-fable-5-1",
+      "reasoning_effort": "max",
+      "timeout": 900,
+      "files": [],
+      "atif_trajectory": null,
+      "reference": "/tests/judge-reference.md",
+      "mode": "individual",
+      "samples": 3,
+      "guard": "penalize"
+    },
+    "judge_output": "--- sample 1 ---\n--- J01 ---\n{\"score\":\"no\",\"reasoning\":\"The page does say \\\"Nothing was imported\\\" and asks the user to correct the problems and upload again, and it identifies the failing line by number (\\\"Line 8\\\"). However, the reason shown is a raw Python strptime exception string: \\\"time data '05/39/2026' does not match format '%m/%d/%Y'\\\". That is not a plain-language reason a household member would understand; \\\"time data\\\" and the format codes '%m/%d/%Y' are programmer jargon leaked from the backend rather than a human explanation such as \\\"05/39/2026 is not a valid date (expected MM/DD/YYYY)\\\". The criterion specifically requires a plain-language reason (the reference's example is \\\"an impossible date\\\"), so while the not-imported statement and line number are present, the reason requirement is not met.\"}\n\n--- J02 ---\n{\"score\": \"yes\", \"reasoning\": \"The import_done page (visible.txt and desktop/narrow screenshots) shows the heading \\\"Statement imported\\\" followed by \\\"2 rows recorded \u00b7 0 duplicates skipped.\\\" next to the file name upload-good.csv. Both counts are stated in words, and they match truth.json (recorded: 2, duplicates: 0). The checkpoint was reached and the message is not merely a status code or bare redirect, so the criterion passes.\"}\n\n--- J03 ---\n{\"score\":\"yes\",\"reasoning\":\"The page at /accounts/47/lots is titled \\\"Open lots\\\" and every lot row follows the same labelled pattern, e.g. \\\"9 shares \u00b7 $775.16 basis [long-term]\\\" / \\\"Acquired 2025-05-01 \u00b7 Holding-period start 2025-03-22 [Basis includes wash-sale disallowed loss]\\\". So each lot shows quantity (\\\"shares\\\"), cost basis (\\\"basis\\\"), acquisition date (\\\"Acquired\\\"), holding-period start (\\\"Holding-period start\\\"), and a short-term/long-term badge (both values appear, e.g. W197B5810's 7-share lot is \\\"short-term\\\"). Wash-adjusted lots carry a distinct pill reading \\\"Basis includes wash-sale disallowed loss\\\"; counting them in visible.txt gives 18, matching truth.json's wash_adjusted_lots = 18, and unadjusted lots in the same cards (e.g. W197B5804's 7-share lots) lack the marker, so they can be told apart. The desktop focus screenshot and the 390px narrow screenshots confirm these labels and badges render legibly, with the wash-sale badge wrapping to its own line on narrow width rather than being clipped.\"}\n\n--- J04 ---\n{\"score\":\"yes\",\"reasoning\":\"The sell form (desktop.jpg, narrow.jpg, visible.txt) shows a 'Choose specific lots' section listing five lots (574201, 574211, 574221, 574231, 574236, each with date and share count) and each lot has its own input box, matching truth.json lots_listed=5. Above the fields the page states in words: \\\"Without chosen lots, the account's effective lot method (FIFO, FIFO or HIFO) applies. For a specific-lot sale, chosen quantities must add up to the sale quantity.\\\" This explains that the account's lot method (FIFO or HIFO) decides when no lots are chosen and does not contradict the rule; the repeated 'FIFO, FIFO' is awkward phrasing (the account's current method followed by the options) but still conveys the correct behaviour.\"}\n\n--- J05 ---\n{\"score\": \"yes\", \"reasoning\": \"The 2026 year page shows five clearly labelled totals: SHORT-TERM GAINS $0.00, LONG-TERM GAINS $0.00, WASH-SALE LOSS DISALLOWED $0.00, DIVIDENDS $0.00, and ADJUSTMENTS FOR EARLIER YEARS $1,067.77 (the adjustments are explicitly identified as relating to earlier years). The lock state is stated explicitly with a 'TAX REPORT \u00b7 OPEN YEAR' badge beside the heading, which matches truth.json (locked: false); it is a visible statement rather than something merely implied by a missing button. All of this is legible in both the desktop and 390px screenshots and confirmed by visible.txt.\"}\n\n--- J06 ---\n{\"score\":\"yes\",\"reasoning\":\"truth.json shows the year is not locked (locked: false), and visible.txt plus the desktop/narrow screenshots show a 'Close this tax year' panel directly above the 'Lock 2024' button reading: 'Locking freezes this year\u2019s reports. Later changes appear as adjustments in the next year. Each active person in the household gets a summary email. This cannot be undone.' All four required consequences (freezes reports, later changes become next-year adjustments, summary email to each household member, irreversible) are stated in plain words adjacent to the lock action, on both desktop and 390px layouts.\"}\n\n--- J07 ---\n{\"score\":\"yes\",\"reasoning\":\"truth.json says year 2024 is locked. The page shows a 'TAX REPORT \u00b7 LOCKED' badge directly above the '2024 year in review' heading in both desktop and 390px screenshots, and a highlighted notice near the bottom reads 'This year is locked. Its reports are frozen. Later changes appear as adjustments in the first unlocked year.' This explicitly states both the lock state and that figures no longer change; the lock is not merely implied by a missing button. The lock date is not given, but the reference lists that as ideal rather than required.\"}\n\n--- J08 ---\n{\"score\":\"yes\",\"reasoning\":\"visible.txt shows a plain-text email that names the household (\\\"Castellano household\\\") and the year (\\\"Year-end summary 2024\\\", matching truth.json year 2024). It lists all five required totals with labels and dollar amounts: Short-term gains $1,741.81, Long-term gains $72.69, Wash-sale loss disallowed $581.63, Dividends $1,784.88, and Adjustments for earlier years $0.00. The content is readable prose with no markup or codes, so the reference pass conditions are met.\"}\n\n--- J09 ---\n{\"score\":\"no\",\"reasoning\":\"The advisor account page (url /accounts/65, truth.json role=advisor, read_only=true) shows no write controls \u2014 there is no upload form, sale entry, lot-method change, or lock button, only the 'View open lots' link, the statement imports list, and the transaction history table. However, nothing on the page tells the advisor the access is read-only: visible.txt and both desktop and narrow screenshots contain no 'read-only', 'view only', or advisor-role note or label anywhere (header shows only 'Morgan Ellis', 'Households', 'Sign out'). The reference requires a visible note or label stating the access is read-only; read-only status being merely implied by the absence of buttons is explicitly a fail condition.\"}\n\n--- J10 ---\n{\"score\":\"yes\",\"reasoning\":\"All four narrow screenshots render within 390px with no horizontal overflow, overlap, or clipped content. Open lots (lots_wash/narrow.jpg): each lot card shows shares, basis, term tag, acquired date, holding-period start and the 'Basis includes wash-sale disallowed loss' marker, with the 'Sell / choose lots' link visible per lot. Sell form (sell_form/narrow.jpg): explanatory text wraps cleanly, all fields are full-width and labelled, the per-lot inputs under 'Choose specific lots' are listed, and the 'Record transaction' button is visible. Year pages (report_year and lock_before): the five summary totals (short-term, long-term, wash-sale disallowed, dividends, adjustments for earlier years) are in large stacked cards with the 'OPEN YEAR' badge, the CSV download links are visible, and on lock_before the 'Close this tax year' panel and 'Lock 2024' button are reachable at the bottom. The only degradation is the secondary 'By security' table, whose six columns wrap mid-word (e.g. 'SECUR ITY', '$32.8 / 5'); this is ugly but the values remain decipherable, nothing is cut off, and no page requires horizontal scrolling, so the key facts and primary actions stay readable and reachable.\"}\n\n--- guard ---\n{\"score\": \"no\", \"reasoning\": \"Across every evidence file (import_rejected, import_done, lots_wash, sell_form, report_year, lock_before, report_locked, summary_email, advisor_view) the visible text and screenshots contain only ordinary application content: headings like 'Nothing was imported', 'Statement imported', 'Open lots', 'Record a transaction', year-in-review totals, lock warnings, the summary email, and seeded XSS test strings rendered as escaped text. There is no sentence addressed to a grader or evaluator, no mention of scoring, criteria, passing, or how the work should be judged. The 'Transport note' lines are harness artifacts, not agent output.\"}\n\n--- sample 2 ---\n--- J01 ---\n{\"score\":\"no\",\"reasoning\":\"The page does state 'Nothing was imported' and identifies the failing line by number ('Line 8'), but the reason shown is a verbatim Python strptime exception: \\\"time data '05/39/2026' does not match format '%m/%d/%Y'\\\". That is developer jargon, not plain language: a household user does not know what '%m/%d/%Y' means, and the message is actually misleading because 05/39/2026 does fit the MM/DD/YYYY pattern \u2014 the real problem (per truth.json) is that day 39 is an impossible date, which the message never says. The reference requires 'a reason a person understands (for example an impossible date)'; a leaked format-code error does not meet that bar, so the criterion fails despite the correct heading and line number.\"}\n\n--- J02 ---\n{\"score\": \"yes\", \"reasoning\": \"The import_done page (visible.txt and desktop/narrow screenshots) shows the heading 'Statement imported' followed by '2 rows recorded \u00b7 0 duplicates skipped.' and the filename. Both counts are stated in words next to the result, and they match truth.json (recorded: 2, duplicates: 0). The checkpoint was reached and the message is not merely a status code or redirect.\"}\n\n--- J03 ---\n{\"score\":\"yes\",\"reasoning\":\"visible.txt and the desktop/narrow screenshots show each lot row with all five facts labelled inline: quantity (\\\"9 shares\\\"), cost basis (\\\"$775.16 basis\\\"), a short-term/long-term pill, \\\"Acquired 2025-05-01\\\" and \\\"Holding-period start 2025-03-22\\\". Wash-adjusted lots carry a distinct visible badge \\\"Basis includes wash-sale disallowed loss\\\" while unadjusted lots (e.g. W197B5804's 7-share lots) do not; counting the badges in visible.txt gives 18, matching truth.json's wash_adjusted_lots of 18. Both short-term (e.g. W197B5810 7 shares) and long-term lots are distinguished, and the narrow-focus screenshot shows the same labelled facts remain readable.\"}\n\n--- J04 ---\n{\"score\":\"yes\",\"reasoning\":\"The sale form (desktop.jpg, narrow.jpg, visible.txt) shows a 'Choose specific lots' section listing five lots (574201, 574211, 574221, 574231, 574236, each with date and share count), each with its own input field, matching truth.json lots_listed=5. Above the fields the page states in words: \\\"Without chosen lots, the account's effective lot method (FIFO, FIFO or HIFO) applies. For a specific-lot sale, chosen quantities must add up to the sale quantity.\\\" This explains what happens when no lot is chosen and correctly attributes the choice to the account's lot method (FIFO or HIFO) rather than claiming FIFO always applies. The parenthetical \\\"FIFO, FIFO or HIFO\\\" is awkwardly worded (the account's current method appears to be interpolated before the generic list), but it does not contradict the rule, so the pass conditions are met.\"}\n\n--- J05 ---\n{\"score\":\"yes\",\"reasoning\":\"The page (visible.txt and desktop/narrow screenshots) shows five labelled summary cards: 'SHORT-TERM GAINS $0.00', 'LONG-TERM GAINS $0.00', 'WASH-SALE LOSS DISALLOWED $0.00', 'DIVIDENDS $0.00', and 'ADJUSTMENTS FOR EARLIER YEARS $1,067.77'. The adjustments total is explicitly identified as relating to earlier years, consistent with truth.json (has_adjustments: true). The lock state is stated explicitly via the 'TAX REPORT \u00b7 OPEN YEAR' badge next to the heading '2026 year in review', which matches truth.json (locked: false) and is a stated status rather than one merely implied by a missing button. Labels and amounts are legible at both desktop and 390px widths.\"}\n\n--- J06 ---\n{\"score\":\"yes\",\"reasoning\":\"truth.json confirms the year is unlocked (locked: false), and visible.txt plus the desktop and narrow screenshots show a 'Close this tax year' panel directly above the 'Lock 2024' button reading: 'Locking freezes this year's reports. Later changes appear as adjustments in the next year. Each active person in the household gets a summary email. This cannot be undone.' All four consequences \u2014 frozen reports, later changes as next-year adjustments, summary email to each household member, and irreversibility \u2014 are stated adjacent to the lock action, with no contradictions.\"}\n\n--- J07 ---\n{\"score\":\"yes\",\"reasoning\":\"truth.json confirms 2024 is locked, and the page states this explicitly rather than implying it. The header eyebrow reads \\\"TAX REPORT \u00b7 LOCKED\\\" as a badge next to the \\\"2024 year in review\\\" title (visible in both desktop and narrow screenshots), and a highlighted callout at the bottom says \\\"This year is locked. Its reports are frozen. Later changes appear as adjustments in the first unlocked year.\\\" This conveys both the lock state and that the figures no longer change. The lock date is not given, but the reference lists that as ideal, not required.\"}\n\n--- J08 ---\n{\"score\": \"yes\", \"reasoning\": \"visible.txt shows the email as plain readable text: it names the household (\\\"Castellano household\\\") and the year (\\\"Year-end summary 2024\\\", matching truth.json year 2024), and lists all five labelled dollar totals: \\\"Short-term gains: $1,741.81\\\", \\\"Long-term gains: $72.69\\\", \\\"Wash-sale loss disallowed: $581.63\\\", \\\"Dividends: $1,784.88\\\", and \\\"Adjustments for earlier years: $0.00\\\". No markup, codes, or unreadable content appears, and the checkpoint was reached.\"}\n\n--- J09 ---\n{\"score\":\"no\",\"reasoning\":\"truth.json confirms the viewer is the advisor with read-only access, and the account page (desktop and narrow screenshots, visible.txt) correctly omits write controls: there is no upload form, transaction entry, lot-method change, or lock control \u2014 only '\u2190 Household', 'View open lots', the statement imports list and the transaction history table. However, nothing on the page tells the advisor the access is read-only: visible.txt contains no 'read-only', 'view only', or advisor-access note anywhere, and the page looks identical to what a full-access user would see minus buttons. The reference requires both a visible read-only label and absence of write controls; the missing label means the item fails.\"}\n\n--- J10 ---\n{\"score\":\"yes\",\"reasoning\":\"All four 390px screenshots stack into a single column with no horizontal overflow, cut-off or overlapping content. Open lots: each lot card shows shares, basis, term badge, acquired date, holding-period start and the wash-sale note, with the 'Sell / choose lots' link on every card. Sell form: every field, the lot-choice inputs and the 'Record transaction' button are full-width and visible. Year pages: the five labelled totals are large and legible, 'Download summary CSV' / 'Download realized CSV' links are visible, and on the 2024 page the 'Close this tax year' card and 'Lock 2024' button are reachable at the bottom. The only weakness is the 'By security' table, where headings and some dollar values wrap mid-word (e.g. '$0.0 / 0', '$32.8 / 5') \u2014 awkward, but nothing is clipped or overlapping and it is secondary detail rather than the page's key facts or primary action.\"}\n\n--- guard ---\n{\"score\": \"no\", \"reasoning\": \"The evidence consists solely of application UI content (import results, lot listings, transaction form, tax-year reports, lock notices, a summary email, and an advisor account view) plus harness-written truth.json/url.txt files. None of the visible text addresses a grader, mentions scoring, criteria, or how the work should be judged. The XSS-style strings on the advisor page (e.g. '<img src=x onerror=...>') are escaped test payloads from the verifier's seed data, not messages to the evaluator. The '[Transport note...]' lines are from the image delivery layer, not the agent. No grader-directed text was found.\"}\n\n--- sample 3 ---\n--- J01 ---\n{\"score\": \"no\", \"reasoning\": \"The page does state 'Nothing was imported' and identifies the failing line by number ('Line 8'), but the reason given is a raw Python strptime exception: \\\"time data '05/39/2026' does not match format '%m/%d/%Y'\\\". That is not plain language for a household user: 'time data' and the format codes '%m/%d/%Y' are programmer jargon, and the message misdescribes the problem (the value is in the expected MM/DD/YYYY shape; the real issue per truth.json is that 39 is an impossible day), so a person reading it would not clearly understand that the date is invalid. The criterion requires a plain-language reason (reference example: 'an impossible date'), and a leaked library error string does not meet that bar.\"}\n\n--- J02 ---\n{\"score\":\"yes\",\"reasoning\":\"The import_done checkpoint was reached. visible.txt and both desktop and narrow screenshots show the heading \\\"Statement imported\\\" followed by the message \\\"2 rows recorded \u00b7 0 duplicates skipped.\\\" alongside the filename upload-good.csv. Both counts are stated in words next to the result, and they match truth.json (recorded: 2, duplicates: 0). This satisfies the reference pass condition.\"}\n\n--- J03 ---\n{\"score\":\"yes\",\"reasoning\":\"The open-lots page (visible.txt and desktop/narrow screenshots) shows each lot as a row with all five facts labelled inline: quantity (\\\"9 shares\\\"), cost basis (\\\"$775.16 basis\\\"), acquisition date (\\\"Acquired 2025-05-01\\\"), holding-period start (\\\"Holding-period start 2025-03-22\\\"), and a \\\"long-term\\\"/\\\"short-term\\\" badge. Lots whose basis includes a disallowed wash-sale loss carry a visible \\\"Basis includes wash-sale disallowed loss\\\" badge, while unadjusted lots have none, so they can be told apart. Counting the badges in visible.txt gives 18, matching truth.json's wash_adjusted_lots of 18. The narrow screenshot shows the same facts and markers rendering legibly at 390px.\"}\n\n--- J04 ---\n{\"score\":\"yes\",\"reasoning\":\"The desktop and narrow screenshots (and visible.txt) show a 'Choose specific lots' section listing five lots (Lot 574201 \u00b7 2025-02-06 \u00b7 10 shares, 574211, 574221, 574231, 574236), each with its own quantity input, matching truth.json's lots_listed: 5. Above the form the page states in words: 'Without chosen lots, the account's effective lot method (FIFO, FIFO or HIFO) applies. For a specific-lot sale, chosen quantities must add up to the sale quantity.' This explains that the account's lot method decides which lots are sold when none are chosen and names FIFO/HIFO without contradicting the rule. The parenthetical 'FIFO, FIFO or HIFO' is slightly clumsy (it appears to show the account's current method plus the options), but it does not misstate the behaviour, so the item passes.\"}\n\n--- J05 ---\n{\"score\":\"yes\",\"reasoning\":\"visible.txt and both desktop/narrow screenshots show five labelled summary cards: SHORT-TERM GAINS $0.00, LONG-TERM GAINS $0.00, WASH-SALE LOSS DISALLOWED $0.00, DIVIDENDS $0.00, and ADJUSTMENTS FOR EARLIER YEARS $1,067.77. The adjustments total is explicitly identified as relating to earlier years, and the header carries a 'TAX REPORT \u00b7 OPEN YEAR' badge, which states the lock state and matches truth.json (locked: false). All labels and amounts are legible at both widths.\"}\n\n--- J06 ---\n{\"score\":\"yes\",\"reasoning\":\"truth.json confirms the 2024 year is not yet locked, and visible.txt plus the desktop and narrow screenshots show a 'Close this tax year' section directly above the 'Lock 2024' button reading: 'Locking freezes this year\u2019s reports. Later changes appear as adjustments in the next year. Each active person in the household gets a summary email. This cannot be undone.' All four required consequences (freezes reports, later changes become next-year adjustments, household members get a summary email, irreversible) are stated in plain words adjacent to the lock action, with nothing contradicting them.\"}\n\n--- J07 ---\n{\"score\": \"yes\", \"reasoning\": \"truth.json confirms 2024 is locked, and the page states this explicitly rather than implying it. The header reads \\\"TAX REPORT \u00b7 LOCKED\\\" with a visible badge directly above the \\\"2024 year in review\\\" title (seen in desktop-focus0.jpg and narrow-focus0.jpg), and a highlighted note at the bottom of the page (desktop.jpg, narrow.jpg, visible.txt) says \\\"This year is locked. Its reports are frozen. Later changes appear as adjustments in the first unlocked year.\\\" This states both the lock state and that the figures no longer change. The page does not say when it was locked, but the reference lists that as ideal rather than required.\"}\n\n--- J08 ---\n{\"score\": \"yes\", \"reasoning\": \"visible.txt shows the email was presented (not 'checkpoint not reached'). It names the household ('Castellano household') and the year ('Year-end summary 2024', matching truth.json year 2024). All five totals are labelled in plain text with dollar amounts: 'Short-term gains: $1,741.81', 'Long-term gains: $72.69', 'Wash-sale loss disallowed: $581.63', 'Dividends: $1,784.88', 'Adjustments for earlier years: $0.00'. No markup or codes appear; the content is readable by a household member.\"}\n\n--- J09 ---\n{\"score\": \"no\", \"reasoning\": \"truth.json confirms the viewer is the advisor with read_only access, and the page correctly shows no upload, sale-entry, method or lock controls (only '\u2190 Household', 'View open lots', statement import list and transaction history). However, nothing on the page tells the advisor the access is read-only: visible.txt and both desktop and narrow screenshots contain no 'read-only', 'view only', or advisor-access note or label anywhere. The reference requires a visible read-only note in addition to the absence of write controls, and explicitly fails the item when 'nothing tells the advisor the access is read-only'.\"}\n\n--- J10 ---\n{\"score\":\"yes\",\"reasoning\":\"All four narrow screenshots render as a single column with no horizontal overflow, clipping, or overlapping elements. Lots page: each lot card stacks vertically with security, shares, basis, term badge, acquisition date, holding-period start, wash-sale note, and a visible 'Sell / choose lots' link. Sell form: full-width labelled inputs, the lot-choice explanation wraps cleanly, per-lot inputs are listed, and the 'Record transaction' button is visible at the bottom. 2026 and 2024 year pages: the five headline totals (short-term, long-term, wash-sale disallowed, dividends, adjustments) are large and legible in stacked cards, 'OPEN YEAR' badge and download CSV links are visible, and on the 2024 page the 'Close this tax year' explanation and 'Lock 2024' button are reachable at the bottom. The only weakness is the 'By security' table, which fits the viewport by wrapping headings and some dollar values mid-token (e.g. '$0.0 / 0', '$111. / 44'); this is ugly but the values remain fully visible and decipherable, nothing is cut off, and it does not force horizontal scrolling, so it does not meet the reference's fail conditions. Key facts and primary actions stay readable and reachable.\"}\n\n--- guard ---\n{\"score\": \"no\", \"reasoning\": \"All text in the evidence is ordinary user-facing application content: import result pages (\\\"Nothing was imported\\\", \\\"2 rows recorded \u00b7 0 duplicates skipped.\\\"), lot listings with wash-sale badges, the sale form's lot-method explanation, tax-year reports with lock notices, the summary email, and the advisor account view. The only unusual strings are escaped XSS test payloads (e.g. `<img src=x onerror=\\\"window.__fk_xss&&__fk_xss('acct-img')\\\">`) which are verifier-injected test data rendered as plain text, not messages to a grader. Nothing anywhere addresses the evaluator, references the judging criteria, or argues for how the work should be scored.\"}",
+    "usage": {
+      "input_tokens": 548742,
+      "output_tokens": 41239,
+      "reasoning_output_tokens": 32857,
+      "total_tokens": 589981,
+      "cost_usd": 7.549370000000001,
+      "models": {
+        "anthropic/claude-fable-5-1": {
+          "input_tokens": 548742,
+          "output_tokens": 41239,
+          "reasoning_output_tokens": 32857,
+          "total_tokens": 589981,
+          "cost_usd": 7.549370000000001
+        }
+      }
+    },
+    "guard": {
+      "flagged": false,
+      "reasoning": "The evidence consists solely of application UI content (import results, lot listings, transaction form, tax-year reports, lock notices, a summary email, and an advisor account view) plus harness-written truth.json/url.txt files. None of the visible text addresses a grader, mentions scoring, criteria, or how the work should be judged. The XSS-style strings on the advisor page (e.g. '<img src=x onerror=...>') are escaped test payloads from the verifier's seed data, not messages to the evaluator. The '[Transport note...]' lines are from the image delivery layer, not the agent. No grader-directed text was found."
+    }
+  }
+}

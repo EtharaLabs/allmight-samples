@@ -1,0 +1,390 @@
+Lotbook.
+Priya R. Raman
+Households
+Profile
+Sign out
+← Household
+Record a transaction
+
+W15 northwind FIFO 1
+
+Without chosen lots, the account’s effective lot method (FIFO, FIFO or HIFO) applies. For a specific-lot sale, chosen quantities must add up to the sale quantity.
+
+Kind
+Buy
+Sell
+Reinvest
+Dividend
+Split
+Trade Date
+Security Id
+ALPN · Alpen Versicherung AG
+AURQ · Aurora Quantum
+AURS · Aurora Semiconductors
+BRKW · Brookwater Utilities
+CDLM · Cedar Lumber
+CRVX · Corvex Software
+DLTW · Delta Windkraft AG
+GLBX · Glacier Global ex-US ETF
+HLIO · Helio Solar
+KSTL · Keystone Logistics
+LUMR · Lumiere Luxe SA
+MA7B58 · Mass assign sec
+MPLR · Maple Rail
+MPLW · Maple Logistics
+NRDB · Northern Rock Bank
+NRDV · Nordvik Shipping ASA
+NTMX · Northstar Total Market ETF
+ORCH · Orchard Health
+ORCV · Orchard Veterinary
+PNVA · Pinnacle Vaccines
+PRAI · Prairie Energy
+QNTM · Quantum Ledger
+RHCH · Rhein Chemie AG
+TIDL · Tidal Bond ETF
+W067B5801 · W06 Holdings 1 USD
+W077B5801 · W07 Holdings 1 CAD
+W077B5802 · W07 Holdings 2 USD
+W077B5803 · W07 Holdings 3 USD
+W077B5804 · W07 Holdings 4 CAD
+W077B5805 · W07 Holdings 5 USD
+W077B5806 · W07 Holdings 6 USD
+W077B5807 · W07 Holdings 7 CAD
+W077B5808 · W07 Holdings 8 USD
+W077B5809 · W07 Holdings 9 USD
+W077B5810 · W07 Holdings 10 CAD
+W077B5811 · W07 Holdings 11 USD
+W077B5812 · W07 Holdings 12 USD
+W077B5813 · W07 Holdings 13 CAD
+W077B5814 · W07 Holdings 14 USD
+W087B5801 · W08 Holdings 1 EUR
+W087B5802 · W08 Holdings 2 USD
+W087B5803 · W08 Holdings 3 CAD
+W087B5804 · W08 Holdings 4 EUR
+W087B5805 · W08 Holdings 5 USD
+W087B5806 · W08 Holdings 6 CAD
+W087B5807 · W08 Holdings 7 EUR
+W087B5808 · W08 Holdings 8 USD
+W087B5809 · W08 Holdings 9 CAD
+W087B5810 · W08 Holdings 10 EUR
+W087B5811 · W08 Holdings 11 USD
+W087B5812 · W08 Holdings 12 CAD
+W137B5801 · W13 Holdings 1 CAD
+W137B5802 · W13 Holdings 2 EUR
+W137B5803 · W13 Holdings 3 USD
+W137B5804 · W13 Holdings 4 CAD
+W137B5805 · W13 Holdings 5 EUR
+W137B5806 · W13 Holdings 6 CAD
+W137B5807 · W13 Holdings 7 EUR
+W137B5808 · W13 Holdings 8 USD
+W137B5809 · W13 Holdings 9 CAD
+W137B5810 · W13 Holdings 10 EUR
+W137B5811 · W13 Holdings 11 CAD
+W137B5812 · W13 Holdings 12 EUR
+W137B5813 · W13 Holdings 13 USD
+W137B5814 · W13 Holdings 14 CAD
+W137B5815 · W13 Holdings 15 EUR
+W137B5816 · W13 Holdings 16 CAD
+W137B5817 · W13 Holdings 17 EUR
+W137B5818 · W13 Holdings 18 USD
+W137B5819 · W13 Holdings 19 CAD
+W137B5820 · W13 Holdings 20 EUR
+W137B5821 · W13 Holdings 21 CAD
+W137B5822 · W13 Holdings 22 EUR
+W137B5823 · W13 Holdings 23 USD
+W137B5824 · W13 Holdings 24 CAD
+W137B5825 · W13 Holdings 25 EUR
+W137B5826 · W13 Holdings 26 CAD
+W137B5827 · W13 Holdings 27 EUR
+W137B5828 · W13 Holdings 28 USD
+W137B5829 · W13 Holdings 29 CAD
+W137B5830 · W13 Holdings 30 EUR
+W137B5831 · W13 Holdings 31 CAD
+W137B5832 · W13 Holdings 32 EUR
+W137B5833 · W13 Holdings 33 USD
+W137B5834 · W13 Holdings 34 CAD
+W137B5835 · W13 Holdings 35 EUR
+W137B5836 · W13 Holdings 36 CAD
+W137B5837 · W13 Holdings 37 CAD
+W137B5838 · W13 Holdings 38 EUR
+W137B5839 · W13 Holdings 39 EUR
+W137B5840 · W13 Holdings 40 EUR
+W137B5841 · W13 Holdings 41 EUR
+W137B5842 · W13 Holdings 42 EUR
+W137B5843 · W13 Holdings 43 EUR
+W137B5844 · W13 Holdings 44 EUR
+W137B5845 · W13 Holdings 45 EUR
+W137B5846 · W13 Holdings 46 EUR
+W137B5847 · W13 Holdings 47 EUR
+W137B5848 · W13 Holdings 48 EUR
+W137B5849 · W13 Holdings 49 EUR
+W137B5850 · W13 Holdings 50 EUR
+W137B5851 · W13 Holdings 51 EUR
+W137B5852 · W13 Holdings 52 EUR
+W137B5853 · W13 Holdings 53 CAD
+W137B5854 · W13 Holdings 54 CAD
+W137B5855 · W13 Holdings 55 CAD
+W137B5856 · W13 Holdings 56 EUR
+W137B5857 · W13 Holdings 57 CAD
+W137B5858 · W13 Holdings 58 CAD
+W137B5859 · W13 Holdings 59 EUR
+W137B5860 · W13 Holdings 60 EUR
+W137B5861 · W13 Holdings 61 CAD
+W137B5862 · W13 Holdings 62 CAD
+W137B5863 · W13 Holdings 63 CAD
+W137B5864 · W13 Holdings 64 EUR
+W137B5865 · W13 Holdings 65 CAD
+W137B5866 · W13 Holdings 66 EUR
+W147B5801 · W14 Holdings 1 USD
+W147B5802 · W14 Holdings 2 EUR
+W147B5803 · W14 Holdings 3 USD
+W147B5804 · W14 Holdings 4 CAD
+W147B5805 · W14 Holdings 5 EUR
+W147B5806 · W14 Holdings 6 CAD
+W147B5807 · W14 Holdings 7 USD
+W147B5808 · W14 Holdings 8 EUR
+W147B5809 · W14 Holdings 9 USD
+W147B5810 · W14 Holdings 10 CAD
+W147B5811 · W14 Holdings 11 EUR
+W147B5812 · W14 Holdings 12 CAD
+W147B5813 · W14 Holdings 13 USD
+W147B5814 · W14 Holdings 14 EUR
+W147B5815 · W14 Holdings 15 USD
+W147B5816 · W14 Holdings 16 CAD
+W147B5817 · W14 Holdings 17 EUR
+W147B5818 · W14 Holdings 18 CAD
+W147B5819 · W14 Holdings 19 USD
+W147B5820 · W14 Holdings 20 EUR
+W147B5821 · W14 Holdings 21 USD
+W147B5822 · W14 Holdings 22 CAD
+W147B5823 · W14 Holdings 23 EUR
+W147B5824 · W14 Holdings 24 CAD
+W147B5825 · W14 Holdings 25 USD
+W147B5826 · W14 Holdings 26 EUR
+W147B5827 · W14 Holdings 27 USD
+W147B5828 · W14 Holdings 28 CAD
+W147B5829 · W14 Holdings 29 EUR
+W147B5830 · W14 Holdings 30 CAD
+W147B5831 · W14 Holdings 31 USD
+W147B5832 · W14 Holdings 32 EUR
+W147B5833 · W14 Holdings 33 USD
+W147B5834 · W14 Holdings 34 CAD
+W147B5835 · W14 Holdings 35 EUR
+W147B5836 · W14 Holdings 36 CAD
+W147B5837 · W14 Holdings 37 EUR
+W147B5838 · W14 Holdings 38 EUR
+W147B5839 · W14 Holdings 39 EUR
+W147B5840 · W14 Holdings 40 EUR
+W147B5841 · W14 Holdings 41 EUR
+W147B5842 · W14 Holdings 42 EUR
+W147B5843 · W14 Holdings 43 EUR
+W147B5844 · W14 Holdings 44 EUR
+W147B5845 · W14 Holdings 45 EUR
+W147B5846 · W14 Holdings 46 EUR
+W147B5847 · W14 Holdings 47 EUR
+W147B5848 · W14 Holdings 48 EUR
+W147B5849 · W14 Holdings 49 EUR
+W147B5850 · W14 Holdings 50 EUR
+W147B5851 · W14 Holdings 51 USD
+W147B5852 · W14 Holdings 52 USD
+W147B5853 · W14 Holdings 53 USD
+W147B5854 · W14 Holdings 54 USD
+W147B5855 · W14 Holdings 55 USD
+W147B5856 · W14 Holdings 56 CAD
+W157B5801 · W15 Holdings 1 USD
+W157B5802 · W15 Holdings 2 EUR
+W157B5803 · W15 Holdings 3 CAD
+W157B5804 · W15 Holdings 4 USD
+W157B5805 · W15 Holdings 5 USD
+W157B5806 · W15 Holdings 6 EUR
+W157B5807 · W15 Holdings 7 CAD
+W157B5808 · W15 Holdings 8 USD
+W157B5809 · W15 Holdings 9 USD
+W157B5810 · W15 Holdings 10 EUR
+W157B5811 · W15 Holdings 11 CAD
+W157B5812 · W15 Holdings 12 USD
+W157B5813 · W15 Holdings 13 USD
+W157B5814 · W15 Holdings 14 EUR
+W157B5815 · W15 Holdings 15 CAD
+W157B5816 · W15 Holdings 16 USD
+W157B5817 · W15 Holdings 17 USD
+W157B5818 · W15 Holdings 18 EUR
+W157B5819 · W15 Holdings 19 CAD
+W157B5820 · W15 Holdings 20 USD
+W157B5821 · W15 Holdings 21 EUR
+W157B5822 · W15 Holdings 22 EUR
+W157B5823 · W15 Holdings 23 EUR
+W157B5824 · W15 Holdings 24 USD
+W157B5825 · W15 Holdings 25 USD
+W157B5826 · W15 Holdings 26 USD
+W157B5827 · W15 Holdings 27 USD
+W157B5828 · W15 Holdings 28 USD
+W157B5829 · W15 Holdings 29 USD
+W157B5830 · W15 Holdings 30 USD
+W157B5831 · W15 Holdings 31 USD
+W157B5832 · W15 Holdings 32 USD
+W157B5833 · W15 Holdings 33 USD
+W157B5834 · W15 Holdings 34 USD
+W157B5835 · W15 Holdings 35 USD
+W157B5836 · W15 Holdings 36 USD
+W157B5837 · W15 Holdings 37 USD
+W157B5838 · W15 Holdings 38 USD
+W157B5839 · W15 Holdings 39 EUR
+W157B5840 · W15 Holdings 40 CAD
+Quantity
+Price per share
+Fee (optional)
+Cash dividend amount
+Split ratio (N:M)
+Memo (optional)
+Choose specific lots
+Lot 574201 · 2025-02-06 · 10 shares
+Lot 574211 · 2025-02-23 · 8 shares
+Lot 574221 · 2025-03-12 · 12 shares
+Lot 574231 · 2025-03-29 · 10 shares
+Lot 574236 · 2025-04-15 · 12 shares
+Record transaction
+LOTBOOK   /   Household investment records · All report amounts in USD
+--- text around form ---
+Lotbook.
+Priya R. Raman
+Households
+Profile
+Sign out
+← Household
+Record a transaction
+
+W15 northwind FIFO 1
+
+Without chosen lots, the account’s effective lot method (FIFO, FIFO or HIFO) applies. For a specific-lot sale, chosen quantities must add up to the sale quantity.
+
+Kind
+Buy
+Sell
+Reinvest
+Dividend
+Split
+Trade Date
+Security Id
+ALPN · Alpen Versicherung AG
+AURQ · Aurora Quantum
+AURS · Aurora Semiconductors
+BRKW · Brookwater Utilities
+CDLM · Cedar Lumber
+CRVX · Corvex Software
+DLTW · Delta Windkraft AG
+GLBX · Glacier Global ex-US ETF
+HLIO · Helio Solar
+KSTL · Keystone Logistics
+LUMR · Lumiere Luxe SA
+MA7B58 · Mass assign sec
+MPLR · Maple Rail
+MPLW · Maple Logistics
+NRDB · Northern Rock Bank
+NRDV · Nordvik Shipping ASA
+NTMX · Northstar Total Market ETF
+ORCH · Orchard Health
+ORCV · Orchard Veterinary
+PNVA · Pinnacle Vaccines
+PRAI · Prairie Energy
+QNTM · Quantum Ledger
+RHCH · Rhein Chemie AG
+TIDL · Tidal Bond ETF
+W067B5801 · W06 Holdings 1 USD
+W077B5801 · W07 Holdings 1 CAD
+W077B5802 · W07 Holdings 2 USD
+W077B5803 · W07 Holdings 3 USD
+W077B5804 · W07 Holdings 4 CAD
+W077B5805 · W07 Holdings 5 USD
+W077B5806 · W07 Holdings 6 USD
+W077B5807 · W07 Holdings 7 CAD
+W077B5808 · W07 Holdings 8 USD
+W077B5809 · W07 Holdings 9 USD
+W077B5810 · W07 Holdings 10 CAD
+W077B5811 · W07 Holdings 11 USD
+W077B5812 · W07 Holdings 12 USD
+W077B5813 · W07 Holdings 13 CAD
+W077B5814 · W07 Holdings 14 USD
+W087B5801 · W08 Holdings 1 EUR
+W087B5802 · W08 Holdings 2 USD
+W087B5803 · W08 Holdings 3 CAD
+W087B5804 · W08 Holdings 4 EUR
+W087B5805 · W08 Holdings 5 USD
+W087B5806 · W08 Holdings 6 CAD
+W087B5807 · W08 Holdings 7 EUR
+W087B5808 · W08 Holdings 8 USD
+W087B5809 · W08 Holdings 9 CAD
+W087B5810 · W08 Holdings 10 EUR
+W087B5811 · W08 Holdings 11 USD
+W087B5812 · W08 Holdings 12 CAD
+W137B5801 · W13 Holdings 1 CAD
+W137B5802 · W13 Holdings 2 EUR
+W137B5803 · W13 Holdings 3 USD
+W137B5804 · W13 Holdings 4 CAD
+W137B5805 · W13 Holdings 5 EUR
+W137B5806 · W13 Holdings 6 CAD
+W137B5807 · W13 Holdings 7 EUR
+W137B5808 · W13 Holdings 8 USD
+W137B5809 · W13 Holdings 9 CAD
+W137B5810 · W13 Holdings 10 EUR
+W137B5811 · W13 Holdings 11 CAD
+W137B5812 · W13 Holdings 12 EUR
+W137B5813 · W13 Holdings 13 USD
+W137B5814 · W13 Holdings 14 CAD
+W137B5815 · W13 Holdings 15 EUR
+W137B5816 · W13 Holdings 16 CAD
+W137B5817 · W13 Holdings 17 EUR
+W137B5818 · W13 Holdings 18 USD
+W137B5819 · W13 Holdings 19 CAD
+W137B5820 · W13 Holdings 20 EUR
+W137B5821 · W13 Holdings 21 CAD
+W137B5822 · W13 Holdings 22 EUR
+W137B5823 · W13 Holdings 23 USD
+W137B5824 · W13 Holdings 24 CAD
+W137B5825 · W13 Holdings 25 EUR
+W137B5826 · W13 Holdings 26 CAD
+W137B5827 · W13 Holdings 27 EUR
+W137B5828 · W13 Holdings 28 USD
+W137B5829 · W13 Holdings 29 CAD
+W137B5830 · W13 Holdings 30 EUR
+W137B5831 · W13 Holdings 31 CAD
+W137B5832 · W13 Holdings 32 EUR
+W137B5833 · W13 Holdings 33 USD
+W137B5834 · W13 Holdings 34 CAD
+W137B5835 · W13 Holdings 35 EUR
+W137B5836 · W13 Holdings 36 CAD
+W137B5837 · W13 Holdings 37 CAD
+W137B5838 · W13 Holdings 38 EUR
+W137B5839 · W13 Holdings 39 EUR
+W137B5840 · W13 Holdings 40 EUR
+W137B5841 · W13 Holdings 41 EUR
+W137B5842 · W13 Holdings 42 EUR
+W137B5843 · W13 Holdings 43 EUR
+W137B5844 · W13 Holdings 44 EUR
+W137B5845 · W13 Holdings 45 EUR
+W137B5846 · W13 Holdings 46 EUR
+W137B5847 · W13 Holdings 47 EUR
+W137B5848 · W13 Holdings 48 EUR
+W137B5849 · W13 Holdings 49 EUR
+W137B5850 · W13 Holdings 50 EUR
+W137B5851 · W13 Holdings 51 EUR
+W137B5852 · W13 Holdings 52 EUR
+W137B5853 · W13 Holdings 53 CAD
+W137B5854 · W13 Holdings 54 CAD
+W137B5855 · W13 Holdings 55 CAD
+W137B5856 · W13 Holdings 56 EUR
+W137B5857 · W13 Holdings 57 CAD
+W137B5858 · W13 Holdings 58 CAD
+W137B5859 · W13 Holdings 59 EUR
+W137B5860 · W13 Holdings 60 EUR
+W137B5861 · W13 Holdings 61 CAD
+W137B5862 · W13 Holdings 62 CAD
+W137B5863 · W13 Holdings 63 CAD
+W137B5864 · W13 Holdings 64 EUR
+W137B5865 · W13 Holdings 65 CAD
+W137B5866 · W13 Holdings 66 EUR
+W147B5801 · W14 Holdings 1 USD
+W147B5802 · W14 Holdings 2 EUR
+W147B5803 · W14 Holdings 3 USD
+W147B5804 · W14 Holdings 4 CAD
+W1

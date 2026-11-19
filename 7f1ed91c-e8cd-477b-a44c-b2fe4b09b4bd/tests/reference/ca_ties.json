@@ -1,0 +1,6485 @@
+{
+"spinoff": [
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-01-29",
+"qty": "9",
+"amount": 54069
+},
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-01-29",
+"qty": "9",
+"amount": 52243
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-06-07",
+"qty": "33333/10000",
+"amount": 36657
+},
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2024-08-19",
+"qty": "9",
+"amount": 59465
+},
+{
+"a": 0,
+"s": "N",
+"kind": "sell",
+"day": "2025-04-11",
+"qty": "1",
+"amount": 8688
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2024-12-31",
+"terms": {
+"new_security": "N",
+"ratio": "2/5",
+"parent_fmv": "2357/50",
+"new_fmv": "873/10",
+"cash_in_lieu_price": "8743/100"
+}
+}
+],
+"wrong": [
+"whole_first"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-07-14",
+"qty": "6",
+"amount": 119716
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2025-04-22",
+"qty": "15",
+"amount": 171548
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-06-27",
+"terms": {
+"new_security": "N",
+"ratio": "2/5",
+"parent_fmv": "739/5",
+"new_fmv": "129/5",
+"cash_in_lieu_price": "259/10"
+}
+}
+],
+"wrong": [
+"whole_first"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2024-12-28",
+"qty": "7",
+"amount": 1821211
+},
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2025-04-29",
+"qty": "13",
+"amount": 1641823
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-06-14",
+"terms": {
+"new_security": "N",
+"ratio": "1/5",
+"parent_fmv": "297",
+"new_fmv": "25",
+"cash_in_lieu_price": "629/25"
+}
+}
+],
+"wrong": [
+"per_share"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2024-03-10",
+"qty": "21",
+"amount": 144412
+},
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2025-02-22",
+"qty": "7",
+"amount": 128503
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2025-03-19",
+"qty": "7",
+"amount": 40352
+},
+{
+"a": 0,
+"s": "P",
+"kind": "split",
+"day": "2025-05-20",
+"ratio": [
+2,
+1
+]
+},
+{
+"a": 1,
+"s": "P",
+"kind": "split",
+"day": "2025-05-20",
+"ratio": [
+4,
+1
+]
+},
+{
+"a": 2,
+"s": "P",
+"kind": "split",
+"day": "2025-05-20",
+"ratio": [
+3,
+1
+]
+},
+{
+"a": 2,
+"s": "N",
+"kind": "sell",
+"day": "2025-07-30",
+"qty": "1",
+"amount": 4035
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-05-20",
+"terms": {
+"new_security": "N",
+"ratio": "1/10",
+"parent_fmv": "5623/25",
+"new_fmv": "4181/100",
+"cash_in_lieu_price": "4203/100"
+}
+}
+],
+"wrong": [
+"after_split"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-03-04",
+"qty": "11",
+"amount": 201123
+},
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-06-06",
+"qty": "6",
+"amount": 73272
+},
+{
+"a": 2,
+"s": "P",
+"kind": "split",
+"day": "2024-11-20",
+"ratio": [
+2,
+1
+]
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2024-11-20",
+"terms": {
+"new_security": "N",
+"ratio": "1/2",
+"parent_fmv": "22967/100",
+"new_fmv": "2967/50",
+"cash_in_lieu_price": "5973/100"
+}
+}
+],
+"wrong": [
+"after_split"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2022-12-21",
+"qty": "5",
+"amount": 9583
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2022-12-22",
+"qty": "49/4",
+"amount": 156893
+},
+{
+"a": 0,
+"s": "P",
+"kind": "split",
+"day": "2024-04-09",
+"ratio": [
+4,
+1
+]
+},
+{
+"a": 0,
+"s": "N",
+"kind": "sell",
+"day": "2024-07-05",
+"qty": "1",
+"amount": 3239
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2024-04-09",
+"terms": {
+"new_security": "N",
+"ratio": "1/5",
+"parent_fmv": "24717/100",
+"new_fmv": "1623/50",
+"cash_in_lieu_price": "1627/50"
+}
+}
+],
+"wrong": [
+"after_split"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-02-25",
+"qty": "18",
+"amount": 129017
+},
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2024-06-11",
+"qty": "15",
+"amount": 10582
+},
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-08-24",
+"qty": "3",
+"amount": 12219
+},
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2024-11-14",
+"qty": "15/2",
+"amount": 43850
+},
+{
+"a": 1,
+"s": "P",
+"kind": "split",
+"day": "2025-05-23",
+"ratio": [
+4,
+1
+]
+},
+{
+"a": 2,
+"s": "P",
+"kind": "split",
+"day": "2025-05-23",
+"ratio": [
+4,
+1
+]
+},
+{
+"a": 2,
+"s": "N",
+"kind": "sell",
+"day": "2025-11-05",
+"qty": "1",
+"amount": 6902
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-05-23",
+"terms": {
+"new_security": "N",
+"ratio": "3/2",
+"parent_fmv": "18827/100",
+"new_fmv": "1801/25",
+"cash_in_lieu_price": "7239/100"
+}
+}
+],
+"wrong": [
+"after_split"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2024-02-07",
+"qty": "49/4",
+"amount": 109489
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-04-24",
+"qty": "25",
+"amount": 42207
+},
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-06-21",
+"qty": "33333/10000",
+"amount": 18074
+},
+{
+"a": 0,
+"s": "P",
+"kind": "split",
+"day": "2025-03-17",
+"ratio": [
+2,
+1
+]
+},
+{
+"a": 1,
+"s": "P",
+"kind": "split",
+"day": "2025-03-17",
+"ratio": [
+2,
+1
+]
+},
+{
+"a": 2,
+"s": "P",
+"kind": "split",
+"day": "2025-03-17",
+"ratio": [
+4,
+1
+]
+},
+{
+"a": 0,
+"s": "N",
+"kind": "sell",
+"day": "2025-05-21",
+"qty": "1",
+"amount": 2520
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-03-17",
+"terms": {
+"new_security": "N",
+"ratio": "1/5",
+"parent_fmv": "13731/50",
+"new_fmv": "122/5",
+"cash_in_lieu_price": "2461/100"
+}
+}
+],
+"wrong": [
+"after_split"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2024-01-27",
+"qty": "6",
+"amount": 58529
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-02-27",
+"qty": "13",
+"amount": 206785
+},
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2024-08-03",
+"qty": "13",
+"amount": 211470
+},
+{
+"a": 1,
+"s": "N",
+"kind": "sell",
+"day": "2025-03-31",
+"qty": "1",
+"amount": 6437
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2024-12-17",
+"terms": {
+"new_security": "N",
+"ratio": "2/5",
+"parent_fmv": "3919/100",
+"new_fmv": "6613/100",
+"cash_in_lieu_price": "3311/50"
+}
+}
+],
+"wrong": [
+"cil_once"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2023-11-04",
+"qty": "25",
+"amount": 747042
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-03-01",
+"qty": "18",
+"amount": 1363858
+},
+{
+"a": 0,
+"s": "P",
+"kind": "split",
+"day": "2024-06-11",
+"ratio": [
+4,
+1
+]
+},
+{
+"a": 2,
+"s": "P",
+"kind": "split",
+"day": "2024-06-11",
+"ratio": [
+2,
+1
+]
+},
+{
+"a": 0,
+"s": "N",
+"kind": "sell",
+"day": "2024-08-23",
+"qty": "1",
+"amount": 6333
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2024-06-11",
+"terms": {
+"new_security": "N",
+"ratio": "1/10",
+"parent_fmv": "9",
+"new_fmv": "62",
+"cash_in_lieu_price": "6221/100"
+}
+}
+],
+"wrong": [
+"decimal_alloc",
+"per_share",
+"after_split"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2024-03-04",
+"qty": "49/4",
+"amount": 225265
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-05-16",
+"qty": "15",
+"amount": 225711
+},
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2025-04-10",
+"qty": "13",
+"amount": 213147
+},
+{
+"a": 0,
+"s": "P",
+"kind": "split",
+"day": "2025-06-23",
+"ratio": [
+4,
+1
+]
+},
+{
+"a": 1,
+"s": "P",
+"kind": "split",
+"day": "2025-06-23",
+"ratio": [
+3,
+1
+]
+},
+{
+"a": 2,
+"s": "P",
+"kind": "split",
+"day": "2025-06-23",
+"ratio": [
+4,
+1
+]
+},
+{
+"a": 1,
+"s": "N",
+"kind": "sell",
+"day": "2026-01-07",
+"qty": "1",
+"amount": 4210
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-06-23",
+"terms": {
+"new_security": "N",
+"ratio": "1/10",
+"parent_fmv": "10209/50",
+"new_fmv": "997/25",
+"cash_in_lieu_price": "4001/100"
+}
+}
+],
+"wrong": [
+"after_split"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-03-31",
+"qty": "14",
+"amount": 228091
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-07-01",
+"qty": "49/4",
+"amount": 1297439
+},
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2024-10-09",
+"qty": "6",
+"amount": 2733927
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-10-19",
+"qty": "3/4",
+"amount": 488465
+},
+{
+"a": 1,
+"s": "N",
+"kind": "sell",
+"day": "2025-04-15",
+"qty": "1",
+"amount": 532
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-01-12",
+"terms": {
+"new_security": "N",
+"ratio": "1/5",
+"parent_fmv": "83",
+"new_fmv": "7",
+"cash_in_lieu_price": "747/100"
+}
+}
+],
+"wrong": [
+"decimal_alloc",
+"per_share"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2023-09-26",
+"qty": "10",
+"amount": 1142547
+},
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2023-10-18",
+"qty": "15/2",
+"amount": 623077
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2023-12-05",
+"qty": "15/2",
+"amount": 2541385
+},
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-03-23",
+"qty": "5",
+"amount": 2558031
+},
+{
+"a": 0,
+"s": "P",
+"kind": "split",
+"day": "2024-06-08",
+"ratio": [
+4,
+1
+]
+},
+{
+"a": 1,
+"s": "P",
+"kind": "split",
+"day": "2024-06-08",
+"ratio": [
+2,
+1
+]
+},
+{
+"a": 2,
+"s": "P",
+"kind": "split",
+"day": "2024-06-08",
+"ratio": [
+3,
+1
+]
+},
+{
+"a": 0,
+"s": "N",
+"kind": "sell",
+"day": "2024-09-23",
+"qty": "1",
+"amount": 6332
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2024-06-08",
+"terms": {
+"new_security": "N",
+"ratio": "1/5",
+"parent_fmv": "103",
+"new_fmv": "59",
+"cash_in_lieu_price": "591/10"
+}
+}
+],
+"wrong": [
+"decimal_alloc",
+"per_share",
+"after_split"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2023-02-05",
+"qty": "21",
+"amount": 87593
+},
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2023-03-09",
+"qty": "18",
+"amount": 167632
+},
+{
+"a": 1,
+"s": "P",
+"kind": "split",
+"day": "2024-06-03",
+"ratio": [
+3,
+1
+]
+},
+{
+"a": 2,
+"s": "P",
+"kind": "split",
+"day": "2024-06-03",
+"ratio": [
+3,
+1
+]
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2024-06-03",
+"terms": {
+"new_security": "N",
+"ratio": "1/5",
+"parent_fmv": "1467/10",
+"new_fmv": "149/2",
+"cash_in_lieu_price": "1871/25"
+}
+}
+],
+"wrong": [
+"cil_once",
+"after_split"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-01-19",
+"qty": "15",
+"amount": 62064
+},
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2024-04-03",
+"qty": "6",
+"amount": 114671
+},
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-10-28",
+"qty": "13",
+"amount": 138599
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2025-03-20",
+"qty": "9",
+"amount": 23116
+},
+{
+"a": 0,
+"s": "P",
+"kind": "split",
+"day": "2025-05-20",
+"ratio": [
+2,
+1
+]
+},
+{
+"a": 1,
+"s": "P",
+"kind": "split",
+"day": "2025-05-20",
+"ratio": [
+2,
+1
+]
+},
+{
+"a": 2,
+"s": "P",
+"kind": "split",
+"day": "2025-05-20",
+"ratio": [
+2,
+1
+]
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-05-20",
+"terms": {
+"new_security": "N",
+"ratio": "3/2",
+"parent_fmv": "4629/25",
+"new_fmv": "338/5",
+"cash_in_lieu_price": "6807/100"
+}
+}
+],
+"wrong": [
+"after_split"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-10-01",
+"qty": "7",
+"amount": 92218
+},
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-12-06",
+"qty": "10",
+"amount": 67010
+},
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2025-06-23",
+"qty": "7",
+"amount": 98922
+},
+{
+"a": 0,
+"s": "P",
+"kind": "split",
+"day": "2025-08-14",
+"ratio": [
+4,
+1
+]
+},
+{
+"a": 2,
+"s": "P",
+"kind": "split",
+"day": "2025-08-14",
+"ratio": [
+3,
+1
+]
+},
+{
+"a": 0,
+"s": "N",
+"kind": "sell",
+"day": "2025-10-22",
+"qty": "1",
+"amount": 4135
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-08-14",
+"terms": {
+"new_security": "N",
+"ratio": "1/2",
+"parent_fmv": "271/4",
+"new_fmv": "1132/25",
+"cash_in_lieu_price": "4539/100"
+}
+}
+],
+"wrong": [
+"after_split"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-07-15",
+"qty": "10",
+"amount": 153369
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-10-18",
+"qty": "3/4",
+"amount": 6238
+},
+{
+"a": 0,
+"s": "P",
+"kind": "split",
+"day": "2024-12-26",
+"ratio": [
+4,
+1
+]
+},
+{
+"a": 2,
+"s": "P",
+"kind": "split",
+"day": "2024-12-26",
+"ratio": [
+4,
+1
+]
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2024-12-26",
+"terms": {
+"new_security": "N",
+"ratio": "1/8",
+"parent_fmv": "4497/20",
+"new_fmv": "469/10",
+"cash_in_lieu_price": "2353/50"
+}
+}
+],
+"wrong": [
+"after_split"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-04-11",
+"qty": "9",
+"amount": 34565
+},
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2024-06-07",
+"qty": "10",
+"amount": 99579
+},
+{
+"a": 1,
+"s": "P",
+"kind": "split",
+"day": "2025-03-17",
+"ratio": [
+4,
+1
+]
+},
+{
+"a": 2,
+"s": "P",
+"kind": "split",
+"day": "2025-03-17",
+"ratio": [
+2,
+1
+]
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-03-17",
+"terms": {
+"new_security": "N",
+"ratio": "1/8",
+"parent_fmv": "12349/50",
+"new_fmv": "579/50",
+"cash_in_lieu_price": "233/20"
+}
+}
+],
+"wrong": [
+"after_split"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-05-23",
+"qty": "18",
+"amount": 274267
+},
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-08-10",
+"qty": "21",
+"amount": 222469
+},
+{
+"a": 0,
+"s": "P",
+"kind": "split",
+"day": "2025-05-31",
+"ratio": [
+3,
+1
+]
+},
+{
+"a": 2,
+"s": "P",
+"kind": "split",
+"day": "2025-05-31",
+"ratio": [
+2,
+1
+]
+},
+{
+"a": 2,
+"s": "N",
+"kind": "sell",
+"day": "2025-08-17",
+"qty": "1",
+"amount": 4825
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-05-31",
+"terms": {
+"new_security": "N",
+"ratio": "1/8",
+"parent_fmv": "3157/100",
+"new_fmv": "4577/100",
+"cash_in_lieu_price": "2289/50"
+}
+}
+],
+"wrong": [
+"cil_once",
+"after_split"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2023-12-31",
+"qty": "49/4",
+"amount": 2045295
+},
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2024-03-13",
+"qty": "18",
+"amount": 496839
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-07-29",
+"qty": "11",
+"amount": 1895775
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2025-02-10",
+"qty": "6",
+"amount": 2836869
+},
+{
+"a": 0,
+"s": "P",
+"kind": "split",
+"day": "2025-04-26",
+"ratio": [
+3,
+1
+]
+},
+{
+"a": 1,
+"s": "P",
+"kind": "split",
+"day": "2025-04-26",
+"ratio": [
+4,
+1
+]
+},
+{
+"a": 2,
+"s": "P",
+"kind": "split",
+"day": "2025-04-26",
+"ratio": [
+3,
+1
+]
+},
+{
+"a": 0,
+"s": "N",
+"kind": "sell",
+"day": "2025-09-08",
+"qty": "1",
+"amount": 8007
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-04-26",
+"terms": {
+"new_security": "N",
+"ratio": "1/5",
+"parent_fmv": "25",
+"new_fmv": "85",
+"cash_in_lieu_price": "8509/100"
+}
+}
+],
+"wrong": [
+"after_split"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2023-09-10",
+"qty": "11",
+"amount": 2102328
+},
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2023-10-29",
+"qty": "10",
+"amount": 1395208
+},
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-08-30",
+"qty": "18",
+"amount": 1365240
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-09-17",
+"qty": "18",
+"amount": 1998584
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-01-17",
+"terms": {
+"new_security": "N",
+"ratio": "1/2",
+"parent_fmv": "39",
+"new_fmv": "18",
+"cash_in_lieu_price": "1841/100"
+}
+}
+],
+"wrong": [
+"per_share"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2023-01-15",
+"qty": "3/4",
+"amount": 11631
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2023-02-05",
+"qty": "33333/10000",
+"amount": 26740
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2023-04-08",
+"qty": "25",
+"amount": 290751
+},
+{
+"a": 0,
+"s": "N",
+"kind": "sell",
+"day": "2024-10-14",
+"qty": "1",
+"amount": 4185
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2024-04-09",
+"terms": {
+"new_security": "N",
+"ratio": "1/8",
+"parent_fmv": "10537/100",
+"new_fmv": "4407/100",
+"cash_in_lieu_price": "2227/50"
+}
+}
+],
+"wrong": [
+"cil_once"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2023-10-29",
+"qty": "14",
+"amount": 1177728
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2023-12-06",
+"qty": "25",
+"amount": 1583744
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2024-11-02",
+"terms": {
+"new_security": "N",
+"ratio": "1/5",
+"parent_fmv": "98",
+"new_fmv": "22",
+"cash_in_lieu_price": "1107/50"
+}
+}
+],
+"wrong": [
+"per_share"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2023-09-21",
+"qty": "11",
+"amount": 202083
+},
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2024-07-02",
+"qty": "21",
+"amount": 137344
+},
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2024-07-25",
+"qty": "21",
+"amount": 135456
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-01-18",
+"terms": {
+"new_security": "N",
+"ratio": "1/4",
+"parent_fmv": "1749/20",
+"new_fmv": "4933/100",
+"cash_in_lieu_price": "2471/50"
+}
+}
+],
+"wrong": [
+"cil_once"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-03-01",
+"qty": "21",
+"amount": 365738
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-08-05",
+"qty": "13",
+"amount": 176047
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-04-29",
+"terms": {
+"new_security": "N",
+"ratio": "1/4",
+"parent_fmv": "5931/100",
+"new_fmv": "209/100",
+"cash_in_lieu_price": "231/100"
+}
+}
+],
+"wrong": [
+"cil_once"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-06-02",
+"qty": "5",
+"amount": 74767
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-08-05",
+"qty": "11",
+"amount": 131035
+},
+{
+"a": 0,
+"s": "N",
+"kind": "sell",
+"day": "2025-11-01",
+"qty": "1",
+"amount": 1203
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-06-18",
+"terms": {
+"new_security": "N",
+"ratio": "2/5",
+"parent_fmv": "1567/100",
+"new_fmv": "1547/100",
+"cash_in_lieu_price": "1549/100"
+}
+}
+],
+"wrong": [
+"cil_once"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-08-31",
+"qty": "25",
+"amount": 1897431
+},
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-10-23",
+"qty": "5",
+"amount": 208941
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-12-27",
+"qty": "13",
+"amount": 1979157
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2025-04-10",
+"qty": "7",
+"amount": 1206615
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-08-08",
+"terms": {
+"new_security": "N",
+"ratio": "1/5",
+"parent_fmv": "295",
+"new_fmv": "67",
+"cash_in_lieu_price": "6707/100"
+}
+}
+],
+"wrong": [
+"per_share"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2023-12-22",
+"qty": "3",
+"amount": 2593786
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-05-09",
+"qty": "10",
+"amount": 222898
+},
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-06-12",
+"qty": "13",
+"amount": 1120834
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-02-15",
+"terms": {
+"new_security": "N",
+"ratio": "3/2",
+"parent_fmv": "245",
+"new_fmv": "10",
+"cash_in_lieu_price": "254/25"
+}
+}
+],
+"wrong": [
+"per_share"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2023-09-28",
+"qty": "11",
+"amount": 1840169
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-03-31",
+"qty": "11",
+"amount": 2711775
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-06-24",
+"qty": "11",
+"amount": 1315161
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-11-17",
+"qty": "33333/10000",
+"amount": 441123
+},
+{
+"a": 2,
+"s": "N",
+"kind": "sell",
+"day": "2025-05-23",
+"qty": "1",
+"amount": 5062
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-01-14",
+"terms": {
+"new_security": "N",
+"ratio": "1/5",
+"parent_fmv": "112",
+"new_fmv": "48",
+"cash_in_lieu_price": "969/20"
+}
+}
+],
+"wrong": [
+"per_share"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-03-31",
+"qty": "13",
+"amount": 2885036
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-05-08",
+"qty": "14",
+"amount": 1734548
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-10-11",
+"qty": "33333/10000",
+"amount": 1349076
+},
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2024-11-10",
+"qty": "21",
+"amount": 2878956
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-04-27",
+"terms": {
+"new_security": "N",
+"ratio": "3/2",
+"parent_fmv": "71",
+"new_fmv": "54",
+"cash_in_lieu_price": "5409/100"
+}
+}
+],
+"wrong": [
+"decimal_alloc",
+"per_share"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2023-11-24",
+"qty": "11",
+"amount": 48081
+},
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-01-23",
+"qty": "10",
+"amount": 133351
+},
+{
+"a": 2,
+"s": "N",
+"kind": "sell",
+"day": "2025-02-14",
+"qty": "1",
+"amount": 4565
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-01-02",
+"terms": {
+"new_security": "N",
+"ratio": "1/5",
+"parent_fmv": "2166/25",
+"new_fmv": "2139/50",
+"cash_in_lieu_price": "4289/100"
+}
+}
+],
+"wrong": [
+"cil_once"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2023-10-14",
+"qty": "14",
+"amount": 217965
+},
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-05-14",
+"qty": "15/2",
+"amount": 1567775
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2024-11-14",
+"terms": {
+"new_security": "N",
+"ratio": "3/2",
+"parent_fmv": "214",
+"new_fmv": "4",
+"cash_in_lieu_price": "417/100"
+}
+}
+],
+"wrong": [
+"decimal_alloc",
+"per_share"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2023-08-16",
+"qty": "33333/10000",
+"amount": 39390
+},
+{
+"a": 2,
+"s": "P",
+"kind": "buy",
+"day": "2024-03-01",
+"qty": "6",
+"amount": 5926
+},
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2024-03-14",
+"qty": "5",
+"amount": 49729
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-05-20",
+"qty": "21",
+"amount": 234257
+},
+{
+"a": 0,
+"s": "N",
+"kind": "sell",
+"day": "2025-05-31",
+"qty": "1",
+"amount": 5447
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2024-11-16",
+"terms": {
+"new_security": "N",
+"ratio": "3333/10000",
+"parent_fmv": "27263/100",
+"new_fmv": "5741/100",
+"cash_in_lieu_price": "579/10"
+}
+}
+],
+"wrong": [
+"cil_once"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2024-10-03",
+"qty": "10",
+"amount": 1888510
+},
+{
+"a": 0,
+"s": "P",
+"kind": "buy",
+"day": "2025-02-01",
+"qty": "7",
+"amount": 909726
+},
+{
+"a": 1,
+"s": "P",
+"kind": "buy",
+"day": "2025-03-09",
+"qty": "3/4",
+"amount": 2606538
+},
+{
+"a": 0,
+"s": "P",
+"kind": "split",
+"day": "2025-05-17",
+"ratio": [
+4,
+1
+]
+},
+{
+"a": 1,
+"s": "P",
+"kind": "split",
+"day": "2025-05-17",
+"ratio": [
+2,
+1
+]
+}
+],
+"actions": [
+{
+"kind": "spinoff",
+"s": "P",
+"day": "2025-05-17",
+"terms": {
+"new_security": "N",
+"ratio": "1/8",
+"parent_fmv": "289",
+"new_fmv": "24",
+"cash_in_lieu_price": "483/20"
+}
+}
+],
+"wrong": [
+"decimal_alloc",
+"per_share",
+"after_split"
+]
+}
+],
+"merger": [
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2024-01-18",
+"qty": "14",
+"amount": 116197
+},
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2024-05-28",
+"qty": "33333/10000",
+"amount": 11685
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-11-03",
+"qty": "5",
+"amount": 49263
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2025-02-17",
+"qty": "9",
+"amount": 141734
+},
+{
+"a": 0,
+"s": "A",
+"kind": "sell",
+"day": "2025-10-16",
+"qty": "1",
+"amount": 58540
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-05-23",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "9/50",
+"cash_per_share": "25/2",
+"acquirer_fmv": "11103/50"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"full_gain",
+"value_once"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-04-01",
+"qty": "3",
+"amount": 48987
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-08-15",
+"qty": "18",
+"amount": 328412
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2025-05-24",
+"qty": "11",
+"amount": 21632
+},
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2025-06-07",
+"qty": "49/4",
+"amount": 100941
+},
+{
+"a": 0,
+"s": "A",
+"kind": "sell",
+"day": "2026-01-11",
+"qty": "1",
+"amount": 87195
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-07-20",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "1/2",
+"cash_per_share": "41/20",
+"acquirer_fmv": "11947/50"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"full_gain"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2024-07-04",
+"qty": "11",
+"amount": 99393
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-08-08",
+"qty": "21",
+"amount": 11182
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2025-03-30",
+"qty": "21",
+"amount": 293423
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2025-06-05",
+"qty": "18",
+"amount": 294187
+},
+{
+"a": 0,
+"s": "A",
+"kind": "sell",
+"day": "2025-12-28",
+"qty": "1",
+"amount": 34583
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-08-24",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "1/4",
+"cash_per_share": "41/20",
+"acquirer_fmv": "4792/25"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"full_gain"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-08-29",
+"qty": "15/2",
+"amount": 79498
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-09-05",
+"qty": "9",
+"amount": 124890
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2025-03-17",
+"qty": "3",
+"amount": 9966
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-03-17",
+"terms": {
+"acquirer": null,
+"shares_per_share": "0",
+"cash_per_share": "1103/20",
+"acquirer_fmv": null
+}
+}
+],
+"wrong": [
+"after_trades"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2023-08-17",
+"qty": "3",
+"amount": 12436
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-02-02",
+"qty": "21",
+"amount": 123393
+},
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2024-08-10",
+"qty": "25",
+"amount": 148767
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2024-11-06",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "1/2",
+"cash_per_share": "0",
+"acquirer_fmv": "18071/100"
+}
+}
+],
+"wrong": [
+"full_gain"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2023-12-17",
+"qty": "5",
+"amount": 21775
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-09-19",
+"qty": "6",
+"amount": 15489
+},
+{
+"a": 0,
+"s": "A",
+"kind": "sell",
+"day": "2025-05-08",
+"qty": "1",
+"amount": 15902
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-01-15",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "1/4",
+"cash_per_share": "156/5",
+"acquirer_fmv": "23243/100"
+}
+}
+],
+"wrong": [
+"full_gain"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-05-25",
+"qty": "15/2",
+"amount": 74688
+},
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2024-06-13",
+"qty": "7",
+"amount": 71599
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-08-09",
+"qty": "3",
+"amount": 59567
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2025-07-24",
+"qty": "3",
+"amount": 47189
+},
+{
+"a": 0,
+"s": "A",
+"kind": "sell",
+"day": "2025-09-26",
+"qty": "1",
+"amount": 73309
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-07-24",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "1/4",
+"cash_per_share": "156/5",
+"acquirer_fmv": "3488/25"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"after_trades"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-07-13",
+"qty": "11",
+"amount": 108467
+},
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2024-07-14",
+"qty": "25",
+"amount": 422076
+},
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2024-07-21",
+"qty": "49/4",
+"amount": 7133
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-08-27",
+"qty": "10",
+"amount": 136043
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2024-12-07",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "1/4",
+"cash_per_share": "156/5",
+"acquirer_fmv": "5768/25"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"full_gain"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-06-11",
+"qty": "21",
+"amount": 235382
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-11-11",
+"qty": "33333/10000",
+"amount": 9165
+},
+{
+"a": 0,
+"s": "A",
+"kind": "sell",
+"day": "2025-08-16",
+"qty": "1",
+"amount": 88090
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-06-08",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "7/20",
+"cash_per_share": "19/4",
+"acquirer_fmv": "5064/25"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"full_gain",
+"value_once"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2023-12-01",
+"qty": "5",
+"amount": 72403
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-03-20",
+"qty": "15",
+"amount": 47969
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-03-30",
+"qty": "21",
+"amount": 350162
+},
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2024-03-30",
+"qty": "3/4",
+"amount": 12055
+},
+{
+"a": 1,
+"s": "A",
+"kind": "sell",
+"day": "2025-06-04",
+"qty": "1",
+"amount": 59886
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-03-08",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "7/20",
+"cash_per_share": "156/5",
+"acquirer_fmv": "5897/50"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"full_gain"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-06-11",
+"qty": "49/4",
+"amount": 217228
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-10-09",
+"qty": "33333/10000",
+"amount": 42963
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2025-02-04",
+"qty": "15",
+"amount": 292294
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-07-19",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "7/20",
+"cash_per_share": "156/5",
+"acquirer_fmv": "10281/50"
+}
+}
+],
+"wrong": [
+"loss_recognized"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-06-03",
+"qty": "7",
+"amount": 136109
+},
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2024-10-04",
+"qty": "3/4",
+"amount": 13657
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-10-13",
+"qty": "5",
+"amount": 28554
+},
+{
+"a": 0,
+"s": "A",
+"kind": "sell",
+"day": "2025-08-19",
+"qty": "1",
+"amount": 46312
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-02-23",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "1/2",
+"cash_per_share": "156/5",
+"acquirer_fmv": "15983/100"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"full_gain"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2025-01-15",
+"qty": "15",
+"amount": 241831
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2025-04-01",
+"qty": "10",
+"amount": 48582
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2025-07-07",
+"qty": "3",
+"amount": 43736
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-07-07",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "1/2",
+"cash_per_share": "25/2",
+"acquirer_fmv": "18603/100"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"full_gain",
+"after_trades"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2024-10-29",
+"qty": "21",
+"amount": 399833
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-11-09",
+"qty": "33333/10000",
+"amount": 29338
+},
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2024-12-23",
+"qty": "3/4",
+"amount": 5358
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2025-03-15",
+"qty": "14",
+"amount": 60467
+},
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2025-06-30",
+"qty": "2",
+"amount": 11904
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-06-30",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "9/50",
+"cash_per_share": "0",
+"acquirer_fmv": "7483/100"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"after_trades"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-07-22",
+"qty": "21",
+"amount": 288779
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2025-02-04",
+"qty": "49/4",
+"amount": 235205
+},
+{
+"a": 0,
+"s": "A",
+"kind": "sell",
+"day": "2025-09-28",
+"qty": "1",
+"amount": 48921
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-05-27",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "6/5",
+"cash_per_share": "19/4",
+"acquirer_fmv": "24107/100"
+}
+}
+],
+"wrong": [
+"full_gain"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2024-06-20",
+"qty": "25",
+"amount": 396811
+},
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2025-01-26",
+"qty": "15/2",
+"amount": 48521
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-07-10",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "6/5",
+"cash_per_share": "19/4",
+"acquirer_fmv": "2874/25"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"full_gain"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2023-11-30",
+"qty": "7",
+"amount": 13960
+},
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2024-01-14",
+"qty": "10",
+"amount": 187825
+},
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2024-06-29",
+"qty": "3",
+"amount": 13372
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-12-14",
+"qty": "49/4",
+"amount": 98641
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-03-03",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "7/20",
+"cash_per_share": "19/4",
+"acquirer_fmv": "126"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"full_gain"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2023-11-10",
+"qty": "15",
+"amount": 202570
+},
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2023-12-01",
+"qty": "25",
+"amount": 299128
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-01-14",
+"qty": "15",
+"amount": 101207
+},
+{
+"a": 1,
+"s": "A",
+"kind": "sell",
+"day": "2025-03-20",
+"qty": "1",
+"amount": 19003
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2024-12-27",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "9/50",
+"cash_per_share": "19/4",
+"acquirer_fmv": "2417/25"
+}
+}
+],
+"wrong": [
+"loss_recognized"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-03-03",
+"qty": "3/4",
+"amount": 12757
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-05-25",
+"qty": "13",
+"amount": 133764
+},
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2025-01-18",
+"qty": "7",
+"amount": 91193
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2025-07-01",
+"qty": "3",
+"amount": 22143
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-07-01",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "1/4",
+"cash_per_share": "0",
+"acquirer_fmv": "111/4"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"after_trades"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2024-02-20",
+"qty": "5",
+"amount": 45980
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-03-08",
+"qty": "10",
+"amount": 27834
+},
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2024-09-28",
+"qty": "14",
+"amount": 88886
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-12-07",
+"qty": "11",
+"amount": 77175
+},
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2025-06-16",
+"qty": "3",
+"amount": 9581
+},
+{
+"a": 1,
+"s": "A",
+"kind": "sell",
+"day": "2025-08-14",
+"qty": "1",
+"amount": 38722
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-06-16",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "9/50",
+"cash_per_share": "19/4",
+"acquirer_fmv": "6189/100"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"after_trades"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2023-04-29",
+"qty": "15",
+"amount": 55444
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2023-07-22",
+"qty": "25",
+"amount": 256618
+},
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2023-12-12",
+"qty": "21",
+"amount": 217580
+},
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2024-05-25",
+"qty": "49/4",
+"amount": 21240
+},
+{
+"a": 1,
+"s": "A",
+"kind": "sell",
+"day": "2024-12-22",
+"qty": "1",
+"amount": 10692
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2024-07-13",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "7/20",
+"cash_per_share": "41/20",
+"acquirer_fmv": "2937/25"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"full_gain"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2023-03-15",
+"qty": "7",
+"amount": 113899
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2023-03-19",
+"qty": "15/2",
+"amount": 100379
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2023-03-22",
+"qty": "5",
+"amount": 94614
+},
+{
+"a": 0,
+"s": "A",
+"kind": "sell",
+"day": "2024-09-12",
+"qty": "1",
+"amount": 57505
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2024-05-27",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "1/4",
+"cash_per_share": "25/2",
+"acquirer_fmv": "1769/10"
+}
+}
+],
+"wrong": [
+"loss_recognized"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-04-01",
+"qty": "7",
+"amount": 93888
+},
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2024-11-09",
+"qty": "18",
+"amount": 191862
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-12-07",
+"qty": "3/4",
+"amount": 13053
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2025-04-06",
+"qty": "15",
+"amount": 114119
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-07-04",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "1/2",
+"cash_per_share": "41/20",
+"acquirer_fmv": "20197/100"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"full_gain"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2023-12-10",
+"qty": "33333/10000",
+"amount": 54937
+},
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2024-01-17",
+"qty": "25",
+"amount": 404046
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-06-25",
+"qty": "13",
+"amount": 155583
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-12-03",
+"qty": "3",
+"amount": 17715
+},
+{
+"a": 0,
+"s": "A",
+"kind": "sell",
+"day": "2025-02-19",
+"qty": "1",
+"amount": 83523
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2024-12-03",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "1/2",
+"cash_per_share": "41/20",
+"acquirer_fmv": "14263/100"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"after_trades"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2024-09-15",
+"qty": "6",
+"amount": 20841
+},
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2024-09-19",
+"qty": "3",
+"amount": 34470
+},
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2024-10-18",
+"qty": "5",
+"amount": 85132
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-11-22",
+"qty": "18",
+"amount": 181841
+},
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2025-04-21",
+"qty": "2",
+"amount": 39313
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-04-21",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "9/50",
+"cash_per_share": "156/5",
+"acquirer_fmv": "3623/25"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"after_trades"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2023-12-14",
+"qty": "9",
+"amount": 124380
+},
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2024-06-15",
+"qty": "6",
+"amount": 109033
+},
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2024-09-08",
+"qty": "15",
+"amount": 35174
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-09-23",
+"qty": "13",
+"amount": 28451
+},
+{
+"a": 2,
+"s": "A",
+"kind": "sell",
+"day": "2025-04-11",
+"qty": "1",
+"amount": 81176
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-02-16",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "1/2",
+"cash_per_share": "19/4",
+"acquirer_fmv": "21863/100"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"full_gain"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-04-26",
+"qty": "7",
+"amount": 103016
+},
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2024-09-12",
+"qty": "33333/10000",
+"amount": 18119
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-08-26",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "7/20",
+"cash_per_share": "0",
+"acquirer_fmv": "1456/25"
+}
+}
+],
+"wrong": [
+"loss_recognized"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-10-07",
+"qty": "21",
+"amount": 308296
+},
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2024-12-14",
+"qty": "15",
+"amount": 146964
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2025-04-06",
+"qty": "3",
+"amount": 23393
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-04-06",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "1/4",
+"cash_per_share": "19/4",
+"acquirer_fmv": "743/10"
+}
+}
+],
+"wrong": [
+"loss_recognized",
+"after_trades"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-01-14",
+"qty": "9",
+"amount": 34376
+},
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2024-09-22",
+"qty": "15",
+"amount": 206914
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-09-26",
+"qty": "10",
+"amount": 109184
+},
+{
+"a": 0,
+"s": "T",
+"kind": "buy",
+"day": "2024-09-29",
+"qty": "6",
+"amount": 101755
+},
+{
+"a": 0,
+"s": "A",
+"kind": "sell",
+"day": "2025-05-20",
+"qty": "1",
+"amount": 78809
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2025-01-10",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "7/20",
+"cash_per_share": "19/4",
+"acquirer_fmv": "8231/100"
+}
+}
+],
+"wrong": [
+"loss_recognized"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 1,
+"s": "T",
+"kind": "buy",
+"day": "2024-03-19",
+"qty": "7",
+"amount": 38442
+},
+{
+"a": 2,
+"s": "T",
+"kind": "buy",
+"day": "2024-08-10",
+"qty": "3/4",
+"amount": 6908
+},
+{
+"a": 1,
+"s": "A",
+"kind": "sell",
+"day": "2025-06-08",
+"qty": "1",
+"amount": 45480
+}
+],
+"actions": [
+{
+"kind": "merger",
+"s": "T",
+"day": "2024-11-25",
+"terms": {
+"acquirer": "A",
+"shares_per_share": "1/4",
+"cash_per_share": "0",
+"acquirer_fmv": "3019/50"
+}
+}
+],
+"wrong": [
+"loss_recognized"
+]
+}
+],
+"roc": [
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-01-13",
+"qty": "18",
+"amount": 1119
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-04-17",
+"qty": "9",
+"amount": 3786
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-05-15",
+"qty": "13",
+"amount": 30411
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2024-08-14",
+"qty": "25",
+"amount": 31045
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2025-04-03",
+"qty": "5",
+"amount": 2070
+},
+{
+"a": 1,
+"s": "X",
+"kind": "sell",
+"day": "2025-11-07",
+"qty": "1",
+"amount": 7787
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-04-03",
+"terms": {
+"amount_per_share": "613/100"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-06-02",
+"terms": {
+"amount_per_share": "441/50"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-08-01",
+"terms": {
+"amount_per_share": "269/50"
+}
+}
+],
+"wrong": [
+"negative_basis",
+"after_trades"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-12-20",
+"qty": "33333/10000",
+"amount": 4078
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2025-01-17",
+"qty": "49/4",
+"amount": 10206
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2025-05-21",
+"qty": "18",
+"amount": 38015
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-08-19",
+"terms": {
+"amount_per_share": "533/100"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-10-18",
+"terms": {
+"amount_per_share": "169/20"
+}
+}
+],
+"wrong": [
+"negative_basis",
+"account_total"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2023-01-12",
+"qty": "21",
+"amount": 21609
+},
+{
+"a": 2,
+"s": "X",
+"kind": "buy",
+"day": "2023-02-18",
+"qty": "25",
+"amount": 27024
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2023-03-08",
+"qty": "13",
+"amount": 13152
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-01-24",
+"qty": "11",
+"amount": 4839
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-05-08",
+"qty": "5",
+"amount": 8794
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2024-05-08",
+"terms": {
+"amount_per_share": "447/50"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2024-07-07",
+"terms": {
+"amount_per_share": "401/100"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2024-09-05",
+"terms": {
+"amount_per_share": "289/100"
+}
+}
+],
+"wrong": [
+"negative_basis",
+"after_trades"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2023-10-27",
+"qty": "7",
+"amount": 5332
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2023-11-20",
+"qty": "13",
+"amount": 35110
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2024-12-09",
+"terms": {
+"amount_per_share": "223/25"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-02-07",
+"terms": {
+"amount_per_share": "491/100"
+}
+}
+],
+"wrong": [
+"negative_basis"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2023-08-24",
+"qty": "10",
+"amount": 18815
+},
+{
+"a": 2,
+"s": "X",
+"kind": "buy",
+"day": "2023-09-22",
+"qty": "9",
+"amount": 26104
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2024-09-28",
+"qty": "14",
+"amount": 23542
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2025-01-04",
+"qty": "5",
+"amount": 6391
+},
+{
+"a": 1,
+"s": "X",
+"kind": "sell",
+"day": "2025-09-12",
+"qty": "1",
+"amount": 6226
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-01-04",
+"terms": {
+"amount_per_share": "151/50"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-03-05",
+"terms": {
+"amount_per_share": "303/100"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-05-04",
+"terms": {
+"amount_per_share": "679/100"
+}
+}
+],
+"wrong": [
+"account_total",
+"after_trades"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2024-03-06",
+"qty": "3",
+"amount": 6025
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2024-03-14",
+"qty": "6",
+"amount": 11754
+},
+{
+"a": 2,
+"s": "X",
+"kind": "buy",
+"day": "2024-06-15",
+"qty": "3",
+"amount": 5429
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-07-20",
+"qty": "3",
+"amount": 6052
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2025-05-06",
+"qty": "5",
+"amount": 7271
+},
+{
+"a": 1,
+"s": "X",
+"kind": "sell",
+"day": "2025-09-16",
+"qty": "1",
+"amount": 19668
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-05-06",
+"terms": {
+"amount_per_share": "409/100"
+}
+}
+],
+"wrong": [
+"after_trades"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2023-03-28",
+"qty": "13",
+"amount": 33880
+},
+{
+"a": 2,
+"s": "X",
+"kind": "buy",
+"day": "2023-08-27",
+"qty": "3",
+"amount": 5360
+},
+{
+"a": 2,
+"s": "X",
+"kind": "buy",
+"day": "2024-05-02",
+"qty": "5",
+"amount": 7911
+},
+{
+"a": 2,
+"s": "X",
+"kind": "sell",
+"day": "2024-07-15",
+"qty": "1",
+"amount": 6199
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2024-05-02",
+"terms": {
+"amount_per_share": "137/25"
+}
+}
+],
+"wrong": [
+"after_trades"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2025-01-12",
+"qty": "11",
+"amount": 16648
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2025-04-20",
+"qty": "15",
+"amount": 38632
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2025-08-05",
+"qty": "4",
+"amount": 4659
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-08-05",
+"terms": {
+"amount_per_share": "169/100"
+}
+}
+],
+"wrong": [
+"after_trades"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2024-03-15",
+"qty": "18",
+"amount": 53272
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-05-18",
+"qty": "7",
+"amount": 20930
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2024-11-11",
+"qty": "5",
+"amount": 6148
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2025-03-17",
+"qty": "13",
+"amount": 9530
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-12-26",
+"qty": "1",
+"amount": 12808
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-07-04",
+"terms": {
+"amount_per_share": "761/100"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-09-02",
+"terms": {
+"amount_per_share": "529/100"
+}
+}
+],
+"wrong": [
+"negative_basis",
+"account_total"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 2,
+"s": "X",
+"kind": "buy",
+"day": "2024-04-19",
+"qty": "7",
+"amount": 17969
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-05-28",
+"qty": "10",
+"amount": 8924
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-10-04",
+"qty": "14",
+"amount": 4171
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2025-06-18",
+"qty": "4",
+"amount": 8266
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-06-18",
+"terms": {
+"amount_per_share": "32/25"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-08-17",
+"terms": {
+"amount_per_share": "17/10"
+}
+}
+],
+"wrong": [
+"account_total",
+"after_trades"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-04-02",
+"qty": "15/2",
+"amount": 19190
+},
+{
+"a": 2,
+"s": "X",
+"kind": "buy",
+"day": "2024-10-19",
+"qty": "5",
+"amount": 4962
+},
+{
+"a": 2,
+"s": "X",
+"kind": "buy",
+"day": "2025-06-12",
+"qty": "5",
+"amount": 6246
+},
+{
+"a": 2,
+"s": "X",
+"kind": "sell",
+"day": "2025-08-01",
+"qty": "1",
+"amount": 5499
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-06-12",
+"terms": {
+"amount_per_share": "597/100"
+}
+}
+],
+"wrong": [
+"after_trades"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2023-01-30",
+"qty": "21",
+"amount": 58778
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2023-02-24",
+"qty": "49/4",
+"amount": 15493
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2023-06-10",
+"qty": "7",
+"amount": 1433
+},
+{
+"a": 1,
+"s": "X",
+"kind": "sell",
+"day": "2024-07-26",
+"qty": "1",
+"amount": 11729
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2024-05-26",
+"terms": {
+"amount_per_share": "581/100"
+}
+}
+],
+"wrong": [
+"negative_basis"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 2,
+"s": "X",
+"kind": "buy",
+"day": "2024-03-04",
+"qty": "9",
+"amount": 27015
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-05-30",
+"qty": "5",
+"amount": 5985
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-09-13",
+"qty": "18",
+"amount": 27403
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2025-03-09",
+"qty": "4",
+"amount": 3473
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-03-09",
+"terms": {
+"amount_per_share": "37/100"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-05-08",
+"terms": {
+"amount_per_share": "249/50"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-07-07",
+"terms": {
+"amount_per_share": "761/100"
+}
+}
+],
+"wrong": [
+"negative_basis",
+"account_total",
+"after_trades"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2023-09-21",
+"qty": "10",
+"amount": 28175
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2023-10-18",
+"qty": "15",
+"amount": 10830
+},
+{
+"a": 2,
+"s": "X",
+"kind": "buy",
+"day": "2024-08-27",
+"qty": "18",
+"amount": 40981
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2024-11-10",
+"terms": {
+"amount_per_share": "35/4"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-01-09",
+"terms": {
+"amount_per_share": "91/25"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-03-10",
+"terms": {
+"amount_per_share": "29/10"
+}
+}
+],
+"wrong": [
+"negative_basis"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 2,
+"s": "X",
+"kind": "buy",
+"day": "2024-02-11",
+"qty": "33333/10000",
+"amount": 1303
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2025-03-10",
+"qty": "5",
+"amount": 10771
+},
+{
+"a": 2,
+"s": "X",
+"kind": "buy",
+"day": "2025-05-14",
+"qty": "5",
+"amount": 7995
+},
+{
+"a": 2,
+"s": "X",
+"kind": "sell",
+"day": "2025-08-28",
+"qty": "1",
+"amount": 3910
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-05-14",
+"terms": {
+"amount_per_share": "413/50"
+}
+}
+],
+"wrong": [
+"negative_basis",
+"after_trades"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-02-05",
+"qty": "14",
+"amount": 28879
+},
+{
+"a": 2,
+"s": "X",
+"kind": "buy",
+"day": "2024-03-20",
+"qty": "15/2",
+"amount": 8617
+},
+{
+"a": 2,
+"s": "X",
+"kind": "buy",
+"day": "2025-02-11",
+"qty": "5",
+"amount": 2804
+},
+{
+"a": 2,
+"s": "X",
+"kind": "sell",
+"day": "2025-09-14",
+"qty": "1",
+"amount": 11318
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-02-11",
+"terms": {
+"amount_per_share": "213/25"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-04-12",
+"terms": {
+"amount_per_share": "383/100"
+}
+}
+],
+"wrong": [
+"negative_basis",
+"after_trades"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2023-09-27",
+"qty": "21",
+"amount": 30620
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2024-02-13",
+"qty": "5",
+"amount": 13228
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2024-03-11",
+"qty": "33333/10000",
+"amount": 7831
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2025-01-06",
+"qty": "4",
+"amount": 6186
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-01-06",
+"terms": {
+"amount_per_share": "421/100"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-03-07",
+"terms": {
+"amount_per_share": "33/10"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-05-06",
+"terms": {
+"amount_per_share": "39/20"
+}
+}
+],
+"wrong": [
+"after_trades"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2024-06-03",
+"qty": "15/2",
+"amount": 3971
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-12-12",
+"qty": "25",
+"amount": 7569
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-04-04",
+"terms": {
+"amount_per_share": "547/100"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-06-03",
+"terms": {
+"amount_per_share": "381/50"
+}
+}
+],
+"wrong": [
+"negative_basis"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2023-01-01",
+"qty": "18",
+"amount": 32061
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2023-05-26",
+"qty": "3/4",
+"amount": 508
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2024-01-11",
+"qty": "13",
+"amount": 9049
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2024-03-21",
+"qty": "5",
+"amount": 3754
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2024-03-21",
+"terms": {
+"amount_per_share": "207/50"
+}
+}
+],
+"wrong": [
+"after_trades"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-04-29",
+"qty": "14",
+"amount": 27031
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2024-11-17",
+"qty": "18",
+"amount": 17715
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2025-01-20",
+"qty": "15",
+"amount": 38654
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2025-02-13",
+"qty": "49/4",
+"amount": 8074
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2025-06-05",
+"qty": "5",
+"amount": 3987
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-11-11",
+"qty": "1",
+"amount": 17016
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-06-05",
+"terms": {
+"amount_per_share": "231/50"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-08-04",
+"terms": {
+"amount_per_share": "233/50"
+}
+}
+],
+"wrong": [
+"negative_basis",
+"account_total",
+"after_trades"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-05-11",
+"qty": "10",
+"amount": 12903
+},
+{
+"a": 2,
+"s": "X",
+"kind": "buy",
+"day": "2024-07-06",
+"qty": "6",
+"amount": 7937
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2025-01-22",
+"qty": "4",
+"amount": 3836
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-07-02",
+"qty": "1",
+"amount": 12957
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-01-22",
+"terms": {
+"amount_per_share": "103/50"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-03-23",
+"terms": {
+"amount_per_share": "63/25"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-05-22",
+"terms": {
+"amount_per_share": "2/25"
+}
+}
+],
+"wrong": [
+"after_trades"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2024-03-08",
+"qty": "10",
+"amount": 15139
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-03-10",
+"qty": "33333/10000",
+"amount": 1330
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-07-03",
+"qty": "6",
+"amount": 5036
+},
+{
+"a": 2,
+"s": "X",
+"kind": "buy",
+"day": "2025-03-29",
+"qty": "14",
+"amount": 16756
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-05-17",
+"terms": {
+"amount_per_share": "293/100"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-07-16",
+"terms": {
+"amount_per_share": "189/50"
+}
+}
+],
+"wrong": [
+"negative_basis"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2024-02-06",
+"qty": "14",
+"amount": 19625
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2024-08-16",
+"qty": "15/2",
+"amount": 6483
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-08-18",
+"qty": "15",
+"amount": 9800
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-09-07",
+"qty": "7",
+"amount": 12054
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-12-18",
+"qty": "5",
+"amount": 5929
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2024-12-18",
+"terms": {
+"amount_per_share": "38/5"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-02-16",
+"terms": {
+"amount_per_share": "127/20"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-04-17",
+"terms": {
+"amount_per_share": "39/20"
+}
+}
+],
+"wrong": [
+"negative_basis",
+"after_trades"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-09-30",
+"qty": "18",
+"amount": 39002
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-10-26",
+"qty": "18",
+"amount": 43636
+},
+{
+"a": 2,
+"s": "X",
+"kind": "buy",
+"day": "2024-12-13",
+"qty": "25",
+"amount": 61266
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2025-02-08",
+"qty": "15/2",
+"amount": 6713
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-06-27",
+"qty": "1",
+"amount": 18650
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-04-23",
+"terms": {
+"amount_per_share": "283/50"
+}
+}
+],
+"wrong": [
+"account_total"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2023-09-04",
+"qty": "15",
+"amount": 40192
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2023-09-17",
+"qty": "18",
+"amount": 17822
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2024-07-05",
+"qty": "6",
+"amount": 8932
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2024-11-05",
+"terms": {
+"amount_per_share": "827/100"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-01-04",
+"terms": {
+"amount_per_share": "57/10"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-03-05",
+"terms": {
+"amount_per_share": "403/50"
+}
+}
+],
+"wrong": [
+"negative_basis"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-07-28",
+"qty": "3/4",
+"amount": 1464
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2024-11-11",
+"qty": "7",
+"amount": 3838
+},
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2025-06-30",
+"qty": "4",
+"amount": 3918
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2026-01-06",
+"qty": "1",
+"amount": 2729
+}
+],
+"actions": [
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-06-30",
+"terms": {
+"amount_per_share": "787/100"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-08-29",
+"terms": {
+"amount_per_share": "27/100"
+}
+},
+{
+"kind": "return_of_capital",
+"s": "X",
+"day": "2025-10-28",
+"terms": {
+"amount_per_share": "146/25"
+}
+}
+],
+"wrong": [
+"negative_basis",
+"account_total",
+"after_trades"
+]
+}
+],
+"ira": [
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-11-15",
+"qty": "6",
+"amount": 71748
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-04-01",
+"qty": "2",
+"amount": 22242
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-04-06",
+"qty": "1",
+"amount": 9327
+},
+{
+"a": 3,
+"s": "X",
+"kind": "dividend",
+"day": "2025-05-06",
+"amount": 3021
+},
+{
+"a": 3,
+"s": "X",
+"kind": "sell",
+"day": "2025-09-10",
+"qty": "1",
+"amount": 9208
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2025-09-14",
+"qty": "1",
+"amount": 15312
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable",
+"ira_sale_washed",
+"ira_dividends"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-12-25",
+"qty": "5",
+"amount": 18995
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-08-05",
+"qty": "5/2",
+"amount": 7883
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-08-10",
+"qty": "5/2",
+"amount": 7693
+},
+{
+"a": 3,
+"s": "X",
+"kind": "sell",
+"day": "2025-10-31",
+"qty": "1",
+"amount": 3001
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-11-30",
+"qty": "2",
+"amount": 17346
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable",
+"ira_sale_washed"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-10-16",
+"qty": "5",
+"amount": 94080
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-02-13",
+"qty": "5",
+"amount": 58330
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-03-05",
+"qty": "5",
+"amount": 63034
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-04-02",
+"qty": "9",
+"amount": 127674
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2024-11-21",
+"qty": "9/4",
+"amount": 27769
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2024-12-11",
+"qty": "9/2",
+"amount": 55538
+},
+{
+"a": 3,
+"s": "X",
+"kind": "sell",
+"day": "2025-05-09",
+"qty": "1",
+"amount": 10781
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-05-26",
+"qty": "3",
+"amount": 20477
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable",
+"ira_sale_washed"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-12-27",
+"qty": "33333/10000",
+"amount": 66019
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-06-20",
+"qty": "11111/10000",
+"amount": 16725
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-07-20",
+"qty": "11111/20000",
+"amount": 9683
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2025-04-21",
+"qty": "15",
+"amount": 247320
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-08-02",
+"qty": "15",
+"amount": 183017
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-08-05",
+"qty": "15",
+"amount": 155812
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-09-03",
+"qty": "15",
+"amount": 187963
+},
+{
+"a": 3,
+"s": "X",
+"kind": "sell",
+"day": "2026-01-12",
+"qty": "1",
+"amount": 11047
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2026-01-29",
+"qty": "1",
+"amount": 24778
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable",
+"ira_sale_washed"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-07-28",
+"qty": "15/2",
+"amount": 132653
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2024-12-13",
+"qty": "15/4",
+"amount": 61683
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-01-11",
+"qty": "15/8",
+"amount": 19898
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2025-06-26",
+"qty": "1",
+"amount": 25688
+},
+{
+"a": 3,
+"s": "X",
+"kind": "sell",
+"day": "2025-06-26",
+"qty": "1",
+"amount": 7252
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable",
+"ira_sale_washed"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-11-01",
+"qty": "3",
+"amount": 42198
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-07-27",
+"qty": "3/2",
+"amount": 14558
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-08-01",
+"qty": "9/4",
+"amount": 20888
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-08-08",
+"qty": "3/4",
+"amount": 6963
+},
+{
+"a": 3,
+"s": "X",
+"kind": "dividend",
+"day": "2025-09-05",
+"amount": 3680
+},
+{
+"a": 3,
+"s": "X",
+"kind": "sell",
+"day": "2025-10-03",
+"qty": "1",
+"amount": 5626
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2025-11-02",
+"qty": "3",
+"amount": 22724
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable",
+"ira_sale_washed",
+"ira_dividends"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-07-04",
+"qty": "6",
+"amount": 70596
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2025-01-24",
+"qty": "3/2",
+"amount": 12178
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-01-27",
+"qty": "3",
+"amount": 30003
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-02-08",
+"qty": "1",
+"amount": 11295
+},
+{
+"a": 3,
+"s": "X",
+"kind": "sell",
+"day": "2025-05-28",
+"qty": "1",
+"amount": 5530
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2023-12-28",
+"qty": "7",
+"amount": 116186
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2024-12-05",
+"qty": "7",
+"amount": 96434
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2024-12-05",
+"qty": "7",
+"amount": 67388
+},
+{
+"a": 3,
+"s": "X",
+"kind": "dividend",
+"day": "2025-01-08",
+"amount": 6092
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable",
+"ira_dividends"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2023-06-17",
+"qty": "33333/10000",
+"amount": 26380
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2024-06-30",
+"qty": "99999/20000",
+"amount": 38778
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2024-07-03",
+"qty": "33333/10000",
+"amount": 15300
+},
+{
+"a": 3,
+"s": "X",
+"kind": "sell",
+"day": "2024-08-20",
+"qty": "1",
+"amount": 6015
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-01-13",
+"qty": "15/2",
+"amount": 52425
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-02-07",
+"qty": "5/4",
+"amount": 8213
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-02-10",
+"qty": "15/4",
+"amount": 21494
+},
+{
+"a": 3,
+"s": "X",
+"kind": "sell",
+"day": "2025-07-01",
+"qty": "1",
+"amount": 10098
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-10-07",
+"qty": "5",
+"amount": 77840
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-05-29",
+"qty": "5",
+"amount": 49039
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-06-10",
+"qty": "5",
+"amount": 75505
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-10-28",
+"qty": "15/2",
+"amount": 140715
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-06-21",
+"qty": "5/2",
+"amount": 43622
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-06-21",
+"qty": "5/2",
+"amount": 40338
+},
+{
+"a": 3,
+"s": "X",
+"kind": "dividend",
+"day": "2025-07-27",
+"amount": 639
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2026-01-04",
+"qty": "2",
+"amount": 29085
+},
+{
+"a": 3,
+"s": "X",
+"kind": "sell",
+"day": "2026-01-04",
+"qty": "1",
+"amount": 7635
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable",
+"ira_sale_washed",
+"ira_dividends"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-07-06",
+"qty": "15",
+"amount": 180300
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-06-10",
+"qty": "5",
+"amount": 33656
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-07-10",
+"qty": "5/2",
+"amount": 21035
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-10-24",
+"qty": "5",
+"amount": 70595
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-08-04",
+"qty": "15/4",
+"amount": 37062
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-08-07",
+"qty": "5/2",
+"amount": 29297
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-09-05",
+"qty": "5/4",
+"amount": 10942
+},
+{
+"a": 3,
+"s": "X",
+"kind": "sell",
+"day": "2026-01-18",
+"qty": "1",
+"amount": 18189
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-03-23",
+"qty": "21",
+"amount": 212205
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-03-28",
+"qty": "21/2",
+"amount": 71089
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2025-03-28",
+"qty": "21/2",
+"amount": 89126
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-03-28",
+"qty": "21",
+"amount": 167642
+},
+{
+"a": 3,
+"s": "X",
+"kind": "sell",
+"day": "2025-08-15",
+"qty": "1",
+"amount": 5053
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2025-08-19",
+"qty": "2",
+"amount": 8295
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable",
+"ira_sale_washed"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-07-19",
+"qty": "33333/10000",
+"amount": 54433
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-03-29",
+"qty": "99999/40000",
+"amount": 37559
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-03-29",
+"qty": "33333/20000",
+"amount": 15786
+},
+{
+"a": 3,
+"s": "X",
+"kind": "dividend",
+"day": "2025-05-01",
+"amount": 4364
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable",
+"ira_dividends"
+]
+},
+{
+"currency": "EUR",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2025-01-07",
+"qty": "3",
+"amount": 34707
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-07-28",
+"qty": "9/4",
+"amount": 22386
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2025-07-28",
+"qty": "3/4",
+"amount": 6941
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-07-31",
+"qty": "3/2",
+"amount": 14403
+},
+{
+"a": 3,
+"s": "X",
+"kind": "dividend",
+"day": "2025-09-06",
+"amount": 2928
+},
+{
+"a": 3,
+"s": "X",
+"kind": "sell",
+"day": "2026-01-08",
+"qty": "1",
+"amount": 10875
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable",
+"ira_dividends"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-08-19",
+"qty": "21",
+"amount": 407925
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-05-08",
+"qty": "21/2",
+"amount": 163170
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2025-05-20",
+"qty": "21/2",
+"amount": 142774
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-06-06",
+"qty": "7/2",
+"amount": 59829
+},
+{
+"a": 3,
+"s": "X",
+"kind": "dividend",
+"day": "2025-06-11",
+"amount": 7055
+},
+{
+"a": 3,
+"s": "X",
+"kind": "sell",
+"day": "2025-06-23",
+"qty": "1",
+"amount": 11849
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2025-06-27",
+"qty": "2",
+"amount": 14593
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable",
+"ira_sale_washed",
+"ira_dividends"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-07-11",
+"qty": "33333/10000",
+"amount": 64443
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-01-07",
+"qty": "33333/20000",
+"amount": 19655
+},
+{
+"a": 1,
+"s": "X",
+"kind": "buy",
+"day": "2025-01-19",
+"qty": "11111/20000",
+"amount": 9666
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-02-05",
+"qty": "11111/20000",
+"amount": 8592
+},
+{
+"a": 3,
+"s": "X",
+"kind": "dividend",
+"day": "2025-02-08",
+"amount": 6257
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable",
+"ira_dividends"
+]
+},
+{
+"currency": "CAD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2023-11-21",
+"qty": "18",
+"amount": 232668
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2024-04-29",
+"qty": "9",
+"amount": 111681
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2024-05-19",
+"qty": "27",
+"amount": 244301
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2024-05-19",
+"qty": "18",
+"amount": 202421
+},
+{
+"a": 3,
+"s": "X",
+"kind": "dividend",
+"day": "2024-06-19",
+"amount": 7617
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable",
+"ira_dividends"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2025-02-25",
+"qty": "25",
+"amount": 118250
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-07-26",
+"qty": "25",
+"amount": 73315
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-08-25",
+"qty": "25",
+"amount": 93418
+},
+{
+"a": 3,
+"s": "X",
+"kind": "dividend",
+"day": "2025-08-26",
+"amount": 6945
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable",
+"ira_dividends"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-04-04",
+"qty": "15/2",
+"amount": 49155
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-03-12",
+"qty": "45/4",
+"amount": 69309
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-03-15",
+"qty": "15/2",
+"amount": 38341
+},
+{
+"a": 3,
+"s": "X",
+"kind": "dividend",
+"day": "2025-04-16",
+"amount": 1204
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable",
+"ira_dividends"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-09-14",
+"qty": "33333/10000",
+"amount": 26336
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-04-10",
+"qty": "33333/20000",
+"amount": 9218
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-04-10",
+"qty": "33333/10000",
+"amount": 19489
+},
+{
+"a": 3,
+"s": "X",
+"kind": "dividend",
+"day": "2025-05-15",
+"amount": 1686
+},
+{
+"a": 3,
+"s": "X",
+"kind": "sell",
+"day": "2025-08-09",
+"qty": "1",
+"amount": 5057
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-08-26",
+"qty": "3",
+"amount": 12857
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable",
+"ira_sale_washed",
+"ira_dividends"
+]
+},
+{
+"currency": "USD",
+"rows": [
+{
+"a": 0,
+"s": "X",
+"kind": "buy",
+"day": "2024-06-09",
+"qty": "9",
+"amount": 126432
+},
+{
+"a": 3,
+"s": "X",
+"kind": "buy",
+"day": "2025-04-08",
+"qty": "3",
+"amount": 29922
+},
+{
+"a": 0,
+"s": "X",
+"kind": "sell",
+"day": "2025-04-08",
+"qty": "9",
+"amount": 104939
+},
+{
+"a": 3,
+"s": "X",
+"kind": "dividend",
+"day": "2025-05-19",
+"amount": 8522
+}
+],
+"actions": [],
+"wrong": [
+"ira_taxable",
+"ira_dividends"
+]
+}
+]
+}

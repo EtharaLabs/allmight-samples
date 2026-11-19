@@ -1,0 +1,133 @@
+# Experience criteria (instruction.md R12, R8.5). Evidence is written by tests/workflows.py (W15, W21, W24).
+[judge]
+judge = "anthropic/claude-fable-5-1"
+reasoning_effort = "max"
+mode = "individual"
+samples = 3
+guard = "penalize"
+timeout = 900
+prompt_template = "judge/prompt.md"
+reference = "/tests/judge-reference.md"
+
+[[criterion]]
+id = "J01"
+name = "J01"
+description = "After a rejected statement upload, the page says that nothing was imported and lists each failing line with a plain-language reason."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/import_rejected"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.1"
+
+[[criterion]]
+id = "J02"
+name = "J02"
+description = "After a successful statement upload, the page says how many rows were recorded and how many were skipped as duplicates."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/import_done"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.1"
+
+[[criterion]]
+id = "J03"
+name = "J03"
+description = "The open-lots page shows, for each lot, the quantity, cost basis, acquisition date, holding-period start and whether it is short- or long-term, and marks lots whose basis includes a disallowed wash-sale loss."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/lots_wash"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.2"
+
+[[criterion]]
+id = "J04"
+name = "J04"
+description = "The sale form lists the lots that can be chosen and explains that, without chosen lots, the account's lot method (FIFO or HIFO) decides which lots are sold."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/sell_form"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.3"
+
+[[criterion]]
+id = "J05"
+name = "J05"
+description = "The tax-year page shows labelled totals for short-term gains, long-term gains, wash-sale disallowed losses, dividends and adjustments for earlier years, and says whether the year is locked."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/report_year"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.4"
+
+[[criterion]]
+id = "J06"
+name = "J06"
+description = "Before locking, the year page states that locking freezes the year's reports, that later changes appear as adjustments in the next year, that each person in the household gets a summary email, and that it cannot be undone."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/lock_before"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.4"
+
+[[criterion]]
+id = "J07"
+name = "J07"
+description = "A locked year's page makes clear that the year is locked and its figures are frozen."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/report_locked"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.4"
+
+[[criterion]]
+id = "J08"
+name = "J08"
+description = "The year-end summary email names the household and the year and gives labelled short-term, long-term, disallowed, dividend and adjustment totals in dollars, in a form a household member can read."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/summary_email"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R8.5"
+
+[[criterion]]
+id = "J09"
+name = "J09"
+description = "Viewing an account as the advisor, the page makes clear the access is read-only and offers no action the advisor cannot take."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/advisor_view"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.5"
+
+[[criterion]]
+id = "J10"
+name = "J10"
+description = "At 390 pixels wide, the key facts and the primary action on these pages stay readable and reachable."
+weight = 1
+negate = false
+type = "binary"
+files = ["/logs/verifier/ux/lots_wash/narrow.jpg", "/logs/verifier/ux/sell_form/narrow.jpg", "/logs/verifier/ux/report_year/narrow.jpg", "/logs/verifier/ux/lock_before/narrow.jpg"]
+[criterion.annotations]
+mode = "judged"
+requirement = "R12.6"
+
+[scoring]
+aggregation = "weighted-mean"

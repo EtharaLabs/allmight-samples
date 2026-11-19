@@ -1,0 +1,10 @@
+Northwind Securities
+Account Activity Statement
+Account Number: NW-W24-7B58-1
+Statement Period: 05/04/2026 to 05/39/2026
+
+Trade Date,Settlement Date,Activity,Symbol,Description,Quantity,Price,Commission,Net Amount,Currency,Reference
+05/04/2026,05/06/2026,buy,W247B5802,Plain Maple Co,3,100.0000,0.00,(300.00),CAD,V7B58-W24-02472
+05/39/2026,05/12/2026,DIVIDEND,W247B5802,Plain Maple Co,,,0.00,7.77,CAD,V7B58-W24-02473
+Total Net Amount,,,,,,,,"(292.23)",,
+End of statement. Generated 05/12/2026 08:14 ET.
